@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F649BE451A27D22400A00E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F649BE441A27D22400A00E3D /* AppDelegate.swift */; };
+		F649BE471A27D22400A00E3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F649BE461A27D22400A00E3D /* ViewController.swift */; };
+		F649BE4A1A27D22400A00E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F649BE481A27D22400A00E3D /* Main.storyboard */; };
+		F649BE4C1A27D22400A00E3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F649BE4B1A27D22400A00E3D /* Images.xcassets */; };
+		F649BE4F1A27D22400A00E3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F649BE4D1A27D22400A00E3D /* LaunchScreen.xib */; };
+		F649BE5B1A27D22400A00E3D /* LootzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F649BE5A1A27D22400A00E3D /* LootzTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F649BE551A27D22400A00E3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F649BE371A27D22400A00E3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F649BE3E1A27D22400A00E3D;
+			remoteInfo = Lootz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F649BE3F1A27D22400A00E3D /* Lootz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lootz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F649BE431A27D22400A00E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F649BE441A27D22400A00E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F649BE461A27D22400A00E3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F649BE491A27D22400A00E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F649BE4B1A27D22400A00E3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F649BE4E1A27D22400A00E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F649BE541A27D22400A00E3D /* LootzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LootzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F649BE591A27D22400A00E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F649BE5A1A27D22400A00E3D /* LootzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootzTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F649BE3C1A27D22400A00E3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F649BE511A27D22400A00E3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F649BE361A27D22400A00E3D = {
+			isa = PBXGroup;
+			children = (
+				F649BE411A27D22400A00E3D /* Lootz */,
+				F649BE571A27D22400A00E3D /* LootzTests */,
+				F649BE401A27D22400A00E3D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F649BE401A27D22400A00E3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F649BE3F1A27D22400A00E3D /* Lootz.app */,
+				F649BE541A27D22400A00E3D /* LootzTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F649BE411A27D22400A00E3D /* Lootz */ = {
+			isa = PBXGroup;
+			children = (
+				F649BE441A27D22400A00E3D /* AppDelegate.swift */,
+				F649BE461A27D22400A00E3D /* ViewController.swift */,
+				F649BE481A27D22400A00E3D /* Main.storyboard */,
+				F649BE4B1A27D22400A00E3D /* Images.xcassets */,
+				F649BE4D1A27D22400A00E3D /* LaunchScreen.xib */,
+				F649BE421A27D22400A00E3D /* Supporting Files */,
+			);
+			path = Lootz;
+			sourceTree = "<group>";
+		};
+		F649BE421A27D22400A00E3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F649BE431A27D22400A00E3D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F649BE571A27D22400A00E3D /* LootzTests */ = {
+			isa = PBXGroup;
+			children = (
+				F649BE5A1A27D22400A00E3D /* LootzTests.swift */,
+				F649BE581A27D22400A00E3D /* Supporting Files */,
+			);
+			path = LootzTests;
+			sourceTree = "<group>";
+		};
+		F649BE581A27D22400A00E3D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F649BE591A27D22400A00E3D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F649BE3E1A27D22400A00E3D /* Lootz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F649BE5E1A27D22400A00E3D /* Build configuration list for PBXNativeTarget "Lootz" */;
+			buildPhases = (
+				F649BE3B1A27D22400A00E3D /* Sources */,
+				F649BE3C1A27D22400A00E3D /* Frameworks */,
+				F649BE3D1A27D22400A00E3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lootz;
+			productName = Lootz;
+			productReference = F649BE3F1A27D22400A00E3D /* Lootz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F649BE531A27D22400A00E3D /* LootzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F649BE611A27D22400A00E3D /* Build configuration list for PBXNativeTarget "LootzTests" */;
+			buildPhases = (
+				F649BE501A27D22400A00E3D /* Sources */,
+				F649BE511A27D22400A00E3D /* Frameworks */,
+				F649BE521A27D22400A00E3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F649BE561A27D22400A00E3D /* PBXTargetDependency */,
+			);
+			name = LootzTests;
+			productName = LootzTests;
+			productReference = F649BE541A27D22400A00E3D /* LootzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F649BE371A27D22400A00E3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Brayden Girard";
+				TargetAttributes = {
+					F649BE3E1A27D22400A00E3D = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					F649BE531A27D22400A00E3D = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = F649BE3E1A27D22400A00E3D;
+					};
+				};
+			};
+			buildConfigurationList = F649BE3A1A27D22400A00E3D /* Build configuration list for PBXProject "Lootz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F649BE361A27D22400A00E3D;
+			productRefGroup = F649BE401A27D22400A00E3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F649BE3E1A27D22400A00E3D /* Lootz */,
+				F649BE531A27D22400A00E3D /* LootzTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F649BE3D1A27D22400A00E3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F649BE4A1A27D22400A00E3D /* Main.storyboard in Resources */,
+				F649BE4F1A27D22400A00E3D /* LaunchScreen.xib in Resources */,
+				F649BE4C1A27D22400A00E3D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F649BE521A27D22400A00E3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F649BE3B1A27D22400A00E3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F649BE471A27D22400A00E3D /* ViewController.swift in Sources */,
+				F649BE451A27D22400A00E3D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F649BE501A27D22400A00E3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F649BE5B1A27D22400A00E3D /* LootzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F649BE561A27D22400A00E3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F649BE3E1A27D22400A00E3D /* Lootz */;
+			targetProxy = F649BE551A27D22400A00E3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F649BE481A27D22400A00E3D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F649BE491A27D22400A00E3D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F649BE4D1A27D22400A00E3D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F649BE4E1A27D22400A00E3D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F649BE5C1A27D22400A00E3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F649BE5D1A27D22400A00E3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F649BE5F1A27D22400A00E3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Lootz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F649BE601A27D22400A00E3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Lootz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F649BE621A27D22400A00E3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LootzTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lootz.app/Lootz";
+			};
+			name = Debug;
+		};
+		F649BE631A27D22400A00E3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LootzTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lootz.app/Lootz";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F649BE3A1A27D22400A00E3D /* Build configuration list for PBXProject "Lootz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F649BE5C1A27D22400A00E3D /* Debug */,
+				F649BE5D1A27D22400A00E3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F649BE5E1A27D22400A00E3D /* Build configuration list for PBXNativeTarget "Lootz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F649BE5F1A27D22400A00E3D /* Debug */,
+				F649BE601A27D22400A00E3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F649BE611A27D22400A00E3D /* Build configuration list for PBXNativeTarget "LootzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F649BE621A27D22400A00E3D /* Debug */,
+				F649BE631A27D22400A00E3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F649BE371A27D22400A00E3D /* Project object */;
+}
