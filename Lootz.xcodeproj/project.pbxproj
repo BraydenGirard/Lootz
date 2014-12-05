@@ -23,12 +23,20 @@
 		F636FB041A27D622002B832C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636FAF81A27D622002B832C /* Social.framework */; };
 		F636FB051A27D622002B832C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636FAF91A27D622002B832C /* StoreKit.framework */; };
 		F636FB061A27D622002B832C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636FAFA1A27D622002B832C /* SystemConfiguration.framework */; };
+		F637F7621A310A8D004752E0 /* login_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F7531A310A8D004752E0 /* login_btn.png */; };
+		F637F7631A310A8D004752E0 /* login_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F7541A310A8D004752E0 /* login_btn@2x.png */; };
+		F637F7641A310A8D004752E0 /* login_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F7551A310A8D004752E0 /* login_btn@3x.png */; };
+		F637F7681A310A8D004752E0 /* login_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F7591A310A8D004752E0 /* login_ui.png */; };
+		F637F7691A310A8D004752E0 /* login_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F75A1A310A8D004752E0 /* login_ui@2x.png */; };
+		F637F76A1A310A8D004752E0 /* login_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F75B1A310A8D004752E0 /* login_ui@3x.png */; };
+		F637F76B1A310A8D004752E0 /* signup_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F75C1A310A8D004752E0 /* signup_btn.png */; };
+		F637F76C1A310A8D004752E0 /* signup_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F75D1A310A8D004752E0 /* signup_btn@2x.png */; };
+		F637F76D1A310A8D004752E0 /* signup_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F75E1A310A8D004752E0 /* signup_btn@3x.png */; };
 		F649BE451A27D22400A00E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F649BE441A27D22400A00E3D /* AppDelegate.swift */; };
 		F649BE471A27D22400A00E3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F649BE461A27D22400A00E3D /* ViewController.swift */; };
 		F649BE4A1A27D22400A00E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F649BE481A27D22400A00E3D /* Main.storyboard */; };
 		F649BE4C1A27D22400A00E3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F649BE4B1A27D22400A00E3D /* Images.xcassets */; };
 		F649BE4F1A27D22400A00E3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F649BE4D1A27D22400A00E3D /* LaunchScreen.xib */; };
-		F649BE5B1A27D22400A00E3D /* LootzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F649BE5A1A27D22400A00E3D /* LootzTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F636FACA1A27D3FC002B832C /* Lootz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lootz-Bridging-Header.h"; sourceTree = "<group>"; };
+		F636FACA1A27D3FC002B832C /* Lootz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lootz-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		F636FACF1A27D561002B832C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F636FAD11A27D580002B832C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		F636FAD21A27D580002B832C /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -59,16 +67,23 @@
 		F636FAF81A27D622002B832C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		F636FAF91A27D622002B832C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F636FAFA1A27D622002B832C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F637F7531A310A8D004752E0 /* login_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_btn.png; sourceTree = "<group>"; };
+		F637F7541A310A8D004752E0 /* login_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_btn@2x.png"; sourceTree = "<group>"; };
+		F637F7551A310A8D004752E0 /* login_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_btn@3x.png"; sourceTree = "<group>"; };
+		F637F7591A310A8D004752E0 /* login_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ui.png; sourceTree = "<group>"; };
+		F637F75A1A310A8D004752E0 /* login_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_ui@2x.png"; sourceTree = "<group>"; };
+		F637F75B1A310A8D004752E0 /* login_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_ui@3x.png"; sourceTree = "<group>"; };
+		F637F75C1A310A8D004752E0 /* signup_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup_btn.png; sourceTree = "<group>"; };
+		F637F75D1A310A8D004752E0 /* signup_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup_btn@2x.png"; sourceTree = "<group>"; };
+		F637F75E1A310A8D004752E0 /* signup_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup_btn@3x.png"; sourceTree = "<group>"; };
 		F649BE3F1A27D22400A00E3D /* Lootz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lootz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F649BE431A27D22400A00E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F649BE441A27D22400A00E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F649BE461A27D22400A00E3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F649BE441A27D22400A00E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Lootz/AppDelegate.swift; sourceTree = "<group>"; };
+		F649BE461A27D22400A00E3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Lootz/ViewController.swift; sourceTree = "<group>"; };
 		F649BE491A27D22400A00E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F649BE4B1A27D22400A00E3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F649BE4B1A27D22400A00E3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Lootz/Images.xcassets; sourceTree = "<group>"; };
 		F649BE4E1A27D22400A00E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F649BE541A27D22400A00E3D /* LootzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LootzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F649BE591A27D22400A00E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F649BE5A1A27D22400A00E3D /* LootzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootzTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +120,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F62DE8EF1A2E312400E77B70 /* SRC */ = {
+			isa = PBXGroup;
+			children = (
+				F62DE8F31A2E317C00E77B70 /* AppDelegate */,
+				F62DE8F11A2E313500E77B70 /* Controllers */,
+				F62DE8F21A2E317200E77B70 /* Helpers */,
+				F62DE8F01A2E312E00E77B70 /* Models */,
+				F62DE8F81A2E32B400E77B70 /* View */,
+			);
+			name = SRC;
+			sourceTree = "<group>";
+		};
+		F62DE8F01A2E312E00E77B70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F62DE8F11A2E313500E77B70 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F649BE461A27D22400A00E3D /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F62DE8F21A2E317200E77B70 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		F62DE8F31A2E317C00E77B70 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F649BE441A27D22400A00E3D /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F62DE8F41A2E319100E77B70 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F62DE8F61A2E31A400E77B70 /* Sounds */,
+				F62DE8F51A2E319900E77B70 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F62DE8F51A2E319900E77B70 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F637F7531A310A8D004752E0 /* login_btn.png */,
+				F637F7541A310A8D004752E0 /* login_btn@2x.png */,
+				F637F7551A310A8D004752E0 /* login_btn@3x.png */,
+				F637F7591A310A8D004752E0 /* login_ui.png */,
+				F637F75A1A310A8D004752E0 /* login_ui@2x.png */,
+				F637F75B1A310A8D004752E0 /* login_ui@3x.png */,
+				F637F75C1A310A8D004752E0 /* signup_btn.png */,
+				F637F75D1A310A8D004752E0 /* signup_btn@2x.png */,
+				F637F75E1A310A8D004752E0 /* signup_btn@3x.png */,
+				F649BE4B1A27D22400A00E3D /* Images.xcassets */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		F62DE8F61A2E31A400E77B70 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		F62DE8F81A2E32B400E77B70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F649BE4D1A27D22400A00E3D /* LaunchScreen.xib */,
+				F649BE481A27D22400A00E3D /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		F636FACE1A27D506002B832C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,15 +225,17 @@
 				F636FACF1A27D561002B832C /* Parse.framework */,
 			);
 			name = Frameworks;
+			path = Lootz;
 			sourceTree = "<group>";
 		};
 		F649BE361A27D22400A00E3D = {
 			isa = PBXGroup;
 			children = (
-				F649BE411A27D22400A00E3D /* Lootz */,
-				F649BE571A27D22400A00E3D /* LootzTests */,
+				F62DE8EF1A2E312400E77B70 /* SRC */,
+				F62DE8F41A2E319100E77B70 /* Resources */,
+				F649BE421A27D22400A00E3D /* Supporting Files */,
+				F636FACE1A27D506002B832C /* Frameworks */,
 				F649BE401A27D22400A00E3D /* Products */,
-				F636FACA1A27D3FC002B832C /* Lootz-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,43 +248,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F649BE411A27D22400A00E3D /* Lootz */ = {
-			isa = PBXGroup;
-			children = (
-				F649BE441A27D22400A00E3D /* AppDelegate.swift */,
-				F649BE461A27D22400A00E3D /* ViewController.swift */,
-				F649BE481A27D22400A00E3D /* Main.storyboard */,
-				F649BE4B1A27D22400A00E3D /* Images.xcassets */,
-				F649BE4D1A27D22400A00E3D /* LaunchScreen.xib */,
-				F649BE421A27D22400A00E3D /* Supporting Files */,
-				F636FACE1A27D506002B832C /* Frameworks */,
-			);
-			path = Lootz;
-			sourceTree = "<group>";
-		};
 		F649BE421A27D22400A00E3D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F636FACA1A27D3FC002B832C /* Lootz-Bridging-Header.h */,
 				F649BE431A27D22400A00E3D /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F649BE571A27D22400A00E3D /* LootzTests */ = {
-			isa = PBXGroup;
-			children = (
-				F649BE5A1A27D22400A00E3D /* LootzTests.swift */,
-				F649BE581A27D22400A00E3D /* Supporting Files */,
-			);
-			path = LootzTests;
-			sourceTree = "<group>";
-		};
-		F649BE581A27D22400A00E3D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F649BE591A27D22400A00E3D /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = Lootz;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +338,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F637F7641A310A8D004752E0 /* login_btn@3x.png in Resources */,
+				F637F7681A310A8D004752E0 /* login_ui.png in Resources */,
+				F637F7621A310A8D004752E0 /* login_btn.png in Resources */,
 				F649BE4A1A27D22400A00E3D /* Main.storyboard in Resources */,
+				F637F76C1A310A8D004752E0 /* signup_btn@2x.png in Resources */,
+				F637F76D1A310A8D004752E0 /* signup_btn@3x.png in Resources */,
+				F637F76B1A310A8D004752E0 /* signup_btn.png in Resources */,
+				F637F7631A310A8D004752E0 /* login_btn@2x.png in Resources */,
 				F649BE4F1A27D22400A00E3D /* LaunchScreen.xib in Resources */,
+				F637F76A1A310A8D004752E0 /* login_ui@3x.png in Resources */,
+				F637F7691A310A8D004752E0 /* login_ui@2x.png in Resources */,
 				F649BE4C1A27D22400A00E3D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +376,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F649BE5B1A27D22400A00E3D /* LootzTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +396,7 @@
 				F649BE491A27D22400A00E3D /* Base */,
 			);
 			name = Main.storyboard;
+			path = Lootz;
 			sourceTree = "<group>";
 		};
 		F649BE4D1A27D22400A00E3D /* LaunchScreen.xib */ = {
@@ -324,6 +405,7 @@
 				F649BE4E1A27D22400A00E3D /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = Lootz;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
