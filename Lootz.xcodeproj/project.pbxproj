@@ -26,9 +26,6 @@
 		F637F7621A310A8D004752E0 /* login_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F7531A310A8D004752E0 /* login_btn.png */; };
 		F637F7631A310A8D004752E0 /* login_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F7541A310A8D004752E0 /* login_btn@2x.png */; };
 		F637F7641A310A8D004752E0 /* login_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F7551A310A8D004752E0 /* login_btn@3x.png */; };
-		F637F7681A310A8D004752E0 /* login_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F7591A310A8D004752E0 /* login_ui.png */; };
-		F637F7691A310A8D004752E0 /* login_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F75A1A310A8D004752E0 /* login_ui@2x.png */; };
-		F637F76A1A310A8D004752E0 /* login_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F75B1A310A8D004752E0 /* login_ui@3x.png */; };
 		F637F76B1A310A8D004752E0 /* signup_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F75C1A310A8D004752E0 /* signup_btn.png */; };
 		F637F76C1A310A8D004752E0 /* signup_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F75D1A310A8D004752E0 /* signup_btn@2x.png */; };
 		F637F76D1A310A8D004752E0 /* signup_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F75E1A310A8D004752E0 /* signup_btn@3x.png */; };
@@ -37,6 +34,16 @@
 		F649BE4A1A27D22400A00E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F649BE481A27D22400A00E3D /* Main.storyboard */; };
 		F649BE4C1A27D22400A00E3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F649BE4B1A27D22400A00E3D /* Images.xcassets */; };
 		F649BE4F1A27D22400A00E3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F649BE4D1A27D22400A00E3D /* LaunchScreen.xib */; };
+		F6CFB6FD1A3255F100405290 /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB6F71A3255F100405290 /* exit.png */; };
+		F6CFB6FE1A3255F100405290 /* exit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB6F81A3255F100405290 /* exit@2x.png */; };
+		F6CFB6FF1A3255F100405290 /* exit@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB6F91A3255F100405290 /* exit@3x.png */; };
+		F6CFB7001A3255F100405290 /* singup_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB6FA1A3255F100405290 /* singup_ui.png */; };
+		F6CFB7011A3255F100405290 /* singup_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB6FB1A3255F100405290 /* singup_ui@2x.png */; };
+		F6CFB7021A3255F100405290 /* singup_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB6FC1A3255F100405290 /* singup_ui@3x.png */; };
+		F6CFB7041A3257A500405290 /* SignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CFB7031A3257A500405290 /* SignupController.swift */; };
+		F6CFB7081A325E1C00405290 /* login_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB7051A325E1C00405290 /* login_ui.png */; };
+		F6CFB7091A325E1C00405290 /* login_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB7061A325E1C00405290 /* login_ui@2x.png */; };
+		F6CFB70A1A325E1C00405290 /* login_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB7071A325E1C00405290 /* login_ui@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,9 +77,6 @@
 		F637F7531A310A8D004752E0 /* login_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_btn.png; sourceTree = "<group>"; };
 		F637F7541A310A8D004752E0 /* login_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_btn@2x.png"; sourceTree = "<group>"; };
 		F637F7551A310A8D004752E0 /* login_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_btn@3x.png"; sourceTree = "<group>"; };
-		F637F7591A310A8D004752E0 /* login_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ui.png; sourceTree = "<group>"; };
-		F637F75A1A310A8D004752E0 /* login_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_ui@2x.png"; sourceTree = "<group>"; };
-		F637F75B1A310A8D004752E0 /* login_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_ui@3x.png"; sourceTree = "<group>"; };
 		F637F75C1A310A8D004752E0 /* signup_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup_btn.png; sourceTree = "<group>"; };
 		F637F75D1A310A8D004752E0 /* signup_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup_btn@2x.png"; sourceTree = "<group>"; };
 		F637F75E1A310A8D004752E0 /* signup_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup_btn@3x.png"; sourceTree = "<group>"; };
@@ -84,6 +88,16 @@
 		F649BE4B1A27D22400A00E3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Lootz/Images.xcassets; sourceTree = "<group>"; };
 		F649BE4E1A27D22400A00E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F649BE541A27D22400A00E3D /* LootzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LootzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6CFB6F71A3255F100405290 /* exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit.png; sourceTree = "<group>"; };
+		F6CFB6F81A3255F100405290 /* exit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exit@2x.png"; sourceTree = "<group>"; };
+		F6CFB6F91A3255F100405290 /* exit@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exit@3x.png"; sourceTree = "<group>"; };
+		F6CFB6FA1A3255F100405290 /* singup_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = singup_ui.png; sourceTree = "<group>"; };
+		F6CFB6FB1A3255F100405290 /* singup_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "singup_ui@2x.png"; sourceTree = "<group>"; };
+		F6CFB6FC1A3255F100405290 /* singup_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "singup_ui@3x.png"; sourceTree = "<group>"; };
+		F6CFB7031A3257A500405290 /* SignupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupController.swift; sourceTree = "<group>"; };
+		F6CFB7051A325E1C00405290 /* login_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ui.png; sourceTree = "<group>"; };
+		F6CFB7061A325E1C00405290 /* login_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_ui@2x.png"; sourceTree = "<group>"; };
+		F6CFB7071A325E1C00405290 /* login_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_ui@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				F649BE461A27D22400A00E3D /* ViewController.swift */,
+				F6CFB7031A3257A500405290 /* SignupController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -174,12 +189,18 @@
 		F62DE8F51A2E319900E77B70 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F6CFB7051A325E1C00405290 /* login_ui.png */,
+				F6CFB7061A325E1C00405290 /* login_ui@2x.png */,
+				F6CFB7071A325E1C00405290 /* login_ui@3x.png */,
+				F6CFB6F71A3255F100405290 /* exit.png */,
+				F6CFB6F81A3255F100405290 /* exit@2x.png */,
+				F6CFB6F91A3255F100405290 /* exit@3x.png */,
+				F6CFB6FA1A3255F100405290 /* singup_ui.png */,
+				F6CFB6FB1A3255F100405290 /* singup_ui@2x.png */,
+				F6CFB6FC1A3255F100405290 /* singup_ui@3x.png */,
 				F637F7531A310A8D004752E0 /* login_btn.png */,
 				F637F7541A310A8D004752E0 /* login_btn@2x.png */,
 				F637F7551A310A8D004752E0 /* login_btn@3x.png */,
-				F637F7591A310A8D004752E0 /* login_ui.png */,
-				F637F75A1A310A8D004752E0 /* login_ui@2x.png */,
-				F637F75B1A310A8D004752E0 /* login_ui@3x.png */,
 				F637F75C1A310A8D004752E0 /* signup_btn.png */,
 				F637F75D1A310A8D004752E0 /* signup_btn@2x.png */,
 				F637F75E1A310A8D004752E0 /* signup_btn@3x.png */,
@@ -307,6 +328,7 @@
 				TargetAttributes = {
 					F649BE3E1A27D22400A00E3D = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = HL9C6CF9A5;
 					};
 					F649BE531A27D22400A00E3D = {
 						CreatedOnToolsVersion = 6.1;
@@ -339,16 +361,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				F637F7641A310A8D004752E0 /* login_btn@3x.png in Resources */,
-				F637F7681A310A8D004752E0 /* login_ui.png in Resources */,
+				F6CFB7001A3255F100405290 /* singup_ui.png in Resources */,
+				F6CFB7011A3255F100405290 /* singup_ui@2x.png in Resources */,
 				F637F7621A310A8D004752E0 /* login_btn.png in Resources */,
 				F649BE4A1A27D22400A00E3D /* Main.storyboard in Resources */,
+				F6CFB7081A325E1C00405290 /* login_ui.png in Resources */,
 				F637F76C1A310A8D004752E0 /* signup_btn@2x.png in Resources */,
+				F6CFB70A1A325E1C00405290 /* login_ui@3x.png in Resources */,
+				F6CFB6FD1A3255F100405290 /* exit.png in Resources */,
 				F637F76D1A310A8D004752E0 /* signup_btn@3x.png in Resources */,
+				F6CFB6FE1A3255F100405290 /* exit@2x.png in Resources */,
+				F6CFB7021A3255F100405290 /* singup_ui@3x.png in Resources */,
 				F637F76B1A310A8D004752E0 /* signup_btn.png in Resources */,
+				F6CFB7091A325E1C00405290 /* login_ui@2x.png in Resources */,
 				F637F7631A310A8D004752E0 /* login_btn@2x.png in Resources */,
+				F6CFB6FF1A3255F100405290 /* exit@3x.png in Resources */,
 				F649BE4F1A27D22400A00E3D /* LaunchScreen.xib in Resources */,
-				F637F76A1A310A8D004752E0 /* login_ui@3x.png in Resources */,
-				F637F7691A310A8D004752E0 /* login_ui@2x.png in Resources */,
 				F649BE4C1A27D22400A00E3D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6CFB7041A3257A500405290 /* SignupController.swift in Sources */,
 				F649BE471A27D22400A00E3D /* ViewController.swift in Sources */,
 				F649BE451A27D22400A00E3D /* AppDelegate.swift in Sources */,
 			);
@@ -493,12 +522,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Lootz",
 				);
 				INFOPLIST_FILE = Lootz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Lootz-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -510,12 +541,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Lootz",
 				);
 				INFOPLIST_FILE = Lootz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Lootz-Bridging-Header.h";
 			};
