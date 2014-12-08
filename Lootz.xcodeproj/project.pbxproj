@@ -34,6 +34,7 @@
 		F649BE4A1A27D22400A00E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F649BE481A27D22400A00E3D /* Main.storyboard */; };
 		F649BE4C1A27D22400A00E3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F649BE4B1A27D22400A00E3D /* Images.xcassets */; };
 		F649BE4F1A27D22400A00E3D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F649BE4D1A27D22400A00E3D /* LaunchScreen.xib */; };
+		F6B429201A363CAE006056A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B4291F1A363CAE006056A7 /* User.swift */; };
 		F6CFB6FD1A3255F100405290 /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB6F71A3255F100405290 /* exit.png */; };
 		F6CFB6FE1A3255F100405290 /* exit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB6F81A3255F100405290 /* exit@2x.png */; };
 		F6CFB6FF1A3255F100405290 /* exit@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB6F91A3255F100405290 /* exit@3x.png */; };
@@ -88,6 +89,7 @@
 		F649BE4B1A27D22400A00E3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Lootz/Images.xcassets; sourceTree = "<group>"; };
 		F649BE4E1A27D22400A00E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F649BE541A27D22400A00E3D /* LootzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LootzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6B4291F1A363CAE006056A7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F6CFB6F71A3255F100405290 /* exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit.png; sourceTree = "<group>"; };
 		F6CFB6F81A3255F100405290 /* exit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exit@2x.png"; sourceTree = "<group>"; };
 		F6CFB6F91A3255F100405290 /* exit@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exit@3x.png"; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		F62DE8F01A2E312E00E77B70 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F6B4291F1A363CAE006056A7 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B429201A363CAE006056A7 /* User.swift in Sources */,
 				F6CFB7041A3257A500405290 /* SignupController.swift in Sources */,
 				F649BE471A27D22400A00E3D /* ViewController.swift in Sources */,
 				F649BE451A27D22400A00E3D /* AppDelegate.swift in Sources */,
