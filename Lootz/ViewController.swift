@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     override func viewDidDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         NSNotificationCenter.defaultCenter().removeObserver(self)
+        
     }
 
     override func didReceiveMemoryWarning() {

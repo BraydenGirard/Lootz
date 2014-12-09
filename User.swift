@@ -10,9 +10,14 @@ import Foundation
 
 class User {
     
-    private var username:String?
-    private var email:String?
-    private var password:String?
+    enum UserClass {
+        case Engineer, Miner, Herbalist
+    }
+    
+    private var username: String?
+    private var email: String?
+    private var password: String?
+    private var userClass: UserClass?
     
     init() {
         
@@ -51,7 +56,7 @@ class User {
     
     func setEmail(input: String?) -> (success: Bool, error: String?) {
         if let tempEmail = input {
-            return (true, nil)
+           return (true, nil)
         }
         else {
             return (false, "must enter an email")
@@ -67,6 +72,21 @@ class User {
         }
     }
     
+    func setUserClass(input: UserClass) -> (success: Bool, error: String?) {
+        switch input {
+            case .Engineer:
+                userClass = UserClass.Engineer
+            case .Miner:
+                userClass = UserClass.Engineer
+            case .Herbalist:
+                userClass = UserClass.Engineer
+            default:
+                userClass = nil
+        }
+        
+        return (true, nil)
+    }
+    
     func getUsername() -> String {
         return username!
     }
@@ -77,6 +97,10 @@ class User {
     
     func getPassword() -> String {
         return password!;
+    }
+    
+    func getUserClass() -> UserClass {
+        return userClass!
     }
 
 }
