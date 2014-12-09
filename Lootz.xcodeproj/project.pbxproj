@@ -45,6 +45,9 @@
 		F6CFB7081A325E1C00405290 /* login_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB7051A325E1C00405290 /* login_ui.png */; };
 		F6CFB7091A325E1C00405290 /* login_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB7061A325E1C00405290 /* login_ui@2x.png */; };
 		F6CFB70A1A325E1C00405290 /* login_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB7071A325E1C00405290 /* login_ui@3x.png */; };
+		F6D789511A36B7B500078FA2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D789501A36B7B500078FA2 /* DatabaseManager.swift */; };
+		F6D789531A36B88A00078FA2 /* ParseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D789521A36B88A00078FA2 /* ParseImpl.swift */; };
+		F6D789551A36B90D00078FA2 /* DBFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D789541A36B90D00078FA2 /* DBFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +103,9 @@
 		F6CFB7051A325E1C00405290 /* login_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ui.png; sourceTree = "<group>"; };
 		F6CFB7061A325E1C00405290 /* login_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_ui@2x.png"; sourceTree = "<group>"; };
 		F6CFB7071A325E1C00405290 /* login_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_ui@3x.png"; sourceTree = "<group>"; };
+		F6D789501A36B7B500078FA2 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		F6D789521A36B88A00078FA2 /* ParseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseImpl.swift; sourceTree = "<group>"; };
+		F6D789541A36B90D00078FA2 /* DBFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,7 @@
 		F62DE8EF1A2E312400E77B70 /* SRC */ = {
 			isa = PBXGroup;
 			children = (
+				F6D7894F1A36B78800078FA2 /* Protocols */,
 				F62DE8F31A2E317C00E77B70 /* AppDelegate */,
 				F62DE8F11A2E313500E77B70 /* Controllers */,
 				F62DE8F21A2E317200E77B70 /* Helpers */,
@@ -168,6 +175,8 @@
 		F62DE8F21A2E317200E77B70 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F6D789521A36B88A00078FA2 /* ParseImpl.swift */,
+				F6D789541A36B90D00078FA2 /* DBFactory.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -280,6 +289,14 @@
 			);
 			name = "Supporting Files";
 			path = Lootz;
+			sourceTree = "<group>";
+		};
+		F6D7894F1A36B78800078FA2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F6D789501A36B7B500078FA2 /* DatabaseManager.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,7 +416,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6B429201A363CAE006056A7 /* User.swift in Sources */,
+				F6D789551A36B90D00078FA2 /* DBFactory.swift in Sources */,
+				F6D789531A36B88A00078FA2 /* ParseImpl.swift in Sources */,
 				F6CFB7041A3257A500405290 /* SignupController.swift in Sources */,
+				F6D789511A36B7B500078FA2 /* DatabaseManager.swift in Sources */,
 				F649BE471A27D22400A00E3D /* ViewController.swift in Sources */,
 				F649BE451A27D22400A00E3D /* AppDelegate.swift in Sources */,
 			);
