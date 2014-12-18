@@ -19,9 +19,7 @@ class User {
     private var password: String?
     private var userClass: UserClass?
     
-    init() {
-        
-    }
+    init() {}
     
     func setUsername(input: String?) -> (success: Bool, error: String?) {
         
@@ -56,6 +54,10 @@ class User {
     
     func setEmail(input: String?) -> (success: Bool, error: String?) {
         if let tempEmail = input {
+            if tempEmail.isEmpty {
+                return (false, "email can not be empty")
+            }
+            email = tempEmail
            return (true, nil)
         }
         else {
@@ -65,6 +67,10 @@ class User {
     
     func setPassword(input: String?) -> (success: Bool, error: String?) {
         if let tempPassword = input {
+            if tempPassword.isEmpty {
+                return (false, "password can not be empty")
+            }
+            password = tempPassword
             return (true, nil)
         }
         else {
