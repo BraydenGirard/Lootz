@@ -1,11 +1,3 @@
-//
-//  SignupController.swift
-//  Lootz
-//
-//  Created by Brayden Girard on 2014-12-05.
-//  Copyright (c) 2014 Brayden Girard. All rights reserved.
-//
-
 import UIKit
 
 class SignupController: UIViewController, UITextFieldDelegate {
