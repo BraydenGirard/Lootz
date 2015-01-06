@@ -13,9 +13,9 @@ class SignupController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        usernameText.delegate = self;
-        emailText.delegate = self;
-        passwordText.delegate = self;
+        usernameText.delegate = self
+        emailText.delegate = self
+        passwordText.delegate = self
         notificationCenter.addObserver(self, selector: "signUpFail:", name: "signUpFail", object: nil)
         notificationCenter.addObserver(self, selector: "signUpSuccess:", name: "signUpSuccess", object: nil)
         
@@ -32,7 +32,14 @@ class SignupController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signUpPushed(sender: UIButton) {
-        signUp(usernameText.text, email: emailText.text, password: passwordText.text)
+        if let error = checkSignUp(usernameText.text, email: emailText.text, password: passwordText.text) {
+            var alert = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else {
+            DBFactory.execute()?.signUp(usernameText.text!, email: emailText.text!, password: passwordText.text!)
+        }
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -42,11 +49,11 @@ class SignupController: UIViewController, UITextFieldDelegate {
     //MARK: - UITextField Delegate Methods
     
     func textFieldDidBeginEditing(textField: UITextField!) {
-        if(textField.tag == 1) {
+        if textField.tag == 1 {
             offset = 75
-        } else if(textField.tag == 2) {
+        } else if textField.tag == 2 {
             offset = 100
-        } else if(textField.tag == 3) {
+        } else if textField.tag == 3 {
             offset = 110
         }
         self.view.frame.origin.y -= offset
@@ -55,18 +62,6 @@ class SignupController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField) {
         self.view.frame.origin.y += offset
         offset = 0
-    }
-    
-    func signUp(username: String?, email: String?, password: String?) {
-        if let error = checkSignUp(username, email: email, password: password) {
-            var alert = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
-        else {
-            var user = User(username: username!, email: email!, password: password!)
-            DBFactory.execute()?.saveNewUser(user)
-        }
     }
     
     func signUpFail(notification: NSNotification) {
@@ -78,7 +73,8 @@ class SignupController: UIViewController, UITextFieldDelegate {
     
     func signUpSuccess(notification: NSNotification) {
         println("Successful signup")
-        //redirect to class selection
+        
+        self.performSegueWithIdentifier("signUpSegue", sender: nil)
     }
     
     //User validation

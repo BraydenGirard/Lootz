@@ -10,38 +10,62 @@ import Foundation
 
 class ParseImpl: DatabaseManager {
     
-    func saveUser(user: User) -> Bool {
-        return true;
-    }
-    
-    func saveNewUser(newUser:User) {
+    func signUp(username: String, email: String, password: String) {
        
         var user = PFUser()
-        user.username = newUser.getUsername()
-        user.password = newUser.getPassword()
-        user.email = newUser.getEmail()
+        user.username = username
+        user.password = password
+        user.email = email
             
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool!, error: NSError!) -> Void in
             if error == nil {
-                // User signed up succesfully
-                println("User created in parse")
-                NSNotificationCenter.defaultCenter().postNotificationName("signUpSuccess", object: user)
+                NSNotificationCenter.defaultCenter().postNotificationName("signUpSuccess", object: nil)
             } else {
                 let errorString = error.userInfo!["error"] as NSString
-                // Show the errorString somewhere and let the user try again.
                 println(errorString)
-                NSNotificationCenter.defaultCenter().postNotificationName("signUpFail", object: errorString)
+                
+                NSNotificationCenter.defaultCenter().postNotificationName("signUpFail", object: nil)
             }
         }
-        
     }
     
-    func signIn() -> Bool {
-        return false;
+    func login(username: String, password: String) {
+        PFUser.logInWithUsernameInBackground(username, password:password) {
+            (user: PFUser!, error: NSError!) -> Void in
+            if user != nil {
+                NSNotificationCenter.defaultCenter().postNotificationName("loginSuccess", object: nil)
+            } else {
+                let errorString = error.userInfo!["error"] as NSString
+                println(errorString)
+                
+                NSNotificationCenter.defaultCenter().postNotificationName("loginFail", object: nil)
+            }
+        }
     }
     
     func checkAutoSignIn() -> Bool {
+        var currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func getUser() -> User {
+        var currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            var user = User(username: currentUser.username, email: currentUser.email, password: currentUser.password)
+            return user
+        } else {
+            //Go back to login
+            var user = User()
+            return user
+        }
+    }
+    
+    func saveUser(user: User) -> Bool {
         return true;
     }
 }

@@ -9,8 +9,9 @@
 import Foundation
 
 protocol DatabaseManager {
-    func saveNewUser(User)
-    func signIn() -> Bool
+    func signUp(username: String, email: String, password: String)
+    func login(username: String, password: String)
     func checkAutoSignIn() -> Bool
     func saveUser(User) -> Bool
+    func getUser() -> User
 }

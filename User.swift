@@ -16,8 +16,14 @@ class User {
     
     init(username: String, email: String, password: String) {
         self.username = username
-        self.email = email;
-        self.password = password;
+        self.email = email
+        self.password = password
+    }
+    
+    init() {
+        self.username = "Unknown"
+        self.email = "Unknown"
+        self.password = "Unknown"
     }
     
     func getUsername() -> String {
