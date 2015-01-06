@@ -26,7 +26,7 @@ class ParseImpl: DatabaseManager {
             if error == nil {
                 // User signed up succesfully
                 println("User created in parse")
-                NSNotificationCenter.defaultCenter().postNotificationName("signUpSuccess", object: nil)
+                NSNotificationCenter.defaultCenter().postNotificationName("signUpSuccess", object: user)
             } else {
                 let errorString = error.userInfo!["error"] as NSString
                 // Show the errorString somewhere and let the user try again.

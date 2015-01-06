@@ -58,36 +58,15 @@ class SignupController: UIViewController, UITextFieldDelegate {
     }
     
     func signUp(username: String?, email: String?, password: String?) {
-        var user = User()
-        
-        var result = user.setUsername(username)
-        
-        if !result.success {
-            var alert = UIAlertController(title: "Username Error", message: result.error, preferredStyle: UIAlertControllerStyle.Alert)
+        if let error = checkSignUp(username, email: email, password: password) {
+            var alert = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
-            return
         }
-        
-        result = user.setEmail(email)
-        
-        if !result.success {
-            var alert = UIAlertController(title: "Username Error", message: result.error, preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
-            return
+        else {
+            var user = User(username: username!, email: email!, password: password!)
+            DBFactory.execute()?.saveNewUser(user)
         }
-        
-        result = user.setPassword(password)
-        
-        if !result.success {
-            var alert = UIAlertController(title: "Username Error", message: result.error, preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
-            return
-        }
-        
-        DBFactory.execute()?.saveNewUser(user)
     }
     
     func signUpFail(notification: NSNotification) {
@@ -100,5 +79,71 @@ class SignupController: UIViewController, UITextFieldDelegate {
     func signUpSuccess(notification: NSNotification) {
         println("Successful signup")
         //redirect to class selection
+    }
+    
+    //User validation
+    
+    func checkUsername(input: String?) -> String? {
+        if let tempUsername = input {
+            if tempUsername.isEmpty {
+                return "username can not be empty"
+            }
+            if countElements(tempUsername) > 20 {
+                return "username is to long (max 20 characters)"
+            }
+            if countElements(tempUsername) < 4 {
+                return "username is to short (min 4 characters)"
+            }
+            
+            let letters = NSCharacterSet.letterCharacterSet()
+            let digits = NSCharacterSet.decimalDigitCharacterSet()
+            
+            for uni in tempUsername.unicodeScalars {
+                if !letters.longCharacterIsMember(uni.value) && !digits.longCharacterIsMember(uni.value) {
+                    return "username is invalid (can only contain letters and numbers)"
+                }
+            }
+            return nil
+        }
+        else {
+            return "must enter a username"
+        }
+    }
+    
+    func checkEmail (input: String?) -> String? {
+        if let tempEmail = input {
+            if tempEmail.isEmpty {
+                return "email can not be empty"
+            }
+            return nil
+        }
+        else {
+            return "must enter an email"
+        }
+    }
+    
+    func checkPassword(input: String?) -> String? {
+        if let tempPassword = input {
+            if tempPassword.isEmpty {
+                return "password can not be empty"
+            }
+            return nil
+        }
+        else {
+            return "must enter a password"
+        }
+    }
+    
+    func checkSignUp(username: String?, email: String?, password: String?) -> String? {
+        if let result = checkUsername(username) {
+            return result
+        }
+        if let result = checkEmail(email) {
+            return result
+        }
+        if let result = checkPassword(password) {
+            return result
+        }
+        return nil
     }
 }
