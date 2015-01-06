@@ -9,7 +9,7 @@
 import Foundation
 
 class DBFactory {
-    class func execute() -> DatabaseManager? {
+    class func execute() -> DatabaseManager {
         return ParseImpl()
     }
 }

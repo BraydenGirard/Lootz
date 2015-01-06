@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -8,7 +8,7 @@
         <!--Login Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="LoginController" customModule="Lootz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginController" id="vXZ-lx-hvc" customClass="LoginController" customModule="Lootz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -151,7 +151,7 @@
         <!--View Controller-->
         <scene sceneID="28m-nf-3X0">
             <objects>
-                <viewController id="wTv-KC-KIO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainController" id="wTv-KC-KIO" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SEf-6W-9qn"/>
                         <viewControllerLayoutGuide type="bottom" id="7p8-KB-hmn"/>
@@ -344,6 +344,6 @@
         <image name="singup_ui.png" width="267" height="270"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JhF-Wb-FXz"/>
+        <segue reference="b7V-p5-Q8x"/>
     </inferredMetricsTieBreakers>
 </document>

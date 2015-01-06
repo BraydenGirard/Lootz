@@ -53,7 +53,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
             self.presentViewController(alert, animated: true, completion: nil)
         }
         else {
-            DBFactory.execute()?.login(usernameText.text!, password: passwordText.text!)
+            DBFactory.execute().login(usernameText.text!, password: passwordText.text!)
         }
 
     }
