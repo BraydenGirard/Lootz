@@ -9,5 +9,10 @@
 import Foundation
 
 class Potion: Loot {
-    
+    override func use() {
+        
+    }
+    override func remove() {
+        
+    }
 }

@@ -9,5 +9,10 @@
 import Foundation
 
 class Gold: Loot {
-    
+    override func use() {
+        
+    }
+    override func remove() {
+        
+    }
 }
