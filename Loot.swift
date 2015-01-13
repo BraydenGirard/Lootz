@@ -8,10 +8,46 @@
 
 import Foundation
 
+let UNKNOWN = "Uknown"
+let MAP = "Map"
+let BOUNTY = "Bounty"
+let HEALTH = "Health"
+let GOLD = "Gold"
+let EMERALD = "Emerald"
+let SAPHIRE = "Saphire"
+let RUBY = "Ruby"
+let CLARITYPOT = "Clarity_Potion"
+let ENERGYPOT = "Enerygy_Potion"
+let HEALTHPOT = "Health_Potion"
+let BAG = "Bag_Of_Loot"
+let BOW = "Bow"
+let TSWORD = "Toy_Sword"
+let SWORD = "Sword"
+let DAGGER = "Dagger"
+let AXE = "Axe"
+let MACE = "Mace"
+let SPEAR = "Spear"
+let STAFF = "Staff"
+let SSHIELD = "Small_Shield"
+let LSHIELD = "Large_Shield"
+let HELMET = "Helmet"
+let ARMOUR = "Armour"
+let GOLDPREFIX = "Gold "
+
 class Loot {
-    private var image: UIImage = UIImage(named:"default.png")!
-    private var rarity: Int = 0
-    private var name: String = "Uknown"
+    let name = UNKNOWN
+    let image =  UIImage(contentsOfFile: "default.png")!
+    let rarity = 0
+    
+    init(name: String, image: UIImage, rarity: Int) {
+        self.name = name
+        self.image = image
+        self.rarity = rarity
+    }
+    
+    init() {
+        
+    }
     
     func getImage() -> UIImage {
       return image

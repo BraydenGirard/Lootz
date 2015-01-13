@@ -37,8 +37,7 @@
 		F64D475A1A4271E500D0914C /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64D47561A4271E500D0914C /* ParseFacebookUtils.framework */; };
 		F64D475B1A4271E500D0914C /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64D47571A4271E500D0914C /* ParseUI.framework */; };
 		F69715F81A5C8EE2009B9366 /* Loot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715F71A5C8EE2009B9366 /* Loot.swift */; };
-		F69715FA1A5C8F08009B9366 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715F91A5C8F08009B9366 /* Weapon.swift */; };
-		F69715FC1A5C8F31009B9366 /* Armour.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715FB1A5C8F31009B9366 /* Armour.swift */; };
+		F69715FA1A5C8F08009B9366 /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715F91A5C8F08009B9366 /* Gear.swift */; };
 		F69715FE1A5C8F4B009B9366 /* Potion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715FD1A5C8F4B009B9366 /* Potion.swift */; };
 		F69716001A5C8F68009B9366 /* Gold.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715FF1A5C8F68009B9366 /* Gold.swift */; };
 		F69716021A5C8F81009B9366 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69716011A5C8F81009B9366 /* Map.swift */; };
@@ -105,8 +104,7 @@
 		F64D47561A4271E500D0914C /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		F64D47571A4271E500D0914C /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		F69715F71A5C8EE2009B9366 /* Loot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loot.swift; sourceTree = "<group>"; };
-		F69715F91A5C8F08009B9366 /* Weapon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
-		F69715FB1A5C8F31009B9366 /* Armour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Armour.swift; sourceTree = "<group>"; };
+		F69715F91A5C8F08009B9366 /* Gear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gear.swift; sourceTree = "<group>"; };
 		F69715FD1A5C8F4B009B9366 /* Potion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Potion.swift; sourceTree = "<group>"; };
 		F69715FF1A5C8F68009B9366 /* Gold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gold.swift; sourceTree = "<group>"; };
 		F69716011A5C8F81009B9366 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
@@ -182,8 +180,7 @@
 			children = (
 				F6B4291F1A363CAE006056A7 /* User.swift */,
 				F69715F71A5C8EE2009B9366 /* Loot.swift */,
-				F69715F91A5C8F08009B9366 /* Weapon.swift */,
-				F69715FB1A5C8F31009B9366 /* Armour.swift */,
+				F69715F91A5C8F08009B9366 /* Gear.swift */,
 				F69715FD1A5C8F4B009B9366 /* Potion.swift */,
 				F69715FF1A5C8F68009B9366 /* Gold.swift */,
 				F69716011A5C8F81009B9366 /* Map.swift */,
@@ -457,11 +454,10 @@
 				F6D789511A36B7B500078FA2 /* DatabaseManager.swift in Sources */,
 				F649BE471A27D22400A00E3D /* LoginController.swift in Sources */,
 				F69716061A5C8FA6009B9366 /* LootBag.swift in Sources */,
-				F69715FC1A5C8F31009B9366 /* Armour.swift in Sources */,
 				F69716041A5C8F8D009B9366 /* Bounty.swift in Sources */,
 				F649BE451A27D22400A00E3D /* AppDelegate.swift in Sources */,
 				F69715FE1A5C8F4B009B9366 /* Potion.swift in Sources */,
-				F69715FA1A5C8F08009B9366 /* Weapon.swift in Sources */,
+				F69715FA1A5C8F08009B9366 /* Gear.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
