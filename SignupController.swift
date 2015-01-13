@@ -38,7 +38,8 @@ class SignupController: UIViewController, UITextFieldDelegate {
             self.presentViewController(alert, animated: true, completion: nil)
         }
         else {
-            DBFactory.execute().signUp(usernameText.text!, email: emailText.text!, password: passwordText.text!)
+            var newUser = User(username: usernameText.text!, email: emailText.text!, password: passwordText.text!, health: FULLHEALTH, energy: FULLENERGY, clarity: FULLCLARITY, inventory: [Loot]())
+            DBFactory.execute().signUp(newUser)
         }
     }
     

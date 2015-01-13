@@ -10,14 +10,11 @@ import Foundation
 
 class ParseImpl: DatabaseManager {
     
-    func signUp(username: String, email: String, password: String) {
+    func signUp(user: User) {
        
-        var user = PFUser()
-        user.username = username
-        user.password = password
-        user.email = email
+        var parseUser = self.convertUser(user)
             
-        user.signUpInBackgroundWithBlock {
+        parseUser.signUpInBackgroundWithBlock {
             (succeeded: Bool!, error: NSError!) -> Void in
             if error == nil {
                 NSNotificationCenter.defaultCenter().postNotificationName("signUpSuccess", object: nil)
@@ -56,16 +53,29 @@ class ParseImpl: DatabaseManager {
     func getUser() -> User {
         var currentUser = PFUser.currentUser()
         if currentUser != nil {
-            var user = User(username: currentUser.username, email: currentUser.email, password: currentUser.password)
+            var user = User(parseUser: currentUser)
             return user
         } else {
-            //Go back to login
+            NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
             var user = User()
             return user
         }
     }
-    
+
     func saveUser(user: User) -> Bool {
-        return true;
+        self.convertUser(user).saveEventually()
+    }
+    
+    func convertUser(user: User) -> PFUser {
+        var parseUser = PFUser()
+        parseUser.username = user.getUsername()
+        parseUser.email = user.getEmail()
+        parseUser.password = user.getPassword()
+        parseUser["health"] = user.getHealth()
+        parseUser["energy"] = user.getEnergy()
+        parseUser["clarity"] = user.getClarity()
+        parseUser["inventory"] = user.getInventory()
+        
+        return parseUser
     }
 }

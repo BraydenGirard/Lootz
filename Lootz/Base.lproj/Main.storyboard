@@ -141,30 +141,12 @@
                     <connections>
                         <outlet property="passwordText" destination="dqM-LB-ezU" id="d0O-Oq-dBr"/>
                         <outlet property="usernameText" destination="0Cg-1j-GIY" id="pAl-In-Eq1"/>
-                        <segue destination="wTv-KC-KIO" kind="show" identifier="loginSegue" id="b7V-p5-Q8x"/>
+                        <segue destination="5JZ-K4-Q9W" kind="show" identifier="loginSegue" id="hcQ-FP-WLt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="372" y="300"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="28m-nf-3X0">
-            <objects>
-                <viewController storyboardIdentifier="MainController" id="wTv-KC-KIO" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SEf-6W-9qn"/>
-                        <viewControllerLayoutGuide type="bottom" id="7p8-KB-hmn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="c9D-vc-Jpn">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="87F-4z-gDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="890" y="1140"/>
         </scene>
         <!--Signup Controller-->
         <scene sceneID="Nl3-zH-WOd">
@@ -329,12 +311,24 @@
                         <outlet property="emailText" destination="EIb-eE-U8d" id="gSa-G6-DAc"/>
                         <outlet property="passwordText" destination="FV7-lx-ZeB" id="Okf-Td-XbW"/>
                         <outlet property="usernameText" destination="C1r-Tl-6Dq" id="Gil-fF-xYF"/>
-                        <segue destination="wTv-KC-KIO" kind="show" identifier="signUpSegue" id="JhF-Wb-FXz"/>
+                        <segue destination="5JZ-K4-Q9W" kind="show" identifier="signUpSegue" id="Sca-n7-eFh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Md1-sb-hej" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1290" y="300"/>
+        </scene>
+        <!--Main Controller-->
+        <scene sceneID="jCP-yN-Opy">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="5JZ-K4-Q9W" customClass="MainController" customModule="Lootz" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="exit" id="5fS-FP-t7A"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C7A-LQ-Lja" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="1158"/>
         </scene>
     </scenes>
     <resources>
@@ -345,6 +339,6 @@
         <image name="singup_ui.png" width="267" height="270"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b7V-p5-Q8x"/>
+        <segue reference="Sca-n7-eFh"/>
     </inferredMetricsTieBreakers>
 </document>

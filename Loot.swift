@@ -38,11 +38,13 @@ class Loot {
     let name = UNKNOWN
     let image =  UIImage(contentsOfFile: "default.png")!
     let rarity = 0
+    var quantity = 0
     
-    init(name: String, image: UIImage, rarity: Int) {
+    init(name: String, image: UIImage, rarity: Int, quantity: Int) {
         self.name = name
         self.image = image
         self.rarity = rarity
+        self.quantity = quantity
     }
     
     init() {
@@ -73,6 +75,18 @@ class Loot {
             }
         }
         return prettyName;
+    }
+    
+    func useAction(user: User) -> User {
+        
+    }
+    
+    func removeAction(user: User) -> User {
+        
+    }
+    
+    func deleteAction(user: User) -> User {
+        
     }
     
 }

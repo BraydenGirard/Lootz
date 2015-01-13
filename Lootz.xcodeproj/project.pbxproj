@@ -25,6 +25,9 @@
 		F637F76B1A310A8D004752E0 /* signup_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F75C1A310A8D004752E0 /* signup_btn.png */; };
 		F637F76C1A310A8D004752E0 /* signup_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F75D1A310A8D004752E0 /* signup_btn@2x.png */; };
 		F637F76D1A310A8D004752E0 /* signup_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F637F75E1A310A8D004752E0 /* signup_btn@3x.png */; };
+		F64999A81A65B6F6009CE022 /* Armour.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64999A71A65B6F6009CE022 /* Armour.swift */; };
+		F64999AA1A65BB1D009CE022 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64999A91A65BB1D009CE022 /* Weapon.swift */; };
+		F64999AC1A65CA96009CE022 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64999AB1A65CA96009CE022 /* MainController.swift */; };
 		F649BE451A27D22400A00E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F649BE441A27D22400A00E3D /* AppDelegate.swift */; };
 		F649BE471A27D22400A00E3D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F649BE461A27D22400A00E3D /* LoginController.swift */; };
 		F649BE4A1A27D22400A00E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F649BE481A27D22400A00E3D /* Main.storyboard */; };
@@ -89,6 +92,9 @@
 		F637F75C1A310A8D004752E0 /* signup_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup_btn.png; sourceTree = "<group>"; };
 		F637F75D1A310A8D004752E0 /* signup_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup_btn@2x.png"; sourceTree = "<group>"; };
 		F637F75E1A310A8D004752E0 /* signup_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup_btn@3x.png"; sourceTree = "<group>"; };
+		F64999A71A65B6F6009CE022 /* Armour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Armour.swift; sourceTree = "<group>"; };
+		F64999A91A65BB1D009CE022 /* Weapon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		F64999AB1A65CA96009CE022 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		F649BE3F1A27D22400A00E3D /* Lootz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lootz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F649BE431A27D22400A00E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F649BE441A27D22400A00E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Lootz/AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +192,8 @@
 				F69716011A5C8F81009B9366 /* Map.swift */,
 				F69716031A5C8F8D009B9366 /* Bounty.swift */,
 				F69716051A5C8FA6009B9366 /* LootBag.swift */,
+				F64999A71A65B6F6009CE022 /* Armour.swift */,
+				F64999A91A65BB1D009CE022 /* Weapon.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -195,6 +203,7 @@
 			children = (
 				F649BE461A27D22400A00E3D /* LoginController.swift */,
 				F6CFB7031A3257A500405290 /* SignupController.swift */,
+				F64999AB1A65CA96009CE022 /* MainController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -445,16 +454,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6B429201A363CAE006056A7 /* User.swift in Sources */,
+				F64999AA1A65BB1D009CE022 /* Weapon.swift in Sources */,
 				F6D789551A36B90D00078FA2 /* DBFactory.swift in Sources */,
 				F69716021A5C8F81009B9366 /* Map.swift in Sources */,
 				F6D789531A36B88A00078FA2 /* ParseImpl.swift in Sources */,
 				F69716001A5C8F68009B9366 /* Gold.swift in Sources */,
 				F69715F81A5C8EE2009B9366 /* Loot.swift in Sources */,
+				F64999AC1A65CA96009CE022 /* MainController.swift in Sources */,
 				F6CFB7041A3257A500405290 /* SignupController.swift in Sources */,
 				F6D789511A36B7B500078FA2 /* DatabaseManager.swift in Sources */,
 				F649BE471A27D22400A00E3D /* LoginController.swift in Sources */,
 				F69716061A5C8FA6009B9366 /* LootBag.swift in Sources */,
 				F69716041A5C8F8D009B9366 /* Bounty.swift in Sources */,
+				F64999A81A65B6F6009CE022 /* Armour.swift in Sources */,
 				F649BE451A27D22400A00E3D /* AppDelegate.swift in Sources */,
 				F69715FE1A5C8F4B009B9366 /* Potion.swift in Sources */,
 				F69715FA1A5C8F08009B9366 /* Gear.swift in Sources */,
