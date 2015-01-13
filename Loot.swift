@@ -11,7 +11,7 @@ import Foundation
 let UNKNOWN = "Uknown"
 let MAP = "Map"
 let BOUNTY = "Bounty"
-let HEALTH = "Health"
+let BAG = "Loot_Bag"
 let GOLD = "Gold"
 let EMERALD = "Emerald"
 let SAPHIRE = "Saphire"
@@ -19,7 +19,6 @@ let RUBY = "Ruby"
 let CLARITYPOT = "Clarity_Potion"
 let ENERGYPOT = "Enerygy_Potion"
 let HEALTHPOT = "Health_Potion"
-let BAG = "Bag_Of_Loot"
 let BOW = "Bow"
 let TSWORD = "Toy_Sword"
 let SWORD = "Sword"
@@ -31,8 +30,11 @@ let STAFF = "Staff"
 let SSHIELD = "Small_Shield"
 let LSHIELD = "Large_Shield"
 let HELMET = "Helmet"
-let ARMOUR = "Armour"
+let BARMOUR = "Body_Armour"
 let GOLDPREFIX = "Gold "
+let ONEHAND = "One_Hand"
+let TWOHAND = "Two_Hand"
+let ONEHANDARMOUR = "One_Hand_Armour"
 
 class Loot {
     let name = UNKNOWN
@@ -77,16 +79,10 @@ class Loot {
         return prettyName;
     }
     
-    func useAction(user: User) -> User {
-        
-    }
+    func use() { }
     
-    func removeAction(user: User) -> User {
-        
-    }
+    func remove() { }
     
-    func deleteAction(user: User) -> User {
-        
-    }
+    func delete() { }
     
 }

@@ -11,7 +11,8 @@
 import Foundation
 
 class Gear: Loot {
-
+    
+    private let type = UNKNOWN
     private let damage = 1
     private let accuracy = 0
     private let isRanged = false
@@ -27,42 +28,54 @@ class Gear: Loot {
         }
         
         if name == BOW {
+            self.type = TWOHAND
             self.isRanged = true
             self.accuracy = 80
             rarity = 20
         } else if name == TSWORD {
+            self.type = ONEHAND
             self.accuracy = 50
             rarity = 50
         } else if name == SWORD {
+            self.type = ONEHAND
             self.accuracy = 85
             rarity = 15
         } else if name == DAGGER {
+            self.type = ONEHAND
             self.accuracy = 75
             rarity = 25
         } else if name == AXE {
+            self.type = TWOHAND
             self.accuracy = 99
             rarity = 1
         } else if name == MACE {
+            self.type = ONEHAND
             self.accuracy = 95
             rarity = 5
         } else if name == SPEAR {
+            self.type = ONEHAND
             self.isRanged = true
             self.accuracy = 60
             rarity = 40
         } else if name == STAFF {
+            self.type = ONEHAND
             self.isRanged = true
             self.accuracy = 99
             rarity = 1
         } else if name == SSHIELD {
+            self.type = ONEHANDARMOUR
             self.accuracy = 10
             rarity = 10
         } else if name == LSHIELD {
+            self.type = ONEHANDARMOUR
             self.accuracy = 20
             rarity = 5
         } else if name == HELMET {
+            self.type = HELMET
             self.accuracy = 10
             rarity = 10
-        } else if name == ARMOUR {
+        } else if name == BARMOUR {
+            self.type = BARMOUR
             self.accuracy = 20
             rarity = 5
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61A020B1A65D2C500E37BA3 /* Gem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61A020A1A65D2C500E37BA3 /* Gem.swift */; };
 		F636FAFB1A27D622002B832C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636FAEF1A27D622002B832C /* Accounts.framework */; };
 		F636FAFC1A27D622002B832C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636FAF01A27D622002B832C /* AudioToolbox.framework */; };
 		F636FAFD1A27D622002B832C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636FAF11A27D622002B832C /* CFNetwork.framework */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F61A020A1A65D2C500E37BA3 /* Gem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gem.swift; sourceTree = "<group>"; };
 		F636FACA1A27D3FC002B832C /* Lootz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lootz-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		F636FAEF1A27D622002B832C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		F636FAF01A27D622002B832C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -187,13 +189,14 @@
 				F6B4291F1A363CAE006056A7 /* User.swift */,
 				F69715F71A5C8EE2009B9366 /* Loot.swift */,
 				F69715F91A5C8F08009B9366 /* Gear.swift */,
+				F64999A71A65B6F6009CE022 /* Armour.swift */,
+				F64999A91A65BB1D009CE022 /* Weapon.swift */,
 				F69715FD1A5C8F4B009B9366 /* Potion.swift */,
+				F61A020A1A65D2C500E37BA3 /* Gem.swift */,
 				F69715FF1A5C8F68009B9366 /* Gold.swift */,
 				F69716011A5C8F81009B9366 /* Map.swift */,
 				F69716031A5C8F8D009B9366 /* Bounty.swift */,
 				F69716051A5C8FA6009B9366 /* LootBag.swift */,
-				F64999A71A65B6F6009CE022 /* Armour.swift */,
-				F64999A91A65BB1D009CE022 /* Weapon.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				F649BE451A27D22400A00E3D /* AppDelegate.swift in Sources */,
 				F69715FE1A5C8F4B009B9366 /* Potion.swift in Sources */,
 				F69715FA1A5C8F08009B9366 /* Gear.swift in Sources */,
+				F61A020B1A65D2C500E37BA3 /* Gem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

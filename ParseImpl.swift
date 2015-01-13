@@ -64,6 +64,7 @@ class ParseImpl: DatabaseManager {
 
     func saveUser(user: User) -> Bool {
         self.convertUser(user).saveEventually()
+        return true
     }
     
     func convertUser(user: User) -> PFUser {
@@ -75,6 +76,7 @@ class ParseImpl: DatabaseManager {
         parseUser["energy"] = user.getEnergy()
         parseUser["clarity"] = user.getClarity()
         parseUser["inventory"] = user.getInventory()
+        parseUser["equipment"] = user.getEquipment()
         
         return parseUser
     }

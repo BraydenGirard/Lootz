@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class Map: Loot {
+    override func use() {
+        
+    }
+    override func remove() {
+        
+    }
+}

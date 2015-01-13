@@ -321,14 +321,14 @@
         <!--Main Controller-->
         <scene sceneID="jCP-yN-Opy">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="5JZ-K4-Q9W" customClass="MainController" customModule="Lootz" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="MainController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="5JZ-K4-Q9W" customClass="MainController" customModule="Lootz" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="show" identifier="exit" id="5fS-FP-t7A"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7A-LQ-Lja" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="1158"/>
+            <point key="canvasLocation" x="849" y="1365"/>
         </scene>
     </scenes>
     <resources>

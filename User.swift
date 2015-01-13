@@ -21,6 +21,7 @@ class User {
     private var energy: Int
     private var clarity: Int
     private var inventory: [Loot]
+    private var equipment: [Gear]
     
     init() {
         self.username = UNKNOWN
@@ -30,9 +31,10 @@ class User {
         self.energy = 0
         self.clarity = 0
         self.inventory = [Loot]()
+        self.equipment = [Gear]()
     }
     
-    init(username: String, email: String, password: String, health: Int, energy: Int, clarity: Int, inventory: [Loot]) {
+    init(username: String, email: String, password: String, health: Int, energy: Int, clarity: Int, inventory: [Loot], equipment: [Gear]) {
         self.username = username
         self.email = email
         self.password = password
@@ -40,10 +42,11 @@ class User {
         self.energy = energy
         self.clarity = clarity
         self.inventory = inventory
+        self.equipment = equipment
     }
     
     convenience init(parseUser: PFUser) {
-        self.init(username: parseUser["username"] as String, email: parseUser["email"] as String, password: parseUser["password"] as String, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: parseUser["inventory"] as [Loot])
+        self.init(username: parseUser["username"] as String, email: parseUser["email"] as String, password: parseUser["password"] as String, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: parseUser["inventory"] as [Loot], equipment: parseUser["equipment"] as [Gear])
     }
     
     func getUsername() -> String {
@@ -94,6 +97,22 @@ class User {
         self.clarity = FULLCLARITY
     }
     
+    func getHitDamage() -> Int {
+        return 0
+    }
+    
+    func getHitChance() -> Int {
+        return 0
+    }
+    
+    func getBlockDamage() -> Int {
+        return 0
+    }
+    
+    func getBlockChance() -> Int {
+        return 0
+    }
+    
     func addInventory(item: Loot) {
         //Add item to array if it does not already exist (check item names) else add 1 to quantity
     }
@@ -104,5 +123,17 @@ class User {
     
     func getInventory() -> [Loot] {
         return inventory
+    }
+    
+    func equipGear(item: Gear) {
+        //Check to see if already wearing to much of that type of gear
+    }
+    
+    func removeGear(item: Gear) {
+        //Check to see if inventory has room
+    }
+    
+    func getEquipment() -> [Loot] {
+        return equipment
     }
 }

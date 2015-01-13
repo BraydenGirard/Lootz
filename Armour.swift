@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class Armour: Gear {
+    override func use() {
+        
+    }
+    override func remove() {
+        
+    }
+}
