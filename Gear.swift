@@ -27,54 +27,54 @@ class Gear: Loot {
             rareMod = 2
         }
         
-        if name == BOW {
+        if name == BOW || name == GBOW {
             self.type = TWOHAND
             self.ranged = true
             self.accuracy = 80
             rarity = 20
-        } else if name == TSWORD {
+        } else if name == TSWORD || name == GTSWORD {
             self.type = ONEHAND
             self.accuracy = 50
             rarity = 50
-        } else if name == SWORD {
+        } else if name == SWORD || name == GSWORD {
             self.type = ONEHAND
             self.accuracy = 85
             rarity = 15
-        } else if name == DAGGER {
+        } else if name == DAGGER || name == GDAGGER {
             self.type = ONEHAND
             self.accuracy = 75
             rarity = 25
-        } else if name == AXE {
+        } else if name == AXE || name == GAXE {
             self.type = TWOHAND
             self.accuracy = 99
             rarity = 1
-        } else if name == MACE {
+        } else if name == MACE || name == GMACE {
             self.type = ONEHAND
             self.accuracy = 95
             rarity = 5
-        } else if name == SPEAR {
+        } else if name == SPEAR || name == GSPEAR {
             self.type = ONEHAND
             self.ranged = true
             self.accuracy = 60
             rarity = 40
-        } else if name == STAFF {
+        } else if name == STAFF || name == GSTAFF {
             self.type = ONEHAND
             self.ranged = true
             self.accuracy = 99
             rarity = 1
-        } else if name == SSHIELD {
+        } else if name == SSHIELD || name == GSSHIELD {
             self.type = ONEHANDARMOUR
             self.accuracy = 10
             rarity = 10
-        } else if name == LSHIELD {
+        } else if name == LSHIELD || name == GLSHIELD {
             self.type = ONEHANDARMOUR
             self.accuracy = 20
             rarity = 5
-        } else if name == HELMET {
+        } else if name == HELMET || name == GHELMET {
             self.type = HELMET
             self.accuracy = 10
             rarity = 10
-        } else if name == BARMOUR {
+        } else if name == BARMOUR || name == GBARMOUR {
             self.type = BARMOUR
             self.accuracy = 20
             rarity = 5
@@ -85,14 +85,6 @@ class Gear: Loot {
     
     convenience init(parseWeapon: PFObject) {
         self.init(name: parseWeapon["name"] as String, gold: parseWeapon["gold"] as Bool, quantity: parseWeapon["quantity"] as Int)
-    }
-    
-    override func getPrettyName() -> String {
-        var prettyName = ""
-        if self.isGold() {
-            prettyName = GOLDPREFIX + super.getPrettyName();
-        }
-        return prettyName;
     }
     
     func getType() -> String {

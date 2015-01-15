@@ -9,7 +9,7 @@
 import Foundation
 
 class Map: Loot {
-    init(quantity: Int) {
-        super.init(name: MAP, image: UIImage(contentsOfFile:MAP + ".png")!, rarity: MAPRARE, quantity: quantity)
+    override init() {
+        super.init(name: MAP, image: UIImage(contentsOfFile:MAP + ".png")!, rarity: MAPRARE, quantity: MAXMAP)
     }
 }

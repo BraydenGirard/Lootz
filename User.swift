@@ -8,9 +8,10 @@
 
 import Foundation
 
-let FULLHEALTH = 3
+let FULLHEALTH = 4
 let FULLENERGY = 100
 let FULLCLARITY = 100
+let FULLINVENTORY = 20
 
 class User {
     
@@ -98,42 +99,236 @@ class User {
     }
     
     func getHitDamage() -> Int {
-        return 0
+        var damage = 0
+        
+        for e in self.equipment {
+            if(e.getType() == ONEHAND || e.getType() == TWOHAND) {
+                damage += e.getDamage()
+            }
+        }
+        return damage;
     }
     
     func getHitChance() -> Int {
-        return 0
+        var chance = 0
+        var tempChance = 0
+        var isDual = false
+        
+        for e in self.equipment {
+            if(e.getType() == ONEHAND || e.getType() == TWOHAND) {
+                if(!isDual) {
+                    chance += e.getAccuracy()
+                    isDual = true
+                }
+                else {
+                    //Decide how to figure out chance
+                }
+            }
+        }
+        return chance;
     }
     
     func getBlockDamage() -> Int {
-        return 0
+        var damage = 0
+        
+        for e in self.equipment {
+            if(e.getType() != ONEHAND || e.getType() != TWOHAND) {
+                damage += e.getDamage()
+            }
+        }
+        return damage;
     }
     
     func getBlockChance() -> Int {
-        return 0
+        var chance = 0
+        
+        for e in self.equipment {
+            if(e.getType() != ONEHAND || e.getType() != TWOHAND) {
+                chance += e.getAccuracy()
+            }
+        }
+        return chance;
     }
     
-    func addInventory(item: Loot) {
-        //Add item to array if it does not already exist (check item names) else add 1 to quantity
+    //Returns true if item is added
+    //Returns false if item cannot be added
+    //because it already exits and only allowed 1
+    func addInventory(item: Loot) -> Bool {
+        var uniqueItem = false
+        
+        var index = self.findInventoryIndex(item)
+        
+        if(index == -1) {
+            uniqueItem = true
+        }
+        
+        if(self.inventory.count < FULLINVENTORY || !uniqueItem) {
+            var index = self.findInventoryIndex(item)
+            
+            if(index != -1) {
+                if(item.isMaxOfOne()) {
+                    return false
+                }
+                else {
+                    self.inventory[index].quantity + item.getQuantity()
+                    return true
+                }
+            }
+            self.inventory.append(item)
+            return true
+        }
+        return false
     }
     
+    //Returns 0 if all items are added to the inventory
+    //Returns number of items that must be cleared from inventory to make room
+    //if inventory does not have enough room
+    func addInventory(items: [Loot]) -> Int {
+        var uniqueItems = 0
+        
+        for i in items {
+            var index = self.findInventoryIndex(i)
+            
+            if(index == -1) {
+                uniqueItems++
+            }
+        }
+        
+        if(getInventory().count + uniqueItems <= FULLINVENTORY) {
+            for i in items {
+                var index = self.findInventoryIndex(i)
+                
+                if(index != -1) {
+                    self.inventory[index].quantity + i.getQuantity()
+                }
+                else {
+                    self.inventory.append(i)
+                }
+            }
+            return 0
+        }
+        else {
+            return getInventory().count + uniqueItems - FULLINVENTORY
+        }
+    }
+    
+    //Removes the item from inventory if it exists
+    //decreases quantity if multiple exist
     func removeInventory(item: Loot) {
-        //Remove item from array if only 1 exists (check item name and quantity) else remove 1 from quantity
+        if(getInventory().count > 0) {
+            var index = findInventoryIndex(item)
+            if(index != -1) {
+                var result = self.inventory[index].quantity - item.quantity
+                if(result > 0) {
+                    self.inventory[index].setQuantity(result)
+                }
+                else {
+                    self.inventory[index].remove()
+                }
+            }
+        }
     }
+    
+    //Removes one item from inventory to equipment
+    func equipFromInventory(item: Gear) {
+        if(getInventory().count > 0) {
+            var index = findInventoryIndex(item)
+            if(index != -1) {
+                var result = self.inventory[index].quantity - 1
+                if(result > 0) {
+                    item.setQuantity(1)
+                    self.equipment.append(item)
+                    self.inventory[index].setQuantity(result)
+                }
+                else {
+                    item.setQuantity(1)
+                    self.equipment.append(item)
+                    self.inventory[index].remove()
+                }
+            }
+        }
+    }
+    
+    
     
     func getInventory() -> [Loot] {
         return inventory
     }
     
-    func equipGear(item: Gear) {
-        //Check to see if already wearing to much of that type of gear
+    //If room to equip returns true
+    //Else returns false and must remove equipment first
+    func equipGear(item: Gear) -> Bool {
+        if(self.equipmentCount(item.getType()) == 0) {
+            if(item.getType() == ONEHAND && self.equipmentCount(TWOHAND) == 0) {
+                equipFromInventory(item)
+                return true
+            } else if(item.getType() == TWOHAND && self.equipmentCount(ONEHAND) == 0 && self.equipmentCount(ONEHANDARMOUR) == 0) {
+                equipFromInventory(item)
+                return true
+            } else if(item.getType() == ONEHANDARMOUR && self.equipmentCount(TWOHAND) == 0 && self.equipmentCount(ONEHAND) < 2) {
+                equipFromInventory(item)
+                return true
+            } else if(item.getType() == HELMET) {
+                equipFromInventory(item)
+                return true
+            } else if(item.getType() == BARMOUR) {
+                equipFromInventory(item)
+                return true
+            }
+        }
+        else if(self.equipmentCount(item.getType()) == 1){
+            if(item.getType() == ONEHAND && self.equipmentCount(ONEHANDARMOUR) == 0) {
+                equipFromInventory(item)
+                return true
+            }
+        }
+        return false
     }
     
-    func removeGear(item: Gear) {
-        //Check to see if inventory has room
+    //Returns true if inventory has room for gear
+    func removeGear(gear: Gear) -> Bool {
+        var index = 0
+     
+        for e in self.equipment {
+            if(e.getName() == gear.getName()) {
+                if(self.addInventory(self.equipment[index])) {
+                    self.equipment[index].remove()
+                    return true
+                }
+                else {
+                    return false
+                }
+            }
+            index++
+        }
+        return false
     }
     
+    //Returns how many of that item are equipped
+    func equipmentCount(type: String) -> Int {
+        var count = 0
+        for e in self.equipment {
+            if(e.getType() == type) {
+                count++
+            }
+        }
+        return count
+    }
+
     func getEquipment() -> [Loot] {
         return equipment
+    }
+    
+    //Returns -1 if the item does not exist in inventory
+    //Returns an index >= 0 if item exists in inventory
+    func findInventoryIndex(item: Loot) -> Int {
+        var index = 0
+        for tempItem in self.inventory {
+            if(item.name == tempItem.name) {
+                return index
+            }
+            index++
+        }
+        return -1
     }
 }

@@ -14,5 +14,6 @@ protocol DatabaseManager {
     func checkAutoSignIn() -> Bool
     func saveUser(user: User) -> Bool
     func getUser() -> User
+    func getUserByUsername(username: String) -> User
     func convertUser(user: User) -> PFUser
 }

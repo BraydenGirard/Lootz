@@ -31,15 +31,28 @@ let SSHIELD = "Small_Shield"
 let LSHIELD = "Large_Shield"
 let HELMET = "Helmet"
 let BARMOUR = "Body_Armour"
-let GOLDPREFIX = "Gold "
+let GBOW = "Gold_Bow"
+let GTSWORD = "Gold_Toy_Sword"
+let GSWORD = "Gold_Sword"
+let GDAGGER = "Gold_Dagger"
+let GAXE = "Gold_Axe"
+let GMACE = "Gold_Mace"
+let GSPEAR = "Gold_Spear"
+let GSTAFF = "Gold_Staff"
+let GSSHIELD = "Gold_Small_Shield"
+let GLSHIELD = "Gold_Large_Shield"
+let GHELMET = "Gold_Helmet"
+let GBARMOUR = "Gold_Body_Armour"
 let ONEHAND = "One_Hand"
 let TWOHAND = "Two_Hand"
 let ONEHANDARMOUR = "One_Hand_Armour"
+
 
 let DAMAGE = 1
 let GDAMAGE = 2
 let POTRARE = 5
 let MAPRARE = 2
+let MAXMAP = 1
 let BAGRARE = 5
 let MAXBAG = 1
 let BOUNTYRARE = 10
@@ -95,6 +108,13 @@ class Loot {
     
     func setQuantity(quantity: Int) {
         self.quantity = quantity
+    }
+    
+    func isMaxOfOne() -> Bool {
+        if(self.name == MAP || self.name == BAG || self.name == BOUNTY) {
+            return true
+        }
+        return false;
     }
     
     func use() { }
