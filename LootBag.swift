@@ -9,10 +9,7 @@
 import Foundation
 
 class LootBag: Loot {
-    override func use() {
-        
-    }
-    override func remove() {
-        
+    override init() {
+        super.init(name: BAG, image: UIImage(contentsOfFile:BAG + ".png")!, rarity: BAGRARE, quantity: MAXBAG)
     }
 }

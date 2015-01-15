@@ -15,21 +15,21 @@ class Gear: Loot {
     private let type = UNKNOWN
     private let damage = 1
     private let accuracy = 0
-    private let isRanged = false
-    private let isGold = false
+    private let ranged = false
+    private let gold = false
     
-    init(name: String, isGold: Bool, quantity: Int) {
-        self.isGold = isGold
+    init(name: String, gold: Bool, quantity: Int) {
+        self.gold = gold
         var rareMod = 1
         var rarity = 0
-        if isGold {
-            damage = 2
+        if self.gold {
+            self.damage = 2
             rareMod = 2
         }
         
         if name == BOW {
             self.type = TWOHAND
-            self.isRanged = true
+            self.ranged = true
             self.accuracy = 80
             rarity = 20
         } else if name == TSWORD {
@@ -54,12 +54,12 @@ class Gear: Loot {
             rarity = 5
         } else if name == SPEAR {
             self.type = ONEHAND
-            self.isRanged = true
+            self.ranged = true
             self.accuracy = 60
             rarity = 40
         } else if name == STAFF {
             self.type = ONEHAND
-            self.isRanged = true
+            self.ranged = true
             self.accuracy = 99
             rarity = 1
         } else if name == SSHIELD {
@@ -84,14 +84,34 @@ class Gear: Loot {
     }
     
     convenience init(parseWeapon: PFObject) {
-        self.init(name: parseWeapon["name"] as String, isGold: parseWeapon["isGold"] as Bool, quantity: parseWeapon["quantity"] as Int)
+        self.init(name: parseWeapon["name"] as String, gold: parseWeapon["gold"] as Bool, quantity: parseWeapon["quantity"] as Int)
     }
     
     override func getPrettyName() -> String {
         var prettyName = ""
-        if isGold {
+        if self.isGold() {
             prettyName = GOLDPREFIX + super.getPrettyName();
         }
         return prettyName;
+    }
+    
+    func getType() -> String {
+        return self.type
+    }
+    
+    func getDamage() -> Int {
+        return self.damage
+    }
+    
+    func getAccuracy() -> Int {
+        return self.accuracy
+    }
+    
+    func isRanged() -> Bool {
+        return self.ranged
+    }
+    
+    func isGold() -> Bool {
+        return self.gold
     }
 }

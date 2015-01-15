@@ -36,6 +36,16 @@ let ONEHAND = "One_Hand"
 let TWOHAND = "Two_Hand"
 let ONEHANDARMOUR = "One_Hand_Armour"
 
+let DAMAGE = 1
+let GDAMAGE = 2
+let POTRARE = 5
+let MAPRARE = 2
+let BAGRARE = 5
+let MAXBAG = 1
+let BOUNTYRARE = 10
+let MAXBOUNTY = 1
+let GOLDRARE = 100
+
 class Loot {
     let name = UNKNOWN
     let image =  UIImage(contentsOfFile: "default.png")!
@@ -77,6 +87,14 @@ class Loot {
             }
         }
         return prettyName;
+    }
+    
+    func getQuantity() -> Int {
+        return self.quantity
+    }
+    
+    func setQuantity(quantity: Int) {
+        self.quantity = quantity
     }
     
     func use() { }

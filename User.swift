@@ -45,7 +45,7 @@ class User {
         self.equipment = equipment
     }
     
-    convenience init(parseUser: PFUser) {
+    convenience init(parseUser: PFObject) {
         self.init(username: parseUser["username"] as String, email: parseUser["email"] as String, password: parseUser["password"] as String, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: parseUser["inventory"] as [Loot], equipment: parseUser["equipment"] as [Gear])
     }
     

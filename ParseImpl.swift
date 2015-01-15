@@ -61,6 +61,12 @@ class ParseImpl: DatabaseManager {
             return user
         }
     }
+    
+    func getUserByUsername(username: String) -> User {
+        var query = PFUser.query()
+        query.whereKey("username", equalTo:username)
+        return User(parseUser: query.getFirstObject())
+    }
 
     func saveUser(user: User) -> Bool {
         self.convertUser(user).saveEventually()

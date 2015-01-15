@@ -9,10 +9,7 @@
 import Foundation
 
 class Map: Loot {
-    override func use() {
-        
-    }
-    override func remove() {
-        
+    init(quantity: Int) {
+        super.init(name: MAP, image: UIImage(contentsOfFile:MAP + ".png")!, rarity: MAPRARE, quantity: quantity)
     }
 }

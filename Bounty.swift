@@ -10,10 +10,7 @@ import Foundation
 
 class Bounty: Loot {
     
-    override func use() {
-    
-    }
-    override func remove() {
-    
+    override init() {
+        super.init(name: BOUNTY, image: UIImage(contentsOfFile:BOUNTY + ".png")!, rarity: BOUNTYRARE, quantity: MAXBOUNTY)
     }
 }
