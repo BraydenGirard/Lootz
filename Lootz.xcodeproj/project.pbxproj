@@ -46,6 +46,7 @@
 		F69716041A5C8F8D009B9366 /* Bounty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69716031A5C8F8D009B9366 /* Bounty.swift */; };
 		F69716061A5C8FA6009B9366 /* LootBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69716051A5C8FA6009B9366 /* LootBag.swift */; };
 		F6B429201A363CAE006056A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B4291F1A363CAE006056A7 /* User.swift */; };
+		F6BEDCA41A6CBA530031D3DB /* Chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BEDCA31A6CBA530031D3DB /* Chest.swift */; };
 		F6CFB6FD1A3255F100405290 /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB6F71A3255F100405290 /* exit.png */; };
 		F6CFB6FE1A3255F100405290 /* exit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB6F81A3255F100405290 /* exit@2x.png */; };
 		F6CFB6FF1A3255F100405290 /* exit@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB6F91A3255F100405290 /* exit@3x.png */; };
@@ -115,6 +116,7 @@
 		F69716031A5C8F8D009B9366 /* Bounty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bounty.swift; sourceTree = "<group>"; };
 		F69716051A5C8FA6009B9366 /* LootBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LootBag.swift; sourceTree = "<group>"; };
 		F6B4291F1A363CAE006056A7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F6BEDCA31A6CBA530031D3DB /* Chest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chest.swift; sourceTree = "<group>"; };
 		F6CFB6F71A3255F100405290 /* exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit.png; sourceTree = "<group>"; };
 		F6CFB6F81A3255F100405290 /* exit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exit@2x.png"; sourceTree = "<group>"; };
 		F6CFB6F91A3255F100405290 /* exit@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exit@3x.png"; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				F69716011A5C8F81009B9366 /* Map.swift */,
 				F69716031A5C8F8D009B9366 /* Bounty.swift */,
 				F69716051A5C8FA6009B9366 /* LootBag.swift */,
+				F6BEDCA31A6CBA530031D3DB /* Chest.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				F69716041A5C8F8D009B9366 /* Bounty.swift in Sources */,
 				F649BE451A27D22400A00E3D /* AppDelegate.swift in Sources */,
 				F69715FE1A5C8F4B009B9366 /* Potion.swift in Sources */,
+				F6BEDCA41A6CBA530031D3DB /* Chest.swift in Sources */,
 				F69715FA1A5C8F08009B9366 /* Gear.swift in Sources */,
 				F61A020B1A65D2C500E37BA3 /* Gem.swift in Sources */,
 			);

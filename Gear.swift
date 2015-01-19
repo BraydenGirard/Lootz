@@ -1,6 +1,4 @@
 //Rarity is diveded by 2 if weapon is gold
-//Rarity is the difference of 100 - accuracy for offensive weapon
-//Rarity is the quotient of 100 / accuracy for defensive weapon
 //If weapon is ranged, allowed to attack the last looter
 //If the weapon is not ranged, allowed to attack the last looter if within 5 minutes of loot time
 //Weapon damage is doubled if gold for offensive weapon
@@ -31,27 +29,27 @@ class Gear: Loot {
             self.type = TWOHAND
             self.ranged = true
             self.accuracy = 80
-            rarity = 20
+            rarity = 10
         } else if name == TSWORD || name == GTSWORD {
             self.type = ONEHAND
             self.accuracy = 50
-            rarity = 50
+            rarity = 40
         } else if name == SWORD || name == GSWORD {
             self.type = ONEHAND
             self.accuracy = 85
-            rarity = 15
+            rarity = 8
         } else if name == DAGGER || name == GDAGGER {
             self.type = ONEHAND
             self.accuracy = 75
-            rarity = 25
+            rarity = 12
         } else if name == AXE || name == GAXE {
             self.type = TWOHAND
             self.accuracy = 99
-            rarity = 1
+            rarity = 4
         } else if name == MACE || name == GMACE {
             self.type = ONEHAND
             self.accuracy = 95
-            rarity = 5
+            rarity = 6
         } else if name == SPEAR || name == GSPEAR {
             self.type = ONEHAND
             self.ranged = true
@@ -61,7 +59,7 @@ class Gear: Loot {
             self.type = ONEHAND
             self.ranged = true
             self.accuracy = 99
-            rarity = 1
+            rarity = 2
         } else if name == SSHIELD || name == GSSHIELD {
             self.type = ONEHANDARMOUR
             self.accuracy = 10
@@ -69,7 +67,7 @@ class Gear: Loot {
         } else if name == LSHIELD || name == GLSHIELD {
             self.type = ONEHANDARMOUR
             self.accuracy = 20
-            rarity = 5
+            rarity = 6
         } else if name == HELMET || name == GHELMET {
             self.type = HELMET
             self.accuracy = 10
@@ -77,7 +75,7 @@ class Gear: Loot {
         } else if name == BARMOUR || name == GBARMOUR {
             self.type = BARMOUR
             self.accuracy = 20
-            rarity = 5
+            rarity = 6
         }
         
         super.init(name: name, image: UIImage(contentsOfFile:name + ".png")!, rarity: rarity/rareMod, quantity: quantity)

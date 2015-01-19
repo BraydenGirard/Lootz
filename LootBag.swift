@@ -22,10 +22,10 @@ class LootBag: Loot {
     }
     
     func openBag(user: User) {
-        user.addInventory(<#item: Loot#>)
+        user.addInventory(items)
     }
     
-    func giveBag(username: String) {
+    func sellBag(username: String) {
         
     }
 }

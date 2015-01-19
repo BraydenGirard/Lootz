@@ -121,7 +121,9 @@ class User {
                     isDual = true
                 }
                 else {
-                    //Decide how to figure out chance
+                    if(e.getAccuracy() > chance) {
+                        chance = e.getAccuracy()
+                    }
                 }
             }
         }
