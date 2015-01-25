@@ -334,15 +334,9 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.png" translatesAutoresizingMaskIntoConstraints="NO" id="oS3-OM-hbY">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=compact" misplaced="YES">
-                                    <rect key="frame" x="453" y="56" width="39" height="39"/>
-                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.png" translatesAutoresizingMaskIntoConstraints="NO" id="vsp-t2-p12">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=compact" misplaced="YES">
-                                    <rect key="frame" x="108" y="56" width="39" height="39"/>
-                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loot_btn.png" translatesAutoresizingMaskIntoConstraints="NO" id="jVS-Lp-A41">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -353,16 +347,20 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
+                            <constraint firstItem="vsp-t2-p12" firstAttribute="trailing" secondItem="FzS-EH-h7B" secondAttribute="trailing" constant="-366" id="FLF-ln-xCU"/>
                             <constraint firstAttribute="centerY" secondItem="FzS-EH-h7B" secondAttribute="centerY" constant="0.5" id="J0n-eO-Fzr"/>
-                            <constraint firstItem="oS3-OM-hbY" firstAttribute="leading" secondItem="vsp-t2-p12" secondAttribute="trailing" constant="306" id="K5a-3h-mJh"/>
+                            <constraint firstItem="vsp-t2-p12" firstAttribute="bottom" secondItem="FzS-EH-h7B" secondAttribute="bottom" constant="-265" id="Jtn-mh-4Oh"/>
                             <constraint firstItem="vsp-t2-p12" firstAttribute="leading" secondItem="FzS-EH-h7B" secondAttribute="leading" constant="20" id="M4g-db-0xA"/>
                             <constraint firstItem="jVS-Lp-A41" firstAttribute="bottom" secondItem="FzS-EH-h7B" secondAttribute="bottom" constant="-33" id="OyJ-Nk-lQr"/>
+                            <constraint firstItem="oS3-OM-hbY" firstAttribute="bottom" secondItem="FzS-EH-h7B" secondAttribute="bottom" constant="-265" id="WnN-uh-dV8"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="bottom" secondItem="fSp-cz-Vjm" secondAttribute="bottom" constant="33" id="XZ7-0S-QoC"/>
+                            <constraint firstItem="oS3-OM-hbY" firstAttribute="trailing" secondItem="FzS-EH-h7B" secondAttribute="trailing" constant="-21" id="YgX-8h-3oz"/>
                             <constraint firstItem="jVS-Lp-A41" firstAttribute="leading" secondItem="fSp-cz-Vjm" secondAttribute="trailing" constant="128" id="bV3-l8-VNR"/>
                             <constraint firstItem="jVS-Lp-A41" firstAttribute="trailing" secondItem="FzS-EH-h7B" secondAttribute="trailing" constant="-51" id="e7a-IB-yGe"/>
                             <constraint firstItem="jVS-Lp-A41" firstAttribute="leading" secondItem="FzS-EH-h7B" secondAttribute="leading" constant="276" id="gZJ-Zp-9QN"/>
                             <constraint firstAttribute="centerX" secondItem="FzS-EH-h7B" secondAttribute="centerX" constant="-0.5" id="hOm-N5-fjc"/>
                             <constraint firstItem="vsp-t2-p12" firstAttribute="top" secondItem="FzS-EH-h7B" secondAttribute="top" constant="17" id="nQu-1Z-yIe"/>
+                            <constraint firstItem="oS3-OM-hbY" firstAttribute="leading" secondItem="FzS-EH-h7B" secondAttribute="leading" constant="365" id="xkS-Xw-wWx"/>
                             <constraint firstItem="oS3-OM-hbY" firstAttribute="top" secondItem="FzS-EH-h7B" secondAttribute="top" constant="17" id="xko-Af-RS9"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="top" secondItem="fSp-cz-Vjm" secondAttribute="top" constant="-245" id="xtm-09-Uz9"/>
                         </constraints>
@@ -379,9 +377,13 @@
                                 <exclude reference="XZ7-0S-QoC"/>
                                 <exclude reference="hOm-N5-fjc"/>
                                 <exclude reference="xtm-09-Uz9"/>
+                                <exclude reference="FLF-ln-xCU"/>
+                                <exclude reference="Jtn-mh-4Oh"/>
                                 <exclude reference="M4g-db-0xA"/>
                                 <exclude reference="nQu-1Z-yIe"/>
-                                <exclude reference="K5a-3h-mJh"/>
+                                <exclude reference="WnN-uh-dV8"/>
+                                <exclude reference="YgX-8h-3oz"/>
+                                <exclude reference="xkS-Xw-wWx"/>
                                 <exclude reference="xko-Af-RS9"/>
                                 <exclude reference="OyJ-Nk-lQr"/>
                                 <exclude reference="bV3-l8-VNR"/>
@@ -402,9 +404,13 @@
                                 <include reference="XZ7-0S-QoC"/>
                                 <include reference="hOm-N5-fjc"/>
                                 <include reference="xtm-09-Uz9"/>
+                                <include reference="FLF-ln-xCU"/>
+                                <include reference="Jtn-mh-4Oh"/>
                                 <include reference="M4g-db-0xA"/>
                                 <include reference="nQu-1Z-yIe"/>
-                                <include reference="K5a-3h-mJh"/>
+                                <include reference="WnN-uh-dV8"/>
+                                <include reference="YgX-8h-3oz"/>
+                                <include reference="xkS-Xw-wWx"/>
                                 <include reference="xko-Af-RS9"/>
                                 <include reference="OyJ-Nk-lQr"/>
                                 <include reference="bV3-l8-VNR"/>
