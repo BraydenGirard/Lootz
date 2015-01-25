@@ -126,6 +126,150 @@
 		F6D789511A36B7B500078FA2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D789501A36B7B500078FA2 /* DatabaseManager.swift */; };
 		F6D789531A36B88A00078FA2 /* ParseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D789521A36B88A00078FA2 /* ParseImpl.swift */; };
 		F6D789551A36B90D00078FA2 /* DBFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D789541A36B90D00078FA2 /* DBFactory.swift */; };
+		F6D9DEFC1A75763500F72300 /* Armor-Upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DE931A75763500F72300 /* Armor-Upgrade.png */; };
+		F6D9DEFD1A75763500F72300 /* Armor-Upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DE941A75763500F72300 /* Armor-Upgrade@2x.png */; };
+		F6D9DEFE1A75763500F72300 /* Armor-Upgrade@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DE951A75763500F72300 /* Armor-Upgrade@3x.png */; };
+		F6D9DEFF1A75763500F72300 /* Armor.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DE961A75763500F72300 /* Armor.png */; };
+		F6D9DF001A75763500F72300 /* Armor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DE971A75763500F72300 /* Armor@2x.png */; };
+		F6D9DF011A75763500F72300 /* Armor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DE981A75763500F72300 /* Armor@3x.png */; };
+		F6D9DF021A75763500F72300 /* Axe-2-Upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DE991A75763500F72300 /* Axe-2-Upgrade.png */; };
+		F6D9DF031A75763500F72300 /* Axe-2-Upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DE9A1A75763500F72300 /* Axe-2-Upgrade@2x.png */; };
+		F6D9DF041A75763500F72300 /* Axe-2-Upgrade@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DE9B1A75763500F72300 /* Axe-2-Upgrade@3x.png */; };
+		F6D9DF051A75763500F72300 /* Axe.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DE9C1A75763500F72300 /* Axe.png */; };
+		F6D9DF061A75763500F72300 /* Axe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DE9D1A75763500F72300 /* Axe@2x.png */; };
+		F6D9DF071A75763500F72300 /* Axe@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DE9E1A75763500F72300 /* Axe@3x.png */; };
+		F6D9DF081A75763500F72300 /* AxeDouble-2-Upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DE9F1A75763500F72300 /* AxeDouble-2-Upgrade.png */; };
+		F6D9DF091A75763500F72300 /* AxeDouble-2-Upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEA01A75763500F72300 /* AxeDouble-2-Upgrade@2x.png */; };
+		F6D9DF0A1A75763500F72300 /* AxeDouble-2-Upgrade@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEA11A75763500F72300 /* AxeDouble-2-Upgrade@3x.png */; };
+		F6D9DF0B1A75763500F72300 /* AxeDouble.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEA21A75763500F72300 /* AxeDouble.png */; };
+		F6D9DF0C1A75763500F72300 /* AxeDouble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEA31A75763500F72300 /* AxeDouble@2x.png */; };
+		F6D9DF0D1A75763500F72300 /* AxeDouble@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEA41A75763500F72300 /* AxeDouble@3x.png */; };
+		F6D9DF0E1A75763500F72300 /* Backpack.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEA51A75763500F72300 /* Backpack.png */; };
+		F6D9DF0F1A75763500F72300 /* Backpack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEA61A75763500F72300 /* Backpack@2x.png */; };
+		F6D9DF101A75763500F72300 /* Backpack@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEA71A75763500F72300 /* Backpack@3x.png */; };
+		F6D9DF111A75763500F72300 /* Bow-Upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEA81A75763500F72300 /* Bow-Upgrade.png */; };
+		F6D9DF121A75763500F72300 /* Bow-Upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEA91A75763500F72300 /* Bow-Upgrade@2x.png */; };
+		F6D9DF131A75763500F72300 /* Bow-Upgrade@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEAA1A75763500F72300 /* Bow-Upgrade@3x.png */; };
+		F6D9DF141A75763500F72300 /* Bow.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEAB1A75763500F72300 /* Bow.png */; };
+		F6D9DF151A75763500F72300 /* Bow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEAC1A75763500F72300 /* Bow@2x.png */; };
+		F6D9DF161A75763500F72300 /* Bow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEAD1A75763500F72300 /* Bow@3x.png */; };
+		F6D9DF171A75763500F72300 /* Coin.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEAE1A75763500F72300 /* Coin.png */; };
+		F6D9DF181A75763500F72300 /* Coin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEAF1A75763500F72300 /* Coin@2x.png */; };
+		F6D9DF191A75763500F72300 /* Coin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB01A75763500F72300 /* Coin@3x.png */; };
+		F6D9DF1A1A75763500F72300 /* Dagger-Upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB11A75763500F72300 /* Dagger-Upgrade.png */; };
+		F6D9DF1B1A75763500F72300 /* Dagger-Upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB21A75763500F72300 /* Dagger-Upgrade@2x.png */; };
+		F6D9DF1C1A75763500F72300 /* Dagger-Upgrade@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB31A75763500F72300 /* Dagger-Upgrade@3x.png */; };
+		F6D9DF1D1A75763500F72300 /* Dagger.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB41A75763500F72300 /* Dagger.png */; };
+		F6D9DF1E1A75763500F72300 /* Dagger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB51A75763500F72300 /* Dagger@2x.png */; };
+		F6D9DF1F1A75763500F72300 /* Dagger@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB61A75763500F72300 /* Dagger@3x.png */; };
+		F6D9DF201A75763500F72300 /* GemBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB71A75763500F72300 /* GemBlue.png */; };
+		F6D9DF211A75763500F72300 /* GemBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB81A75763500F72300 /* GemBlue@2x.png */; };
+		F6D9DF221A75763500F72300 /* GemBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB91A75763500F72300 /* GemBlue@3x.png */; };
+		F6D9DF231A75763500F72300 /* GemGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEBA1A75763500F72300 /* GemGreen.png */; };
+		F6D9DF241A75763500F72300 /* GemGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEBB1A75763500F72300 /* GemGreen@2x.png */; };
+		F6D9DF251A75763500F72300 /* GemGreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEBC1A75763500F72300 /* GemGreen@3x.png */; };
+		F6D9DF261A75763500F72300 /* GemRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEBD1A75763500F72300 /* GemRed.png */; };
+		F6D9DF271A75763500F72300 /* GemRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEBE1A75763500F72300 /* GemRed@2x.png */; };
+		F6D9DF281A75763500F72300 /* GemRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEBF1A75763500F72300 /* GemRed@3x.png */; };
+		F6D9DF291A75763500F72300 /* Hammer-Upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEC01A75763500F72300 /* Hammer-Upgrade.png */; };
+		F6D9DF2A1A75763500F72300 /* Hammer-Upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEC11A75763500F72300 /* Hammer-Upgrade@2x.png */; };
+		F6D9DF2B1A75763500F72300 /* Hammer-Upgrade@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEC21A75763500F72300 /* Hammer-Upgrade@3x.png */; };
+		F6D9DF2C1A75763500F72300 /* Hammer.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEC31A75763500F72300 /* Hammer.png */; };
+		F6D9DF2D1A75763500F72300 /* Hammer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEC41A75763500F72300 /* Hammer@2x.png */; };
+		F6D9DF2E1A75763500F72300 /* Hammer@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEC51A75763500F72300 /* Hammer@3x.png */; };
+		F6D9DF2F1A75763500F72300 /* Helmet-Upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEC61A75763500F72300 /* Helmet-Upgrade.png */; };
+		F6D9DF301A75763500F72300 /* Helmet-Upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEC71A75763500F72300 /* Helmet-Upgrade@2x.png */; };
+		F6D9DF311A75763500F72300 /* Helmet-Upgrade@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEC81A75763500F72300 /* Helmet-Upgrade@3x.png */; };
+		F6D9DF321A75763500F72300 /* Helmet.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEC91A75763500F72300 /* Helmet.png */; };
+		F6D9DF331A75763500F72300 /* Helmet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DECA1A75763500F72300 /* Helmet@2x.png */; };
+		F6D9DF341A75763500F72300 /* Helmet@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DECB1A75763500F72300 /* Helmet@3x.png */; };
+		F6D9DF351A75763500F72300 /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DECC1A75763500F72300 /* Map.png */; };
+		F6D9DF361A75763500F72300 /* Map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DECD1A75763500F72300 /* Map@2x.png */; };
+		F6D9DF371A75763500F72300 /* Map@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DECE1A75763500F72300 /* Map@3x.png */; };
+		F6D9DF381A75763500F72300 /* PotionBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DECF1A75763500F72300 /* PotionBlue.png */; };
+		F6D9DF391A75763500F72300 /* PotionBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED01A75763500F72300 /* PotionBlue@2x.png */; };
+		F6D9DF3A1A75763500F72300 /* PotionBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED11A75763500F72300 /* PotionBlue@3x.png */; };
+		F6D9DF3B1A75763500F72300 /* PotionGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED21A75763500F72300 /* PotionGreen.png */; };
+		F6D9DF3C1A75763500F72300 /* PotionGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED31A75763500F72300 /* PotionGreen@2x.png */; };
+		F6D9DF3D1A75763500F72300 /* PotionGreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED41A75763500F72300 /* PotionGreen@3x.png */; };
+		F6D9DF3E1A75763500F72300 /* PotionRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED51A75763500F72300 /* PotionRed.png */; };
+		F6D9DF3F1A75763500F72300 /* PotionRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED61A75763500F72300 /* PotionRed@2x.png */; };
+		F6D9DF401A75763500F72300 /* PotionRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED71A75763500F72300 /* PotionRed@3x.png */; };
+		F6D9DF411A75763500F72300 /* Scroll.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED81A75763500F72300 /* Scroll.png */; };
+		F6D9DF421A75763500F72300 /* Scroll@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED91A75763500F72300 /* Scroll@2x.png */; };
+		F6D9DF431A75763500F72300 /* Scroll@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEDA1A75763500F72300 /* Scroll@3x.png */; };
+		F6D9DF441A75763500F72300 /* Shield-Upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEDB1A75763500F72300 /* Shield-Upgrade.png */; };
+		F6D9DF451A75763500F72300 /* Shield-Upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEDC1A75763500F72300 /* Shield-Upgrade@2x.png */; };
+		F6D9DF461A75763500F72300 /* Shield-Upgrade@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEDD1A75763500F72300 /* Shield-Upgrade@3x.png */; };
+		F6D9DF471A75763500F72300 /* Shield.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEDE1A75763500F72300 /* Shield.png */; };
+		F6D9DF481A75763500F72300 /* Shield@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEDF1A75763500F72300 /* Shield@2x.png */; };
+		F6D9DF491A75763500F72300 /* Shield@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEE01A75763500F72300 /* Shield@3x.png */; };
+		F6D9DF4A1A75763500F72300 /* Small-Shield-Upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEE11A75763500F72300 /* Small-Shield-Upgrade.png */; };
+		F6D9DF4B1A75763500F72300 /* Small-Shield-Upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEE21A75763500F72300 /* Small-Shield-Upgrade@2x.png */; };
+		F6D9DF4C1A75763500F72300 /* Small-Shield-Upgrade@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEE31A75763500F72300 /* Small-Shield-Upgrade@3x.png */; };
+		F6D9DF4D1A75763500F72300 /* Small-Shield.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEE41A75763500F72300 /* Small-Shield.png */; };
+		F6D9DF4E1A75763500F72300 /* Small-Shield@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEE51A75763500F72300 /* Small-Shield@2x.png */; };
+		F6D9DF4F1A75763500F72300 /* Small-Shield@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEE61A75763500F72300 /* Small-Shield@3x.png */; };
+		F6D9DF501A75763500F72300 /* Spear-Upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEE71A75763500F72300 /* Spear-Upgrade.png */; };
+		F6D9DF511A75763500F72300 /* Spear-Upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEE81A75763500F72300 /* Spear-Upgrade@2x.png */; };
+		F6D9DF521A75763500F72300 /* Spear-Upgrade@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEE91A75763500F72300 /* Spear-Upgrade@3x.png */; };
+		F6D9DF531A75763500F72300 /* Spear.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEEA1A75763500F72300 /* Spear.png */; };
+		F6D9DF541A75763500F72300 /* Spear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEEB1A75763500F72300 /* Spear@2x.png */; };
+		F6D9DF551A75763500F72300 /* Spear@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEEC1A75763500F72300 /* Spear@3x.png */; };
+		F6D9DF561A75763500F72300 /* Sword-Upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEED1A75763500F72300 /* Sword-Upgrade.png */; };
+		F6D9DF571A75763500F72300 /* Sword-Upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEEE1A75763500F72300 /* Sword-Upgrade@2x.png */; };
+		F6D9DF581A75763500F72300 /* Sword-Upgrade@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEEF1A75763500F72300 /* Sword-Upgrade@3x.png */; };
+		F6D9DF591A75763500F72300 /* Sword.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEF01A75763500F72300 /* Sword.png */; };
+		F6D9DF5A1A75763500F72300 /* Sword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEF11A75763500F72300 /* Sword@2x.png */; };
+		F6D9DF5B1A75763500F72300 /* Sword@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEF21A75763500F72300 /* Sword@3x.png */; };
+		F6D9DF5C1A75763500F72300 /* Wand-Upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEF31A75763500F72300 /* Wand-Upgrade.png */; };
+		F6D9DF5D1A75763500F72300 /* Wand-Upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEF41A75763500F72300 /* Wand-Upgrade@2x.png */; };
+		F6D9DF5E1A75763500F72300 /* Wand-Upgrade@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEF51A75763500F72300 /* Wand-Upgrade@3x.png */; };
+		F6D9DF5F1A75763500F72300 /* Wand.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEF61A75763500F72300 /* Wand.png */; };
+		F6D9DF601A75763500F72300 /* Wand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEF71A75763500F72300 /* Wand@2x.png */; };
+		F6D9DF611A75763500F72300 /* Wand@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEF81A75763500F72300 /* Wand@3x.png */; };
+		F6D9DF621A75763500F72300 /* WoodSword.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEF91A75763500F72300 /* WoodSword.png */; };
+		F6D9DF631A75763500F72300 /* WoodSword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEFA1A75763500F72300 /* WoodSword@2x.png */; };
+		F6D9DF641A75763500F72300 /* WoodSword@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEFB1A75763500F72300 /* WoodSword@3x.png */; };
+		F6D9DF8C1A75765400F72300 /* east_red.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF651A75765400F72300 /* east_red.png */; };
+		F6D9DF8D1A75765400F72300 /* east_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF661A75765400F72300 /* east_red@2x.png */; };
+		F6D9DF8E1A75765400F72300 /* east_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF671A75765400F72300 /* east_red@3x.png */; };
+		F6D9DF8F1A75765400F72300 /* east.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF681A75765400F72300 /* east.png */; };
+		F6D9DF901A75765400F72300 /* east@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF691A75765400F72300 /* east@2x.png */; };
+		F6D9DF911A75765400F72300 /* east@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF6A1A75765400F72300 /* east@3x.png */; };
+		F6D9DF921A75765400F72300 /* explorer_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF6B1A75765400F72300 /* explorer_ui.png */; };
+		F6D9DF931A75765400F72300 /* explorer_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF6C1A75765400F72300 /* explorer_ui@2x.png */; };
+		F6D9DF941A75765400F72300 /* explorer_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF6D1A75765400F72300 /* explorer_ui@3x.png */; };
+		F6D9DF951A75765400F72300 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF6E1A75765400F72300 /* list.png */; };
+		F6D9DF961A75765400F72300 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF6F1A75765400F72300 /* list@2x.png */; };
+		F6D9DF971A75765400F72300 /* list@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF701A75765400F72300 /* list@3x.png */; };
+		F6D9DF981A75765400F72300 /* loot_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF711A75765400F72300 /* loot_btn.png */; };
+		F6D9DF991A75765400F72300 /* loot_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF721A75765400F72300 /* loot_btn@2x.png */; };
+		F6D9DF9A1A75765400F72300 /* loot_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF731A75765400F72300 /* loot_btn@3x.png */; };
+		F6D9DF9B1A75765400F72300 /* north_red.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF741A75765400F72300 /* north_red.png */; };
+		F6D9DF9C1A75765400F72300 /* north_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF751A75765400F72300 /* north_red@2x.png */; };
+		F6D9DF9D1A75765400F72300 /* north_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF761A75765400F72300 /* north_red@3x.png */; };
+		F6D9DF9E1A75765400F72300 /* north.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF771A75765400F72300 /* north.png */; };
+		F6D9DF9F1A75765400F72300 /* north@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF781A75765400F72300 /* north@2x.png */; };
+		F6D9DFA01A75765400F72300 /* north@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF791A75765400F72300 /* north@3x.png */; };
+		F6D9DFA11A75765400F72300 /* search_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF7A1A75765400F72300 /* search_btn.png */; };
+		F6D9DFA21A75765400F72300 /* search_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF7B1A75765400F72300 /* search_btn@2x.png */; };
+		F6D9DFA31A75765400F72300 /* search_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF7C1A75765400F72300 /* search_btn@3x.png */; };
+		F6D9DFA41A75765400F72300 /* south_red.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF7D1A75765400F72300 /* south_red.png */; };
+		F6D9DFA51A75765400F72300 /* south_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF7E1A75765400F72300 /* south_red@2x.png */; };
+		F6D9DFA61A75765400F72300 /* south_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF7F1A75765400F72300 /* south_red@3x.png */; };
+		F6D9DFA71A75765400F72300 /* south.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF801A75765400F72300 /* south.png */; };
+		F6D9DFA81A75765400F72300 /* south@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF811A75765400F72300 /* south@2x.png */; };
+		F6D9DFA91A75765400F72300 /* south@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF821A75765400F72300 /* south@3x.png */; };
+		F6D9DFAA1A75765400F72300 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF831A75765400F72300 /* star.png */; };
+		F6D9DFAB1A75765400F72300 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF841A75765400F72300 /* star@2x.png */; };
+		F6D9DFAC1A75765400F72300 /* star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF851A75765400F72300 /* star@3x.png */; };
+		F6D9DFAD1A75765400F72300 /* west_red.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF861A75765400F72300 /* west_red.png */; };
+		F6D9DFAE1A75765400F72300 /* west_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF871A75765400F72300 /* west_red@2x.png */; };
+		F6D9DFAF1A75765400F72300 /* west_red@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF881A75765400F72300 /* west_red@3x.png */; };
+		F6D9DFB01A75765400F72300 /* west.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF891A75765400F72300 /* west.png */; };
+		F6D9DFB11A75765400F72300 /* west@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF8A1A75765400F72300 /* west@2x.png */; };
+		F6D9DFB21A75765400F72300 /* west@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF8B1A75765400F72300 /* west@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -262,6 +406,150 @@
 		F6D789501A36B7B500078FA2 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		F6D789521A36B88A00078FA2 /* ParseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseImpl.swift; sourceTree = "<group>"; };
 		F6D789541A36B90D00078FA2 /* DBFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFactory.swift; sourceTree = "<group>"; };
+		F6D9DE931A75763500F72300 /* Armor-Upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Armor-Upgrade.png"; sourceTree = "<group>"; };
+		F6D9DE941A75763500F72300 /* Armor-Upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Armor-Upgrade@2x.png"; sourceTree = "<group>"; };
+		F6D9DE951A75763500F72300 /* Armor-Upgrade@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Armor-Upgrade@3x.png"; sourceTree = "<group>"; };
+		F6D9DE961A75763500F72300 /* Armor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Armor.png; sourceTree = "<group>"; };
+		F6D9DE971A75763500F72300 /* Armor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Armor@2x.png"; sourceTree = "<group>"; };
+		F6D9DE981A75763500F72300 /* Armor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Armor@3x.png"; sourceTree = "<group>"; };
+		F6D9DE991A75763500F72300 /* Axe-2-Upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Axe-2-Upgrade.png"; sourceTree = "<group>"; };
+		F6D9DE9A1A75763500F72300 /* Axe-2-Upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Axe-2-Upgrade@2x.png"; sourceTree = "<group>"; };
+		F6D9DE9B1A75763500F72300 /* Axe-2-Upgrade@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Axe-2-Upgrade@3x.png"; sourceTree = "<group>"; };
+		F6D9DE9C1A75763500F72300 /* Axe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Axe.png; sourceTree = "<group>"; };
+		F6D9DE9D1A75763500F72300 /* Axe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Axe@2x.png"; sourceTree = "<group>"; };
+		F6D9DE9E1A75763500F72300 /* Axe@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Axe@3x.png"; sourceTree = "<group>"; };
+		F6D9DE9F1A75763500F72300 /* AxeDouble-2-Upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AxeDouble-2-Upgrade.png"; sourceTree = "<group>"; };
+		F6D9DEA01A75763500F72300 /* AxeDouble-2-Upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AxeDouble-2-Upgrade@2x.png"; sourceTree = "<group>"; };
+		F6D9DEA11A75763500F72300 /* AxeDouble-2-Upgrade@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AxeDouble-2-Upgrade@3x.png"; sourceTree = "<group>"; };
+		F6D9DEA21A75763500F72300 /* AxeDouble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AxeDouble.png; sourceTree = "<group>"; };
+		F6D9DEA31A75763500F72300 /* AxeDouble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AxeDouble@2x.png"; sourceTree = "<group>"; };
+		F6D9DEA41A75763500F72300 /* AxeDouble@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AxeDouble@3x.png"; sourceTree = "<group>"; };
+		F6D9DEA51A75763500F72300 /* Backpack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Backpack.png; sourceTree = "<group>"; };
+		F6D9DEA61A75763500F72300 /* Backpack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Backpack@2x.png"; sourceTree = "<group>"; };
+		F6D9DEA71A75763500F72300 /* Backpack@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Backpack@3x.png"; sourceTree = "<group>"; };
+		F6D9DEA81A75763500F72300 /* Bow-Upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bow-Upgrade.png"; sourceTree = "<group>"; };
+		F6D9DEA91A75763500F72300 /* Bow-Upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bow-Upgrade@2x.png"; sourceTree = "<group>"; };
+		F6D9DEAA1A75763500F72300 /* Bow-Upgrade@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bow-Upgrade@3x.png"; sourceTree = "<group>"; };
+		F6D9DEAB1A75763500F72300 /* Bow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bow.png; sourceTree = "<group>"; };
+		F6D9DEAC1A75763500F72300 /* Bow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bow@2x.png"; sourceTree = "<group>"; };
+		F6D9DEAD1A75763500F72300 /* Bow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bow@3x.png"; sourceTree = "<group>"; };
+		F6D9DEAE1A75763500F72300 /* Coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Coin.png; sourceTree = "<group>"; };
+		F6D9DEAF1A75763500F72300 /* Coin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Coin@2x.png"; sourceTree = "<group>"; };
+		F6D9DEB01A75763500F72300 /* Coin@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Coin@3x.png"; sourceTree = "<group>"; };
+		F6D9DEB11A75763500F72300 /* Dagger-Upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dagger-Upgrade.png"; sourceTree = "<group>"; };
+		F6D9DEB21A75763500F72300 /* Dagger-Upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dagger-Upgrade@2x.png"; sourceTree = "<group>"; };
+		F6D9DEB31A75763500F72300 /* Dagger-Upgrade@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dagger-Upgrade@3x.png"; sourceTree = "<group>"; };
+		F6D9DEB41A75763500F72300 /* Dagger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dagger.png; sourceTree = "<group>"; };
+		F6D9DEB51A75763500F72300 /* Dagger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dagger@2x.png"; sourceTree = "<group>"; };
+		F6D9DEB61A75763500F72300 /* Dagger@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dagger@3x.png"; sourceTree = "<group>"; };
+		F6D9DEB71A75763500F72300 /* GemBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GemBlue.png; sourceTree = "<group>"; };
+		F6D9DEB81A75763500F72300 /* GemBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GemBlue@2x.png"; sourceTree = "<group>"; };
+		F6D9DEB91A75763500F72300 /* GemBlue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GemBlue@3x.png"; sourceTree = "<group>"; };
+		F6D9DEBA1A75763500F72300 /* GemGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GemGreen.png; sourceTree = "<group>"; };
+		F6D9DEBB1A75763500F72300 /* GemGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GemGreen@2x.png"; sourceTree = "<group>"; };
+		F6D9DEBC1A75763500F72300 /* GemGreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GemGreen@3x.png"; sourceTree = "<group>"; };
+		F6D9DEBD1A75763500F72300 /* GemRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GemRed.png; sourceTree = "<group>"; };
+		F6D9DEBE1A75763500F72300 /* GemRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GemRed@2x.png"; sourceTree = "<group>"; };
+		F6D9DEBF1A75763500F72300 /* GemRed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GemRed@3x.png"; sourceTree = "<group>"; };
+		F6D9DEC01A75763500F72300 /* Hammer-Upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hammer-Upgrade.png"; sourceTree = "<group>"; };
+		F6D9DEC11A75763500F72300 /* Hammer-Upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hammer-Upgrade@2x.png"; sourceTree = "<group>"; };
+		F6D9DEC21A75763500F72300 /* Hammer-Upgrade@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hammer-Upgrade@3x.png"; sourceTree = "<group>"; };
+		F6D9DEC31A75763500F72300 /* Hammer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hammer.png; sourceTree = "<group>"; };
+		F6D9DEC41A75763500F72300 /* Hammer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hammer@2x.png"; sourceTree = "<group>"; };
+		F6D9DEC51A75763500F72300 /* Hammer@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hammer@3x.png"; sourceTree = "<group>"; };
+		F6D9DEC61A75763500F72300 /* Helmet-Upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Helmet-Upgrade.png"; sourceTree = "<group>"; };
+		F6D9DEC71A75763500F72300 /* Helmet-Upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Helmet-Upgrade@2x.png"; sourceTree = "<group>"; };
+		F6D9DEC81A75763500F72300 /* Helmet-Upgrade@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Helmet-Upgrade@3x.png"; sourceTree = "<group>"; };
+		F6D9DEC91A75763500F72300 /* Helmet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Helmet.png; sourceTree = "<group>"; };
+		F6D9DECA1A75763500F72300 /* Helmet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Helmet@2x.png"; sourceTree = "<group>"; };
+		F6D9DECB1A75763500F72300 /* Helmet@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Helmet@3x.png"; sourceTree = "<group>"; };
+		F6D9DECC1A75763500F72300 /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map.png; sourceTree = "<group>"; };
+		F6D9DECD1A75763500F72300 /* Map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Map@2x.png"; sourceTree = "<group>"; };
+		F6D9DECE1A75763500F72300 /* Map@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Map@3x.png"; sourceTree = "<group>"; };
+		F6D9DECF1A75763500F72300 /* PotionBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PotionBlue.png; sourceTree = "<group>"; };
+		F6D9DED01A75763500F72300 /* PotionBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PotionBlue@2x.png"; sourceTree = "<group>"; };
+		F6D9DED11A75763500F72300 /* PotionBlue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PotionBlue@3x.png"; sourceTree = "<group>"; };
+		F6D9DED21A75763500F72300 /* PotionGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PotionGreen.png; sourceTree = "<group>"; };
+		F6D9DED31A75763500F72300 /* PotionGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PotionGreen@2x.png"; sourceTree = "<group>"; };
+		F6D9DED41A75763500F72300 /* PotionGreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PotionGreen@3x.png"; sourceTree = "<group>"; };
+		F6D9DED51A75763500F72300 /* PotionRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PotionRed.png; sourceTree = "<group>"; };
+		F6D9DED61A75763500F72300 /* PotionRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PotionRed@2x.png"; sourceTree = "<group>"; };
+		F6D9DED71A75763500F72300 /* PotionRed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PotionRed@3x.png"; sourceTree = "<group>"; };
+		F6D9DED81A75763500F72300 /* Scroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Scroll.png; sourceTree = "<group>"; };
+		F6D9DED91A75763500F72300 /* Scroll@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scroll@2x.png"; sourceTree = "<group>"; };
+		F6D9DEDA1A75763500F72300 /* Scroll@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scroll@3x.png"; sourceTree = "<group>"; };
+		F6D9DEDB1A75763500F72300 /* Shield-Upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shield-Upgrade.png"; sourceTree = "<group>"; };
+		F6D9DEDC1A75763500F72300 /* Shield-Upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shield-Upgrade@2x.png"; sourceTree = "<group>"; };
+		F6D9DEDD1A75763500F72300 /* Shield-Upgrade@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shield-Upgrade@3x.png"; sourceTree = "<group>"; };
+		F6D9DEDE1A75763500F72300 /* Shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shield.png; sourceTree = "<group>"; };
+		F6D9DEDF1A75763500F72300 /* Shield@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shield@2x.png"; sourceTree = "<group>"; };
+		F6D9DEE01A75763500F72300 /* Shield@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shield@3x.png"; sourceTree = "<group>"; };
+		F6D9DEE11A75763500F72300 /* Small-Shield-Upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Small-Shield-Upgrade.png"; sourceTree = "<group>"; };
+		F6D9DEE21A75763500F72300 /* Small-Shield-Upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Small-Shield-Upgrade@2x.png"; sourceTree = "<group>"; };
+		F6D9DEE31A75763500F72300 /* Small-Shield-Upgrade@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Small-Shield-Upgrade@3x.png"; sourceTree = "<group>"; };
+		F6D9DEE41A75763500F72300 /* Small-Shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Small-Shield.png"; sourceTree = "<group>"; };
+		F6D9DEE51A75763500F72300 /* Small-Shield@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Small-Shield@2x.png"; sourceTree = "<group>"; };
+		F6D9DEE61A75763500F72300 /* Small-Shield@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Small-Shield@3x.png"; sourceTree = "<group>"; };
+		F6D9DEE71A75763500F72300 /* Spear-Upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spear-Upgrade.png"; sourceTree = "<group>"; };
+		F6D9DEE81A75763500F72300 /* Spear-Upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spear-Upgrade@2x.png"; sourceTree = "<group>"; };
+		F6D9DEE91A75763500F72300 /* Spear-Upgrade@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spear-Upgrade@3x.png"; sourceTree = "<group>"; };
+		F6D9DEEA1A75763500F72300 /* Spear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spear.png; sourceTree = "<group>"; };
+		F6D9DEEB1A75763500F72300 /* Spear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spear@2x.png"; sourceTree = "<group>"; };
+		F6D9DEEC1A75763500F72300 /* Spear@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spear@3x.png"; sourceTree = "<group>"; };
+		F6D9DEED1A75763500F72300 /* Sword-Upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sword-Upgrade.png"; sourceTree = "<group>"; };
+		F6D9DEEE1A75763500F72300 /* Sword-Upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sword-Upgrade@2x.png"; sourceTree = "<group>"; };
+		F6D9DEEF1A75763500F72300 /* Sword-Upgrade@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sword-Upgrade@3x.png"; sourceTree = "<group>"; };
+		F6D9DEF01A75763500F72300 /* Sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sword.png; sourceTree = "<group>"; };
+		F6D9DEF11A75763500F72300 /* Sword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sword@2x.png"; sourceTree = "<group>"; };
+		F6D9DEF21A75763500F72300 /* Sword@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sword@3x.png"; sourceTree = "<group>"; };
+		F6D9DEF31A75763500F72300 /* Wand-Upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wand-Upgrade.png"; sourceTree = "<group>"; };
+		F6D9DEF41A75763500F72300 /* Wand-Upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wand-Upgrade@2x.png"; sourceTree = "<group>"; };
+		F6D9DEF51A75763500F72300 /* Wand-Upgrade@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wand-Upgrade@3x.png"; sourceTree = "<group>"; };
+		F6D9DEF61A75763500F72300 /* Wand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wand.png; sourceTree = "<group>"; };
+		F6D9DEF71A75763500F72300 /* Wand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wand@2x.png"; sourceTree = "<group>"; };
+		F6D9DEF81A75763500F72300 /* Wand@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Wand@3x.png"; sourceTree = "<group>"; };
+		F6D9DEF91A75763500F72300 /* WoodSword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WoodSword.png; sourceTree = "<group>"; };
+		F6D9DEFA1A75763500F72300 /* WoodSword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WoodSword@2x.png"; sourceTree = "<group>"; };
+		F6D9DEFB1A75763500F72300 /* WoodSword@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WoodSword@3x.png"; sourceTree = "<group>"; };
+		F6D9DF651A75765400F72300 /* east_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = east_red.png; sourceTree = "<group>"; };
+		F6D9DF661A75765400F72300 /* east_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "east_red@2x.png"; sourceTree = "<group>"; };
+		F6D9DF671A75765400F72300 /* east_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "east_red@3x.png"; sourceTree = "<group>"; };
+		F6D9DF681A75765400F72300 /* east.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = east.png; sourceTree = "<group>"; };
+		F6D9DF691A75765400F72300 /* east@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "east@2x.png"; sourceTree = "<group>"; };
+		F6D9DF6A1A75765400F72300 /* east@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "east@3x.png"; sourceTree = "<group>"; };
+		F6D9DF6B1A75765400F72300 /* explorer_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explorer_ui.png; sourceTree = "<group>"; };
+		F6D9DF6C1A75765400F72300 /* explorer_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "explorer_ui@2x.png"; sourceTree = "<group>"; };
+		F6D9DF6D1A75765400F72300 /* explorer_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "explorer_ui@3x.png"; sourceTree = "<group>"; };
+		F6D9DF6E1A75765400F72300 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		F6D9DF6F1A75765400F72300 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
+		F6D9DF701A75765400F72300 /* list@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@3x.png"; sourceTree = "<group>"; };
+		F6D9DF711A75765400F72300 /* loot_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loot_btn.png; sourceTree = "<group>"; };
+		F6D9DF721A75765400F72300 /* loot_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loot_btn@2x.png"; sourceTree = "<group>"; };
+		F6D9DF731A75765400F72300 /* loot_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loot_btn@3x.png"; sourceTree = "<group>"; };
+		F6D9DF741A75765400F72300 /* north_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = north_red.png; sourceTree = "<group>"; };
+		F6D9DF751A75765400F72300 /* north_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "north_red@2x.png"; sourceTree = "<group>"; };
+		F6D9DF761A75765400F72300 /* north_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "north_red@3x.png"; sourceTree = "<group>"; };
+		F6D9DF771A75765400F72300 /* north.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = north.png; sourceTree = "<group>"; };
+		F6D9DF781A75765400F72300 /* north@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "north@2x.png"; sourceTree = "<group>"; };
+		F6D9DF791A75765400F72300 /* north@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "north@3x.png"; sourceTree = "<group>"; };
+		F6D9DF7A1A75765400F72300 /* search_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_btn.png; sourceTree = "<group>"; };
+		F6D9DF7B1A75765400F72300 /* search_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_btn@2x.png"; sourceTree = "<group>"; };
+		F6D9DF7C1A75765400F72300 /* search_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_btn@3x.png"; sourceTree = "<group>"; };
+		F6D9DF7D1A75765400F72300 /* south_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = south_red.png; sourceTree = "<group>"; };
+		F6D9DF7E1A75765400F72300 /* south_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "south_red@2x.png"; sourceTree = "<group>"; };
+		F6D9DF7F1A75765400F72300 /* south_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "south_red@3x.png"; sourceTree = "<group>"; };
+		F6D9DF801A75765400F72300 /* south.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = south.png; sourceTree = "<group>"; };
+		F6D9DF811A75765400F72300 /* south@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "south@2x.png"; sourceTree = "<group>"; };
+		F6D9DF821A75765400F72300 /* south@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "south@3x.png"; sourceTree = "<group>"; };
+		F6D9DF831A75765400F72300 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		F6D9DF841A75765400F72300 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		F6D9DF851A75765400F72300 /* star@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@3x.png"; sourceTree = "<group>"; };
+		F6D9DF861A75765400F72300 /* west_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = west_red.png; sourceTree = "<group>"; };
+		F6D9DF871A75765400F72300 /* west_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "west_red@2x.png"; sourceTree = "<group>"; };
+		F6D9DF881A75765400F72300 /* west_red@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "west_red@3x.png"; sourceTree = "<group>"; };
+		F6D9DF891A75765400F72300 /* west.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = west.png; sourceTree = "<group>"; };
+		F6D9DF8A1A75765400F72300 /* west@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "west@2x.png"; sourceTree = "<group>"; };
+		F6D9DF8B1A75765400F72300 /* west@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "west@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +660,150 @@
 		F62DE8F51A2E319900E77B70 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F6D9DF651A75765400F72300 /* east_red.png */,
+				F6D9DF661A75765400F72300 /* east_red@2x.png */,
+				F6D9DF671A75765400F72300 /* east_red@3x.png */,
+				F6D9DF681A75765400F72300 /* east.png */,
+				F6D9DF691A75765400F72300 /* east@2x.png */,
+				F6D9DF6A1A75765400F72300 /* east@3x.png */,
+				F6D9DF6B1A75765400F72300 /* explorer_ui.png */,
+				F6D9DF6C1A75765400F72300 /* explorer_ui@2x.png */,
+				F6D9DF6D1A75765400F72300 /* explorer_ui@3x.png */,
+				F6D9DF6E1A75765400F72300 /* list.png */,
+				F6D9DF6F1A75765400F72300 /* list@2x.png */,
+				F6D9DF701A75765400F72300 /* list@3x.png */,
+				F6D9DF711A75765400F72300 /* loot_btn.png */,
+				F6D9DF721A75765400F72300 /* loot_btn@2x.png */,
+				F6D9DF731A75765400F72300 /* loot_btn@3x.png */,
+				F6D9DF741A75765400F72300 /* north_red.png */,
+				F6D9DF751A75765400F72300 /* north_red@2x.png */,
+				F6D9DF761A75765400F72300 /* north_red@3x.png */,
+				F6D9DF771A75765400F72300 /* north.png */,
+				F6D9DF781A75765400F72300 /* north@2x.png */,
+				F6D9DF791A75765400F72300 /* north@3x.png */,
+				F6D9DF7A1A75765400F72300 /* search_btn.png */,
+				F6D9DF7B1A75765400F72300 /* search_btn@2x.png */,
+				F6D9DF7C1A75765400F72300 /* search_btn@3x.png */,
+				F6D9DF7D1A75765400F72300 /* south_red.png */,
+				F6D9DF7E1A75765400F72300 /* south_red@2x.png */,
+				F6D9DF7F1A75765400F72300 /* south_red@3x.png */,
+				F6D9DF801A75765400F72300 /* south.png */,
+				F6D9DF811A75765400F72300 /* south@2x.png */,
+				F6D9DF821A75765400F72300 /* south@3x.png */,
+				F6D9DF831A75765400F72300 /* star.png */,
+				F6D9DF841A75765400F72300 /* star@2x.png */,
+				F6D9DF851A75765400F72300 /* star@3x.png */,
+				F6D9DF861A75765400F72300 /* west_red.png */,
+				F6D9DF871A75765400F72300 /* west_red@2x.png */,
+				F6D9DF881A75765400F72300 /* west_red@3x.png */,
+				F6D9DF891A75765400F72300 /* west.png */,
+				F6D9DF8A1A75765400F72300 /* west@2x.png */,
+				F6D9DF8B1A75765400F72300 /* west@3x.png */,
+				F6D9DE931A75763500F72300 /* Armor-Upgrade.png */,
+				F6D9DE941A75763500F72300 /* Armor-Upgrade@2x.png */,
+				F6D9DE951A75763500F72300 /* Armor-Upgrade@3x.png */,
+				F6D9DE961A75763500F72300 /* Armor.png */,
+				F6D9DE971A75763500F72300 /* Armor@2x.png */,
+				F6D9DE981A75763500F72300 /* Armor@3x.png */,
+				F6D9DE991A75763500F72300 /* Axe-2-Upgrade.png */,
+				F6D9DE9A1A75763500F72300 /* Axe-2-Upgrade@2x.png */,
+				F6D9DE9B1A75763500F72300 /* Axe-2-Upgrade@3x.png */,
+				F6D9DE9C1A75763500F72300 /* Axe.png */,
+				F6D9DE9D1A75763500F72300 /* Axe@2x.png */,
+				F6D9DE9E1A75763500F72300 /* Axe@3x.png */,
+				F6D9DE9F1A75763500F72300 /* AxeDouble-2-Upgrade.png */,
+				F6D9DEA01A75763500F72300 /* AxeDouble-2-Upgrade@2x.png */,
+				F6D9DEA11A75763500F72300 /* AxeDouble-2-Upgrade@3x.png */,
+				F6D9DEA21A75763500F72300 /* AxeDouble.png */,
+				F6D9DEA31A75763500F72300 /* AxeDouble@2x.png */,
+				F6D9DEA41A75763500F72300 /* AxeDouble@3x.png */,
+				F6D9DEA51A75763500F72300 /* Backpack.png */,
+				F6D9DEA61A75763500F72300 /* Backpack@2x.png */,
+				F6D9DEA71A75763500F72300 /* Backpack@3x.png */,
+				F6D9DEA81A75763500F72300 /* Bow-Upgrade.png */,
+				F6D9DEA91A75763500F72300 /* Bow-Upgrade@2x.png */,
+				F6D9DEAA1A75763500F72300 /* Bow-Upgrade@3x.png */,
+				F6D9DEAB1A75763500F72300 /* Bow.png */,
+				F6D9DEAC1A75763500F72300 /* Bow@2x.png */,
+				F6D9DEAD1A75763500F72300 /* Bow@3x.png */,
+				F6D9DEAE1A75763500F72300 /* Coin.png */,
+				F6D9DEAF1A75763500F72300 /* Coin@2x.png */,
+				F6D9DEB01A75763500F72300 /* Coin@3x.png */,
+				F6D9DEB11A75763500F72300 /* Dagger-Upgrade.png */,
+				F6D9DEB21A75763500F72300 /* Dagger-Upgrade@2x.png */,
+				F6D9DEB31A75763500F72300 /* Dagger-Upgrade@3x.png */,
+				F6D9DEB41A75763500F72300 /* Dagger.png */,
+				F6D9DEB51A75763500F72300 /* Dagger@2x.png */,
+				F6D9DEB61A75763500F72300 /* Dagger@3x.png */,
+				F6D9DEB71A75763500F72300 /* GemBlue.png */,
+				F6D9DEB81A75763500F72300 /* GemBlue@2x.png */,
+				F6D9DEB91A75763500F72300 /* GemBlue@3x.png */,
+				F6D9DEBA1A75763500F72300 /* GemGreen.png */,
+				F6D9DEBB1A75763500F72300 /* GemGreen@2x.png */,
+				F6D9DEBC1A75763500F72300 /* GemGreen@3x.png */,
+				F6D9DEBD1A75763500F72300 /* GemRed.png */,
+				F6D9DEBE1A75763500F72300 /* GemRed@2x.png */,
+				F6D9DEBF1A75763500F72300 /* GemRed@3x.png */,
+				F6D9DEC01A75763500F72300 /* Hammer-Upgrade.png */,
+				F6D9DEC11A75763500F72300 /* Hammer-Upgrade@2x.png */,
+				F6D9DEC21A75763500F72300 /* Hammer-Upgrade@3x.png */,
+				F6D9DEC31A75763500F72300 /* Hammer.png */,
+				F6D9DEC41A75763500F72300 /* Hammer@2x.png */,
+				F6D9DEC51A75763500F72300 /* Hammer@3x.png */,
+				F6D9DEC61A75763500F72300 /* Helmet-Upgrade.png */,
+				F6D9DEC71A75763500F72300 /* Helmet-Upgrade@2x.png */,
+				F6D9DEC81A75763500F72300 /* Helmet-Upgrade@3x.png */,
+				F6D9DEC91A75763500F72300 /* Helmet.png */,
+				F6D9DECA1A75763500F72300 /* Helmet@2x.png */,
+				F6D9DECB1A75763500F72300 /* Helmet@3x.png */,
+				F6D9DECC1A75763500F72300 /* Map.png */,
+				F6D9DECD1A75763500F72300 /* Map@2x.png */,
+				F6D9DECE1A75763500F72300 /* Map@3x.png */,
+				F6D9DECF1A75763500F72300 /* PotionBlue.png */,
+				F6D9DED01A75763500F72300 /* PotionBlue@2x.png */,
+				F6D9DED11A75763500F72300 /* PotionBlue@3x.png */,
+				F6D9DED21A75763500F72300 /* PotionGreen.png */,
+				F6D9DED31A75763500F72300 /* PotionGreen@2x.png */,
+				F6D9DED41A75763500F72300 /* PotionGreen@3x.png */,
+				F6D9DED51A75763500F72300 /* PotionRed.png */,
+				F6D9DED61A75763500F72300 /* PotionRed@2x.png */,
+				F6D9DED71A75763500F72300 /* PotionRed@3x.png */,
+				F6D9DED81A75763500F72300 /* Scroll.png */,
+				F6D9DED91A75763500F72300 /* Scroll@2x.png */,
+				F6D9DEDA1A75763500F72300 /* Scroll@3x.png */,
+				F6D9DEDB1A75763500F72300 /* Shield-Upgrade.png */,
+				F6D9DEDC1A75763500F72300 /* Shield-Upgrade@2x.png */,
+				F6D9DEDD1A75763500F72300 /* Shield-Upgrade@3x.png */,
+				F6D9DEDE1A75763500F72300 /* Shield.png */,
+				F6D9DEDF1A75763500F72300 /* Shield@2x.png */,
+				F6D9DEE01A75763500F72300 /* Shield@3x.png */,
+				F6D9DEE11A75763500F72300 /* Small-Shield-Upgrade.png */,
+				F6D9DEE21A75763500F72300 /* Small-Shield-Upgrade@2x.png */,
+				F6D9DEE31A75763500F72300 /* Small-Shield-Upgrade@3x.png */,
+				F6D9DEE41A75763500F72300 /* Small-Shield.png */,
+				F6D9DEE51A75763500F72300 /* Small-Shield@2x.png */,
+				F6D9DEE61A75763500F72300 /* Small-Shield@3x.png */,
+				F6D9DEE71A75763500F72300 /* Spear-Upgrade.png */,
+				F6D9DEE81A75763500F72300 /* Spear-Upgrade@2x.png */,
+				F6D9DEE91A75763500F72300 /* Spear-Upgrade@3x.png */,
+				F6D9DEEA1A75763500F72300 /* Spear.png */,
+				F6D9DEEB1A75763500F72300 /* Spear@2x.png */,
+				F6D9DEEC1A75763500F72300 /* Spear@3x.png */,
+				F6D9DEED1A75763500F72300 /* Sword-Upgrade.png */,
+				F6D9DEEE1A75763500F72300 /* Sword-Upgrade@2x.png */,
+				F6D9DEEF1A75763500F72300 /* Sword-Upgrade@3x.png */,
+				F6D9DEF01A75763500F72300 /* Sword.png */,
+				F6D9DEF11A75763500F72300 /* Sword@2x.png */,
+				F6D9DEF21A75763500F72300 /* Sword@3x.png */,
+				F6D9DEF31A75763500F72300 /* Wand-Upgrade.png */,
+				F6D9DEF41A75763500F72300 /* Wand-Upgrade@2x.png */,
+				F6D9DEF51A75763500F72300 /* Wand-Upgrade@3x.png */,
+				F6D9DEF61A75763500F72300 /* Wand.png */,
+				F6D9DEF71A75763500F72300 /* Wand@2x.png */,
+				F6D9DEF81A75763500F72300 /* Wand@3x.png */,
+				F6D9DEF91A75763500F72300 /* WoodSword.png */,
+				F6D9DEFA1A75763500F72300 /* WoodSword@2x.png */,
+				F6D9DEFB1A75763500F72300 /* WoodSword@3x.png */,
 				F608B5A71A7462B30072E6E0 /* armour_slot.png */,
 				F608B5A81A7462B30072E6E0 /* armour_slot@2x.png */,
 				F608B5A91A7462B30072E6E0 /* armour_slot@3x.png */,
@@ -616,87 +1048,231 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D9DF191A75763500F72300 /* Coin@3x.png in Resources */,
+				F6D9DF3B1A75763500F72300 /* PotionGreen.png in Resources */,
 				F637F7641A310A8D004752E0 /* login_btn@3x.png in Resources */,
+				F6D9DF4E1A75763500F72300 /* Small-Shield@2x.png in Resources */,
+				F6D9DF5E1A75763500F72300 /* Wand-Upgrade@3x.png in Resources */,
+				F6D9DF151A75763500F72300 /* Bow@2x.png in Resources */,
+				F6D9DF4F1A75763500F72300 /* Small-Shield@3x.png in Resources */,
+				F6D9DF9B1A75765400F72300 /* north_red.png in Resources */,
+				F6D9DF8D1A75765400F72300 /* east_red@2x.png in Resources */,
 				F608B6131A7462B30072E6E0 /* health_75.png in Resources */,
+				F6D9DF351A75763500F72300 /* Map.png in Resources */,
 				F6CFB7001A3255F100405290 /* singup_ui.png in Resources */,
 				F608B6021A7462B30072E6E0 /* energy_50@2x.png in Resources */,
+				F6D9DF941A75765400F72300 /* explorer_ui@3x.png in Resources */,
 				F608B5F51A7462B30072E6E0 /* clarity_empty.png in Resources */,
 				F608B5F01A7462B30072E6E0 /* clarity_50@2x.png in Resources */,
+				F6D9DF491A75763500F72300 /* Shield@3x.png in Resources */,
+				F6D9DEFD1A75763500F72300 /* Armor-Upgrade@2x.png in Resources */,
 				F608B5F11A7462B30072E6E0 /* clarity_50@3x.png in Resources */,
+				F6D9DF041A75763500F72300 /* Axe-2-Upgrade@3x.png in Resources */,
+				F6D9DF581A75763500F72300 /* Sword-Upgrade@3x.png in Resources */,
+				F6D9DF1F1A75763500F72300 /* Dagger@3x.png in Resources */,
 				F6CFB7011A3255F100405290 /* singup_ui@2x.png in Resources */,
+				F6D9DF1D1A75763500F72300 /* Dagger.png in Resources */,
+				F6D9DF911A75765400F72300 /* east@3x.png in Resources */,
 				F608B6071A7462B30072E6E0 /* energy_empty.png in Resources */,
 				F608B5FC1A7462B30072E6E0 /* empty_slot@2x.png in Resources */,
+				F6D9DF091A75763500F72300 /* AxeDouble-2-Upgrade@2x.png in Resources */,
+				F6D9DF641A75763500F72300 /* WoodSword@3x.png in Resources */,
 				F608B5EB1A7462B30072E6E0 /* character_ui@3x.png in Resources */,
+				F6D9DFA81A75765400F72300 /* south@2x.png in Resources */,
+				F6D9DF051A75763500F72300 /* Axe.png in Resources */,
 				F608B60A1A7462B30072E6E0 /* energy_full.png in Resources */,
 				F608B5F61A7462B30072E6E0 /* clarity_empty@2x.png in Resources */,
+				F6D9DF471A75763500F72300 /* Shield.png in Resources */,
+				F6D9DF9F1A75765400F72300 /* north@2x.png in Resources */,
+				F6D9DFAB1A75765400F72300 /* star@2x.png in Resources */,
 				F637F7621A310A8D004752E0 /* login_btn.png in Resources */,
+				F6D9DF2F1A75763500F72300 /* Helmet-Upgrade.png in Resources */,
 				F649BE4A1A27D22400A00E3D /* Main.storyboard in Resources */,
 				F6CFB7081A325E1C00405290 /* login_ui.png in Resources */,
 				F608B6161A7462B30072E6E0 /* health_empty.png in Resources */,
+				F6D9DF2E1A75763500F72300 /* Hammer@3x.png in Resources */,
+				F6D9DFB11A75765400F72300 /* west@2x.png in Resources */,
 				F637F76C1A310A8D004752E0 /* signup_btn@2x.png in Resources */,
+				F6D9DF321A75763500F72300 /* Helmet.png in Resources */,
 				F608B6241A7462B30072E6E0 /* weapon_slot@3x.png in Resources */,
 				F608B5F81A7462B30072E6E0 /* clarity_full.png in Resources */,
 				F6CFB70A1A325E1C00405290 /* login_ui@3x.png in Resources */,
+				F6D9DF021A75763500F72300 /* Axe-2-Upgrade.png in Resources */,
+				F6D9DF381A75763500F72300 /* PotionBlue.png in Resources */,
 				F608B5EF1A7462B30072E6E0 /* clarity_50.png in Resources */,
+				F6D9DF2C1A75763500F72300 /* Hammer.png in Resources */,
 				F6CFB6FD1A3255F100405290 /* exit.png in Resources */,
+				F6D9DF141A75763500F72300 /* Bow.png in Resources */,
 				F608B5E91A7462B30072E6E0 /* character_ui.png in Resources */,
 				F608B6011A7462B30072E6E0 /* energy_50.png in Resources */,
 				F608B6041A7462B30072E6E0 /* energy_75.png in Resources */,
+				F6D9DF101A75763500F72300 /* Backpack@3x.png in Resources */,
 				F608B5FE1A7462B30072E6E0 /* energy_25.png in Resources */,
+				F6D9DF5C1A75763500F72300 /* Wand-Upgrade.png in Resources */,
+				F6D9DFA11A75765400F72300 /* search_btn.png in Resources */,
+				F6D9DF1A1A75763500F72300 /* Dagger-Upgrade.png in Resources */,
+				F6D9DF201A75763500F72300 /* GemBlue.png in Resources */,
 				F608B6231A7462B30072E6E0 /* weapon_slot@2x.png in Resources */,
 				F608B6211A7462B30072E6E0 /* sheild_slot@3x.png in Resources */,
+				F6D9DF551A75763500F72300 /* Spear@3x.png in Resources */,
+				F6D9DF4C1A75763500F72300 /* Small-Shield-Upgrade@3x.png in Resources */,
+				F6D9DF3A1A75763500F72300 /* PotionBlue@3x.png in Resources */,
+				F6D9DFAA1A75765400F72300 /* star.png in Resources */,
+				F6D9DF0B1A75763500F72300 /* AxeDouble.png in Resources */,
+				F6D9DFAF1A75765400F72300 /* west_red@3x.png in Resources */,
 				F608B6221A7462B30072E6E0 /* weapon_slot.png in Resources */,
+				F6D9DF211A75763500F72300 /* GemBlue@2x.png in Resources */,
+				F6D9DF531A75763500F72300 /* Spear.png in Resources */,
+				F6D9DF251A75763500F72300 /* GemGreen@3x.png in Resources */,
 				F637F76D1A310A8D004752E0 /* signup_btn@3x.png in Resources */,
+				F6D9DFB21A75765400F72300 /* west@3x.png in Resources */,
 				F608B5E71A7462B30072E6E0 /* armour_slot@2x.png in Resources */,
+				F6D9DF0A1A75763500F72300 /* AxeDouble-2-Upgrade@3x.png in Resources */,
+				F6D9DF281A75763500F72300 /* GemRed@3x.png in Resources */,
 				F608B6171A7462B30072E6E0 /* health_empty@2x.png in Resources */,
+				F6D9DF3C1A75763500F72300 /* PotionGreen@2x.png in Resources */,
+				F6D9DFA71A75765400F72300 /* south.png in Resources */,
 				F6CFB6FE1A3255F100405290 /* exit@2x.png in Resources */,
+				F6D9DF031A75763500F72300 /* Axe-2-Upgrade@2x.png in Resources */,
 				F608B5F31A7462B30072E6E0 /* clarity_75@2x.png in Resources */,
+				F6D9DF5D1A75763500F72300 /* Wand-Upgrade@2x.png in Resources */,
+				F6D9DF001A75763500F72300 /* Armor@2x.png in Resources */,
+				F6D9DF3D1A75763500F72300 /* PotionGreen@3x.png in Resources */,
+				F6D9DF221A75763500F72300 /* GemBlue@3x.png in Resources */,
+				F6D9DF921A75765400F72300 /* explorer_ui.png in Resources */,
+				F6D9DF341A75763500F72300 /* Helmet@3x.png in Resources */,
 				F608B5E61A7462B30072E6E0 /* armour_slot.png in Resources */,
+				F6D9DF071A75763500F72300 /* Axe@3x.png in Resources */,
+				F6D9DF521A75763500F72300 /* Spear-Upgrade@3x.png in Resources */,
+				F6D9DF131A75763500F72300 /* Bow-Upgrade@3x.png in Resources */,
+				F6D9DF401A75763500F72300 /* PotionRed@3x.png in Resources */,
 				F608B60C1A7462B30072E6E0 /* energy_full@3x.png in Resources */,
 				F608B6151A7462B30072E6E0 /* health_75@3x.png in Resources */,
 				F608B60E1A7462B30072E6E0 /* health_25@2x.png in Resources */,
 				F608B5F21A7462B30072E6E0 /* clarity_75.png in Resources */,
 				F608B6141A7462B30072E6E0 /* health_75@2x.png in Resources */,
+				F6D9DF9C1A75765400F72300 /* north_red@2x.png in Resources */,
+				F6D9DF231A75763500F72300 /* GemGreen.png in Resources */,
+				F6D9DFA51A75765400F72300 /* south_red@2x.png in Resources */,
+				F6D9DF2A1A75763500F72300 /* Hammer-Upgrade@2x.png in Resources */,
+				F6D9DF451A75763500F72300 /* Shield-Upgrade@2x.png in Resources */,
+				F6D9DF611A75763500F72300 /* Wand@3x.png in Resources */,
+				F6D9DF5F1A75763500F72300 /* Wand.png in Resources */,
+				F6D9DFAE1A75765400F72300 /* west_red@2x.png in Resources */,
 				F608B5FF1A7462B30072E6E0 /* energy_25@2x.png in Resources */,
+				F6D9DEFC1A75763500F72300 /* Armor-Upgrade.png in Resources */,
+				F6D9DF2B1A75763500F72300 /* Hammer-Upgrade@3x.png in Resources */,
 				F6CFB7021A3255F100405290 /* singup_ui@3x.png in Resources */,
+				F6D9DEFF1A75763500F72300 /* Armor.png in Resources */,
 				F608B60F1A7462B30072E6E0 /* health_25@3x.png in Resources */,
+				F6D9DF461A75763500F72300 /* Shield-Upgrade@3x.png in Resources */,
+				F6D9DF8C1A75765400F72300 /* east_red.png in Resources */,
+				F6D9DF5B1A75763500F72300 /* Sword@3x.png in Resources */,
+				F6D9DF411A75763500F72300 /* Scroll.png in Resources */,
+				F6D9DF161A75763500F72300 /* Bow@3x.png in Resources */,
+				F6D9DF301A75763500F72300 /* Helmet-Upgrade@2x.png in Resources */,
+				F6D9DF1E1A75763500F72300 /* Dagger@2x.png in Resources */,
+				F6D9DF081A75763500F72300 /* AxeDouble-2-Upgrade.png in Resources */,
+				F6D9DF431A75763500F72300 /* Scroll@3x.png in Resources */,
 				F608B61B1A7462B30072E6E0 /* health_full@3x.png in Resources */,
+				F6D9DF181A75763500F72300 /* Coin@2x.png in Resources */,
 				F608B5F91A7462B30072E6E0 /* clarity_full@2x.png in Resources */,
+				F6D9DF511A75763500F72300 /* Spear-Upgrade@2x.png in Resources */,
+				F6D9DF121A75763500F72300 /* Bow-Upgrade@2x.png in Resources */,
+				F6D9DF621A75763500F72300 /* WoodSword.png in Resources */,
+				F6D9DF631A75763500F72300 /* WoodSword@2x.png in Resources */,
 				F637F76B1A310A8D004752E0 /* signup_btn.png in Resources */,
+				F6D9DF261A75763500F72300 /* GemRed.png in Resources */,
+				F6D9DF571A75763500F72300 /* Sword-Upgrade@2x.png in Resources */,
+				F6D9DF961A75765400F72300 /* list@2x.png in Resources */,
 				F608B5EA1A7462B30072E6E0 /* character_ui@2x.png in Resources */,
 				F608B60B1A7462B30072E6E0 /* energy_full@2x.png in Resources */,
+				F6D9DF481A75763500F72300 /* Shield@2x.png in Resources */,
+				F6D9DF8E1A75765400F72300 /* east_red@3x.png in Resources */,
+				F6D9DF1B1A75763500F72300 /* Dagger-Upgrade@2x.png in Resources */,
 				F608B6001A7462B30072E6E0 /* energy_25@3x.png in Resources */,
+				F6D9DF8F1A75765400F72300 /* east.png in Resources */,
+				F6D9DF2D1A75763500F72300 /* Hammer@2x.png in Resources */,
+				F6D9DF4D1A75763500F72300 /* Small-Shield.png in Resources */,
+				F6D9DF9D1A75765400F72300 /* north_red@3x.png in Resources */,
+				F6D9DF971A75765400F72300 /* list@3x.png in Resources */,
+				F6D9DF331A75763500F72300 /* Helmet@2x.png in Resources */,
+				F6D9DF9A1A75765400F72300 /* loot_btn@3x.png in Resources */,
+				F6D9DF271A75763500F72300 /* GemRed@2x.png in Resources */,
+				F6D9DEFE1A75763500F72300 /* Armor-Upgrade@3x.png in Resources */,
 				F608B61E1A7462B30072E6E0 /* helmet_slot@3x.png in Resources */,
 				F608B5E81A7462B30072E6E0 /* armour_slot@3x.png in Resources */,
+				F6D9DF1C1A75763500F72300 /* Dagger-Upgrade@3x.png in Resources */,
+				F6D9DF441A75763500F72300 /* Shield-Upgrade.png in Resources */,
+				F6D9DF011A75763500F72300 /* Armor@3x.png in Resources */,
 				F608B61D1A7462B30072E6E0 /* helmet_slot@2x.png in Resources */,
+				F6D9DF9E1A75765400F72300 /* north.png in Resources */,
 				F608B6201A7462B30072E6E0 /* sheild_slot@2x.png in Resources */,
 				F608B6181A7462B30072E6E0 /* health_empty@3x.png in Resources */,
 				F6CFB7091A325E1C00405290 /* login_ui@2x.png in Resources */,
 				F608B5F41A7462B30072E6E0 /* clarity_75@3x.png in Resources */,
 				F608B61A1A7462B30072E6E0 /* health_full@2x.png in Resources */,
+				F6D9DF111A75763500F72300 /* Bow-Upgrade.png in Resources */,
+				F6D9DF951A75765400F72300 /* list.png in Resources */,
 				F608B6061A7462B30072E6E0 /* energy_75@3x.png in Resources */,
+				F6D9DF0C1A75763500F72300 /* AxeDouble@2x.png in Resources */,
+				F6D9DF0D1A75763500F72300 /* AxeDouble@3x.png in Resources */,
+				F6D9DF0F1A75763500F72300 /* Backpack@2x.png in Resources */,
 				F608B5FD1A7462B30072E6E0 /* empty_slot@3x.png in Resources */,
+				F6D9DFA31A75765400F72300 /* search_btn@3x.png in Resources */,
+				F6D9DFA61A75765400F72300 /* south_red@3x.png in Resources */,
 				F608B5EE1A7462B30072E6E0 /* clarity_25@3x.png in Resources */,
+				F6D9DF901A75765400F72300 /* east@2x.png in Resources */,
+				F6D9DFA21A75765400F72300 /* search_btn@2x.png in Resources */,
+				F6D9DF4A1A75763500F72300 /* Small-Shield-Upgrade.png in Resources */,
 				F608B61F1A7462B30072E6E0 /* sheild_slot.png in Resources */,
+				F6D9DF421A75763500F72300 /* Scroll@2x.png in Resources */,
+				F6D9DF501A75763500F72300 /* Spear-Upgrade.png in Resources */,
 				F608B61C1A7462B30072E6E0 /* helmet_slot.png in Resources */,
+				F6D9DF561A75763500F72300 /* Sword-Upgrade.png in Resources */,
+				F6D9DFA41A75765400F72300 /* south_red.png in Resources */,
+				F6D9DF241A75763500F72300 /* GemGreen@2x.png in Resources */,
+				F6D9DFAC1A75765400F72300 /* star@3x.png in Resources */,
+				F6D9DF391A75763500F72300 /* PotionBlue@2x.png in Resources */,
 				F608B6101A7462B30072E6E0 /* health_50.png in Resources */,
+				F6D9DF591A75763500F72300 /* Sword.png in Resources */,
+				F6D9DF371A75763500F72300 /* Map@3x.png in Resources */,
 				F608B60D1A7462B30072E6E0 /* health_25.png in Resources */,
+				F6D9DF291A75763500F72300 /* Hammer-Upgrade.png in Resources */,
 				F608B5FA1A7462B30072E6E0 /* clarity_full@3x.png in Resources */,
+				F6D9DF171A75763500F72300 /* Coin.png in Resources */,
+				F6D9DF5A1A75763500F72300 /* Sword@2x.png in Resources */,
 				F608B6111A7462B30072E6E0 /* health_50@2x.png in Resources */,
+				F6D9DF061A75763500F72300 /* Axe@2x.png in Resources */,
+				F6D9DF931A75765400F72300 /* explorer_ui@2x.png in Resources */,
 				F608B6051A7462B30072E6E0 /* energy_75@2x.png in Resources */,
 				F637F7631A310A8D004752E0 /* login_btn@2x.png in Resources */,
+				F6D9DF0E1A75763500F72300 /* Backpack.png in Resources */,
 				F608B5FB1A7462B30072E6E0 /* empty_slot.png in Resources */,
 				F6CFB6FF1A3255F100405290 /* exit@3x.png in Resources */,
+				F6D9DF541A75763500F72300 /* Spear@2x.png in Resources */,
 				F608B5EC1A7462B30072E6E0 /* clarity_25.png in Resources */,
+				F6D9DF3E1A75763500F72300 /* PotionRed.png in Resources */,
+				F6D9DF361A75763500F72300 /* Map@2x.png in Resources */,
 				F608B5F71A7462B30072E6E0 /* clarity_empty@3x.png in Resources */,
 				F608B6031A7462B30072E6E0 /* energy_50@3x.png in Resources */,
 				F608B6121A7462B30072E6E0 /* health_50@3x.png in Resources */,
 				F608B6091A7462B30072E6E0 /* energy_empty@3x.png in Resources */,
+				F6D9DF991A75765400F72300 /* loot_btn@2x.png in Resources */,
 				F649BE4F1A27D22400A00E3D /* LaunchScreen.xib in Resources */,
+				F6D9DFAD1A75765400F72300 /* west_red.png in Resources */,
+				F6D9DFA91A75765400F72300 /* south@3x.png in Resources */,
+				F6D9DF601A75763500F72300 /* Wand@2x.png in Resources */,
+				F6D9DFB01A75765400F72300 /* west.png in Resources */,
 				F608B6191A7462B30072E6E0 /* health_full.png in Resources */,
+				F6D9DF981A75765400F72300 /* loot_btn.png in Resources */,
+				F6D9DFA01A75765400F72300 /* north@3x.png in Resources */,
+				F6D9DF3F1A75763500F72300 /* PotionRed@2x.png in Resources */,
 				F608B5ED1A7462B30072E6E0 /* clarity_25@2x.png in Resources */,
 				F649BE4C1A27D22400A00E3D /* Images.xcassets in Resources */,
+				F6D9DF4B1A75763500F72300 /* Small-Shield-Upgrade@2x.png in Resources */,
 				F608B6081A7462B30072E6E0 /* energy_empty@2x.png in Resources */,
+				F6D9DF311A75763500F72300 /* Helmet-Upgrade@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
