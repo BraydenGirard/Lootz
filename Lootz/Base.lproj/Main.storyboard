@@ -19,12 +19,18 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_ui.png" translatesAutoresizingMaskIntoConstraints="NO" id="SV6-oP-2z4">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="115" y="189" width="371" height="222"/>
+                                </variation>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c24-Qk-oJz">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="signup_btn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="311" y="333" width="98" height="43"/>
+                                </variation>
                                 <connections>
                                     <segue destination="TIH-Wm-bSe" kind="show" identifier="signup" id="XWh-Lf-FXb"/>
                                 </connections>
@@ -43,7 +49,8 @@
                                         <exclude reference="9T1-yg-atJ"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact">
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="212" y="253" width="174" height="30"/>
                                     <mask key="constraints">
                                         <include reference="9T1-yg-atJ"/>
                                     </mask>
@@ -63,7 +70,8 @@
                                         <exclude reference="qeR-Fq-fYa"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact">
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="212" y="292" width="174" height="30"/>
                                     <mask key="constraints">
                                         <include reference="qeR-Fq-fYa"/>
                                     </mask>
@@ -74,6 +82,9 @@
                                 <state key="normal" image="login_btn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="188" y="333" width="98" height="43"/>
+                                </variation>
                                 <connections>
                                     <action selector="loginButtonPushed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="m2D-AC-39n"/>
                                 </connections>
@@ -141,7 +152,7 @@
                     <connections>
                         <outlet property="passwordText" destination="dqM-LB-ezU" id="d0O-Oq-dBr"/>
                         <outlet property="usernameText" destination="0Cg-1j-GIY" id="pAl-In-Eq1"/>
-                        <segue destination="5JZ-K4-Q9W" kind="show" identifier="loginSegue" id="hcQ-FP-WLt"/>
+                        <segue destination="qmz-kA-Rdn" kind="show" identifier="loginSegue" id="HXC-s2-8iK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -311,7 +322,7 @@
                         <outlet property="emailText" destination="EIb-eE-U8d" id="gSa-G6-DAc"/>
                         <outlet property="passwordText" destination="FV7-lx-ZeB" id="Okf-Td-XbW"/>
                         <outlet property="usernameText" destination="C1r-Tl-6Dq" id="Gil-fF-xYF"/>
-                        <segue destination="5JZ-K4-Q9W" kind="show" identifier="signUpSegue" id="Sca-n7-eFh"/>
+                        <segue destination="qmz-kA-Rdn" kind="show" identifier="signUpSegue" id="aif-Lf-rCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Md1-sb-hej" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -319,16 +330,106 @@
             <point key="canvasLocation" x="1290" y="300"/>
         </scene>
         <!--Main Controller-->
-        <scene sceneID="jCP-yN-Opy">
+        <scene sceneID="Icm-4D-G9J">
             <objects>
-                <pageViewController storyboardIdentifier="MainController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="5JZ-K4-Q9W" customClass="MainController" customModule="Lootz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainController" id="qmz-kA-Rdn" customClass="MainController" customModule="Lootz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ggG-ye-35j"/>
+                        <viewControllerLayoutGuide type="bottom" id="m6d-P0-7iT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rVR-wJ-JNY">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="show" identifier="exit" id="5fS-FP-t7A"/>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="exit" id="rUt-IK-zk6"/>
+                        <segue destination="qAw-nN-0FA" kind="show" identifier="mainRight" id="hlt-oN-y8K"/>
+                        <segue destination="XdL-6o-Jce" kind="show" identifier="mainLeft" id="KhT-cx-r0N"/>
                     </connections>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C7A-LQ-Lja" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n7t-68-EG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="1365"/>
+            <point key="canvasLocation" x="824" y="1389"/>
+        </scene>
+        <!--Left Controller-->
+        <scene sceneID="W0P-rp-2wT">
+            <objects>
+                <viewController id="XdL-6o-Jce" customClass="LeftController" customModule="Lootz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rcc-qR-sDa"/>
+                        <viewControllerLayoutGuide type="bottom" id="oUN-1j-jYA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3yc-9O-ge5">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="drm-VB-zBD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.86666666670000003" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="drm-VB-zBD"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="drm-VB-zBD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="exitLeft" id="Cs0-c4-AAz"/>
+                        <segue destination="qmz-kA-Rdn" kind="show" identifier="leftMain" id="dMo-tZ-wYh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RbW-lM-cv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="1389"/>
+        </scene>
+        <!--Right Controller-->
+        <scene sceneID="9lk-M3-hCp">
+            <objects>
+                <viewController id="qAw-nN-0FA" customClass="RightController" customModule="Lootz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P4X-QJ-0DQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="H9K-aR-Y1A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mNO-Gq-LP4">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NP2-VC-jyX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="NP2-VC-jyX"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="NP2-VC-jyX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="exitRight" id="Htt-EU-I46"/>
+                        <segue destination="qmz-kA-Rdn" kind="show" identifier="rightMain" id="MNG-AA-BbD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4RJ-7Y-3L0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="1389"/>
         </scene>
     </scenes>
     <resources>
@@ -339,6 +440,7 @@
         <image name="singup_ui.png" width="267" height="270"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Sca-n7-eFh"/>
+        <segue reference="Cs0-c4-AAz"/>
+        <segue reference="dMo-tZ-wYh"/>
     </inferredMetricsTieBreakers>
 </document>

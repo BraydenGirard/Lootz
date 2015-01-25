@@ -1,19 +1,22 @@
-import UIKit
+//
+//  LeftController.swift
+//  Lootz
+//
+//  Created by Brayden Girard on 2015-01-24.
+//  Copyright (c) 2015 Brayden Girard. All rights reserved.
+//
 
-class MainController: UIViewController {
+import Foundation
+
+class LeftController: UIViewController {
     
     let notificationCenter = NSNotificationCenter.defaultCenter()
     let transitionManager = TransitionManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.tag = 1;
         notificationCenter.addObserver(self, selector: "exit:", name: "exit", object: nil)
-        
-        //------------right  swipe gestures in view--------------//
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: Selector("rightSwiped"))
-        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
-        self.view.addGestureRecognizer(swipeRight)
         
         //-----------left swipe gestures in view--------------//
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: Selector("leftSwiped"))
@@ -22,17 +25,12 @@ class MainController: UIViewController {
     }
     
     func exit(notification: NSNotification) {
-        self.performSegueWithIdentifier("exit", sender: nil)
-    }
-    
-    func rightSwiped()
-    {
-        self.performSegueWithIdentifier("mainLeft", sender: nil)
+        self.performSegueWithIdentifier("exitLeft", sender: nil)
     }
     
     func leftSwiped()
     {
-        self.performSegueWithIdentifier("mainRight", sender: nil)
+        self.performSegueWithIdentifier("leftMain", sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -45,5 +43,5 @@ class MainController: UIViewController {
         toViewController.transitioningDelegate = self.transitionManager
         
     }
-
+    
 }
