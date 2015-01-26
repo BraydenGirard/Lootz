@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Brayden Girard. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class LeftController: UIViewController {
     
