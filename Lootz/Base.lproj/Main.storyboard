@@ -428,6 +428,9 @@
                                         <include reference="Gkz-e6-z0T"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="viewLocationBtnAction:" destination="qmz-kA-Rdn" eventType="touchUpInside" id="ely-6J-CMQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I22-rP-ukX">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -447,6 +450,9 @@
                                         <include reference="jCj-3q-4ab"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="saveLocationBtnAction:" destination="qmz-kA-Rdn" eventType="touchUpInside" id="Vph-fO-Kdp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgD-OC-sHo">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -466,6 +472,9 @@
                                         <include reference="OYW-oO-Yix"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="lootBtnAction:" destination="qmz-kA-Rdn" eventType="touchUpInside" id="UKt-zk-B0W"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hU8-Ke-vIe">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -524,6 +533,9 @@
                                         <include reference="EJ7-gF-aju"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="searchBtnAction:" destination="qmz-kA-Rdn" eventType="touchUpInside" id="SMH-j7-Ky9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -691,6 +703,16 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="distanceLabel" destination="4qk-o4-sff" id="bgH-SR-MeA"/>
+                        <outlet property="eastImg" destination="hJ7-tm-hsR" id="iXf-65-raM"/>
+                        <outlet property="exploreText" destination="hU8-Ke-vIe" id="HWc-Yc-n6v"/>
+                        <outlet property="lootBtn" destination="sgD-OC-sHo" id="O1n-yw-hE0"/>
+                        <outlet property="northImg" destination="i6q-NC-3KK" id="gxv-nD-Ml8"/>
+                        <outlet property="saveLocationBtn" destination="I22-rP-ukX" id="lCz-z3-lxL"/>
+                        <outlet property="searchBtn" destination="3R8-1X-ge6" id="zXG-Cj-Mih"/>
+                        <outlet property="southImg" destination="Jnf-bY-1pO" id="xk2-jL-y4g"/>
+                        <outlet property="viewLocationBtn" destination="JDJ-9M-ukH" id="V8a-Ip-vcx"/>
+                        <outlet property="westImg" destination="PDi-iw-Qbl" id="aF4-eg-8Ou"/>
                         <segue destination="vXZ-lx-hvc" kind="show" identifier="exit" id="rUt-IK-zk6"/>
                         <segue destination="qAw-nN-0FA" kind="show" identifier="mainRight" id="hlt-oN-y8K"/>
                         <segue destination="XdL-6o-Jce" kind="show" identifier="mainLeft" id="KhT-cx-r0N"/>
@@ -1706,6 +1728,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="MNG-AA-BbD"/>
-        <segue reference="Htt-EU-I46"/>
+        <segue reference="rUt-IK-zk6"/>
     </inferredMetricsTieBreakers>
 </document>

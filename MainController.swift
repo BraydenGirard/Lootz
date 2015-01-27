@@ -5,6 +5,21 @@ class MainController: UIViewController {
     let notificationCenter = NSNotificationCenter.defaultCenter()
     let transitionManager = TransitionManager()
     
+    @IBOutlet var exploreText: UITextView!
+    
+    @IBOutlet var distanceLabel: UILabel!
+    
+    @IBOutlet var saveLocationBtn: UIButton!
+    @IBOutlet var viewLocationBtn: UIButton!
+    @IBOutlet var searchBtn: UIButton!
+    @IBOutlet var lootBtn: UIButton!
+    
+    @IBOutlet var eastImg: UIImageView!
+    @IBOutlet var northImg: UIImageView!
+    @IBOutlet var southImg: UIImageView!
+    @IBOutlet var westImg: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,4 +61,19 @@ class MainController: UIViewController {
         
     }
 
+    @IBAction func saveLocationBtnAction(sender: UIButton) {
+        
+    }
+    
+    @IBAction func viewLocationBtnAction(sender: UIButton) {
+        
+    }
+    
+    @IBAction func searchBtnAction(sender: UIButton) {
+        
+    }
+    
+    @IBAction func lootBtnAction(sender: UIButton) {
+        
+    }
 }
