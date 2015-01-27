@@ -47,7 +47,7 @@ class User {
     }
     
     convenience init(parseUser: PFObject) {
-        self.init(username: parseUser["username"] as String, email: parseUser["email"] as String, password: parseUser["password"] as String, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: parseUser["inventory"] as [Loot], equipment: parseUser["equipment"] as [Gear])
+        self.init(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: parseUser["inventory"] as [Loot], equipment: parseUser["equipment"] as [Gear])
     }
     
     func getUsername() -> String {
@@ -321,6 +321,27 @@ class User {
         return equipment
     }
     
+    func getEquipment(type: String) -> Loot? {
+        for tempItem in self.equipment {
+            if(type == tempItem.getType()) {
+                return tempItem;
+            }
+        }
+        return nil
+    }
+    
+    func getDualEquipment(type: String) -> [Loot]? {
+        var index = 0
+        var weapons = [Loot]()
+        for tempItem in self.equipment {
+            if(type == tempItem.getType()) {
+                weapons[index] = tempItem;
+                index++
+            }
+        }
+        return nil
+    }
+    
     //Returns -1 if the item does not exist in inventory
     //Returns an index >= 0 if item exists in inventory
     func findInventoryIndex(item: Loot) -> Int {
@@ -333,4 +354,6 @@ class User {
         }
         return -1
     }
+    
+  
 }

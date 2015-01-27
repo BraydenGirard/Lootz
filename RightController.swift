@@ -48,13 +48,44 @@ class RightController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.view.tag = 2;
+        
+        self.view.tag = 2;
         notificationCenter.addObserver(self, selector: "exit:", name: "exit", object: nil)
         
-        //------------right  swipe gestures in view--------------//
+        //------------right swipe gestures in view--------------//
         let swipeRight = UISwipeGestureRecognizer(target: self, action: Selector("rightSwiped"))
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
         self.view.addGestureRecognizer(swipeRight)
+        
+        //------------static view setup--------------//
+        usernameLabel.text = DBFactory.execute().getUser().getUsername()
+        
+        if let headImg = DBFactory.execute().getUser().getEquipment(HELMET)?.getImage() {
+            headBtn.setImage(headImg, forState: UIControlState.Normal)
+        }
+        if let chestImg = DBFactory.execute().getUser().getEquipment(BARMOUR)?.getImage() {
+            chestBtn.setImage(chestImg, forState: UIControlState.Normal)
+        }
+        if let offHandImg = DBFactory.execute().getUser().getEquipment(ONEHANDARMOUR)?.getImage() {
+            headBtn.setImage(offHandImg, forState: UIControlState.Normal)
+            if let primaryHandImg = DBFactory.execute().getUser().getEquipment(ONEHAND)?.getImage() {
+                primaryHandBtn.setImage(primaryHandImg, forState: UIControlState.Normal)
+            }
+        }
+        else {
+            if let weapons = DBFactory.execute().getUser().getDualEquipment(ONEHAND) {
+                if let primaryHandImg = weapons[0].getImage() as UIImage? {
+                    primaryHandBtn.setImage(primaryHandImg, forState: UIControlState.Normal)
+                }
+                if let offHandImg = weapons[1].getImage() as UIImage? {
+                    offHandBtn.setImage(offHandImg, forState: UIControlState.Normal)
+                }
+            }
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
     }
     
     func exit(notification: NSNotification) {
