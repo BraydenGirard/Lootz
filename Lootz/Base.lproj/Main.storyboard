@@ -529,14 +529,15 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="trailing" secondItem="sgD-OC-sHo" secondAttribute="trailing" constant="51" id="0gH-y7-KGk"/>
+                            <constraint firstItem="FzS-EH-h7B" firstAttribute="bottom" secondItem="4qk-o4-sff" secondAttribute="bottom" constant="49" id="23D-x3-hpF"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="trailing" secondItem="hJ7-tm-hsR" secondAttribute="trailing" constant="157" id="3Ug-M4-Bz3"/>
+                            <constraint firstItem="FzS-EH-h7B" firstAttribute="top" secondItem="4qk-o4-sff" secondAttribute="top" constant="-251" id="4uD-kf-1Ss"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="leading" secondItem="3R8-1X-ge6" secondAttribute="leading" constant="-50" id="6QG-lr-gGk"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="top" secondItem="3R8-1X-ge6" secondAttribute="top" constant="-236" id="7LB-HV-NGF"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="leading" secondItem="PDi-iw-Qbl" secondAttribute="leading" constant="-156" id="8Il-nf-J8I"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="trailing" secondItem="JDJ-9M-ukH" secondAttribute="trailing" constant="25" id="9Jw-d7-cEM"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="top" secondItem="PDi-iw-Qbl" secondAttribute="top" constant="-249" id="CXE-ad-nyx"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="bottom" secondItem="PDi-iw-Qbl" secondAttribute="bottom" constant="55" id="CrN-kR-rMY"/>
-                            <constraint firstItem="FzS-EH-h7B" firstAttribute="bottom" secondItem="4qk-o4-sff" secondAttribute="bottom" constant="53" id="Ewr-AD-gwB"/>
                             <constraint firstItem="hU8-Ke-vIe" firstAttribute="trailing" secondItem="FzS-EH-h7B" secondAttribute="trailing" constant="-51" id="Fnc-rZ-ThM"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="leading" secondItem="hJ7-tm-hsR" secondAttribute="leading" constant="-260" id="HlB-5b-P5O"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="bottom" secondItem="I22-rP-ukX" secondAttribute="bottom" constant="265" id="IHj-Mh-YD9"/>
@@ -564,7 +565,6 @@
                             <constraint firstItem="hU8-Ke-vIe" firstAttribute="leading" secondItem="FzS-EH-h7B" secondAttribute="leading" constant="50" id="oaD-49-gfM"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="bottom" secondItem="3R8-1X-ge6" secondAttribute="bottom" constant="42" id="sdr-XL-c3X"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="bottom" secondItem="sgD-OC-sHo" secondAttribute="bottom" constant="42" id="t9f-7v-Pco"/>
-                            <constraint firstItem="FzS-EH-h7B" firstAttribute="top" secondItem="4qk-o4-sff" secondAttribute="top" constant="-247" id="tuH-BV-ipf"/>
                             <constraint firstItem="Jnf-bY-1pO" firstAttribute="top" secondItem="FzS-EH-h7B" secondAttribute="top" constant="276" id="vSN-cd-6JA"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="top" secondItem="i6q-NC-3KK" secondAttribute="top" constant="-228" id="vpW-5J-egH"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="top" secondItem="sgD-OC-sHo" secondAttribute="top" constant="-236" id="vuU-y8-AUu"/>
@@ -587,14 +587,15 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0gH-y7-KGk"/>
+                                <exclude reference="23D-x3-hpF"/>
                                 <exclude reference="3Ug-M4-Bz3"/>
+                                <exclude reference="4uD-kf-1Ss"/>
                                 <exclude reference="6QG-lr-gGk"/>
                                 <exclude reference="7LB-HV-NGF"/>
                                 <exclude reference="8Il-nf-J8I"/>
                                 <exclude reference="9Jw-d7-cEM"/>
                                 <exclude reference="CXE-ad-nyx"/>
                                 <exclude reference="CrN-kR-rMY"/>
-                                <exclude reference="Ewr-AD-gwB"/>
                                 <exclude reference="HlB-5b-P5O"/>
                                 <exclude reference="IHj-Mh-YD9"/>
                                 <exclude reference="J0n-eO-Fzr"/>
@@ -615,19 +616,18 @@
                                 <exclude reference="hOm-N5-fjc"/>
                                 <exclude reference="sdr-XL-c3X"/>
                                 <exclude reference="t9f-7v-Pco"/>
-                                <exclude reference="tuH-BV-ipf"/>
                                 <exclude reference="vpW-5J-egH"/>
                                 <exclude reference="vuU-y8-AUu"/>
                                 <exclude reference="yuu-R8-T6X"/>
                                 <exclude reference="zRn-QO-hks"/>
-                                <exclude reference="IS5-ch-oQ2"/>
-                                <exclude reference="Ujf-6H-r27"/>
-                                <exclude reference="imp-zz-uc1"/>
-                                <exclude reference="vSN-cd-6JA"/>
                                 <exclude reference="Fnc-rZ-ThM"/>
                                 <exclude reference="LLH-Jl-MVf"/>
                                 <exclude reference="god-Ck-WR5"/>
                                 <exclude reference="oaD-49-gfM"/>
+                                <exclude reference="IS5-ch-oQ2"/>
+                                <exclude reference="Ujf-6H-r27"/>
+                                <exclude reference="imp-zz-uc1"/>
+                                <exclude reference="vSN-cd-6JA"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -646,14 +646,15 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="0gH-y7-KGk"/>
+                                <include reference="23D-x3-hpF"/>
                                 <include reference="3Ug-M4-Bz3"/>
+                                <include reference="4uD-kf-1Ss"/>
                                 <include reference="6QG-lr-gGk"/>
                                 <include reference="7LB-HV-NGF"/>
                                 <include reference="8Il-nf-J8I"/>
                                 <include reference="9Jw-d7-cEM"/>
                                 <include reference="CXE-ad-nyx"/>
                                 <include reference="CrN-kR-rMY"/>
-                                <include reference="Ewr-AD-gwB"/>
                                 <include reference="HlB-5b-P5O"/>
                                 <include reference="IHj-Mh-YD9"/>
                                 <include reference="J0n-eO-Fzr"/>
@@ -674,19 +675,18 @@
                                 <include reference="hOm-N5-fjc"/>
                                 <include reference="sdr-XL-c3X"/>
                                 <include reference="t9f-7v-Pco"/>
-                                <include reference="tuH-BV-ipf"/>
                                 <include reference="vpW-5J-egH"/>
                                 <include reference="vuU-y8-AUu"/>
                                 <include reference="yuu-R8-T6X"/>
                                 <include reference="zRn-QO-hks"/>
-                                <include reference="IS5-ch-oQ2"/>
-                                <include reference="Ujf-6H-r27"/>
-                                <include reference="imp-zz-uc1"/>
-                                <include reference="vSN-cd-6JA"/>
                                 <include reference="Fnc-rZ-ThM"/>
                                 <include reference="LLH-Jl-MVf"/>
                                 <include reference="god-Ck-WR5"/>
                                 <include reference="oaD-49-gfM"/>
+                                <include reference="IS5-ch-oQ2"/>
+                                <include reference="Ujf-6H-r27"/>
+                                <include reference="imp-zz-uc1"/>
+                                <include reference="vSN-cd-6JA"/>
                             </mask>
                         </variation>
                     </view>
@@ -842,12 +842,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B92-lU-vRU">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B92-lU-vRU">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="B92-lU-vRU" secondAttribute="height" multiplier="40:41" id="jau-J2-JeR"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -861,12 +861,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whf-91-Gsf">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whf-91-Gsf">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Whf-91-Gsf" secondAttribute="height" multiplier="40:41" id="vAw-5p-280"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -880,12 +880,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSr-Wp-u27">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSr-Wp-u27">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BSr-Wp-u27" secondAttribute="height" multiplier="40:41" id="LKi-LM-ThG"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -899,12 +899,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbg-VB-FMc">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbg-VB-FMc">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Dbg-VB-FMc" secondAttribute="height" multiplier="40:41" id="J88-16-Y8f"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -975,12 +975,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0z2-pW-cnD">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0z2-pW-cnD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0z2-pW-cnD" secondAttribute="height" multiplier="40:41" id="Ww2-qO-pjY"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -994,12 +994,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSa-wS-DCi">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSa-wS-DCi">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DSa-wS-DCi" secondAttribute="height" multiplier="40:41" id="RES-ZQ-Gu3"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -1013,12 +1013,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EH9-TR-jlJ">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EH9-TR-jlJ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EH9-TR-jlJ" secondAttribute="height" multiplier="40:41" id="o46-5F-Sxs"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -1032,12 +1032,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXr-hz-Y7W">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXr-hz-Y7W">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="DXr-hz-Y7W" secondAttribute="height" multiplier="40:41" id="Sfj-Dz-gqY"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -1051,12 +1051,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05E-fo-21a">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05E-fo-21a">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="05E-fo-21a" secondAttribute="height" multiplier="40:41" id="J6X-67-nGA"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -1070,12 +1070,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rL8-Dz-FVx">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rL8-Dz-FVx">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rL8-Dz-FVx" secondAttribute="height" multiplier="40:41" id="pxf-w1-6TB"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -1089,12 +1089,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Q0-Ii-qgD">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Q0-Ii-qgD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5Q0-Ii-qgD" secondAttribute="height" multiplier="40:41" id="y2E-jZ-OgZ"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -1108,12 +1108,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kth-hh-jSr">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kth-hh-jSr">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="kth-hh-jSr" secondAttribute="height" multiplier="40:41" id="Ukz-v9-NCJ"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -1127,12 +1127,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQy-0i-t0a">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQy-0i-t0a">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KQy-0i-t0a" secondAttribute="height" multiplier="40:41" id="Fup-sZ-sA2"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -1146,12 +1146,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnO-dD-goI">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnO-dD-goI">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XnO-dD-goI" secondAttribute="height" multiplier="40:41" id="VIl-5K-6LY"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -1165,12 +1165,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndm-S6-grZ">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndm-S6-grZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ndm-S6-grZ" secondAttribute="height" multiplier="40:41" id="D4x-Bs-rC0"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -1184,12 +1184,12 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccA-Ev-68u">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccA-Ev-68u">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ccA-Ev-68u" secondAttribute="height" multiplier="40:41" id="ZsV-yZ-ZVj"/>
                                 </constraints>
-                                <state key="normal" image="empty_slot.png">
+                                <state key="normal" backgroundImage="empty_slot.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -1638,6 +1638,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="MNG-AA-BbD"/>
-        <segue reference="Htt-EU-I46"/>
+        <segue reference="rUt-IK-zk6"/>
     </inferredMetricsTieBreakers>
 </document>
