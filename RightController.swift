@@ -13,6 +13,39 @@ class RightController: UIViewController {
     let notificationCenter = NSNotificationCenter.defaultCenter()
     let transitionManager = TransitionManager()
     
+    @IBOutlet var usernameLabel: UILabel!
+    @IBOutlet var goldLabel: UILabel!
+    
+    @IBOutlet var actionBtn: UIButton!
+    @IBOutlet var removeBtn: UIButton!
+    @IBOutlet var headBtn: UIButton!
+    @IBOutlet var offHandBtn: UIButton!
+    @IBOutlet var chestBtn: UIButton!
+    @IBOutlet var primaryHandBtn: UIButton!
+    @IBOutlet var inv1Btn: UIButton!
+    @IBOutlet var inv2Btn: UIButton!
+    @IBOutlet var inv3Btn: UIButton!
+    @IBOutlet var inv4Btn: UIButton!
+    @IBOutlet var inv5Btn: UIButton!
+    @IBOutlet var inv6Btn: UIButton!
+    @IBOutlet var inv7Btn: UIButton!
+    @IBOutlet var inv8Btn: UIButton!
+    @IBOutlet var inv9Btn: UIButton!
+    @IBOutlet var inv10Btn: UIButton!
+    @IBOutlet var inv11Btn: UIButton!
+    @IBOutlet var inv12Btn: UIButton!
+    @IBOutlet var inv13Btn: UIButton!
+    @IBOutlet var inv14Btn: UIButton!
+    @IBOutlet var inv15Btn: UIButton!
+    @IBOutlet var inv16Btn: UIButton!
+    
+    @IBOutlet var healthImg: UIImageView!
+    @IBOutlet var energyImg: UIImageView!
+    @IBOutlet var clarityImg: UIImageView!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
          self.view.tag = 2;
@@ -42,5 +75,49 @@ class RightController: UIViewController {
         // the segue to use our custom TransitionManager object to manage the transition animation
         toViewController.transitioningDelegate = self.transitionManager
         
+    }
+    @IBAction func actionBtnAction(sender: UIButton) {
+    }
+    @IBAction func removeBtnAction(sender: UIButton) {
+    }
+    @IBAction func headBtnAction(sender: UIButton) {
+    }
+    @IBAction func offHandBtnAction(sender: UIButton) {
+    }
+    @IBAction func chestBtnAction(sender: UIButton) {
+    }
+    @IBAction func primaryHandBtnAction(sender: UIButton) {
+    }
+    @IBAction func inv1BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv2BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv3BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv4BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv5BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv6BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv7BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv8BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv9BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv10BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv11BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv12BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv13BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv14BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv15BtnAction(sender:UIButton) {
+    }
+    @IBAction func inv16BtnAction(sender:UIButton) {
     }
 }

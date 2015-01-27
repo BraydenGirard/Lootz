@@ -882,6 +882,9 @@
                                         <include reference="jau-J2-JeR"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv2BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="2Iw-jv-5sk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whf-91-Gsf">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -901,6 +904,9 @@
                                         <include reference="vAw-5p-280"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv3BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="i3c-Ry-Grg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSr-Wp-u27">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -920,6 +926,9 @@
                                         <include reference="LKi-LM-ThG"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv4BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="U7U-FF-q9k"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbg-VB-FMc">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -939,6 +948,9 @@
                                         <include reference="J88-16-Y8f"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv1BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="GQK-pC-ejn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huw-6e-D95">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -958,6 +970,9 @@
                                         <include reference="I6v-KL-a3S"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="headBtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="310-Ab-CqD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUf-AA-oBD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -977,6 +992,9 @@
                                         <include reference="7Oe-Re-zOu"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="offHandBtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="8I5-1n-dhB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWM-y1-uUp">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -996,6 +1014,9 @@
                                         <include reference="6Lp-CJ-7hW"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="chestBtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="tmr-Ep-aeB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0z2-pW-cnD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1015,6 +1036,9 @@
                                         <include reference="Ww2-qO-pjY"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv6BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="NB0-wI-O1L"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSa-wS-DCi">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1034,6 +1058,9 @@
                                         <include reference="RES-ZQ-Gu3"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv7BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="oQa-y0-sZe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EH9-TR-jlJ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1053,6 +1080,9 @@
                                         <include reference="o46-5F-Sxs"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv8BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="FZZ-cR-KkH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXr-hz-Y7W">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1072,6 +1102,9 @@
                                         <include reference="Sfj-Dz-gqY"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv5BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="T1f-nt-sPl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05E-fo-21a">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1091,6 +1124,9 @@
                                         <include reference="J6X-67-nGA"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv10BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="7Ly-wL-Uhz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rL8-Dz-FVx">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1110,6 +1146,9 @@
                                         <include reference="pxf-w1-6TB"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv11BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="mMy-QG-pit"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Q0-Ii-qgD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1129,6 +1168,9 @@
                                         <include reference="y2E-jZ-OgZ"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv12BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="x83-ec-K3Z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kth-hh-jSr">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1148,6 +1190,9 @@
                                         <include reference="Ukz-v9-NCJ"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv9BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="d6p-Wv-gGC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQy-0i-t0a">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1167,6 +1212,9 @@
                                         <include reference="Fup-sZ-sA2"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv14BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="JHg-8a-2gd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnO-dD-goI">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1186,6 +1234,9 @@
                                         <include reference="VIl-5K-6LY"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv15BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="GQs-HP-cXc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndm-S6-grZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1205,6 +1256,9 @@
                                         <include reference="D4x-Bs-rC0"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv16BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="cPT-Ye-ueV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccA-Ev-68u">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1224,6 +1278,9 @@
                                         <include reference="ZsV-yZ-ZVj"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="inv13BtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="gMu-Q8-UHn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYM-uQ-hYc">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1243,6 +1300,9 @@
                                         <include reference="TLy-Vg-wIH"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="primaryHandBtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="kSj-bA-FC9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gl-fN-wjw">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1262,6 +1322,9 @@
                                         <include reference="HRx-M1-y46"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="actionBtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="xOH-tv-1LD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5Q-Um-QHd">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1281,6 +1344,9 @@
                                         <include reference="EX8-P1-8s6"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="removeBtnAction:" destination="qAw-nN-0FA" eventType="touchUpInside" id="NdC-Fg-zKi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1686,6 +1752,33 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="actionBtn" destination="5Gl-fN-wjw" id="ZfL-rW-JYK"/>
+                        <outlet property="chestBtn" destination="HWM-y1-uUp" id="ZQi-Ex-NZ7"/>
+                        <outlet property="clarityImg" destination="YXb-Tr-G69" id="Wfw-Ea-aQF"/>
+                        <outlet property="energyImg" destination="SgR-bv-OJA" id="rXa-pz-qfk"/>
+                        <outlet property="goldLabel" destination="GyB-ve-9dK" id="KJg-Z0-1xZ"/>
+                        <outlet property="headBtn" destination="huw-6e-D95" id="mto-ie-FWu"/>
+                        <outlet property="healthImg" destination="Cwe-wv-ia3" id="dim-e1-ThW"/>
+                        <outlet property="inv10Btn" destination="05E-fo-21a" id="je1-U4-9xv"/>
+                        <outlet property="inv11Btn" destination="rL8-Dz-FVx" id="ynp-OH-d2h"/>
+                        <outlet property="inv12Btn" destination="5Q0-Ii-qgD" id="FhZ-Bf-4Ys"/>
+                        <outlet property="inv13Btn" destination="ccA-Ev-68u" id="Isv-iT-CnR"/>
+                        <outlet property="inv14Btn" destination="KQy-0i-t0a" id="dMv-I5-tbF"/>
+                        <outlet property="inv15Btn" destination="XnO-dD-goI" id="603-ZO-7kv"/>
+                        <outlet property="inv16Btn" destination="ndm-S6-grZ" id="nFm-DS-zQZ"/>
+                        <outlet property="inv1Btn" destination="Dbg-VB-FMc" id="WOO-HS-5jq"/>
+                        <outlet property="inv2Btn" destination="B92-lU-vRU" id="ml7-J8-hod"/>
+                        <outlet property="inv3Btn" destination="Whf-91-Gsf" id="kC3-KG-qUR"/>
+                        <outlet property="inv4Btn" destination="BSr-Wp-u27" id="vxS-Yc-QoR"/>
+                        <outlet property="inv5Btn" destination="DXr-hz-Y7W" id="6XL-6c-oZg"/>
+                        <outlet property="inv6Btn" destination="0z2-pW-cnD" id="hiJ-1C-6JE"/>
+                        <outlet property="inv7Btn" destination="DSa-wS-DCi" id="5cD-SD-45H"/>
+                        <outlet property="inv8Btn" destination="EH9-TR-jlJ" id="Vv8-QW-Wck"/>
+                        <outlet property="inv9Btn" destination="kth-hh-jSr" id="Wfa-B9-xIJ"/>
+                        <outlet property="offHandBtn" destination="dUf-AA-oBD" id="ZJW-v9-WWx"/>
+                        <outlet property="primaryHandBtn" destination="HYM-uQ-hYc" id="Mgh-2G-b9p"/>
+                        <outlet property="removeBtn" destination="d5Q-Um-QHd" id="9Oe-p7-Owg"/>
+                        <outlet property="usernameLabel" destination="Q5P-P7-KKc" id="yGM-Cy-7YS"/>
                         <segue destination="vXZ-lx-hvc" kind="show" identifier="exitRight" id="Htt-EU-I46"/>
                         <segue destination="qmz-kA-Rdn" kind="show" identifier="rightMain" id="MNG-AA-BbD"/>
                     </connections>
@@ -1728,6 +1821,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="MNG-AA-BbD"/>
-        <segue reference="rUt-IK-zk6"/>
+        <segue reference="Htt-EU-I46"/>
     </inferredMetricsTieBreakers>
 </document>
