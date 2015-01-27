@@ -97,6 +97,12 @@
 		F64D47591A4271E500D0914C /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64D47551A4271E500D0914C /* ParseCrashReporting.framework */; };
 		F64D475A1A4271E500D0914C /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64D47561A4271E500D0914C /* ParseFacebookUtils.framework */; };
 		F64D475B1A4271E500D0914C /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64D47571A4271E500D0914C /* ParseUI.framework */; };
+		F65D23211A781EFE009A8939 /* remove_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F65D231B1A781EFE009A8939 /* remove_btn.png */; };
+		F65D23221A781EFE009A8939 /* remove_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65D231C1A781EFE009A8939 /* remove_btn@3x.png */; };
+		F65D23231A781EFE009A8939 /* remove_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65D231D1A781EFE009A8939 /* remove_btn@2x.png */; };
+		F65D23241A781EFE009A8939 /* action_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F65D231E1A781EFE009A8939 /* action_btn.png */; };
+		F65D23251A781EFE009A8939 /* action_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65D231F1A781EFE009A8939 /* action_btn@2x.png */; };
+		F65D23261A781EFE009A8939 /* action_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65D23201A781EFE009A8939 /* action_btn@3x.png */; };
 		F69715F81A5C8EE2009B9366 /* Loot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715F71A5C8EE2009B9366 /* Loot.swift */; };
 		F69715FA1A5C8F08009B9366 /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715F91A5C8F08009B9366 /* Gear.swift */; };
 		F69715FE1A5C8F4B009B9366 /* Potion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715FD1A5C8F4B009B9366 /* Potion.swift */; };
@@ -376,6 +382,12 @@
 		F64D47551A4271E500D0914C /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
 		F64D47561A4271E500D0914C /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		F64D47571A4271E500D0914C /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		F65D231B1A781EFE009A8939 /* remove_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remove_btn.png; sourceTree = "<group>"; };
+		F65D231C1A781EFE009A8939 /* remove_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "remove_btn@3x.png"; sourceTree = "<group>"; };
+		F65D231D1A781EFE009A8939 /* remove_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "remove_btn@2x.png"; sourceTree = "<group>"; };
+		F65D231E1A781EFE009A8939 /* action_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = action_btn.png; sourceTree = "<group>"; };
+		F65D231F1A781EFE009A8939 /* action_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "action_btn@2x.png"; sourceTree = "<group>"; };
+		F65D23201A781EFE009A8939 /* action_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "action_btn@3x.png"; sourceTree = "<group>"; };
 		F69715F71A5C8EE2009B9366 /* Loot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loot.swift; sourceTree = "<group>"; };
 		F69715F91A5C8F08009B9366 /* Gear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gear.swift; sourceTree = "<group>"; };
 		F69715FD1A5C8F4B009B9366 /* Potion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Potion.swift; sourceTree = "<group>"; };
@@ -658,6 +670,12 @@
 		F62DE8F51A2E319900E77B70 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F65D231B1A781EFE009A8939 /* remove_btn.png */,
+				F65D231C1A781EFE009A8939 /* remove_btn@3x.png */,
+				F65D231D1A781EFE009A8939 /* remove_btn@2x.png */,
+				F65D231E1A781EFE009A8939 /* action_btn.png */,
+				F65D231F1A781EFE009A8939 /* action_btn@2x.png */,
+				F65D23201A781EFE009A8939 /* action_btn@3x.png */,
 				F6F35C7F1A775CBD0042D313 /* armour_slot.png */,
 				F6F35C801A775CBD0042D313 /* armour_slot@2x.png */,
 				F6F35C811A775CBD0042D313 /* armour_slot@3x.png */,
@@ -1079,6 +1097,7 @@
 				F608B60A1A7462B30072E6E0 /* energy_full.png in Resources */,
 				F608B5F61A7462B30072E6E0 /* clarity_empty@2x.png in Resources */,
 				F6D9DF471A75763500F72300 /* Shield.png in Resources */,
+				F65D23211A781EFE009A8939 /* remove_btn.png in Resources */,
 				F6D9DF9F1A75765400F72300 /* north@2x.png in Resources */,
 				F6D9DFAB1A75765400F72300 /* star@2x.png in Resources */,
 				F637F7621A310A8D004752E0 /* login_btn.png in Resources */,
@@ -1090,6 +1109,7 @@
 				F6D9DFB11A75765400F72300 /* west@2x.png in Resources */,
 				F637F76C1A310A8D004752E0 /* signup_btn@2x.png in Resources */,
 				F6D9DF321A75763500F72300 /* Helmet.png in Resources */,
+				F65D23241A781EFE009A8939 /* action_btn.png in Resources */,
 				F6F35C821A775CBD0042D313 /* armour_slot.png in Resources */,
 				F608B6241A7462B30072E6E0 /* weapon_slot@3x.png in Resources */,
 				F608B5F81A7462B30072E6E0 /* clarity_full.png in Resources */,
@@ -1133,6 +1153,7 @@
 				F608B5F31A7462B30072E6E0 /* clarity_75@2x.png in Resources */,
 				F6D9DF5D1A75763500F72300 /* Wand-Upgrade@2x.png in Resources */,
 				F6D9DF001A75763500F72300 /* Armor@2x.png in Resources */,
+				F65D23261A781EFE009A8939 /* action_btn@3x.png in Resources */,
 				F6D9DF3D1A75763500F72300 /* PotionGreen@3x.png in Resources */,
 				F6D9DF221A75763500F72300 /* GemBlue@3x.png in Resources */,
 				F6D9DF921A75765400F72300 /* explorer_ui.png in Resources */,
@@ -1208,6 +1229,7 @@
 				F6D9DF111A75763500F72300 /* Bow-Upgrade.png in Resources */,
 				F6D9DF951A75765400F72300 /* list.png in Resources */,
 				F608B6061A7462B30072E6E0 /* energy_75@3x.png in Resources */,
+				F65D23231A781EFE009A8939 /* remove_btn@2x.png in Resources */,
 				F6D9DF0C1A75763500F72300 /* AxeDouble@2x.png in Resources */,
 				F6D9DF0D1A75763500F72300 /* AxeDouble@3x.png in Resources */,
 				F6D9DF0F1A75763500F72300 /* Backpack@2x.png in Resources */,
@@ -1238,6 +1260,7 @@
 				F608B6111A7462B30072E6E0 /* health_50@2x.png in Resources */,
 				F6D9DF061A75763500F72300 /* Axe@2x.png in Resources */,
 				F6F35C761A77525D0042D313 /* character_ui.png in Resources */,
+				F65D23221A781EFE009A8939 /* remove_btn@3x.png in Resources */,
 				F6D9DF931A75765400F72300 /* explorer_ui@2x.png in Resources */,
 				F608B6051A7462B30072E6E0 /* energy_75@2x.png in Resources */,
 				F637F7631A310A8D004752E0 /* login_btn@2x.png in Resources */,
@@ -1247,6 +1270,7 @@
 				F6D9DF541A75763500F72300 /* Spear@2x.png in Resources */,
 				F608B5EC1A7462B30072E6E0 /* clarity_25.png in Resources */,
 				F6D9DF3E1A75763500F72300 /* PotionRed.png in Resources */,
+				F65D23251A781EFE009A8939 /* action_btn@2x.png in Resources */,
 				F6D9DF361A75763500F72300 /* Map@2x.png in Resources */,
 				F608B5F71A7462B30072E6E0 /* clarity_empty@3x.png in Resources */,
 				F608B6031A7462B30072E6E0 /* energy_50@3x.png in Resources */,
