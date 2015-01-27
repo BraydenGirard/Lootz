@@ -10,12 +10,6 @@
 		F608B5A21A7422090072E6E0 /* LeftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608B5A11A7422090072E6E0 /* LeftController.swift */; };
 		F608B5A41A7422140072E6E0 /* RightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608B5A31A7422140072E6E0 /* RightController.swift */; };
 		F608B5A61A742D990072E6E0 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F608B5A51A742D990072E6E0 /* TransitionManager.swift */; };
-		F608B5E61A7462B30072E6E0 /* armour_slot.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5A71A7462B30072E6E0 /* armour_slot.png */; };
-		F608B5E71A7462B30072E6E0 /* armour_slot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5A81A7462B30072E6E0 /* armour_slot@2x.png */; };
-		F608B5E81A7462B30072E6E0 /* armour_slot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5A91A7462B30072E6E0 /* armour_slot@3x.png */; };
-		F608B5E91A7462B30072E6E0 /* character_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5AA1A7462B30072E6E0 /* character_ui.png */; };
-		F608B5EA1A7462B30072E6E0 /* character_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5AB1A7462B30072E6E0 /* character_ui@2x.png */; };
-		F608B5EB1A7462B30072E6E0 /* character_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5AC1A7462B30072E6E0 /* character_ui@3x.png */; };
 		F608B5EC1A7462B30072E6E0 /* clarity_25.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5AD1A7462B30072E6E0 /* clarity_25.png */; };
 		F608B5ED1A7462B30072E6E0 /* clarity_25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5AE1A7462B30072E6E0 /* clarity_25@2x.png */; };
 		F608B5EE1A7462B30072E6E0 /* clarity_25@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5AF1A7462B30072E6E0 /* clarity_25@3x.png */; };
@@ -70,7 +64,6 @@
 		F608B61F1A7462B30072E6E0 /* sheild_slot.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5E01A7462B30072E6E0 /* sheild_slot.png */; };
 		F608B6201A7462B30072E6E0 /* sheild_slot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5E11A7462B30072E6E0 /* sheild_slot@2x.png */; };
 		F608B6211A7462B30072E6E0 /* sheild_slot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5E21A7462B30072E6E0 /* sheild_slot@3x.png */; };
-		F608B6221A7462B30072E6E0 /* weapon_slot.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5E31A7462B30072E6E0 /* weapon_slot.png */; };
 		F608B6231A7462B30072E6E0 /* weapon_slot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5E41A7462B30072E6E0 /* weapon_slot@2x.png */; };
 		F608B6241A7462B30072E6E0 /* weapon_slot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5E51A7462B30072E6E0 /* weapon_slot@3x.png */; };
 		F61A020B1A65D2C500E37BA3 /* Gem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61A020A1A65D2C500E37BA3 /* Gem.swift */; };
@@ -270,6 +263,12 @@
 		F6D9DFB01A75765400F72300 /* west.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF891A75765400F72300 /* west.png */; };
 		F6D9DFB11A75765400F72300 /* west@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF8A1A75765400F72300 /* west@2x.png */; };
 		F6D9DFB21A75765400F72300 /* west@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF8B1A75765400F72300 /* west@3x.png */; };
+		F6F35C761A77525D0042D313 /* character_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F6F35C731A77525D0042D313 /* character_ui.png */; };
+		F6F35C771A77525D0042D313 /* character_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6F35C741A77525D0042D313 /* character_ui@2x.png */; };
+		F6F35C781A77525D0042D313 /* character_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6F35C751A77525D0042D313 /* character_ui@3x.png */; };
+		F6F35C821A775CBD0042D313 /* armour_slot.png in Resources */ = {isa = PBXBuildFile; fileRef = F6F35C7F1A775CBD0042D313 /* armour_slot.png */; };
+		F6F35C831A775CBD0042D313 /* armour_slot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6F35C801A775CBD0042D313 /* armour_slot@2x.png */; };
+		F6F35C841A775CBD0042D313 /* armour_slot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6F35C811A775CBD0042D313 /* armour_slot@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -286,12 +285,6 @@
 		F608B5A11A7422090072E6E0 /* LeftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftController.swift; sourceTree = "<group>"; };
 		F608B5A31A7422140072E6E0 /* RightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightController.swift; sourceTree = "<group>"; };
 		F608B5A51A742D990072E6E0 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
-		F608B5A71A7462B30072E6E0 /* armour_slot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = armour_slot.png; sourceTree = "<group>"; };
-		F608B5A81A7462B30072E6E0 /* armour_slot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "armour_slot@2x.png"; sourceTree = "<group>"; };
-		F608B5A91A7462B30072E6E0 /* armour_slot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "armour_slot@3x.png"; sourceTree = "<group>"; };
-		F608B5AA1A7462B30072E6E0 /* character_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = character_ui.png; sourceTree = "<group>"; };
-		F608B5AB1A7462B30072E6E0 /* character_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "character_ui@2x.png"; sourceTree = "<group>"; };
-		F608B5AC1A7462B30072E6E0 /* character_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "character_ui@3x.png"; sourceTree = "<group>"; };
 		F608B5AD1A7462B30072E6E0 /* clarity_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clarity_25.png; sourceTree = "<group>"; };
 		F608B5AE1A7462B30072E6E0 /* clarity_25@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clarity_25@2x.png"; sourceTree = "<group>"; };
 		F608B5AF1A7462B30072E6E0 /* clarity_25@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clarity_25@3x.png"; sourceTree = "<group>"; };
@@ -346,7 +339,6 @@
 		F608B5E01A7462B30072E6E0 /* sheild_slot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sheild_slot.png; sourceTree = "<group>"; };
 		F608B5E11A7462B30072E6E0 /* sheild_slot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sheild_slot@2x.png"; sourceTree = "<group>"; };
 		F608B5E21A7462B30072E6E0 /* sheild_slot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sheild_slot@3x.png"; sourceTree = "<group>"; };
-		F608B5E31A7462B30072E6E0 /* weapon_slot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weapon_slot.png; sourceTree = "<group>"; };
 		F608B5E41A7462B30072E6E0 /* weapon_slot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weapon_slot@2x.png"; sourceTree = "<group>"; };
 		F608B5E51A7462B30072E6E0 /* weapon_slot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weapon_slot@3x.png"; sourceTree = "<group>"; };
 		F61A020A1A65D2C500E37BA3 /* Gem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gem.swift; sourceTree = "<group>"; };
@@ -550,6 +542,12 @@
 		F6D9DF891A75765400F72300 /* west.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = west.png; sourceTree = "<group>"; };
 		F6D9DF8A1A75765400F72300 /* west@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "west@2x.png"; sourceTree = "<group>"; };
 		F6D9DF8B1A75765400F72300 /* west@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "west@3x.png"; sourceTree = "<group>"; };
+		F6F35C731A77525D0042D313 /* character_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = character_ui.png; sourceTree = "<group>"; };
+		F6F35C741A77525D0042D313 /* character_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "character_ui@2x.png"; sourceTree = "<group>"; };
+		F6F35C751A77525D0042D313 /* character_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "character_ui@3x.png"; sourceTree = "<group>"; };
+		F6F35C7F1A775CBD0042D313 /* armour_slot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = armour_slot.png; sourceTree = "<group>"; };
+		F6F35C801A775CBD0042D313 /* armour_slot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "armour_slot@2x.png"; sourceTree = "<group>"; };
+		F6F35C811A775CBD0042D313 /* armour_slot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "armour_slot@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -660,6 +658,12 @@
 		F62DE8F51A2E319900E77B70 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F6F35C7F1A775CBD0042D313 /* armour_slot.png */,
+				F6F35C801A775CBD0042D313 /* armour_slot@2x.png */,
+				F6F35C811A775CBD0042D313 /* armour_slot@3x.png */,
+				F6F35C731A77525D0042D313 /* character_ui.png */,
+				F6F35C741A77525D0042D313 /* character_ui@2x.png */,
+				F6F35C751A77525D0042D313 /* character_ui@3x.png */,
 				F6D9DF651A75765400F72300 /* east_red.png */,
 				F6D9DF661A75765400F72300 /* east_red@2x.png */,
 				F6D9DF671A75765400F72300 /* east_red@3x.png */,
@@ -804,12 +808,6 @@
 				F6D9DEF91A75763500F72300 /* WoodSword.png */,
 				F6D9DEFA1A75763500F72300 /* WoodSword@2x.png */,
 				F6D9DEFB1A75763500F72300 /* WoodSword@3x.png */,
-				F608B5A71A7462B30072E6E0 /* armour_slot.png */,
-				F608B5A81A7462B30072E6E0 /* armour_slot@2x.png */,
-				F608B5A91A7462B30072E6E0 /* armour_slot@3x.png */,
-				F608B5AA1A7462B30072E6E0 /* character_ui.png */,
-				F608B5AB1A7462B30072E6E0 /* character_ui@2x.png */,
-				F608B5AC1A7462B30072E6E0 /* character_ui@3x.png */,
 				F608B5AD1A7462B30072E6E0 /* clarity_25.png */,
 				F608B5AE1A7462B30072E6E0 /* clarity_25@2x.png */,
 				F608B5AF1A7462B30072E6E0 /* clarity_25@3x.png */,
@@ -864,7 +862,6 @@
 				F608B5E01A7462B30072E6E0 /* sheild_slot.png */,
 				F608B5E11A7462B30072E6E0 /* sheild_slot@2x.png */,
 				F608B5E21A7462B30072E6E0 /* sheild_slot@3x.png */,
-				F608B5E31A7462B30072E6E0 /* weapon_slot.png */,
 				F608B5E41A7462B30072E6E0 /* weapon_slot@2x.png */,
 				F608B5E51A7462B30072E6E0 /* weapon_slot@3x.png */,
 				F6CFB7051A325E1C00405290 /* login_ui.png */,
@@ -1077,7 +1074,6 @@
 				F608B5FC1A7462B30072E6E0 /* empty_slot@2x.png in Resources */,
 				F6D9DF091A75763500F72300 /* AxeDouble-2-Upgrade@2x.png in Resources */,
 				F6D9DF641A75763500F72300 /* WoodSword@3x.png in Resources */,
-				F608B5EB1A7462B30072E6E0 /* character_ui@3x.png in Resources */,
 				F6D9DFA81A75765400F72300 /* south@2x.png in Resources */,
 				F6D9DF051A75763500F72300 /* Axe.png in Resources */,
 				F608B60A1A7462B30072E6E0 /* energy_full.png in Resources */,
@@ -1094,6 +1090,7 @@
 				F6D9DFB11A75765400F72300 /* west@2x.png in Resources */,
 				F637F76C1A310A8D004752E0 /* signup_btn@2x.png in Resources */,
 				F6D9DF321A75763500F72300 /* Helmet.png in Resources */,
+				F6F35C821A775CBD0042D313 /* armour_slot.png in Resources */,
 				F608B6241A7462B30072E6E0 /* weapon_slot@3x.png in Resources */,
 				F608B5F81A7462B30072E6E0 /* clarity_full.png in Resources */,
 				F6CFB70A1A325E1C00405290 /* login_ui@3x.png in Resources */,
@@ -1103,7 +1100,6 @@
 				F6D9DF2C1A75763500F72300 /* Hammer.png in Resources */,
 				F6CFB6FD1A3255F100405290 /* exit.png in Resources */,
 				F6D9DF141A75763500F72300 /* Bow.png in Resources */,
-				F608B5E91A7462B30072E6E0 /* character_ui.png in Resources */,
 				F608B6011A7462B30072E6E0 /* energy_50.png in Resources */,
 				F608B6041A7462B30072E6E0 /* energy_75.png in Resources */,
 				F6D9DF101A75763500F72300 /* Backpack@3x.png in Resources */,
@@ -1116,17 +1112,17 @@
 				F608B6211A7462B30072E6E0 /* sheild_slot@3x.png in Resources */,
 				F6D9DF551A75763500F72300 /* Spear@3x.png in Resources */,
 				F6D9DF4C1A75763500F72300 /* Small-Shield-Upgrade@3x.png in Resources */,
+				F6F35C781A77525D0042D313 /* character_ui@3x.png in Resources */,
 				F6D9DF3A1A75763500F72300 /* PotionBlue@3x.png in Resources */,
 				F6D9DFAA1A75765400F72300 /* star.png in Resources */,
 				F6D9DF0B1A75763500F72300 /* AxeDouble.png in Resources */,
+				F6F35C841A775CBD0042D313 /* armour_slot@3x.png in Resources */,
 				F6D9DFAF1A75765400F72300 /* west_red@3x.png in Resources */,
-				F608B6221A7462B30072E6E0 /* weapon_slot.png in Resources */,
 				F6D9DF211A75763500F72300 /* GemBlue@2x.png in Resources */,
 				F6D9DF531A75763500F72300 /* Spear.png in Resources */,
 				F6D9DF251A75763500F72300 /* GemGreen@3x.png in Resources */,
 				F637F76D1A310A8D004752E0 /* signup_btn@3x.png in Resources */,
 				F6D9DFB21A75765400F72300 /* west@3x.png in Resources */,
-				F608B5E71A7462B30072E6E0 /* armour_slot@2x.png in Resources */,
 				F6D9DF0A1A75763500F72300 /* AxeDouble-2-Upgrade@3x.png in Resources */,
 				F6D9DF281A75763500F72300 /* GemRed@3x.png in Resources */,
 				F608B6171A7462B30072E6E0 /* health_empty@2x.png in Resources */,
@@ -1141,7 +1137,6 @@
 				F6D9DF221A75763500F72300 /* GemBlue@3x.png in Resources */,
 				F6D9DF921A75765400F72300 /* explorer_ui.png in Resources */,
 				F6D9DF341A75763500F72300 /* Helmet@3x.png in Resources */,
-				F608B5E61A7462B30072E6E0 /* armour_slot.png in Resources */,
 				F6D9DF071A75763500F72300 /* Axe@3x.png in Resources */,
 				F6D9DF521A75763500F72300 /* Spear-Upgrade@3x.png in Resources */,
 				F6D9DF131A75763500F72300 /* Bow-Upgrade@3x.png in Resources */,
@@ -1185,7 +1180,6 @@
 				F6D9DF261A75763500F72300 /* GemRed.png in Resources */,
 				F6D9DF571A75763500F72300 /* Sword-Upgrade@2x.png in Resources */,
 				F6D9DF961A75765400F72300 /* list@2x.png in Resources */,
-				F608B5EA1A7462B30072E6E0 /* character_ui@2x.png in Resources */,
 				F608B60B1A7462B30072E6E0 /* energy_full@2x.png in Resources */,
 				F6D9DF481A75763500F72300 /* Shield@2x.png in Resources */,
 				F6D9DF8E1A75765400F72300 /* east_red@3x.png in Resources */,
@@ -1201,7 +1195,6 @@
 				F6D9DF271A75763500F72300 /* GemRed@2x.png in Resources */,
 				F6D9DEFE1A75763500F72300 /* Armor-Upgrade@3x.png in Resources */,
 				F608B61E1A7462B30072E6E0 /* helmet_slot@3x.png in Resources */,
-				F608B5E81A7462B30072E6E0 /* armour_slot@3x.png in Resources */,
 				F6D9DF1C1A75763500F72300 /* Dagger-Upgrade@3x.png in Resources */,
 				F6D9DF441A75763500F72300 /* Shield-Upgrade.png in Resources */,
 				F6D9DF011A75763500F72300 /* Armor@3x.png in Resources */,
@@ -1244,6 +1237,7 @@
 				F6D9DF5A1A75763500F72300 /* Sword@2x.png in Resources */,
 				F608B6111A7462B30072E6E0 /* health_50@2x.png in Resources */,
 				F6D9DF061A75763500F72300 /* Axe@2x.png in Resources */,
+				F6F35C761A77525D0042D313 /* character_ui.png in Resources */,
 				F6D9DF931A75765400F72300 /* explorer_ui@2x.png in Resources */,
 				F608B6051A7462B30072E6E0 /* energy_75@2x.png in Resources */,
 				F637F7631A310A8D004752E0 /* login_btn@2x.png in Resources */,
@@ -1268,6 +1262,8 @@
 				F6D9DF981A75765400F72300 /* loot_btn.png in Resources */,
 				F6D9DFA01A75765400F72300 /* north@3x.png in Resources */,
 				F6D9DF3F1A75763500F72300 /* PotionRed@2x.png in Resources */,
+				F6F35C771A77525D0042D313 /* character_ui@2x.png in Resources */,
+				F6F35C831A775CBD0042D313 /* armour_slot@2x.png in Resources */,
 				F608B5ED1A7462B30072E6E0 /* clarity_25@2x.png in Resources */,
 				F649BE4C1A27D22400A00E3D /* Images.xcassets in Resources */,
 				F6D9DF4B1A75763500F72300 /* Small-Shield-Upgrade@2x.png in Resources */,
