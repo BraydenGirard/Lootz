@@ -22,9 +22,6 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
         let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
         
-        println(fromView.tag)
-        println(toView.tag)
-        
         // set up from 2D transforms that we'll use in the animation
         let offScreenRight = CGAffineTransformMakeTranslation(container.frame.width, 0)
         let offScreenLeft = CGAffineTransformMakeTranslation(-container.frame.width, 0)

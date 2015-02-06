@@ -53,9 +53,7 @@ class ParseImpl: DatabaseManager {
     func getUser() -> User {
         var currentUser = PFUser.currentUser()
         if currentUser != nil {
-            println("Before creating user")
             var user = User(parseUser: currentUser)
-            println("After creating user")
             return user
         } else {
             NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
