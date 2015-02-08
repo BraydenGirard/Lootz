@@ -10,6 +10,12 @@ import Foundation
 
 class Gold: Loot {
     init(quantity: Int) {
-        super.init(name: GOLD, image: UIImage(contentsOfFile:GOLD + ".png")!, rarity: GOLDRARE, quantity: quantity)
+        super.init(name: GOLD, image: UIImage(contentsOfFile:GOLD + ".png")!, quantity: quantity)
     }
+    
+    override func use() { }
+    
+    override func remove() { }
+    
+    override func delete() { }
 }

@@ -62,13 +62,11 @@ let GOLDRARE = 100
 class Loot {
     let name = UNKNOWN
     let image =  UIImage(contentsOfFile: "default.png")!
-    let rarity = 0
     var quantity = 0
     
-    init(name: String, image: UIImage, rarity: Int, quantity: Int) {
+    init(name: String, image: UIImage, quantity: Int) {
         self.name = name
         self.image = image
-        self.rarity = rarity
         self.quantity = quantity
     }
     
@@ -78,10 +76,6 @@ class Loot {
     
     func getImage() -> UIImage {
       return image
-    }
-    
-    func getRarity() -> Int {
-        return rarity
     }
     
     func getName() -> String {

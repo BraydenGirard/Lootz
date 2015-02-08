@@ -66,7 +66,6 @@
 		F608B6211A7462B30072E6E0 /* sheild_slot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5E21A7462B30072E6E0 /* sheild_slot@3x.png */; };
 		F608B6231A7462B30072E6E0 /* weapon_slot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5E41A7462B30072E6E0 /* weapon_slot@2x.png */; };
 		F608B6241A7462B30072E6E0 /* weapon_slot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5E51A7462B30072E6E0 /* weapon_slot@3x.png */; };
-		F61A020B1A65D2C500E37BA3 /* Gem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61A020A1A65D2C500E37BA3 /* Gem.swift */; };
 		F636FAFB1A27D622002B832C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636FAEF1A27D622002B832C /* Accounts.framework */; };
 		F636FAFC1A27D622002B832C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636FAF01A27D622002B832C /* AudioToolbox.framework */; };
 		F636FAFD1A27D622002B832C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636FAF11A27D622002B832C /* CFNetwork.framework */; };
@@ -107,9 +106,6 @@
 		F69715FA1A5C8F08009B9366 /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715F91A5C8F08009B9366 /* Gear.swift */; };
 		F69715FE1A5C8F4B009B9366 /* Potion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715FD1A5C8F4B009B9366 /* Potion.swift */; };
 		F69716001A5C8F68009B9366 /* Gold.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715FF1A5C8F68009B9366 /* Gold.swift */; };
-		F69716021A5C8F81009B9366 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69716011A5C8F81009B9366 /* Map.swift */; };
-		F69716041A5C8F8D009B9366 /* Bounty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69716031A5C8F8D009B9366 /* Bounty.swift */; };
-		F69716061A5C8FA6009B9366 /* LootBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69716051A5C8FA6009B9366 /* LootBag.swift */; };
 		F6B429201A363CAE006056A7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B4291F1A363CAE006056A7 /* User.swift */; };
 		F6BEDCA41A6CBA530031D3DB /* Chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BEDCA31A6CBA530031D3DB /* Chest.swift */; };
 		F6CFB6FD1A3255F100405290 /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB6F71A3255F100405290 /* exit.png */; };
@@ -161,15 +157,6 @@
 		F6D9DF1D1A75763500F72300 /* Dagger.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB41A75763500F72300 /* Dagger.png */; };
 		F6D9DF1E1A75763500F72300 /* Dagger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB51A75763500F72300 /* Dagger@2x.png */; };
 		F6D9DF1F1A75763500F72300 /* Dagger@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB61A75763500F72300 /* Dagger@3x.png */; };
-		F6D9DF201A75763500F72300 /* GemBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB71A75763500F72300 /* GemBlue.png */; };
-		F6D9DF211A75763500F72300 /* GemBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB81A75763500F72300 /* GemBlue@2x.png */; };
-		F6D9DF221A75763500F72300 /* GemBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEB91A75763500F72300 /* GemBlue@3x.png */; };
-		F6D9DF231A75763500F72300 /* GemGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEBA1A75763500F72300 /* GemGreen.png */; };
-		F6D9DF241A75763500F72300 /* GemGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEBB1A75763500F72300 /* GemGreen@2x.png */; };
-		F6D9DF251A75763500F72300 /* GemGreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEBC1A75763500F72300 /* GemGreen@3x.png */; };
-		F6D9DF261A75763500F72300 /* GemRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEBD1A75763500F72300 /* GemRed.png */; };
-		F6D9DF271A75763500F72300 /* GemRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEBE1A75763500F72300 /* GemRed@2x.png */; };
-		F6D9DF281A75763500F72300 /* GemRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEBF1A75763500F72300 /* GemRed@3x.png */; };
 		F6D9DF291A75763500F72300 /* Hammer-Upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEC01A75763500F72300 /* Hammer-Upgrade.png */; };
 		F6D9DF2A1A75763500F72300 /* Hammer-Upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEC11A75763500F72300 /* Hammer-Upgrade@2x.png */; };
 		F6D9DF2B1A75763500F72300 /* Hammer-Upgrade@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEC21A75763500F72300 /* Hammer-Upgrade@3x.png */; };
@@ -182,9 +169,6 @@
 		F6D9DF321A75763500F72300 /* Helmet.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEC91A75763500F72300 /* Helmet.png */; };
 		F6D9DF331A75763500F72300 /* Helmet@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DECA1A75763500F72300 /* Helmet@2x.png */; };
 		F6D9DF341A75763500F72300 /* Helmet@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DECB1A75763500F72300 /* Helmet@3x.png */; };
-		F6D9DF351A75763500F72300 /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DECC1A75763500F72300 /* Map.png */; };
-		F6D9DF361A75763500F72300 /* Map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DECD1A75763500F72300 /* Map@2x.png */; };
-		F6D9DF371A75763500F72300 /* Map@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DECE1A75763500F72300 /* Map@3x.png */; };
 		F6D9DF381A75763500F72300 /* PotionBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DECF1A75763500F72300 /* PotionBlue.png */; };
 		F6D9DF391A75763500F72300 /* PotionBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED01A75763500F72300 /* PotionBlue@2x.png */; };
 		F6D9DF3A1A75763500F72300 /* PotionBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED11A75763500F72300 /* PotionBlue@3x.png */; };
@@ -194,9 +178,6 @@
 		F6D9DF3E1A75763500F72300 /* PotionRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED51A75763500F72300 /* PotionRed.png */; };
 		F6D9DF3F1A75763500F72300 /* PotionRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED61A75763500F72300 /* PotionRed@2x.png */; };
 		F6D9DF401A75763500F72300 /* PotionRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED71A75763500F72300 /* PotionRed@3x.png */; };
-		F6D9DF411A75763500F72300 /* Scroll.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED81A75763500F72300 /* Scroll.png */; };
-		F6D9DF421A75763500F72300 /* Scroll@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DED91A75763500F72300 /* Scroll@2x.png */; };
-		F6D9DF431A75763500F72300 /* Scroll@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEDA1A75763500F72300 /* Scroll@3x.png */; };
 		F6D9DF441A75763500F72300 /* Shield-Upgrade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEDB1A75763500F72300 /* Shield-Upgrade.png */; };
 		F6D9DF451A75763500F72300 /* Shield-Upgrade@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEDC1A75763500F72300 /* Shield-Upgrade@2x.png */; };
 		F6D9DF461A75763500F72300 /* Shield-Upgrade@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DEDD1A75763500F72300 /* Shield-Upgrade@3x.png */; };
@@ -347,7 +328,6 @@
 		F608B5E21A7462B30072E6E0 /* sheild_slot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sheild_slot@3x.png"; sourceTree = "<group>"; };
 		F608B5E41A7462B30072E6E0 /* weapon_slot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weapon_slot@2x.png"; sourceTree = "<group>"; };
 		F608B5E51A7462B30072E6E0 /* weapon_slot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weapon_slot@3x.png"; sourceTree = "<group>"; };
-		F61A020A1A65D2C500E37BA3 /* Gem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gem.swift; sourceTree = "<group>"; };
 		F636FACA1A27D3FC002B832C /* Lootz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lootz-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		F636FAEF1A27D622002B832C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		F636FAF01A27D622002B832C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -392,9 +372,6 @@
 		F69715F91A5C8F08009B9366 /* Gear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gear.swift; sourceTree = "<group>"; };
 		F69715FD1A5C8F4B009B9366 /* Potion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Potion.swift; sourceTree = "<group>"; };
 		F69715FF1A5C8F68009B9366 /* Gold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gold.swift; sourceTree = "<group>"; };
-		F69716011A5C8F81009B9366 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
-		F69716031A5C8F8D009B9366 /* Bounty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bounty.swift; sourceTree = "<group>"; };
-		F69716051A5C8FA6009B9366 /* LootBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LootBag.swift; sourceTree = "<group>"; };
 		F6B4291F1A363CAE006056A7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F6BEDCA31A6CBA530031D3DB /* Chest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chest.swift; sourceTree = "<group>"; };
 		F6CFB6F71A3255F100405290 /* exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit.png; sourceTree = "<group>"; };
@@ -446,15 +423,6 @@
 		F6D9DEB41A75763500F72300 /* Dagger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dagger.png; sourceTree = "<group>"; };
 		F6D9DEB51A75763500F72300 /* Dagger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dagger@2x.png"; sourceTree = "<group>"; };
 		F6D9DEB61A75763500F72300 /* Dagger@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Dagger@3x.png"; sourceTree = "<group>"; };
-		F6D9DEB71A75763500F72300 /* GemBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GemBlue.png; sourceTree = "<group>"; };
-		F6D9DEB81A75763500F72300 /* GemBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GemBlue@2x.png"; sourceTree = "<group>"; };
-		F6D9DEB91A75763500F72300 /* GemBlue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GemBlue@3x.png"; sourceTree = "<group>"; };
-		F6D9DEBA1A75763500F72300 /* GemGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GemGreen.png; sourceTree = "<group>"; };
-		F6D9DEBB1A75763500F72300 /* GemGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GemGreen@2x.png"; sourceTree = "<group>"; };
-		F6D9DEBC1A75763500F72300 /* GemGreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GemGreen@3x.png"; sourceTree = "<group>"; };
-		F6D9DEBD1A75763500F72300 /* GemRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GemRed.png; sourceTree = "<group>"; };
-		F6D9DEBE1A75763500F72300 /* GemRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GemRed@2x.png"; sourceTree = "<group>"; };
-		F6D9DEBF1A75763500F72300 /* GemRed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GemRed@3x.png"; sourceTree = "<group>"; };
 		F6D9DEC01A75763500F72300 /* Hammer-Upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hammer-Upgrade.png"; sourceTree = "<group>"; };
 		F6D9DEC11A75763500F72300 /* Hammer-Upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hammer-Upgrade@2x.png"; sourceTree = "<group>"; };
 		F6D9DEC21A75763500F72300 /* Hammer-Upgrade@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Hammer-Upgrade@3x.png"; sourceTree = "<group>"; };
@@ -467,9 +435,6 @@
 		F6D9DEC91A75763500F72300 /* Helmet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Helmet.png; sourceTree = "<group>"; };
 		F6D9DECA1A75763500F72300 /* Helmet@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Helmet@2x.png"; sourceTree = "<group>"; };
 		F6D9DECB1A75763500F72300 /* Helmet@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Helmet@3x.png"; sourceTree = "<group>"; };
-		F6D9DECC1A75763500F72300 /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map.png; sourceTree = "<group>"; };
-		F6D9DECD1A75763500F72300 /* Map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Map@2x.png"; sourceTree = "<group>"; };
-		F6D9DECE1A75763500F72300 /* Map@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Map@3x.png"; sourceTree = "<group>"; };
 		F6D9DECF1A75763500F72300 /* PotionBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PotionBlue.png; sourceTree = "<group>"; };
 		F6D9DED01A75763500F72300 /* PotionBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PotionBlue@2x.png"; sourceTree = "<group>"; };
 		F6D9DED11A75763500F72300 /* PotionBlue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PotionBlue@3x.png"; sourceTree = "<group>"; };
@@ -479,9 +444,6 @@
 		F6D9DED51A75763500F72300 /* PotionRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PotionRed.png; sourceTree = "<group>"; };
 		F6D9DED61A75763500F72300 /* PotionRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PotionRed@2x.png"; sourceTree = "<group>"; };
 		F6D9DED71A75763500F72300 /* PotionRed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PotionRed@3x.png"; sourceTree = "<group>"; };
-		F6D9DED81A75763500F72300 /* Scroll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Scroll.png; sourceTree = "<group>"; };
-		F6D9DED91A75763500F72300 /* Scroll@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scroll@2x.png"; sourceTree = "<group>"; };
-		F6D9DEDA1A75763500F72300 /* Scroll@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Scroll@3x.png"; sourceTree = "<group>"; };
 		F6D9DEDB1A75763500F72300 /* Shield-Upgrade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shield-Upgrade.png"; sourceTree = "<group>"; };
 		F6D9DEDC1A75763500F72300 /* Shield-Upgrade@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shield-Upgrade@2x.png"; sourceTree = "<group>"; };
 		F6D9DEDD1A75763500F72300 /* Shield-Upgrade@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shield-Upgrade@3x.png"; sourceTree = "<group>"; };
@@ -618,11 +580,7 @@
 				F69715F71A5C8EE2009B9366 /* Loot.swift */,
 				F69715F91A5C8F08009B9366 /* Gear.swift */,
 				F69715FD1A5C8F4B009B9366 /* Potion.swift */,
-				F61A020A1A65D2C500E37BA3 /* Gem.swift */,
 				F69715FF1A5C8F68009B9366 /* Gold.swift */,
-				F69716011A5C8F81009B9366 /* Map.swift */,
-				F69716031A5C8F8D009B9366 /* Bounty.swift */,
-				F69716051A5C8FA6009B9366 /* LootBag.swift */,
 				F6BEDCA31A6CBA530031D3DB /* Chest.swift */,
 			);
 			name = Models;
@@ -757,15 +715,6 @@
 				F6D9DEB41A75763500F72300 /* Dagger.png */,
 				F6D9DEB51A75763500F72300 /* Dagger@2x.png */,
 				F6D9DEB61A75763500F72300 /* Dagger@3x.png */,
-				F6D9DEB71A75763500F72300 /* GemBlue.png */,
-				F6D9DEB81A75763500F72300 /* GemBlue@2x.png */,
-				F6D9DEB91A75763500F72300 /* GemBlue@3x.png */,
-				F6D9DEBA1A75763500F72300 /* GemGreen.png */,
-				F6D9DEBB1A75763500F72300 /* GemGreen@2x.png */,
-				F6D9DEBC1A75763500F72300 /* GemGreen@3x.png */,
-				F6D9DEBD1A75763500F72300 /* GemRed.png */,
-				F6D9DEBE1A75763500F72300 /* GemRed@2x.png */,
-				F6D9DEBF1A75763500F72300 /* GemRed@3x.png */,
 				F6D9DEC01A75763500F72300 /* Hammer-Upgrade.png */,
 				F6D9DEC11A75763500F72300 /* Hammer-Upgrade@2x.png */,
 				F6D9DEC21A75763500F72300 /* Hammer-Upgrade@3x.png */,
@@ -778,9 +727,6 @@
 				F6D9DEC91A75763500F72300 /* Helmet.png */,
 				F6D9DECA1A75763500F72300 /* Helmet@2x.png */,
 				F6D9DECB1A75763500F72300 /* Helmet@3x.png */,
-				F6D9DECC1A75763500F72300 /* Map.png */,
-				F6D9DECD1A75763500F72300 /* Map@2x.png */,
-				F6D9DECE1A75763500F72300 /* Map@3x.png */,
 				F6D9DECF1A75763500F72300 /* PotionBlue.png */,
 				F6D9DED01A75763500F72300 /* PotionBlue@2x.png */,
 				F6D9DED11A75763500F72300 /* PotionBlue@3x.png */,
@@ -790,9 +736,6 @@
 				F6D9DED51A75763500F72300 /* PotionRed.png */,
 				F6D9DED61A75763500F72300 /* PotionRed@2x.png */,
 				F6D9DED71A75763500F72300 /* PotionRed@3x.png */,
-				F6D9DED81A75763500F72300 /* Scroll.png */,
-				F6D9DED91A75763500F72300 /* Scroll@2x.png */,
-				F6D9DEDA1A75763500F72300 /* Scroll@3x.png */,
 				F6D9DEDB1A75763500F72300 /* Shield-Upgrade.png */,
 				F6D9DEDC1A75763500F72300 /* Shield-Upgrade@2x.png */,
 				F6D9DEDD1A75763500F72300 /* Shield-Upgrade@3x.png */,
@@ -1073,7 +1016,6 @@
 				F6D9DF9B1A75765400F72300 /* north_red.png in Resources */,
 				F6D9DF8D1A75765400F72300 /* east_red@2x.png in Resources */,
 				F608B6131A7462B30072E6E0 /* health_75.png in Resources */,
-				F6D9DF351A75763500F72300 /* Map.png in Resources */,
 				F6CFB7001A3255F100405290 /* singup_ui.png in Resources */,
 				F608B6021A7462B30072E6E0 /* energy_50@2x.png in Resources */,
 				F6D9DF941A75765400F72300 /* explorer_ui@3x.png in Resources */,
@@ -1127,7 +1069,6 @@
 				F6D9DF5C1A75763500F72300 /* Wand-Upgrade.png in Resources */,
 				F6D9DFA11A75765400F72300 /* search_btn.png in Resources */,
 				F6D9DF1A1A75763500F72300 /* Dagger-Upgrade.png in Resources */,
-				F6D9DF201A75763500F72300 /* GemBlue.png in Resources */,
 				F608B6231A7462B30072E6E0 /* weapon_slot@2x.png in Resources */,
 				F608B6211A7462B30072E6E0 /* sheild_slot@3x.png in Resources */,
 				F6D9DF551A75763500F72300 /* Spear@3x.png in Resources */,
@@ -1138,13 +1079,10 @@
 				F6D9DF0B1A75763500F72300 /* AxeDouble.png in Resources */,
 				F6F35C841A775CBD0042D313 /* armour_slot@3x.png in Resources */,
 				F6D9DFAF1A75765400F72300 /* west_red@3x.png in Resources */,
-				F6D9DF211A75763500F72300 /* GemBlue@2x.png in Resources */,
 				F6D9DF531A75763500F72300 /* Spear.png in Resources */,
-				F6D9DF251A75763500F72300 /* GemGreen@3x.png in Resources */,
 				F637F76D1A310A8D004752E0 /* signup_btn@3x.png in Resources */,
 				F6D9DFB21A75765400F72300 /* west@3x.png in Resources */,
 				F6D9DF0A1A75763500F72300 /* AxeDouble-2-Upgrade@3x.png in Resources */,
-				F6D9DF281A75763500F72300 /* GemRed@3x.png in Resources */,
 				F608B6171A7462B30072E6E0 /* health_empty@2x.png in Resources */,
 				F6D9DF3C1A75763500F72300 /* PotionGreen@2x.png in Resources */,
 				F6D9DFA71A75765400F72300 /* south.png in Resources */,
@@ -1155,7 +1093,6 @@
 				F6D9DF001A75763500F72300 /* Armor@2x.png in Resources */,
 				F65D23261A781EFE009A8939 /* action_btn@3x.png in Resources */,
 				F6D9DF3D1A75763500F72300 /* PotionGreen@3x.png in Resources */,
-				F6D9DF221A75763500F72300 /* GemBlue@3x.png in Resources */,
 				F6D9DF921A75765400F72300 /* explorer_ui.png in Resources */,
 				F6D9DF341A75763500F72300 /* Helmet@3x.png in Resources */,
 				F6D9DF071A75763500F72300 /* Axe@3x.png in Resources */,
@@ -1168,7 +1105,6 @@
 				F608B5F21A7462B30072E6E0 /* clarity_75.png in Resources */,
 				F608B6141A7462B30072E6E0 /* health_75@2x.png in Resources */,
 				F6D9DF9C1A75765400F72300 /* north_red@2x.png in Resources */,
-				F6D9DF231A75763500F72300 /* GemGreen.png in Resources */,
 				F6D9DFA51A75765400F72300 /* south_red@2x.png in Resources */,
 				F6D9DF2A1A75763500F72300 /* Hammer-Upgrade@2x.png in Resources */,
 				F6D9DF451A75763500F72300 /* Shield-Upgrade@2x.png in Resources */,
@@ -1184,12 +1120,10 @@
 				F6D9DF461A75763500F72300 /* Shield-Upgrade@3x.png in Resources */,
 				F6D9DF8C1A75765400F72300 /* east_red.png in Resources */,
 				F6D9DF5B1A75763500F72300 /* Sword@3x.png in Resources */,
-				F6D9DF411A75763500F72300 /* Scroll.png in Resources */,
 				F6D9DF161A75763500F72300 /* Bow@3x.png in Resources */,
 				F6D9DF301A75763500F72300 /* Helmet-Upgrade@2x.png in Resources */,
 				F6D9DF1E1A75763500F72300 /* Dagger@2x.png in Resources */,
 				F6D9DF081A75763500F72300 /* AxeDouble-2-Upgrade.png in Resources */,
-				F6D9DF431A75763500F72300 /* Scroll@3x.png in Resources */,
 				F608B61B1A7462B30072E6E0 /* health_full@3x.png in Resources */,
 				F6D9DF181A75763500F72300 /* Coin@2x.png in Resources */,
 				F608B5F91A7462B30072E6E0 /* clarity_full@2x.png in Resources */,
@@ -1198,7 +1132,6 @@
 				F6D9DF621A75763500F72300 /* WoodSword.png in Resources */,
 				F6D9DF631A75763500F72300 /* WoodSword@2x.png in Resources */,
 				F637F76B1A310A8D004752E0 /* signup_btn.png in Resources */,
-				F6D9DF261A75763500F72300 /* GemRed.png in Resources */,
 				F6D9DF571A75763500F72300 /* Sword-Upgrade@2x.png in Resources */,
 				F6D9DF961A75765400F72300 /* list@2x.png in Resources */,
 				F608B60B1A7462B30072E6E0 /* energy_full@2x.png in Resources */,
@@ -1213,7 +1146,6 @@
 				F6D9DF971A75765400F72300 /* list@3x.png in Resources */,
 				F6D9DF331A75763500F72300 /* Helmet@2x.png in Resources */,
 				F6D9DF9A1A75765400F72300 /* loot_btn@3x.png in Resources */,
-				F6D9DF271A75763500F72300 /* GemRed@2x.png in Resources */,
 				F6D9DEFE1A75763500F72300 /* Armor-Upgrade@3x.png in Resources */,
 				F608B61E1A7462B30072E6E0 /* helmet_slot@3x.png in Resources */,
 				F6D9DF1C1A75763500F72300 /* Dagger-Upgrade@3x.png in Resources */,
@@ -1241,17 +1173,14 @@
 				F6D9DFA21A75765400F72300 /* search_btn@2x.png in Resources */,
 				F6D9DF4A1A75763500F72300 /* Small-Shield-Upgrade.png in Resources */,
 				F608B61F1A7462B30072E6E0 /* sheild_slot.png in Resources */,
-				F6D9DF421A75763500F72300 /* Scroll@2x.png in Resources */,
 				F6D9DF501A75763500F72300 /* Spear-Upgrade.png in Resources */,
 				F608B61C1A7462B30072E6E0 /* helmet_slot.png in Resources */,
 				F6D9DF561A75763500F72300 /* Sword-Upgrade.png in Resources */,
 				F6D9DFA41A75765400F72300 /* south_red.png in Resources */,
-				F6D9DF241A75763500F72300 /* GemGreen@2x.png in Resources */,
 				F6D9DFAC1A75765400F72300 /* star@3x.png in Resources */,
 				F6D9DF391A75763500F72300 /* PotionBlue@2x.png in Resources */,
 				F608B6101A7462B30072E6E0 /* health_50.png in Resources */,
 				F6D9DF591A75763500F72300 /* Sword.png in Resources */,
-				F6D9DF371A75763500F72300 /* Map@3x.png in Resources */,
 				F608B60D1A7462B30072E6E0 /* health_25.png in Resources */,
 				F6D9DF291A75763500F72300 /* Hammer-Upgrade.png in Resources */,
 				F608B5FA1A7462B30072E6E0 /* clarity_full@3x.png in Resources */,
@@ -1271,7 +1200,6 @@
 				F608B5EC1A7462B30072E6E0 /* clarity_25.png in Resources */,
 				F6D9DF3E1A75763500F72300 /* PotionRed.png in Resources */,
 				F65D23251A781EFE009A8939 /* action_btn@2x.png in Resources */,
-				F6D9DF361A75763500F72300 /* Map@2x.png in Resources */,
 				F608B5F71A7462B30072E6E0 /* clarity_empty@3x.png in Resources */,
 				F608B6031A7462B30072E6E0 /* energy_50@3x.png in Resources */,
 				F608B6121A7462B30072E6E0 /* health_50@3x.png in Resources */,
@@ -1314,7 +1242,6 @@
 				F608B5A21A7422090072E6E0 /* LeftController.swift in Sources */,
 				F6B429201A363CAE006056A7 /* User.swift in Sources */,
 				F6D789551A36B90D00078FA2 /* DBFactory.swift in Sources */,
-				F69716021A5C8F81009B9366 /* Map.swift in Sources */,
 				F6D789531A36B88A00078FA2 /* ParseImpl.swift in Sources */,
 				F69716001A5C8F68009B9366 /* Gold.swift in Sources */,
 				F69715F81A5C8EE2009B9366 /* Loot.swift in Sources */,
@@ -1322,14 +1249,11 @@
 				F6CFB7041A3257A500405290 /* SignupController.swift in Sources */,
 				F6D789511A36B7B500078FA2 /* DatabaseManager.swift in Sources */,
 				F649BE471A27D22400A00E3D /* LoginController.swift in Sources */,
-				F69716061A5C8FA6009B9366 /* LootBag.swift in Sources */,
-				F69716041A5C8F8D009B9366 /* Bounty.swift in Sources */,
 				F649BE451A27D22400A00E3D /* AppDelegate.swift in Sources */,
 				F69715FE1A5C8F4B009B9366 /* Potion.swift in Sources */,
 				F608B5A61A742D990072E6E0 /* TransitionManager.swift in Sources */,
 				F6BEDCA41A6CBA530031D3DB /* Chest.swift in Sources */,
 				F69715FA1A5C8F08009B9366 /* Gear.swift in Sources */,
-				F61A020B1A65D2C500E37BA3 /* Gem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

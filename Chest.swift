@@ -12,16 +12,23 @@ class Chest {
     
     private let latitude: Double
     private let longitude: Double
-    private let lootz: [Loot]
+    private let weapon: String?
+    private let weaponGold: Bool?
+    private let item: String?
+    private let gold: Int
     
-    init(lootz: [Loot], latitude: Double, longitude: Double) {
+    init(latitude: Double, longitude: Double, weapon: String, weaponGold: Bool, item:String, gold: Int) {
         self.latitude = latitude
         self.longitude = longitude
-        self.lootz = lootz
+        self.weapon = weapon
+        self.weaponGold = weaponGold
+        self.item = item
+        self.gold = gold
     }
     
     convenience init(parseChest: PFObject) {
-        self.init(lootz: parseChest["lootz"] as [Loot], latitude: parseChest["latitude"] as Double, longitude: parseChest["longitude"] as Double)
+        let geoLocation = parseChest["location"] as PFGeoPoint
+        self.init(latitude: geoLocation.latitude, longitude: geoLocation.longitude, weapon: parseChest["weapon"] as String, weaponGold: parseChest["weaponGold"] as Bool, item: parseChest["item"] as String, gold: parseChest["gold"] as Int)
     }
     
     func getLatitude() -> Double {
@@ -31,8 +38,20 @@ class Chest {
     func getLongitude() -> Double {
         return self.longitude
     }
+
+    func getWeapon() -> String? {
+        return self.weapon
+    }
     
-    func getLootz() -> [Loot] {
-        return self.lootz
+    func isGold() -> Bool? {
+        return self.weaponGold
+    }
+    
+    func getItem() -> String? {
+        return self.weapon
+    }
+    
+    func getGold() -> Int {
+        return self.gold
     }
 }
