@@ -1,9 +1,10 @@
 import UIKit
 
-class MainController: UIViewController {
+class MainController: UIViewController, CLLocationManagerDelegate {
     
     let notificationCenter = NSNotificationCenter.defaultCenter()
     let transitionManager = TransitionManager()
+    let locationManager = CLLocationManager()
     
     @IBOutlet var exploreText: UITextView!
     
@@ -34,6 +35,20 @@ class MainController: UIViewController {
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: Selector("leftSwiped"))
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
         self.view.addGestureRecognizer(swipeLeft)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        locationManager.delegate = self;
+        
+        switch CLLocationManager.authorizationStatus() {
+        case .NotDetermined:
+            locationManager.requestAlwaysAuthorization()
+        case .AuthorizedWhenInUse, .Restricted, .Denied:
+            showLocationError()
+        default:
+            locationManager.startUpdatingLocation()
+        }
+
     }
     
     func exit(notification: NSNotification) {
@@ -75,5 +90,36 @@ class MainController: UIViewController {
     
     @IBAction func lootBtnAction(sender: UIButton) {
         
+    }
+    
+    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status:CLAuthorizationStatus)
+    {
+        if status == .Authorized {
+            manager.startUpdatingLocation()
+        }
+        else {
+            self.showLocationError()
+        }
+    }
+    
+    func showLocationError() {
+        let alertController = UIAlertController(
+            title: "Background Location Access Disabled",
+            message: "In order to play Lootz, please open this app's settings and set location access to 'Always'.",
+            preferredStyle: .Alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            self.performSegueWithIdentifier("exit", sender: nil)
+        }
+        alertController.addAction(cancelAction)
+        
+        let openAction = UIAlertAction(title: "Open Settings", style: .Default) { (action) in
+            if let url = NSURL(string:UIApplicationOpenSettingsURLString) {
+                UIApplication.sharedApplication().openURL(url)
+            }
+        }
+        alertController.addAction(openAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 }
