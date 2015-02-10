@@ -4,7 +4,6 @@ class MainController: UIViewController, CLLocationManagerDelegate {
     
     let notificationCenter = NSNotificationCenter.defaultCenter()
     let transitionManager = TransitionManager()
-    let locationManager = CLLocationManager()
     
     @IBOutlet var exploreText: UITextView!
     
@@ -38,17 +37,9 @@ class MainController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
-        locationManager.delegate = self;
-        
-        switch CLLocationManager.authorizationStatus() {
-        case .NotDetermined:
-            locationManager.requestAlwaysAuthorization()
-        case .AuthorizedWhenInUse, .Restricted, .Denied:
-            showLocationError()
-        default:
-            locationManager.startUpdatingLocation()
+        if(!LocationController.sharedInstance.startLocationServices()) {
+            self.showLocationError()
         }
-
     }
     
     func exit(notification: NSNotification) {
@@ -90,16 +81,6 @@ class MainController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func lootBtnAction(sender: UIButton) {
         
-    }
-    
-    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status:CLAuthorizationStatus)
-    {
-        if status == .Authorized {
-            manager.startUpdatingLocation()
-        }
-        else {
-            self.showLocationError()
-        }
     }
     
     func showLocationError() {

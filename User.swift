@@ -23,6 +23,7 @@ class User {
     private var clarity: Int
     private var inventory: [Loot]
     private var equipment: [Gear]
+    private var locationHistory: [CLLocation]
     
     init() {
         self.username = UNKNOWN
@@ -33,9 +34,10 @@ class User {
         self.clarity = 0
         self.inventory = [Loot]()
         self.equipment = [Gear]()
+        self.locationHistory = [CLLocation]()
     }
     
-    init(username: String, email: String, password: String, health: Int, energy: Int, clarity: Int, inventory: [Loot], equipment: [Gear]) {
+    init(username: String, email: String, password: String, health: Int, energy: Int, clarity: Int, inventory: [Loot], equipment: [Gear], locationHistory: [CLLocation]) {
         self.username = username
         self.email = email
         self.password = password
@@ -44,10 +46,11 @@ class User {
         self.clarity = clarity
         self.inventory = inventory
         self.equipment = equipment
+        self.locationHistory = locationHistory
     }
     
     convenience init(parseUser: PFObject) {
-        self.init(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: parseUser["inventory"] as [Loot], equipment: parseUser["equipment"] as [Gear])
+        self.init(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: parseUser["inventory"] as [Loot], equipment: parseUser["equipment"] as [Gear], locationHistory: parseUser["locationHistory"] as [CLLocation])
     }
     
     func getUsername() -> String {
@@ -348,6 +351,14 @@ class User {
             index++
         }
         return -1
+    }
+    
+    func getLocationHistory() -> [CLLocation] {
+        return locationHistory
+    }
+    
+    func setLocationHistory(locationHistory: [CLLocation]) {
+        self.locationHistory = locationHistory
     }
     
   

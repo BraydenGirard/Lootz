@@ -34,6 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
         
+        if let launch = launchOptions {
+            if let key = launch.indexForKey(UIApplicationLaunchOptionsLocationKey) {
+                LocationController.sharedInstance.startBackgroundLocationServices()
+            }
+        }
+        
         return true
     }
 
@@ -43,8 +49,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        LocationController.sharedInstance.stopLocationServices()
+        LocationController.sharedInstance.startBackgroundLocationServices()
+        println("Entered backgound mode")
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -52,7 +59,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        LocationController.sharedInstance.stopBackgroundLocationServices()
+        LocationController.sharedInstance.startLocationServices()
+        println("Application became active")
     }
 
     func applicationWillTerminate(application: UIApplication) {

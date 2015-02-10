@@ -102,6 +102,7 @@
 		F65D23241A781EFE009A8939 /* action_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F65D231E1A781EFE009A8939 /* action_btn.png */; };
 		F65D23251A781EFE009A8939 /* action_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65D231F1A781EFE009A8939 /* action_btn@2x.png */; };
 		F65D23261A781EFE009A8939 /* action_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65D23201A781EFE009A8939 /* action_btn@3x.png */; };
+		F6673B821A8A879D0022966C /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6673B811A8A879D0022966C /* LocationController.swift */; };
 		F69715F81A5C8EE2009B9366 /* Loot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715F71A5C8EE2009B9366 /* Loot.swift */; };
 		F69715FA1A5C8F08009B9366 /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715F91A5C8F08009B9366 /* Gear.swift */; };
 		F69715FE1A5C8F4B009B9366 /* Potion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715FD1A5C8F4B009B9366 /* Potion.swift */; };
@@ -368,6 +369,7 @@
 		F65D231E1A781EFE009A8939 /* action_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = action_btn.png; sourceTree = "<group>"; };
 		F65D231F1A781EFE009A8939 /* action_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "action_btn@2x.png"; sourceTree = "<group>"; };
 		F65D23201A781EFE009A8939 /* action_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "action_btn@3x.png"; sourceTree = "<group>"; };
+		F6673B811A8A879D0022966C /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		F69715F71A5C8EE2009B9366 /* Loot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loot.swift; sourceTree = "<group>"; };
 		F69715F91A5C8F08009B9366 /* Gear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gear.swift; sourceTree = "<group>"; };
 		F69715FD1A5C8F4B009B9366 /* Potion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Potion.swift; sourceTree = "<group>"; };
@@ -604,6 +606,7 @@
 				F608B5A51A742D990072E6E0 /* TransitionManager.swift */,
 				F6D789521A36B88A00078FA2 /* ParseImpl.swift */,
 				F6D789541A36B90D00078FA2 /* DBFactory.swift */,
+				F6673B811A8A879D0022966C /* LocationController.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -1253,6 +1256,7 @@
 				F69715FE1A5C8F4B009B9366 /* Potion.swift in Sources */,
 				F608B5A61A742D990072E6E0 /* TransitionManager.swift in Sources */,
 				F6BEDCA41A6CBA530031D3DB /* Chest.swift in Sources */,
+				F6673B821A8A879D0022966C /* LocationController.swift in Sources */,
 				F69715FA1A5C8F08009B9366 /* Gear.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

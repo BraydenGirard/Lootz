@@ -77,12 +77,12 @@ class ParseImpl: DatabaseManager {
         var parseUser = PFUser()
         parseUser.username = user.getUsername()
         parseUser.email = user.getEmail()
-        parseUser.password = user.getPassword()
         parseUser["health"] = user.getHealth()
         parseUser["energy"] = user.getEnergy()
         parseUser["clarity"] = user.getClarity()
         parseUser["inventory"] = user.getInventory()
         parseUser["equipment"] = user.getEquipment()
+        parseUser["locationHistory"] = user.getLocationHistory()
         
         return parseUser
     }
