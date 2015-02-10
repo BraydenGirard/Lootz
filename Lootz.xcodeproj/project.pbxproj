@@ -529,6 +529,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F636FAFF1A27D622002B832C /* CoreLocation.framework in Frameworks */,
 				F64D475B1A4271E500D0914C /* ParseUI.framework in Frameworks */,
 				F64D47581A4271E500D0914C /* Bolts.framework in Frameworks */,
 				F64D47511A42711400D0914C /* libsqlite3.dylib in Frameworks */,
@@ -544,7 +545,6 @@
 				F636FAFD1A27D622002B832C /* CFNetwork.framework in Frameworks */,
 				F636FB051A27D622002B832C /* StoreKit.framework in Frameworks */,
 				F636FB061A27D622002B832C /* SystemConfiguration.framework in Frameworks */,
-				F636FAFF1A27D622002B832C /* CoreLocation.framework in Frameworks */,
 				F636FB011A27D622002B832C /* MobileCoreServices.framework in Frameworks */,
 				F64D47591A4271E500D0914C /* ParseCrashReporting.framework in Frameworks */,
 			);

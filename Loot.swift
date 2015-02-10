@@ -9,13 +9,7 @@
 import Foundation
 
 let UNKNOWN = "Uknown"
-let MAP = "Map"
-let BOUNTY = "Bounty"
-let BAG = "Loot_Bag"
 let GOLD = "Gold"
-let EMERALD = "Emerald"
-let SAPHIRE = "Saphire"
-let RUBY = "Ruby"
 let CLARITYPOT = "Clarity_Potion"
 let ENERGYPOT = "Enerygy_Potion"
 let HEALTHPOT = "Health_Potion"
@@ -102,13 +96,6 @@ class Loot {
     
     func setQuantity(quantity: Int) {
         self.quantity = quantity
-    }
-    
-    func isMaxOfOne() -> Bool {
-        if(self.name == MAP || self.name == BAG || self.name == BOUNTY) {
-            return true
-        }
-        return false;
     }
     
     func use() { }

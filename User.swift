@@ -168,13 +168,8 @@ class User {
             var index = self.findInventoryIndex(item)
             
             if(index != -1) {
-                if(item.isMaxOfOne()) {
-                    return false
-                }
-                else {
-                    self.inventory[index].quantity + item.getQuantity()
-                    return true
-                }
+                self.inventory[index].quantity = self.inventory[index].quantity + item.getQuantity()
+                return true
             }
             self.inventory.append(item)
             return true

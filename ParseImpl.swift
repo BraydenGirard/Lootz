@@ -86,4 +86,30 @@ class ParseImpl: DatabaseManager {
         
         return parseUser
     }
+    
+    func findChests(lat: Double, lng: Double, distance: Double) -> [Chest] {
+    
+        let currentLocation = PFGeoPoint(latitude:lat, longitude:lng)
+     
+        var query = PFQuery(className:"Chest")
+
+        query.whereKey("location", nearGeoPoint: currentLocation, withinKilometers: distance)
+   
+        query.limit = 10
+   
+        var parseChests = query.findObjects()
+        
+        var finalChests = [Chest]()
+        
+        if let chests = parseChests {
+            var i = 0
+            for c in chests {
+                var chest = Chest(latitude: c["latitude"] as Double, longitude: c["longitude"] as Double, weapon: c["weapon"] as String, weaponGold: c["weaponGold"] as Bool, item: c["item"] as String, gold: c["gold"] as Int)
+                finalChests[i] = chest
+                i++
+            }
+        }
+
+        return finalChests
+    }
 }
