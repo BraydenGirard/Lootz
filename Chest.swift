@@ -12,9 +12,9 @@ class Chest {
     
     private let latitude: Double
     private let longitude: Double
-    private let weapon: String?
-    private let weaponGold: Bool?
-    private let item: String?
+    private let weapon: String
+    private let weaponGold: Bool
+    private let item: String
     private let gold: Int
     
     init(latitude: Double, longitude: Double, weapon: String, weaponGold: Bool, item:String, gold: Int) {

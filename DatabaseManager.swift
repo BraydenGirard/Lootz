@@ -16,5 +16,5 @@ protocol DatabaseManager {
     func getUser() -> User
     func getUserByUsername(username: String) -> User
     func convertUser(user: User) -> PFUser
-    func findChests(lat: Double, lng: Double, distance: Double) -> [Chest]
+    func findChests(lat: Double, lng: Double, distance: Double)
 }

@@ -29,9 +29,21 @@ class User {
         self.username = UNKNOWN
         self.email = UNKNOWN
         self.password = UNKNOWN
-        self.health = 0
-        self.energy = 0
-        self.clarity = 0
+        self.health = FULLHEALTH
+        self.energy = FULLENERGY
+        self.clarity = FULLCLARITY
+        self.inventory = [Loot]()
+        self.equipment = [Gear]()
+        self.locationHistory = [CLLocation]()
+    }
+    
+    init(username: String, email: String, password: String) {
+        self.username = username
+        self.email = email
+        self.password = password
+        self.health = FULLHEALTH
+        self.energy = FULLENERGY
+        self.clarity = FULLCLARITY
         self.inventory = [Loot]()
         self.equipment = [Gear]()
         self.locationHistory = [CLLocation]()

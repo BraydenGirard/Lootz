@@ -38,7 +38,7 @@ class SignupController: UIViewController, UITextFieldDelegate {
             self.presentViewController(alert, animated: true, completion: nil)
         }
         else {
-            var newUser = User(username: usernameText.text!, email: emailText.text!, password: passwordText.text!, health: FULLHEALTH, energy: FULLENERGY, clarity: FULLCLARITY, inventory: [Loot](), equipment: [Gear]())
+            var newUser = User(username: usernameText.text!, email: emailText.text!, password: passwordText.text!)
             DBFactory.execute().signUp(newUser)
         }
     }
@@ -123,6 +123,9 @@ class SignupController: UIViewController, UITextFieldDelegate {
         if let tempPassword = input {
             if tempPassword.isEmpty {
                 return "password can not be empty"
+            }
+            else if tempPassword == UNKNOWN {
+                return "invalid password"
             }
             return nil
         }

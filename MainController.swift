@@ -24,6 +24,7 @@ class MainController: UIViewController {
         super.viewDidLoad()
 
         notificationCenter.addObserver(self, selector: "exit:", name: "exit", object: nil)
+        notificationCenter.addObserver(self, selector: "chestSearchComplete:", name: "chestSearchComplete", object: nil)
         
         //------------right  swipe gestures in view--------------//
         let swipeRight = UISwipeGestureRecognizer(target: self, action: Selector("rightSwiped"))
@@ -80,14 +81,7 @@ class MainController: UIViewController {
             var latitude = currentLocation.coordinate.latitude as Double
             var longitude = currentLocation.coordinate.longitude as Double
             var distance = DBFactory.execute().getUser().getClarityDistance()
-            var chests = DBFactory.execute().findChests(latitude, lng: longitude, distance: distance)
-            
-            if chests.count != 0 {
-                exploreText.text = "Found \(chests.count) chests in your area"
-            }
-            else {
-                exploreText.text = "Did not find any chests"
-            }
+            DBFactory.execute().findChests(latitude, lng: longitude, distance: distance)
         }
         else {
             showLocationError()
@@ -132,5 +126,18 @@ class MainController: UIViewController {
         alertController.addAction(okAction)
         
         self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func chestSearchComplete(notification: NSNotification) {
+        
+        let userInfo:Dictionary<String,[Chest]!> = notification.userInfo as Dictionary<String,[Chest]!>
+        let chests = userInfo["chests"] as [Chest]!
+        
+        if chests.count != 0 {
+            exploreText.text = "Found \(chests.count) chests in your area"
+        }
+        else {
+            exploreText.text = "Did not find any chests"
+        }
     }
 }

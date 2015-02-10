@@ -75,6 +75,9 @@ class ParseImpl: DatabaseManager {
     
     func convertUser(user: User) -> PFUser {
         var parseUser = PFUser()
+        if(user.getPassword() != UNKNOWN) {
+            parseUser.password = user.getPassword()
+        }
         parseUser.username = user.getUsername()
         parseUser.email = user.getEmail()
         parseUser["health"] = user.getHealth()
@@ -87,7 +90,7 @@ class ParseImpl: DatabaseManager {
         return parseUser
     }
     
-    func findChests(lat: Double, lng: Double, distance: Double) -> [Chest] {
+    func findChests(lat: Double, lng: Double, distance: Double) {
     
         let currentLocation = PFGeoPoint(latitude:lat, longitude:lng)
      
@@ -97,19 +100,20 @@ class ParseImpl: DatabaseManager {
    
         query.limit = 10
    
-        var parseChests = query.findObjects()
-        
-        var finalChests = [Chest]()
-        
-        if let chests = parseChests {
-            var i = 0
-            for c in chests {
-                var chest = Chest(latitude: c["latitude"] as Double, longitude: c["longitude"] as Double, weapon: c["weapon"] as String, weaponGold: c["weaponGold"] as Bool, item: c["item"] as String, gold: c["gold"] as Int)
-                finalChests[i] = chest
-                i++
+        query.findObjectsInBackgroundWithBlock { (objects: Array!, error: NSError!) -> Void in
+            var finalChests = [Chest]()
+            
+            if let chests = objects {
+                var i = 0
+                for c in chests {
+                    println("Chest \(i)")
+                    var chest = Chest(parseChest: c as PFObject)
+                     println("Chest \(i) after")
+                    finalChests[i] = chest
+                    i++
+                }
             }
+            NSNotificationCenter.defaultCenter().postNotificationName("chestSearchComplete", object: self, userInfo:["chests": finalChests])
         }
-
-        return finalChests
     }
 }
