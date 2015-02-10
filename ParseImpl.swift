@@ -104,13 +104,9 @@ class ParseImpl: DatabaseManager {
             var finalChests = [Chest]()
             
             if let chests = objects {
-                var i = 0
                 for c in chests {
-                    println("Chest \(i)")
                     var chest = Chest(parseChest: c as PFObject)
-                     println("Chest \(i) after")
-                    finalChests[i] = chest
-                    i++
+                    finalChests.append(chest)
                 }
             }
             NSNotificationCenter.defaultCenter().postNotificationName("chestSearchComplete", object: self, userInfo:["chests": finalChests])

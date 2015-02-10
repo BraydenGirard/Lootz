@@ -78,6 +78,7 @@ class MainController: UIViewController {
     
     @IBAction func searchBtnAction(sender: UIButton) {
         if let currentLocation = LocationController.sharedInstance.getCurrentLocation() {
+            searchBtn.enabled = false
             var latitude = currentLocation.coordinate.latitude as Double
             var longitude = currentLocation.coordinate.longitude as Double
             var distance = DBFactory.execute().getUser().getClarityDistance()
@@ -129,7 +130,6 @@ class MainController: UIViewController {
     }
     
     func chestSearchComplete(notification: NSNotification) {
-        
         let userInfo:Dictionary<String,[Chest]!> = notification.userInfo as Dictionary<String,[Chest]!>
         let chests = userInfo["chests"] as [Chest]!
         
@@ -139,5 +139,6 @@ class MainController: UIViewController {
         else {
             exploreText.text = "Did not find any chests"
         }
+         searchBtn.enabled = true
     }
 }
