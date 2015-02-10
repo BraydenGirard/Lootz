@@ -93,6 +93,16 @@ class User {
         return clarity
     }
     
+    func getClarityDistance() -> Double {
+        if(clarity != 0) {
+            clarity = clarity - 25
+            return 2
+        }
+        else {
+            return 1
+        }
+    }
+    
     func setClarity(clarity: Int) {
         self.clarity = clarity
     }

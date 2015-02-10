@@ -61,6 +61,10 @@ class LocationController: NSObject, CLLocationManagerDelegate{
         manager.stopMonitoringSignificantLocationChanges()
     }
     
+    func getCurrentLocation() -> CLLocation? {
+        return currentLocation
+    }
+    
     //Location manager was authorized start monitoring locations
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status:CLAuthorizationStatus)
     {

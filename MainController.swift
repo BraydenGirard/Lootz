@@ -1,6 +1,6 @@
 import UIKit
 
-class MainController: UIViewController, CLLocationManagerDelegate {
+class MainController: UIViewController {
     
     let notificationCenter = NSNotificationCenter.defaultCenter()
     let transitionManager = TransitionManager()
@@ -38,7 +38,7 @@ class MainController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidAppear(animated: Bool) {
         if(!LocationController.sharedInstance.startLocationServices()) {
-            self.showLocationError()
+            self.showLocationPermissionError()
         }
     }
     
@@ -76,14 +76,29 @@ class MainController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func searchBtnAction(sender: UIButton) {
-        
+        if let currentLocation = LocationController.sharedInstance.getCurrentLocation() {
+            var latitude = currentLocation.coordinate.latitude as Double
+            var longitude = currentLocation.coordinate.longitude as Double
+            var distance = DBFactory.execute().getUser().getClarityDistance()
+            var chests = DBFactory.execute().findChests(latitude, lng: longitude, distance: distance)
+            
+            if chests.count != 0 {
+                exploreText.text = "Found \(chests.count) chests in your area"
+            }
+            else {
+                exploreText.text = "Did not find any chests"
+            }
+        }
+        else {
+            showLocationError()
+        }
     }
     
     @IBAction func lootBtnAction(sender: UIButton) {
         
     }
     
-    func showLocationError() {
+    func showLocationPermissionError() {
         let alertController = UIAlertController(
             title: "Background Location Access Disabled",
             message: "In order to play Lootz, please open this app's settings and set location access to 'Always'.",
@@ -100,6 +115,21 @@ class MainController: UIViewController, CLLocationManagerDelegate {
             }
         }
         alertController.addAction(openAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func showLocationError() {
+        let alertController = UIAlertController(
+            title: "Location Unknown",
+            message: "It must be a dead zone, we can't find your location. Please try and find an open area and try again.",
+            preferredStyle: .Alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alertController.addAction(okAction)
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }
