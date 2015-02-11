@@ -5,23 +5,35 @@ class MainController: UIViewController {
     let notificationCenter = NSNotificationCenter.defaultCenter()
     let transitionManager = TransitionManager()
     
+    @IBOutlet var darkView: UIView!
+    @IBOutlet var lootzView: UIImageView!
+    
     @IBOutlet var exploreText: UITextView!
     
     @IBOutlet var distanceLabel: UILabel!
+    @IBOutlet var weaponLabel: UILabel!
+    @IBOutlet var goldLabel: UILabel!
+    @IBOutlet var itemLabel: UILabel!
     
     @IBOutlet var saveLocationBtn: UIButton!
     @IBOutlet var viewLocationBtn: UIButton!
     @IBOutlet var searchBtn: UIButton!
     @IBOutlet var lootBtn: UIButton!
+    @IBOutlet var collectBtn: UIButton!
     
     @IBOutlet var eastImg: UIImageView!
     @IBOutlet var northImg: UIImageView!
     @IBOutlet var southImg: UIImageView!
     @IBOutlet var westImg: UIImageView!
     
+    @IBOutlet var weaponImg: UIImageView!
+    @IBOutlet var goldImg: UIImageView!
+    @IBOutlet var itemImg: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hideLootzUI()
 
         notificationCenter.addObserver(self, selector: "exit:", name: "exit", object: nil)
         notificationCenter.addObserver(self, selector: "chestSearchComplete:", name: "chestSearchComplete", object: nil)
@@ -90,7 +102,11 @@ class MainController: UIViewController {
     }
     
     @IBAction func lootBtnAction(sender: UIButton) {
-        
+        showLootzUI()
+    }
+    
+    @IBAction func collectBtnAction(sender: UIButton) {
+        hideLootzUI()
     }
     
     func showLocationPermissionError() {
@@ -140,5 +156,29 @@ class MainController: UIViewController {
             exploreText.text = "Did not find any chests"
         }
          searchBtn.enabled = true
+    }
+    
+    func showLootzUI() {
+        darkView.hidden = false
+        lootzView.hidden = false
+        collectBtn.hidden = false
+        weaponLabel.hidden = false
+        goldLabel.hidden = false
+        itemLabel.hidden = false
+        weaponImg.hidden = false
+        goldImg.hidden = false
+        itemImg.hidden = false
+    }
+    
+    func hideLootzUI() {
+        darkView.hidden = true
+        lootzView.hidden = true
+        collectBtn.hidden = true
+        weaponLabel.hidden = true
+        goldLabel.hidden = true
+        itemLabel.hidden = true
+        weaponImg.hidden = true
+        goldImg.hidden = true
+        itemImg.hidden = true
     }
 }

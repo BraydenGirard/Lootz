@@ -103,6 +103,12 @@
 		F65D23251A781EFE009A8939 /* action_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65D231F1A781EFE009A8939 /* action_btn@2x.png */; };
 		F65D23261A781EFE009A8939 /* action_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F65D23201A781EFE009A8939 /* action_btn@3x.png */; };
 		F6673B821A8A879D0022966C /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6673B811A8A879D0022966C /* LocationController.swift */; };
+		F6673B891A8AC93D0022966C /* collect_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B831A8AC93D0022966C /* collect_btn@3x.png */; };
+		F6673B8A1A8AC93D0022966C /* collect_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B841A8AC93D0022966C /* collect_btn.png */; };
+		F6673B8B1A8AC93D0022966C /* collect_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B851A8AC93D0022966C /* collect_btn@2x.png */; };
+		F6673B8C1A8AC93D0022966C /* lootz_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B861A8AC93D0022966C /* lootz_ui@3x.png */; };
+		F6673B8D1A8AC93D0022966C /* lootz_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B871A8AC93D0022966C /* lootz_ui.png */; };
+		F6673B8E1A8AC93D0022966C /* lootz_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B881A8AC93D0022966C /* lootz_ui@2x.png */; };
 		F69715F81A5C8EE2009B9366 /* Loot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715F71A5C8EE2009B9366 /* Loot.swift */; };
 		F69715FA1A5C8F08009B9366 /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715F91A5C8F08009B9366 /* Gear.swift */; };
 		F69715FE1A5C8F4B009B9366 /* Potion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715FD1A5C8F4B009B9366 /* Potion.swift */; };
@@ -370,6 +376,12 @@
 		F65D231F1A781EFE009A8939 /* action_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "action_btn@2x.png"; sourceTree = "<group>"; };
 		F65D23201A781EFE009A8939 /* action_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "action_btn@3x.png"; sourceTree = "<group>"; };
 		F6673B811A8A879D0022966C /* LocationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		F6673B831A8AC93D0022966C /* collect_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collect_btn@3x.png"; sourceTree = "<group>"; };
+		F6673B841A8AC93D0022966C /* collect_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collect_btn.png; sourceTree = "<group>"; };
+		F6673B851A8AC93D0022966C /* collect_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collect_btn@2x.png"; sourceTree = "<group>"; };
+		F6673B861A8AC93D0022966C /* lootz_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lootz_ui@3x.png"; sourceTree = "<group>"; };
+		F6673B871A8AC93D0022966C /* lootz_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lootz_ui.png; sourceTree = "<group>"; };
+		F6673B881A8AC93D0022966C /* lootz_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lootz_ui@2x.png"; sourceTree = "<group>"; };
 		F69715F71A5C8EE2009B9366 /* Loot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loot.swift; sourceTree = "<group>"; };
 		F69715F91A5C8F08009B9366 /* Gear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gear.swift; sourceTree = "<group>"; };
 		F69715FD1A5C8F4B009B9366 /* Potion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Potion.swift; sourceTree = "<group>"; };
@@ -631,6 +643,12 @@
 		F62DE8F51A2E319900E77B70 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F6673B831A8AC93D0022966C /* collect_btn@3x.png */,
+				F6673B841A8AC93D0022966C /* collect_btn.png */,
+				F6673B851A8AC93D0022966C /* collect_btn@2x.png */,
+				F6673B861A8AC93D0022966C /* lootz_ui@3x.png */,
+				F6673B871A8AC93D0022966C /* lootz_ui.png */,
+				F6673B881A8AC93D0022966C /* lootz_ui@2x.png */,
 				F65D231B1A781EFE009A8939 /* remove_btn.png */,
 				F65D231C1A781EFE009A8939 /* remove_btn@3x.png */,
 				F65D231D1A781EFE009A8939 /* remove_btn@2x.png */,
@@ -1034,12 +1052,14 @@
 				F6D9DF1D1A75763500F72300 /* Dagger.png in Resources */,
 				F6D9DF911A75765400F72300 /* east@3x.png in Resources */,
 				F608B6071A7462B30072E6E0 /* energy_empty.png in Resources */,
+				F6673B891A8AC93D0022966C /* collect_btn@3x.png in Resources */,
 				F608B5FC1A7462B30072E6E0 /* empty_slot@2x.png in Resources */,
 				F6D9DF091A75763500F72300 /* AxeDouble-2-Upgrade@2x.png in Resources */,
 				F6D9DF641A75763500F72300 /* WoodSword@3x.png in Resources */,
 				F6D9DFA81A75765400F72300 /* south@2x.png in Resources */,
 				F6D9DF051A75763500F72300 /* Axe.png in Resources */,
 				F608B60A1A7462B30072E6E0 /* energy_full.png in Resources */,
+				F6673B8E1A8AC93D0022966C /* lootz_ui@2x.png in Resources */,
 				F608B5F61A7462B30072E6E0 /* clarity_empty@2x.png in Resources */,
 				F6D9DF471A75763500F72300 /* Shield.png in Resources */,
 				F65D23211A781EFE009A8939 /* remove_btn.png in Resources */,
@@ -1072,7 +1092,9 @@
 				F6D9DF5C1A75763500F72300 /* Wand-Upgrade.png in Resources */,
 				F6D9DFA11A75765400F72300 /* search_btn.png in Resources */,
 				F6D9DF1A1A75763500F72300 /* Dagger-Upgrade.png in Resources */,
+				F6673B8B1A8AC93D0022966C /* collect_btn@2x.png in Resources */,
 				F608B6231A7462B30072E6E0 /* weapon_slot@2x.png in Resources */,
+				F6673B8A1A8AC93D0022966C /* collect_btn.png in Resources */,
 				F608B6211A7462B30072E6E0 /* sheild_slot@3x.png in Resources */,
 				F6D9DF551A75763500F72300 /* Spear@3x.png in Resources */,
 				F6D9DF4C1A75763500F72300 /* Small-Shield-Upgrade@3x.png in Resources */,
@@ -1147,6 +1169,7 @@
 				F6D9DF4D1A75763500F72300 /* Small-Shield.png in Resources */,
 				F6D9DF9D1A75765400F72300 /* north_red@3x.png in Resources */,
 				F6D9DF971A75765400F72300 /* list@3x.png in Resources */,
+				F6673B8C1A8AC93D0022966C /* lootz_ui@3x.png in Resources */,
 				F6D9DF331A75763500F72300 /* Helmet@2x.png in Resources */,
 				F6D9DF9A1A75765400F72300 /* loot_btn@3x.png in Resources */,
 				F6D9DEFE1A75763500F72300 /* Armor-Upgrade@3x.png in Resources */,
@@ -1181,6 +1204,7 @@
 				F6D9DF561A75763500F72300 /* Sword-Upgrade.png in Resources */,
 				F6D9DFA41A75765400F72300 /* south_red.png in Resources */,
 				F6D9DFAC1A75765400F72300 /* star@3x.png in Resources */,
+				F6673B8D1A8AC93D0022966C /* lootz_ui.png in Resources */,
 				F6D9DF391A75763500F72300 /* PotionBlue@2x.png in Resources */,
 				F608B6101A7462B30072E6E0 /* health_50.png in Resources */,
 				F6D9DF591A75763500F72300 /* Sword.png in Resources */,
