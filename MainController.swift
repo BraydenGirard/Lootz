@@ -4,6 +4,7 @@ class MainController: UIViewController {
     
     let notificationCenter = NSNotificationCenter.defaultCenter()
     let transitionManager = TransitionManager()
+    var nearestChest: Chest? = nil
     
     @IBOutlet var darkView: UIView!
     @IBOutlet var lootzView: UIImageView!
@@ -89,6 +90,14 @@ class MainController: UIViewController {
     }
     
     @IBAction func searchBtnAction(sender: UIButton) {
+        var nearestChest: Chest? = nil
+        exploreText.text = ""
+        eastImg.highlighted = false
+        westImg.highlighted = false
+        northImg.highlighted = false
+        southImg.highlighted = false
+        distanceLabel.hidden = true
+        
         if let currentLocation = LocationController.sharedInstance.getCurrentLocation() {
             searchBtn.enabled = false
             var latitude = currentLocation.coordinate.latitude as Double
@@ -102,7 +111,24 @@ class MainController: UIViewController {
     }
     
     @IBAction func lootBtnAction(sender: UIButton) {
-        showLootzUI()
+        if let chest = nearestChest {
+            var currentLocation = LocationController.sharedInstance.getCurrentLocation()
+            var chestLocation = CLLocation(latitude: chest.getLatitude(), longitude: chest.getLongitude())
+            
+            var distance = currentLocation?.distanceFromLocation(chestLocation)
+            
+            if(distance < 25) {
+                showLootzUI()
+            }
+            else
+            {
+                exploreText.text = "You are not close enough to loot the chest"
+            }
+        }
+        else {
+            exploreText.text = "There are no chests near by to loot"
+        }
+        
     }
     
     @IBAction func collectBtnAction(sender: UIButton) {
@@ -150,7 +176,29 @@ class MainController: UIViewController {
         let chests = userInfo["chests"] as [Chest]!
         
         if chests.count != 0 {
-            exploreText.text = "Found \(chests.count) chests in your area"
+            exploreText.text = "Found \(chests.count) chests in your area, now tracking closest chest \n"
+            nearestChest = chests[0]
+            
+            if let chest = nearestChest {
+                var currentLocation = LocationController.sharedInstance.getCurrentLocation()
+                var chestLocation = CLLocation(latitude: chest.getLatitude(), longitude: chest.getLongitude())
+            
+                var distance = currentLocation?.distanceFromLocation(chestLocation)
+                
+                if let dist = distance as Double? {
+                    distanceLabel.hidden = false
+                    distanceLabel.text = String(Int(dist)) + " m"
+                }
+                else {
+                    println("Could not find distance to nearest chest")
+                    exploreText.text.extend("Could not find distance to nearest chest")
+                }
+            }
+            else {
+                println("Could not find nearest chest")
+                exploreText.text.extend("Could not find nearest chest")
+            }
+            
         }
         else {
             exploreText.text = "Did not find any chests"
