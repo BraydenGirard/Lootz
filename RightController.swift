@@ -13,6 +13,9 @@ class RightController: UIViewController {
     let notificationCenter = NSNotificationCenter.defaultCenter()
     let transitionManager = TransitionManager()
     
+    let TOTALBUTTONS = 20
+    let BUTTONSTART = 100
+    
     @IBOutlet var usernameLabel: UILabel!
     @IBOutlet var goldLabel: UILabel!
     
@@ -49,7 +52,7 @@ class RightController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.tag = 2;
+        self.view.tag = -2;
         notificationCenter.addObserver(self, selector: "exit:", name: "exit", object: nil)
         
         //------------right swipe gestures in view--------------//
@@ -59,6 +62,30 @@ class RightController: UIViewController {
         
         //------------static view setup--------------//
         usernameLabel.text = DBFactory.execute().getUser().getUsername()
+        
+        inv1Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv2Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv3Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv4Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv5Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv6Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv7Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv8Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv9Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv10Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv11Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv12Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv13Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv14Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv15Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+        inv16Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        deselectButton(0)
+        
+        
+        //goldLabel.text = DBFactory.execute().getUser().getGold() as String
         
         if let headImg = DBFactory.execute().getUser().getEquipment(HELMET)?.getImage() {
             headBtn.setImage(headImg, forState: UIControlState.Normal)
@@ -82,10 +109,7 @@ class RightController: UIViewController {
                 }
             }
         }
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        
+
     }
     
     func exit(notification: NSNotification) {
@@ -108,47 +132,97 @@ class RightController: UIViewController {
         
     }
     @IBAction func actionBtnAction(sender: UIButton) {
+        var selectedButton = getSelectedButton()
+        
+        if let theButton = selectedButton {
+            //If less than 116 inventory is selected
+            //do something with inventory
+            if(theButton.tag < 116) {
+                var inventory = DBFactory.execute().getUser().getInventory()
+                    
+                if((theButton.tag - BUTTONSTART) < inventory.count) {
+                    var lootItem = inventory[theButton.tag - BUTTONSTART]
+                    lootItem.use()
+                }
+            }
+        }
     }
     @IBAction func removeBtnAction(sender: UIButton) {
+        var selectedButton = getSelectedButton()
+        
+        if let theButton = selectedButton {
+            //If less than 116 inventory is selected
+            //else equipment is selected
+            if(theButton.tag < 116) {
+                var inventory = DBFactory.execute().getUser().getInventory()
+                
+                if((theButton.tag - BUTTONSTART) < inventory.count) {
+                    var lootItem = inventory[theButton.tag - BUTTONSTART]
+                    confirmRemove(lootItem)
+                }
+            } else {
+                if(theButton.tag == 116) {
+                    //Remove the head piece if room in inventory
+                } else if(theButton.tag == 117) {
+                    //Remove the shield if room in inventory
+                } else if(theButton.tag == 118) {
+                    //Remove the chest armour if room in inventory
+                } else if(theButton.tag == 119) {
+                    //Remove the sword if room in inventory
+                }
+            }
+        }
     }
-    @IBAction func headBtnAction(sender: UIButton) {
+    @IBAction func equipmentBtnAction(sender: UIButton) {
+        deselectButton(sender.tag)
+        sender.selected = !sender.selected
     }
-    @IBAction func offHandBtnAction(sender: UIButton) {
+    @IBAction func invBtnAction(sender:UIButton) {
+        deselectButton(sender.tag)
+        sender.selected = !sender.selected
+        
     }
-    @IBAction func chestBtnAction(sender: UIButton) {
+    
+    func deselectButton(senderTag: Int) {
+        var button = getSelectedButton()
+        
+        if let theButton = button {
+            if(theButton.tag == senderTag) {
+                return
+            }
+            theButton.selected = false
+        }
     }
-    @IBAction func primaryHandBtnAction(sender: UIButton) {
+    
+    func getSelectedButton() -> UIButton? {
+        for(var i=BUTTONSTART; i<BUTTONSTART + TOTALBUTTONS; i++) {
+            
+            var button = self.view.viewWithTag(i) as UIButton
+            if(button.selected) {
+                return button
+            }
+        }
+        return nil
     }
-    @IBAction func inv1BtnAction(sender:UIButton) {
+    
+    func confirmRemove(lootItem: Loot) {
+        let alertController = UIAlertController(
+            title: "Remove Item",
+            message: "Are you sure you want to remove 1 of this item from your inventory?",
+            preferredStyle: .Alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            
+        }
+        alertController.addAction(cancelAction)
+        
+        let removeAction = UIAlertAction(title: "Yes Remove", style: .Default) { (action) in
+            DBFactory.execute().getUser().removeInventory(lootItem)
+        }
+        alertController.addAction(removeAction)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
-    @IBAction func inv2BtnAction(sender:UIButton) {
-    }
-    @IBAction func inv3BtnAction(sender:UIButton) {
-    }
-    @IBAction func inv4BtnAction(sender:UIButton) {
-    }
-    @IBAction func inv5BtnAction(sender:UIButton) {
-    }
-    @IBAction func inv6BtnAction(sender:UIButton) {
-    }
-    @IBAction func inv7BtnAction(sender:UIButton) {
-    }
-    @IBAction func inv8BtnAction(sender:UIButton) {
-    }
-    @IBAction func inv9BtnAction(sender:UIButton) {
-    }
-    @IBAction func inv10BtnAction(sender:UIButton) {
-    }
-    @IBAction func inv11BtnAction(sender:UIButton) {
-    }
-    @IBAction func inv12BtnAction(sender:UIButton) {
-    }
-    @IBAction func inv13BtnAction(sender:UIButton) {
-    }
-    @IBAction func inv14BtnAction(sender:UIButton) {
-    }
-    @IBAction func inv15BtnAction(sender:UIButton) {
-    }
-    @IBAction func inv16BtnAction(sender:UIButton) {
-    }
+    
+
 }

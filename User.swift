@@ -18,6 +18,7 @@ class User {
     private let username: String
     private let email: String
     private let password: String
+    private var gold: Int
     private var health: Int
     private var energy: Int
     private var clarity: Int
@@ -29,6 +30,7 @@ class User {
         self.username = UNKNOWN
         self.email = UNKNOWN
         self.password = UNKNOWN
+        self.gold = 0
         self.health = FULLHEALTH
         self.energy = FULLENERGY
         self.clarity = FULLCLARITY
@@ -41,6 +43,7 @@ class User {
         self.username = username
         self.email = email
         self.password = password
+        self.gold = 0
         self.health = FULLHEALTH
         self.energy = FULLENERGY
         self.clarity = FULLCLARITY
@@ -49,10 +52,11 @@ class User {
         self.locationHistory = [CLLocation]()
     }
     
-    init(username: String, email: String, password: String, health: Int, energy: Int, clarity: Int, inventory: [Loot], equipment: [Gear], locationHistory: [CLLocation]) {
+    init(username: String, email: String, password: String, gold: Int, health: Int, energy: Int, clarity: Int, inventory: [Loot], equipment: [Gear], locationHistory: [CLLocation]) {
         self.username = username
         self.email = email
         self.password = password
+        self.gold = gold
         self.health = health
         self.energy = energy
         self.clarity = clarity
@@ -62,7 +66,7 @@ class User {
     }
     
     convenience init(parseUser: PFObject) {
-        self.init(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: parseUser["inventory"] as [Loot], equipment: parseUser["equipment"] as [Gear], locationHistory: parseUser["locationHistory"] as [CLLocation])
+        self.init(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, gold: parseUser["gold"] as Int, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: parseUser["inventory"] as [Loot], equipment: parseUser["equipment"] as [Gear], locationHistory: parseUser["locationHistory"] as [CLLocation])
     }
     
     func getUsername() -> String {
@@ -75,6 +79,14 @@ class User {
     
     func getPassword() -> String {
         return password
+    }
+    
+    func getGold() -> Int {
+        return gold
+    }
+    
+    func setGold(gold: Int) {
+        self.gold = gold
     }
     
     func getHealth() -> Int {

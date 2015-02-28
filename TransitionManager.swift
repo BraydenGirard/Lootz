@@ -27,12 +27,12 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
         let offScreenLeft = CGAffineTransformMakeTranslation(-container.frame.width, 0)
         
         // prepare the toView for the animation
-        if(toView.tag == 1) {
+        if(toView.tag == -1) {
             toView.transform = offScreenLeft
-        } else if(toView.tag == 2) {
+        } else if(toView.tag == -2) {
             toView.transform = offScreenRight
         } else {
-            if(fromView.tag == 1) {
+            if(fromView.tag == -1) {
                 toView.transform = offScreenRight
             } else {
                 toView.transform = offScreenLeft
@@ -57,12 +57,12 @@ class TransitionManager: NSObject, UIViewControllerAnimatedTransitioning, UIView
             
             // slide fromView off either the left or right edge of the screen 
             // depending if we're presenting or dismissing this view
-            if(toView.tag == 1) {
+            if(toView.tag == -1) {
                 fromView.transform = offScreenRight
-            } else if(toView.tag == 2) {
+            } else if(toView.tag == -2) {
                 fromView.transform = offScreenLeft
             } else {
-                if(fromView.tag == 1) {
+                if(fromView.tag == -1) {
                     fromView.transform = offScreenLeft
                 } else {
                     fromView.transform = offScreenRight

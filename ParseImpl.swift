@@ -86,6 +86,7 @@ class ParseImpl: DatabaseManager {
         parseUser["inventory"] = user.getInventory()
         parseUser["equipment"] = user.getEquipment()
         parseUser["locationHistory"] = user.getLocationHistory()
+        parseUser["gold"] = user.getGold()
         
         return parseUser
     }

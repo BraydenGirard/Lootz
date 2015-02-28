@@ -38,6 +38,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
     }
     
     func startBackgroundLocationServices() -> Bool {
+       
         manager.delegate = self;
         manager.desiredAccuracy = kCLLocationAccuracyBest
         backgroundState = true;
@@ -49,6 +50,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
             return false
         default:
             manager.startMonitoringSignificantLocationChanges()
+             println("Background location started")
         }
         return true
     }
@@ -76,8 +78,9 @@ class LocationController: NSObject, CLLocationManagerDelegate{
     //Location was updated get newest location
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         self.currentLocation = locations[locations.count - 1] as? CLLocation
-        
+        println("Location has been updated")
         if(backgroundState && currentLocation != nil) {
+            println("Found location in background")
             var currentUser = DBFactory.execute().getUser()
             var locationHistory = currentUser.getLocationHistory()
             locationHistory.append(currentLocation!)

@@ -37,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         println("Application launching before")
         if let launch = launchOptions {
             if let key = launch.indexForKey(UIApplicationLaunchOptionsLocationKey) {
+                println("Allowed to start background location")
                 LocationController.sharedInstance.startBackgroundLocationServices()
             }
         }

@@ -15,7 +15,7 @@ class LeftController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.tag = 1;
+        self.view.tag = -1;
         notificationCenter.addObserver(self, selector: "exit:", name: "exit", object: nil)
         
         //-----------left swipe gestures in view--------------//
