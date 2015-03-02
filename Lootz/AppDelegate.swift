@@ -34,14 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
         
-        println("Application launching before")
+        println("Application launching")
         if let launch = launchOptions {
             if let key = launch.indexForKey(UIApplicationLaunchOptionsLocationKey) {
                 println("Allowed to start background location")
                 LocationController.sharedInstance.startBackgroundLocationServices()
             }
         }
-        println("Application Launching after")
         return true
     }
 
@@ -51,10 +50,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-         println("Entered backgound mode before")
+         println("Application entered backgound mode")
         LocationController.sharedInstance.stopLocationServices()
         LocationController.sharedInstance.startBackgroundLocationServices()
-        println("Entered backgound mode after")
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -62,10 +60,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        println("Application became active before")
+        println("Application became active")
         LocationController.sharedInstance.stopBackgroundLocationServices()
         LocationController.sharedInstance.startLocationServices()
-        println("Application became active after")
     }
 
     func applicationWillTerminate(application: UIApplication) {

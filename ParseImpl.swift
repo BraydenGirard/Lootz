@@ -62,6 +62,17 @@ class ParseImpl: DatabaseManager {
         }
     }
     
+    func updateUser() {
+        var currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            PFUser.currentUser().fetchInBackgroundWithBlock({ (object:PFObject!, error: NSError!) -> Void in
+                NSNotificationCenter.defaultCenter().postNotificationName("refreshProfile", object: nil)
+            })
+        } else {
+            NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
+        }
+    }
+    
     func getUserByUsername(username: String) -> User {
         var query = PFUser.query()
         query.whereKey("username", equalTo:username)
@@ -71,6 +82,30 @@ class ParseImpl: DatabaseManager {
     func saveUser(user: User) -> Bool {
         self.convertUser(user).saveEventually()
         return true
+    }
+    
+    func saveUserLocation(location: CLLocation) {
+        var currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            PFUser.currentUser().fetchInBackgroundWithBlock({ (object:PFObject!, error: NSError!) -> Void in
+                NSNotificationCenter.defaultCenter().postNotificationName("refreshProfile", object: nil)
+            })
+        } else {
+            NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
+        }
+
+        var lat = location.coordinate.latitude as Double
+        var lng = location.coordinate.longitude as Double
+
+        var locationHistory = self.getUser().getLocationHistory()
+    
+        locationHistory.latitudes.append(lat)
+        locationHistory.longitudes.append(lng)
+        
+        currentUser["latHistory"] = locationHistory.latitudes
+        currentUser["lngHistory"] = locationHistory.longitudes
+        
+        currentUser.saveEventually()
     }
     
     func convertUser(user: User) -> PFUser {
@@ -85,7 +120,8 @@ class ParseImpl: DatabaseManager {
         parseUser["clarity"] = user.getClarity()
         parseUser["inventory"] = user.getInventory()
         parseUser["equipment"] = user.getEquipment()
-        parseUser["locationHistory"] = user.getLocationHistory()
+        parseUser["latHistory"] = user.getLatHistory()
+        parseUser["lngHistory"] = user.getLngHistory()
         parseUser["gold"] = user.getGold()
         
         return parseUser

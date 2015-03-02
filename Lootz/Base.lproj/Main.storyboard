@@ -541,7 +541,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
+                                    <rect key="frame" x="0.0" y="-100" width="600" height="400"/>
                                 </variation>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lootz_ui.png" translatesAutoresizingMaskIntoConstraints="NO" id="6si-dA-WPW">
@@ -954,7 +954,7 @@
                             <imageView userInteractionEnabled="NO" tag="27" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character_ui.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q3X-bn-7c4">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="26" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88888888" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyB-ve-9dK">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="26" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyB-ve-9dK">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GyB-ve-9dK" secondAttribute="height" multiplier="59:21" id="P6R-D1-P8f"/>
@@ -1922,22 +1922,6 @@
                         <outlet property="goldLabel" destination="GyB-ve-9dK" id="KJg-Z0-1xZ"/>
                         <outlet property="headBtn" destination="huw-6e-D95" id="mto-ie-FWu"/>
                         <outlet property="healthImg" destination="Cwe-wv-ia3" id="dim-e1-ThW"/>
-                        <outlet property="inv10Btn" destination="05E-fo-21a" id="je1-U4-9xv"/>
-                        <outlet property="inv11Btn" destination="rL8-Dz-FVx" id="ynp-OH-d2h"/>
-                        <outlet property="inv12Btn" destination="5Q0-Ii-qgD" id="FhZ-Bf-4Ys"/>
-                        <outlet property="inv13Btn" destination="ccA-Ev-68u" id="Isv-iT-CnR"/>
-                        <outlet property="inv14Btn" destination="KQy-0i-t0a" id="dMv-I5-tbF"/>
-                        <outlet property="inv15Btn" destination="XnO-dD-goI" id="603-ZO-7kv"/>
-                        <outlet property="inv16Btn" destination="ndm-S6-grZ" id="nFm-DS-zQZ"/>
-                        <outlet property="inv1Btn" destination="Dbg-VB-FMc" id="WOO-HS-5jq"/>
-                        <outlet property="inv2Btn" destination="B92-lU-vRU" id="ml7-J8-hod"/>
-                        <outlet property="inv3Btn" destination="Whf-91-Gsf" id="kC3-KG-qUR"/>
-                        <outlet property="inv4Btn" destination="BSr-Wp-u27" id="vxS-Yc-QoR"/>
-                        <outlet property="inv5Btn" destination="DXr-hz-Y7W" id="6XL-6c-oZg"/>
-                        <outlet property="inv6Btn" destination="0z2-pW-cnD" id="hiJ-1C-6JE"/>
-                        <outlet property="inv7Btn" destination="DSa-wS-DCi" id="5cD-SD-45H"/>
-                        <outlet property="inv8Btn" destination="EH9-TR-jlJ" id="Vv8-QW-Wck"/>
-                        <outlet property="inv9Btn" destination="kth-hh-jSr" id="Wfa-B9-xIJ"/>
                         <outlet property="offHandBtn" destination="dUf-AA-oBD" id="ZJW-v9-WWx"/>
                         <outlet property="primaryHandBtn" destination="HYM-uQ-hYc" id="Mgh-2G-b9p"/>
                         <outlet property="removeBtn" destination="d5Q-Um-QHd" id="9Oe-p7-Owg"/>
@@ -1985,7 +1969,7 @@
         <image name="west_red.png" width="16" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MNG-AA-BbD"/>
-        <segue reference="Htt-EU-I46"/>
+        <segue reference="HXC-s2-8iK"/>
+        <segue reference="rUt-IK-zk6"/>
     </inferredMetricsTieBreakers>
 </document>

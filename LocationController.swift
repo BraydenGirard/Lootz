@@ -81,11 +81,9 @@ class LocationController: NSObject, CLLocationManagerDelegate{
         println("Location has been updated")
         if(backgroundState && currentLocation != nil) {
             println("Found location in background")
-            var currentUser = DBFactory.execute().getUser()
-            var locationHistory = currentUser.getLocationHistory()
-            locationHistory.append(currentLocation!)
-            currentUser.setLocationHistory(locationHistory)
-            DBFactory.execute().saveUser(currentUser)
+            if let theLocation = currentLocation {
+                DBFactory.execute().saveUserLocation(theLocation)
+            }
         }
     }
 }

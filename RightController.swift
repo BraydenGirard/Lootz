@@ -14,6 +14,7 @@ class RightController: UIViewController {
     let transitionManager = TransitionManager()
     
     let TOTALBUTTONS = 20
+    let TOTALINVBUTTONS = 16
     let BUTTONSTART = 100
     
     @IBOutlet var usernameLabel: UILabel!
@@ -25,22 +26,6 @@ class RightController: UIViewController {
     @IBOutlet var offHandBtn: UIButton!
     @IBOutlet var chestBtn: UIButton!
     @IBOutlet var primaryHandBtn: UIButton!
-    @IBOutlet var inv1Btn: UIButton!
-    @IBOutlet var inv2Btn: UIButton!
-    @IBOutlet var inv3Btn: UIButton!
-    @IBOutlet var inv4Btn: UIButton!
-    @IBOutlet var inv5Btn: UIButton!
-    @IBOutlet var inv6Btn: UIButton!
-    @IBOutlet var inv7Btn: UIButton!
-    @IBOutlet var inv8Btn: UIButton!
-    @IBOutlet var inv9Btn: UIButton!
-    @IBOutlet var inv10Btn: UIButton!
-    @IBOutlet var inv11Btn: UIButton!
-    @IBOutlet var inv12Btn: UIButton!
-    @IBOutlet var inv13Btn: UIButton!
-    @IBOutlet var inv14Btn: UIButton!
-    @IBOutlet var inv15Btn: UIButton!
-    @IBOutlet var inv16Btn: UIButton!
     
     @IBOutlet var healthImg: UIImageView!
     @IBOutlet var energyImg: UIImageView!
@@ -52,8 +37,11 @@ class RightController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
         self.view.tag = -2;
         notificationCenter.addObserver(self, selector: "exit:", name: "exit", object: nil)
+        notificationCenter.addObserver(self, selector: "refreshProfile:", name: "refreshProfile", object: nil)
+        
         
         //------------right swipe gestures in view--------------//
         let swipeRight = UISwipeGestureRecognizer(target: self, action: Selector("rightSwiped"))
@@ -62,30 +50,11 @@ class RightController: UIViewController {
         
         //------------static view setup--------------//
         usernameLabel.text = DBFactory.execute().getUser().getUsername()
-        
-        inv1Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv2Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv3Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv4Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv5Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv6Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv7Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv8Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv9Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv10Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv11Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv12Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv13Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv14Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv15Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
-        inv16Btn.setBackgroundImage(UIImage (named:"empty_slot_selected.png")!, forState: UIControlState.Selected)
     }
     
     override func viewDidAppear(animated: Bool) {
+        DBFactory.execute().updateUser()
         deselectButton(0)
-        
-        
-        //goldLabel.text = DBFactory.execute().getUser().getGold() as String
         
         if let headImg = DBFactory.execute().getUser().getEquipment(HELMET)?.getImage() {
             headBtn.setImage(headImg, forState: UIControlState.Normal)
@@ -205,6 +174,13 @@ class RightController: UIViewController {
         return nil
     }
     
+    func setupInvButtons() {
+        for(var i=BUTTONSTART; i<BUTTONSTART + TOTALINVBUTTONS; i++) {
+            var button = self.view.viewWithTag(i) as UIButton
+            button.setBackgroundImage(UIImage(named: "empty_slot_selected"), forState: UIControlState.Selected)
+        }
+    }
+    
     func confirmRemove(lootItem: Loot) {
         let alertController = UIAlertController(
             title: "Remove Item",
@@ -224,5 +200,54 @@ class RightController: UIViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
-
+    func setupBars() {
+        var health = DBFactory.execute().getUser().getHealth()
+        var clarity = DBFactory.execute().getUser().getClarity()
+        var energy = DBFactory.execute().getUser().getEnergy()
+        
+        switch health {
+        case FULLHEALTH:
+            healthImg.image = UIImage(named: "health_full")
+        case 75:
+            healthImg.image = UIImage(named: "health_75")
+        case 50:
+            healthImg.image = UIImage(named: "health_50")
+        case 25:
+            healthImg.image = UIImage(named: "health_25")
+        default:
+            healthImg.image = UIImage(named: "health_empty")
+        }
+        
+        switch energy {
+        case FULLENERGY:
+            energyImg.image = UIImage(named: "energy_full")
+        case 75:
+            energyImg.image = UIImage(named: "energy_75")
+        case 50:
+            energyImg.image = UIImage(named: "energy_50")
+        case 25:
+            energyImg.image = UIImage(named: "energy_25")
+        default:
+            energyImg.image = UIImage(named: "energy_empty")
+        }
+        
+        switch clarity {
+        case FULLCLARITY:
+            clarityImg.image = UIImage(named: "clarity_full")
+        case 75:
+            clarityImg.image = UIImage(named: "clarity_75")
+        case 50:
+            clarityImg.image = UIImage(named: "clarity_50")
+        case 25:
+            clarityImg.image = UIImage(named: "clarity_25")
+        default:
+            clarityImg.image = UIImage(named: "clarity_empty")
+        }
+    }
+    
+    func refreshProfile(notification: NSNotification) {
+        setupInvButtons()
+        setupBars()
+        goldLabel.text = String(DBFactory.execute().getUser().getGold())
+    }
 }

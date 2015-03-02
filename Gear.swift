@@ -11,14 +11,16 @@ import Foundation
 class Gear: Loot {
     
     private let type = UNKNOWN
-    private let damage = 1
+    private let damage = 25
     private let accuracy = 0
     private let ranged = false
     private let gold = false
     
     init(name: String, gold: Bool, quantity: Int) {
         self.gold = gold
-        
+        if(gold) {
+            damage = 50
+        }
         if name == BOW || name == GBOW {
             self.type = TWOHAND
             self.ranged = true

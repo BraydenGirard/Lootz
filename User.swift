@@ -8,10 +8,10 @@
 
 import Foundation
 
-let FULLHEALTH = 4
+let FULLHEALTH = 100
 let FULLENERGY = 100
 let FULLCLARITY = 100
-let FULLINVENTORY = 20
+let FULLINVENTORY = 16
 
 class User {
     
@@ -24,7 +24,8 @@ class User {
     private var clarity: Int
     private var inventory: [Loot]
     private var equipment: [Gear]
-    private var locationHistory: [CLLocation]
+    private var latHistory: [Double]
+    private var lngHistory: [Double]
     
     init() {
         self.username = UNKNOWN
@@ -34,9 +35,10 @@ class User {
         self.health = FULLHEALTH
         self.energy = FULLENERGY
         self.clarity = FULLCLARITY
-        self.inventory = [Loot]()
-        self.equipment = [Gear]()
-        self.locationHistory = [CLLocation]()
+        self.inventory = []
+        self.equipment = []
+        self.latHistory = []
+        self.lngHistory = []
     }
     
     init(username: String, email: String, password: String) {
@@ -47,12 +49,13 @@ class User {
         self.health = FULLHEALTH
         self.energy = FULLENERGY
         self.clarity = FULLCLARITY
-        self.inventory = [Loot]()
-        self.equipment = [Gear]()
-        self.locationHistory = [CLLocation]()
+        self.inventory = []
+        self.equipment = []
+        self.latHistory = []
+        self.lngHistory = []
     }
     
-    init(username: String, email: String, password: String, gold: Int, health: Int, energy: Int, clarity: Int, inventory: [Loot], equipment: [Gear], locationHistory: [CLLocation]) {
+    init(username: String, email: String, password: String, gold: Int, health: Int, energy: Int, clarity: Int, inventory: [Loot], equipment: [Gear], latHistory: [Double], lngHistory: [Double]) {
         self.username = username
         self.email = email
         self.password = password
@@ -62,11 +65,12 @@ class User {
         self.clarity = clarity
         self.inventory = inventory
         self.equipment = equipment
-        self.locationHistory = locationHistory
+        self.latHistory = latHistory
+        self.lngHistory = lngHistory
     }
     
     convenience init(parseUser: PFObject) {
-        self.init(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, gold: parseUser["gold"] as Int, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: parseUser["inventory"] as [Loot], equipment: parseUser["equipment"] as [Gear], locationHistory: parseUser["locationHistory"] as [CLLocation])
+        self.init(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, gold: parseUser["gold"] as Int, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: parseUser["inventory"] as [Loot], equipment: parseUser["equipment"] as [Gear], latHistory: parseUser["latHistory"] as [Double], lngHistory: parseUser["lngHistory"] as [Double])
     }
     
     func getUsername() -> String {
@@ -387,12 +391,21 @@ class User {
         return -1
     }
     
-    func getLocationHistory() -> [CLLocation] {
-        return locationHistory
+    func getLocationHistory() -> (latitudes: [Double], longitudes: [Double]) {
+        return (latitudes: latHistory, longitudes: lngHistory)
     }
     
-    func setLocationHistory(locationHistory: [CLLocation]) {
-        self.locationHistory = locationHistory
+    func setLocationtHistory(locationTuple: (latitudes: [Double], longitudes: [Double])) {
+        self.latHistory = locationTuple.latitudes
+        self.lngHistory = locationTuple.longitudes
+    }
+    
+    func getLatHistory() -> [Double] {
+        return latHistory
+    }
+    
+    func getLngHistory() -> [Double] {
+        return lngHistory
     }
     
   

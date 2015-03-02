@@ -14,7 +14,9 @@ protocol DatabaseManager {
     func checkAutoSignIn() -> Bool
     func saveUser(user: User) -> Bool
     func getUser() -> User
+    func updateUser()
     func getUserByUsername(username: String) -> User
     func convertUser(user: User) -> PFUser
     func findChests(lat: Double, lng: Double, distance: Double)
+    func saveUserLocation(location: CLLocation)
 }
