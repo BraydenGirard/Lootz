@@ -12,8 +12,19 @@ class ParseImpl: DatabaseManager {
     
     func signUp(user: User) {
        
-        var parseUser = self.convertUser(user)
-            
+        var parseUser = PFUser()
+        
+        parseUser.username = user.getUsername()
+        parseUser.email = user.getEmail()
+        parseUser["health"] = user.getHealth()
+        parseUser["energy"] = user.getEnergy()
+        parseUser["clarity"] = user.getClarity()
+        parseUser["inventory"] = user.getInventory()
+        parseUser["equipment"] = user.getEquipment()
+        parseUser["latHistory"] = user.getLatHistory()
+        parseUser["lngHistory"] = user.getLngHistory()
+        parseUser["gold"] = user.getGold()
+        
         parseUser.signUpInBackgroundWithBlock {
             (succeeded: Bool!, error: NSError!) -> Void in
             if error == nil {
@@ -62,17 +73,6 @@ class ParseImpl: DatabaseManager {
         }
     }
     
-    func updateUser() {
-        var currentUser = PFUser.currentUser()
-        if currentUser != nil {
-            PFUser.currentUser().fetchInBackgroundWithBlock({ (object:PFObject!, error: NSError!) -> Void in
-                NSNotificationCenter.defaultCenter().postNotificationName("refreshProfile", object: nil)
-            })
-        } else {
-            NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
-        }
-    }
-    
     func getUserByUsername(username: String) -> User {
         var query = PFUser.query()
         query.whereKey("username", equalTo:username)
@@ -80,8 +80,23 @@ class ParseImpl: DatabaseManager {
     }
 
     func saveUser(user: User) -> Bool {
-        self.convertUser(user).saveEventually()
-        return true
+        var parseUser = PFUser.currentUser()
+        if parseUser != nil {
+            parseUser.username = user.getUsername()
+            parseUser.email = user.getEmail()
+            parseUser["health"] = user.getHealth()
+            parseUser["energy"] = user.getEnergy()
+            parseUser["clarity"] = user.getClarity()
+            parseUser["inventory"] = user.getInventory()
+            parseUser["equipment"] = user.getEquipment()
+            parseUser["latHistory"] = user.getLatHistory()
+            parseUser["lngHistory"] = user.getLngHistory()
+            parseUser["gold"] = user.getGold()
+            return true
+        } else {
+            NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
+            return false
+        }
     }
     
     func saveUserLocation(location: CLLocation) {
@@ -108,23 +123,15 @@ class ParseImpl: DatabaseManager {
         currentUser.saveEventually()
     }
     
-    func convertUser(user: User) -> PFUser {
-        var parseUser = PFUser()
-        if(user.getPassword() != UNKNOWN) {
-            parseUser.password = user.getPassword()
+    func updateUser() {
+        var currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            PFUser.currentUser().fetchInBackgroundWithBlock({ (object:PFObject!, error: NSError!) -> Void in
+                NSNotificationCenter.defaultCenter().postNotificationName("refreshProfile", object: nil)
+            })
+        } else {
+            NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
         }
-        parseUser.username = user.getUsername()
-        parseUser.email = user.getEmail()
-        parseUser["health"] = user.getHealth()
-        parseUser["energy"] = user.getEnergy()
-        parseUser["clarity"] = user.getClarity()
-        parseUser["inventory"] = user.getInventory()
-        parseUser["equipment"] = user.getEquipment()
-        parseUser["latHistory"] = user.getLatHistory()
-        parseUser["lngHistory"] = user.getLngHistory()
-        parseUser["gold"] = user.getGold()
-        
-        return parseUser
     }
     
     func findChests(lat: Double, lng: Double, distance: Double) {

@@ -12,11 +12,11 @@ protocol DatabaseManager {
     func signUp(user: User)
     func login(username: String, password: String)
     func checkAutoSignIn() -> Bool
-    func saveUser(user: User) -> Bool
     func getUser() -> User
-    func updateUser()
     func getUserByUsername(username: String) -> User
-    func convertUser(user: User) -> PFUser
-    func findChests(lat: Double, lng: Double, distance: Double)
+    func saveUser(user: User) -> Bool
     func saveUserLocation(location: CLLocation)
+    func updateUser()
+    func findChests(lat: Double, lng: Double, distance: Double)
+    
 }

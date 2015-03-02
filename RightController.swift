@@ -31,16 +31,13 @@ class RightController: UIViewController {
     @IBOutlet var energyImg: UIImageView!
     @IBOutlet var clarityImg: UIImageView!
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
        
         self.view.tag = -2;
         notificationCenter.addObserver(self, selector: "exit:", name: "exit", object: nil)
-        notificationCenter.addObserver(self, selector: "refreshProfile:", name: "refreshProfile", object: nil)
+        notificationCenter.addObserver(self, selector: "refreshProfile", name: "refreshProfile", object: nil)
         
         
         //------------right swipe gestures in view--------------//
@@ -55,30 +52,6 @@ class RightController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         DBFactory.execute().updateUser()
         deselectButton(0)
-        
-        if let headImg = DBFactory.execute().getUser().getEquipment(HELMET)?.getImage() {
-            headBtn.setImage(headImg, forState: UIControlState.Normal)
-        }
-        if let chestImg = DBFactory.execute().getUser().getEquipment(BARMOUR)?.getImage() {
-            chestBtn.setImage(chestImg, forState: UIControlState.Normal)
-        }
-        if let offHandImg = DBFactory.execute().getUser().getEquipment(ONEHANDARMOUR)?.getImage() {
-            headBtn.setImage(offHandImg, forState: UIControlState.Normal)
-            if let primaryHandImg = DBFactory.execute().getUser().getEquipment(ONEHAND)?.getImage() {
-                primaryHandBtn.setImage(primaryHandImg, forState: UIControlState.Normal)
-            }
-        }
-        else {
-            if let weapons = DBFactory.execute().getUser().getDualEquipment(ONEHAND) {
-                if let primaryHandImg = weapons[0].getImage() as UIImage? {
-                    primaryHandBtn.setImage(primaryHandImg, forState: UIControlState.Normal)
-                }
-                if let offHandImg = weapons[1].getImage() as UIImage? {
-                    offHandBtn.setImage(offHandImg, forState: UIControlState.Normal)
-                }
-            }
-        }
-
     }
     
     func exit(notification: NSNotification) {
@@ -126,12 +99,16 @@ class RightController: UIViewController {
                 var inventory = DBFactory.execute().getUser().getInventory()
                 
                 if((theButton.tag - BUTTONSTART) < inventory.count) {
-                    var lootItem = inventory[theButton.tag - BUTTONSTART]
+                    let lootItem = inventory[theButton.tag - BUTTONSTART]
                     confirmRemove(lootItem)
                 }
             } else {
                 if(theButton.tag == 116) {
-                    //Remove the head piece if room in inventory
+                    let helmet = DBFactory.execute().getUser().getEquipment(HELMET)
+                    if let theHelmet = helmet {
+                        DBFactory.execute().getUser().removeGear(theHelmet)
+                        refreshProfile()
+                    }
                 } else if(theButton.tag == 117) {
                     //Remove the shield if room in inventory
                 } else if(theButton.tag == 118) {
@@ -178,6 +155,13 @@ class RightController: UIViewController {
         for(var i=BUTTONSTART; i<BUTTONSTART + TOTALINVBUTTONS; i++) {
             var button = self.view.viewWithTag(i) as UIButton
             button.setBackgroundImage(UIImage(named: "empty_slot_selected"), forState: UIControlState.Selected)
+            var image = getInvImage(i)
+            var imageSelected = getInvImageSelected(i)
+            
+            if(image != nil) {
+                button.setImage(image, forState: UIControlState.Normal)
+                button.setImage(imageSelected, forState: UIControlState.Selected)
+            }
         }
     }
     
@@ -245,9 +229,55 @@ class RightController: UIViewController {
         }
     }
     
-    func refreshProfile(notification: NSNotification) {
+    func refreshProfile() {
         setupInvButtons()
         setupBars()
         goldLabel.text = String(DBFactory.execute().getUser().getGold())
+        
+        if let headImg = DBFactory.execute().getUser().getEquipment(HELMET)?.getImage() {
+            headBtn.setImage(headImg, forState: UIControlState.Normal)
+        }
+        if let chestImg = DBFactory.execute().getUser().getEquipment(BARMOUR)?.getImage() {
+            chestBtn.setImage(chestImg, forState: UIControlState.Normal)
+        }
+        if let offHandImg = DBFactory.execute().getUser().getEquipment(ONEHANDARMOUR)?.getImage() {
+            headBtn.setImage(offHandImg, forState: UIControlState.Normal)
+            if let primaryHandImg = DBFactory.execute().getUser().getEquipment(ONEHAND)?.getImage() {
+                primaryHandBtn.setImage(primaryHandImg, forState: UIControlState.Normal)
+            }
+        }
+        else {
+            if let weapons = DBFactory.execute().getUser().getDualEquipment(ONEHAND) {
+                if let primaryHandImg = weapons[0].getImage() as UIImage? {
+                    primaryHandBtn.setImage(primaryHandImg, forState: UIControlState.Normal)
+                }
+                if let offHandImg = weapons[1].getImage() as UIImage? {
+                    offHandBtn.setImage(offHandImg, forState: UIControlState.Normal)
+                }
+            }
+        }
+
+    }
+    
+    func getInvImage(currentIndex: Int) -> UIImage? {
+        var invIndex = currentIndex - BUTTONSTART
+        var inventory = DBFactory.execute().getUser().getInventory()
+        
+        if(invIndex < inventory.count) {
+            let lootItem = inventory[invIndex]
+            return lootItem.image
+        }
+        return nil
+    }
+    
+    func getInvImageSelected(currentIndex: Int) -> UIImage? {
+        var invIndex = currentIndex - BUTTONSTART
+        var inventory = DBFactory.execute().getUser().getInventory()
+        
+        if(invIndex < inventory.count) {
+            let lootItem = inventory[invIndex]
+            return UIImage(named: lootItem.getName() + "_selected")
+        }
+        return nil
     }
 }

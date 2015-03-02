@@ -324,7 +324,7 @@ class User {
     }
     
     //Returns true if inventory has room for gear
-    func removeGear(gear: Gear) -> Bool {
+    func removeGear(gear: Loot) -> Bool {
         var index = 0
      
         for e in self.equipment {
