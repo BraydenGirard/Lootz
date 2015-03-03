@@ -54,4 +54,23 @@ class Chest {
     func getGold() -> Int {
         return self.gold
     }
+    
+    func getLoot() -> [Loot] {
+        var loot = [Loot]()
+        var weapon:Gear
+        if(self.weaponGold) {
+            weapon = Gear(name: self.weapon + "_Gold", gold: self.weaponGold, quantity: 1)
+        } else {
+            weapon = Gear(name: self.weapon, gold: self.weaponGold, quantity: 1)
+        }
+        
+        loot.append(weapon)
+        
+        if(self.item != "Empty") {
+            var item = Loot(name: self.item, image: UIImage(contentsOfFile:self.item + ".png")!, quantity: 1)
+            loot.append(item)
+        }
+        
+        return loot
+    }
 }

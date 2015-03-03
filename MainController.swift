@@ -5,7 +5,9 @@ class MainController: UIViewController {
     let notificationCenter = NSNotificationCenter.defaultCenter()
     let transitionManager = TransitionManager()
     var nearestChest: Chest? = nil
+    var chestDistance: Int = 0
     
+    @IBOutlet var errorLabel: UILabel!
     @IBOutlet var darkView: UIView!
     @IBOutlet var lootzView: UIImageView!
     
@@ -16,6 +18,7 @@ class MainController: UIViewController {
     @IBOutlet var goldLabel: UILabel!
     @IBOutlet var itemLabel: UILabel!
     
+    @IBOutlet var exitBtn: UIButton!
     @IBOutlet var saveLocationBtn: UIButton!
     @IBOutlet var viewLocationBtn: UIButton!
     @IBOutlet var searchBtn: UIButton!
@@ -117,9 +120,9 @@ class MainController: UIViewController {
             var chestLocation = CLLocation(latitude: chest.getLatitude(), longitude: chest.getLongitude())
             
             if let currLocation = currentLocation {
-                var distance = currLocation.distanceFromLocation(chestLocation)
+                chestDistance = Int(currLocation.distanceFromLocation(chestLocation))
                 
-                if(distance < 25) {
+                if(chestDistance < 25) {
                     showLootzUI(chest)
                 }
                 else
@@ -137,7 +140,23 @@ class MainController: UIViewController {
     }
     
     @IBAction func collectBtnAction(sender: UIButton) {
-        hideLootzUI()
+        var currentEnergy = DBFactory.execute().getUser().getEnergy()
+        
+        if(currentEnergy - chestDistance > 0) {
+            let result = DBFactory.execute().getUser().addInventory(nearestChest!.getLoot())
+            if(result == 0) {
+                DBFactory.execute().getUser().setEnergy(currentEnergy - chestDistance)
+                hideLootzUI()
+            } else {
+                errorLabel.text = "Need \(result) empty spots in inventory"
+                errorLabel.hidden = false;
+            }
+        } else {
+            errorLabel.text = "Not enough energy to loot"
+            errorLabel.hidden = false;
+        }
+        
+        
     }
     
     func showLocationPermissionError() {
@@ -187,12 +206,11 @@ class MainController: UIViewController {
             if let chest = nearestChest {
                 var currentLocation = LocationController.sharedInstance.getCurrentLocation()
                 var chestLocation = CLLocation(latitude: chest.getLatitude(), longitude: chest.getLongitude())
-            
-                var distance = currentLocation?.distanceFromLocation(chestLocation)
-                
-                if let dist = distance as Double? {
+    
+                if let currLocation = currentLocation {
+                    var distance = Int(currLocation.distanceFromLocation(chestLocation))
                     distanceLabel.hidden = false
-                    distanceLabel.text = String(Int(dist)) + " m"
+                    distanceLabel.text = String(distance) + " m"
                 }
                 else {
                     println("Could not find distance to nearest chest")
@@ -240,8 +258,7 @@ class MainController: UIViewController {
         weaponImg.hidden = false
         goldImg.hidden = false
         itemImg.hidden = false
-        
-        
+        exitBtn.hidden = false
     }
     
     func hideLootzUI() {
@@ -254,6 +271,12 @@ class MainController: UIViewController {
         weaponImg.hidden = true
         goldImg.hidden = true
         itemImg.hidden = true
+        errorLabel.hidden = true
+        exitBtn.hidden = true
+    }
+    
+    @IBAction func exitBtnPushed(sender: AnyObject) {
+        hideLootzUI()
     }
     
     func replaceUnderscores(theString: String) -> String {
