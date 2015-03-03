@@ -25,11 +25,6 @@ class MainController: UIViewController {
     @IBOutlet var lootBtn: UIButton!
     @IBOutlet var collectBtn: UIButton!
     
-    @IBOutlet var eastImg: UIImageView!
-    @IBOutlet var northImg: UIImageView!
-    @IBOutlet var southImg: UIImageView!
-    @IBOutlet var westImg: UIImageView!
-    
     @IBOutlet var weaponImg: UIImageView!
     @IBOutlet var goldImg: UIImageView!
     @IBOutlet var itemImg: UIImageView!
@@ -95,10 +90,6 @@ class MainController: UIViewController {
     @IBAction func searchBtnAction(sender: UIButton) {
         var nearestChest: Chest? = nil
         exploreText.text = ""
-        eastImg.highlighted = false
-        westImg.highlighted = false
-        northImg.highlighted = false
-        southImg.highlighted = false
         distanceLabel.hidden = true
         
         if let currentLocation = LocationController.sharedInstance.getCurrentLocation() {

@@ -65,10 +65,6 @@ class Gear: Loot {
         super.init(name: name, image: UIImage(named:name)!, quantity: quantity)
     }
     
-    convenience init(parseWeapon: PFObject) {
-        self.init(name: parseWeapon["name"] as String, gold: parseWeapon["gold"] as Bool, quantity: parseWeapon["quantity"] as Int)
-    }
-    
     func getType() -> String {
         return self.type
     }

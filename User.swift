@@ -69,10 +69,6 @@ class User {
         self.lngHistory = lngHistory
     }
     
-    convenience init(parseUser: PFObject) {
-        self.init(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, gold: parseUser["gold"] as Int, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: parseUser["inventory"] as [Loot], equipment: parseUser["equipment"] as [Gear], latHistory: parseUser["latHistory"] as [Double], lngHistory: parseUser["lngHistory"] as [Double])
-    }
-    
     func getUsername() -> String {
         return username
     }
@@ -357,7 +353,7 @@ class User {
         return count
     }
 
-    func getEquipment() -> [Loot] {
+    func getEquipment() -> [Gear] {
         return equipment
     }
     

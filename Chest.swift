@@ -26,11 +26,6 @@ class Chest {
         self.gold = gold
     }
     
-    convenience init(parseChest: PFObject) {
-        let geoLocation = parseChest["location"] as PFGeoPoint
-        self.init(latitude: geoLocation.latitude, longitude: geoLocation.longitude, weapon: parseChest["weapon"] as String, weaponGold: parseChest["weaponGold"] as Bool, item: parseChest["item"] as String, gold: parseChest["gold"] as Int)
-    }
-    
     func getLatitude() -> Double {
         return self.latitude
     }

@@ -53,7 +53,7 @@ let BOUNTYRARE = 10
 let MAXBOUNTY = 1
 let GOLDRARE = 100
 
-class Loot {
+class Loot: NSObject {
     let name = UNKNOWN
     let image =  UIImage(named: "default")!
     var quantity = 0
@@ -62,10 +62,6 @@ class Loot {
         self.name = name
         self.image = image
         self.quantity = quantity
-    }
-    
-    init() {
-        
     }
     
     func getImage() -> UIImage {

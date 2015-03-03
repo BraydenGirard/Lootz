@@ -177,7 +177,10 @@ class RightController: UIViewController {
         alertController.addAction(cancelAction)
         
         let removeAction = UIAlertAction(title: "Yes Remove", style: .Default) { (action) in
-            DBFactory.execute().getUser().removeInventory(lootItem)
+            var user = DBFactory.execute().getUser()
+            user.removeInventory(lootItem)
+            DBFactory.execute().saveUser(user)
+            DBFactory.execute().updateUser()
         }
         alertController.addAction(removeAction)
         

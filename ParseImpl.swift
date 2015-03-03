@@ -64,8 +64,7 @@ class ParseImpl: DatabaseManager {
     func getUser() -> User {
         var currentUser = PFUser.currentUser()
         if currentUser != nil {
-            var user = User(parseUser: currentUser)
-            return user
+           return self.getUserFromParse(currentUser)
         } else {
             NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
             var user = User()
@@ -76,7 +75,7 @@ class ParseImpl: DatabaseManager {
     func getUserByUsername(username: String) -> User {
         var query = PFUser.query()
         query.whereKey("username", equalTo:username)
-        return User(parseUser: query.getFirstObject())
+        return self.getUserFromParse(query.getFirstObject())
     }
 
     func saveUser(user: User) -> Bool {
@@ -92,6 +91,42 @@ class ParseImpl: DatabaseManager {
             parseUser["latHistory"] = user.getLatHistory()
             parseUser["lngHistory"] = user.getLngHistory()
             parseUser["gold"] = user.getGold()
+            
+            var lootArray = [PFObject]()
+            var gearArray = [PFObject]()
+            
+            for var i=0; i<user.getInventory().count; i++ {
+                
+                if(user.getInventory()[i] is Gear) {
+                    var currentGear = user.getInventory()[i] as Gear
+                    var gear = PFObject(className: "Gear")
+                    gear["name"] = currentGear.getName() as String
+                    gear["gold"] = currentGear.isGold() as Bool
+                    gear["quantity"] = currentGear.getQuantity() as Int
+                    gearArray.append(gear)
+                } else {
+                    var loot = PFObject(className: "Loot")
+                    loot["name"] = user.getInventory()[i].getName()
+                    loot["quantity"] = user.getInventory()[i].getQuantity()
+                    lootArray.append(loot)
+
+                }
+            }
+            
+            var equipment = [PFObject]()
+            
+            for var i=0; i<user.getEquipment().count; i++ {
+                var loot = PFObject(className: "Gear")
+                loot["name"] = user.getEquipment()[i].getName()
+                loot["isGold"] = user.getEquipment()[i].isGold()
+                loot["quantity"] = user.getEquipment()[i].getQuantity()
+                equipment.append(loot)
+            }
+            
+            parseUser["loot"] = lootArray
+            parseUser["gear"] = gearArray
+            parseUser["equipment"] = equipment
+            
             parseUser.saveEventually()
             return true
         } else {
@@ -127,8 +162,15 @@ class ParseImpl: DatabaseManager {
     func updateUser() {
         var currentUser = PFUser.currentUser()
         if currentUser != nil {
-            PFUser.currentUser().fetchInBackgroundWithBlock({ (object:PFObject!, error: NSError!) -> Void in
-                NSNotificationCenter.defaultCenter().postNotificationName("refreshProfile", object: nil)
+            var userQuery = PFUser.query()
+    
+            PFUser.currentUser().fetchIfNeededInBackgroundWithBlock({ (user:PFObject!, error: NSError!) -> Void in
+                user["inventory"].fetchIfNeededInBackgroundWithBlock({ (inventory: PFObject!, error: NSError!) -> Void in
+                    NSNotificationCenter.defaultCenter().postNotificationName("refreshProfile", object: nil)
+                })
+                user["equipment"].fetchIfNeededInBackgroundWithBlock({ (inventory: PFObject!, error: NSError!) -> Void in
+                    NSNotificationCenter.defaultCenter().postNotificationName("refreshProfile", object: nil)
+                })
             })
         } else {
             NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
@@ -150,11 +192,57 @@ class ParseImpl: DatabaseManager {
             
             if let chests = objects {
                 for c in chests {
-                    var chest = Chest(parseChest: c as PFObject)
+                    var chest = self.getChestFromParse(c as PFObject)
                     finalChests.append(chest)
                 }
             }
             NSNotificationCenter.defaultCenter().postNotificationName("chestSearchComplete", object: self, userInfo:["chests": finalChests])
         }
+    }
+    
+    func getChestFromParse(parseChest: PFObject) -> Chest {
+        return Chest(latitude: parseChest["latitude"] as Double, longitude: parseChest["longitude"] as Double, weapon: parseChest["weapon"] as String, weaponGold: parseChest["weaponGold"] as Bool, item: parseChest["item"] as String, gold: parseChest["gold"] as Int)
+    }
+    
+    func getUserFromParse(parseUser: PFObject) -> User {
+        var loot = self.getLootFromParse(parseUser["loot"] as [PFObject])
+        var gear = self.getGearFromParse(parseUser["gear"] as [PFObject])
+        var inventory:[Loot] = []
+        
+        for l in loot {
+            inventory.append(l)
+        }
+        
+        for g in gear {
+            inventory.append(g)
+        }
+        
+        var equipment = self.getGearFromParse(parseUser["equipment"] as [PFObject])
+        
+        return User(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, gold: parseUser["gold"] as Int, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: inventory, equipment: equipment, latHistory: parseUser["latHistory"] as [Double], lngHistory: parseUser["lngHistory"] as [Double])
+    }
+    
+    func getLootFromParse(parseInv: [PFObject]) -> [Loot] {
+        var inventory:[Loot] = []
+        
+        for var i=0; i<parseInv.count; i++ {
+            var parseLoot = parseInv[i]
+            var loot = Loot(name: parseLoot["name"] as String, image: UIImage(named: parseLoot["name"] as String)!, quantity: parseLoot["quantity"] as Int)
+            inventory.append(loot)
+        }
+        
+        return inventory
+    }
+    
+    func getGearFromParse(parseEqp: [PFObject]) -> [Gear] {
+        var equipment:[Gear] = []
+        
+        for var i=0; i<parseEqp.count; i++ {
+            var parseGear = parseEqp[i]
+            var gear = Gear(name: parseGear["name"] as String, gold: parseGear["isGold"] as Bool, quantity: parseGear["quantity"] as Int)
+            equipment.append(gear)
+        }
+        
+        return equipment
     }
 }

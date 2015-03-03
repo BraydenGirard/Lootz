@@ -143,10 +143,15 @@
 		F6673B8C1A8AC93D0022966C /* lootz_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B861A8AC93D0022966C /* lootz_ui@3x.png */; };
 		F6673B8D1A8AC93D0022966C /* lootz_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B871A8AC93D0022966C /* lootz_ui.png */; };
 		F6673B8E1A8AC93D0022966C /* lootz_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B881A8AC93D0022966C /* lootz_ui@2x.png */; };
+		F68B63231AA63F8B00122469 /* Toy_Sword_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B631D1AA63F8A00122469 /* Toy_Sword_selected.png */; };
+		F68B63241AA63F8B00122469 /* Toy_Sword_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B631E1AA63F8A00122469 /* Toy_Sword_selected@2x.png */; };
+		F68B63251AA63F8B00122469 /* Toy_Sword_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B631F1AA63F8A00122469 /* Toy_Sword_selected@3x.png */; };
+		F68B63261AA63F8B00122469 /* Toy_Sword.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B63201AA63F8A00122469 /* Toy_Sword.png */; };
+		F68B63271AA63F8B00122469 /* Toy_Sword@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B63211AA63F8A00122469 /* Toy_Sword@2x.png */; };
+		F68B63281AA63F8B00122469 /* Toy_Sword@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B63221AA63F8B00122469 /* Toy_Sword@3x.png */; };
 		F69715F81A5C8EE2009B9366 /* Loot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715F71A5C8EE2009B9366 /* Loot.swift */; };
 		F69715FA1A5C8F08009B9366 /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715F91A5C8F08009B9366 /* Gear.swift */; };
 		F69715FE1A5C8F4B009B9366 /* Potion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69715FD1A5C8F4B009B9366 /* Potion.swift */; };
-		F6B31DE71AA3D8CF005E04EB /* LocationTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B31DE61AA3D8CF005E04EB /* LocationTuple.swift */; };
 		F6B31DFA1AA42DA7005E04EB /* Axe_Gold_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6B31DE81AA42DA7005E04EB /* Axe_Gold_selected.png */; };
 		F6B31DFB1AA42DA7005E04EB /* Axe_Gold_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6B31DE91AA42DA7005E04EB /* Axe_Gold_selected@2x.png */; };
 		F6B31DFC1AA42DA7005E04EB /* Axe_Gold_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6B31DEA1AA42DA7005E04EB /* Axe_Gold_selected@3x.png */; };
@@ -489,13 +494,19 @@
 		F6673B861A8AC93D0022966C /* lootz_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lootz_ui@3x.png"; sourceTree = "<group>"; };
 		F6673B871A8AC93D0022966C /* lootz_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lootz_ui.png; sourceTree = "<group>"; };
 		F6673B881A8AC93D0022966C /* lootz_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lootz_ui@2x.png"; sourceTree = "<group>"; };
+		F68B631C1AA63ECE00122469 /* Current Chest.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Current Chest.gpx"; sourceTree = "<group>"; };
+		F68B631D1AA63F8A00122469 /* Toy_Sword_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Toy_Sword_selected.png; sourceTree = "<group>"; };
+		F68B631E1AA63F8A00122469 /* Toy_Sword_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Toy_Sword_selected@2x.png"; sourceTree = "<group>"; };
+		F68B631F1AA63F8A00122469 /* Toy_Sword_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Toy_Sword_selected@3x.png"; sourceTree = "<group>"; };
+		F68B63201AA63F8A00122469 /* Toy_Sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Toy_Sword.png; sourceTree = "<group>"; };
+		F68B63211AA63F8A00122469 /* Toy_Sword@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Toy_Sword@2x.png"; sourceTree = "<group>"; };
+		F68B63221AA63F8B00122469 /* Toy_Sword@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Toy_Sword@3x.png"; sourceTree = "<group>"; };
 		F69715F71A5C8EE2009B9366 /* Loot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loot.swift; sourceTree = "<group>"; };
 		F69715F91A5C8F08009B9366 /* Gear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gear.swift; sourceTree = "<group>"; };
 		F69715FD1A5C8F4B009B9366 /* Potion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Potion.swift; sourceTree = "<group>"; };
 		F6B31DE21AA3C855005E04EB /* Carleton University.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Carleton University.gpx"; sourceTree = "<group>"; };
 		F6B31DE31AA3C86D005E04EB /* 1279 Meadowlands.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "1279 Meadowlands.gpx"; sourceTree = "<group>"; };
 		F6B31DE41AA3C87A005E04EB /* City Hall.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "City Hall.gpx"; sourceTree = "<group>"; };
-		F6B31DE61AA3D8CF005E04EB /* LocationTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTuple.swift; sourceTree = "<group>"; };
 		F6B31DE81AA42DA7005E04EB /* Axe_Gold_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Axe_Gold_selected.png; sourceTree = "<group>"; };
 		F6B31DE91AA42DA7005E04EB /* Axe_Gold_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Axe_Gold_selected@2x.png"; sourceTree = "<group>"; };
 		F6B31DEA1AA42DA7005E04EB /* Axe_Gold_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Axe_Gold_selected@3x.png"; sourceTree = "<group>"; };
@@ -744,7 +755,6 @@
 				F69715F91A5C8F08009B9366 /* Gear.swift */,
 				F69715FD1A5C8F4B009B9366 /* Potion.swift */,
 				F6BEDCA31A6CBA530031D3DB /* Chest.swift */,
-				F6B31DE61AA3D8CF005E04EB /* LocationTuple.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -979,6 +989,12 @@
 				F6B31E9C1AA42EA9005E04EB /* Sword_Gold_selected.png */,
 				F6B31E9D1AA42EA9005E04EB /* Sword_Gold_selected@2x.png */,
 				F6B31E9E1AA42EA9005E04EB /* Sword_Gold_selected@3x.png */,
+				F68B631D1AA63F8A00122469 /* Toy_Sword_selected.png */,
+				F68B631E1AA63F8A00122469 /* Toy_Sword_selected@2x.png */,
+				F68B631F1AA63F8A00122469 /* Toy_Sword_selected@3x.png */,
+				F68B63201AA63F8A00122469 /* Toy_Sword.png */,
+				F68B63211AA63F8A00122469 /* Toy_Sword@2x.png */,
+				F68B63221AA63F8B00122469 /* Toy_Sword@3x.png */,
 				F62673C61AA2692D000613D9 /* armour_slot_selected.png */,
 				F62673C81AA2692D000613D9 /* armour_slot_selected@2x.png */,
 				F62673C91AA2692D000613D9 /* armour_slot_selected@3x.png */,
@@ -1167,6 +1183,7 @@
 				F6B31DE21AA3C855005E04EB /* Carleton University.gpx */,
 				F6B31DE31AA3C86D005E04EB /* 1279 Meadowlands.gpx */,
 				F6B31DE41AA3C87A005E04EB /* City Hall.gpx */,
+				F68B631C1AA63ECE00122469 /* Current Chest.gpx */,
 			);
 			name = Locations;
 			sourceTree = "<group>";
@@ -1340,6 +1357,7 @@
 				F6B31E3C1AA42E1A005E04EB /* Mace_Gold_selected.png in Resources */,
 				F62674A61AA2692E000613D9 /* Shield_selected.png in Resources */,
 				F6B31E661AA42E4C005E04EB /* Health_Potion_selected.png in Resources */,
+				F68B63241AA63F8B00122469 /* Toy_Sword_selected@2x.png in Resources */,
 				F6B31E891AA42E82005E04EB /* Small_Shield_Gold@3x.png in Resources */,
 				F6D9DFA11A75765400F72300 /* search_btn.png in Resources */,
 				F62674761AA2692E000613D9 /* Dagger_selected.png in Resources */,
@@ -1363,6 +1381,7 @@
 				F62674551AA2692E000613D9 /* armour_slot_selected@3x.png in Resources */,
 				F6B31DFD1AA42DA7005E04EB /* Axe_Gold.png in Resources */,
 				F6B31EAE1AA43106005E04EB /* Axe_selected.png in Resources */,
+				F68B63261AA63F8B00122469 /* Toy_Sword.png in Resources */,
 				F6F35C841A775CBD0042D313 /* armour_slot@3x.png in Resources */,
 				F6D9DFAF1A75765400F72300 /* west_red@3x.png in Resources */,
 				F6E493B41AA582DA00953B5A /* default@3x.png in Resources */,
@@ -1423,6 +1442,7 @@
 				F6D9DF961A75765400F72300 /* list@2x.png in Resources */,
 				F608B60B1A7462B30072E6E0 /* energy_full@2x.png in Resources */,
 				F6D9DF481A75763500F72300 /* Shield@2x.png in Resources */,
+				F68B63251AA63F8B00122469 /* Toy_Sword_selected@3x.png in Resources */,
 				F6B31E2A1AA42DFE005E04EB /* Dagger_Gold_selected.png in Resources */,
 				F6D9DF8E1A75765400F72300 /* east_red@3x.png in Resources */,
 				F608B6001A7462B30072E6E0 /* energy_25@3x.png in Resources */,
@@ -1430,6 +1450,7 @@
 				F6B31E8A1AA42E82005E04EB /* Small_Shield_selected.png in Resources */,
 				F6B31E071AA42DA7005E04EB /* Body_Armour_selected@2x.png in Resources */,
 				F6D9DF9D1A75765400F72300 /* north_red@3x.png in Resources */,
+				F68B63271AA63F8B00122469 /* Toy_Sword@2x.png in Resources */,
 				F6B31E011AA42DA7005E04EB /* Body_Armour_Gold_selected@2x.png in Resources */,
 				F6B31E061AA42DA7005E04EB /* Body_Armour_selected.png in Resources */,
 				F6B31E8E1AA42E82005E04EB /* Small_Shield@2x.png in Resources */,
@@ -1455,6 +1476,7 @@
 				F6B31E021AA42DA7005E04EB /* Body_Armour_Gold_selected@3x.png in Resources */,
 				F608B6201A7462B30072E6E0 /* sheild_slot@2x.png in Resources */,
 				F608B6181A7462B30072E6E0 /* health_empty@3x.png in Resources */,
+				F68B63231AA63F8B00122469 /* Toy_Sword_selected.png in Resources */,
 				F6CFB7091A325E1C00405290 /* login_ui@2x.png in Resources */,
 				F6B31E221AA42DE8005E04EB /* Gold@2x.png in Resources */,
 				F6B31E501AA42E34005E04EB /* Clarity_Potion_selected@3x.png in Resources */,
@@ -1491,6 +1513,7 @@
 				F6B31E451AA42E1A005E04EB /* Mace.png in Resources */,
 				F6B31EB31AA43106005E04EB /* Axe@3x.png in Resources */,
 				F6B31E151AA42DCD005E04EB /* Bow_Gold.png in Resources */,
+				F68B63281AA63F8B00122469 /* Toy_Sword@3x.png in Resources */,
 				F62674A21AA2692E000613D9 /* sheild_slot_selected.png in Resources */,
 				F6D9DFA41A75765400F72300 /* south_red.png in Resources */,
 				F6D9DFAC1A75765400F72300 /* star@3x.png in Resources */,
@@ -1586,7 +1609,6 @@
 				F608B5A61A742D990072E6E0 /* TransitionManager.swift in Sources */,
 				F6BEDCA41A6CBA530031D3DB /* Chest.swift in Sources */,
 				F6673B821A8A879D0022966C /* LocationController.swift in Sources */,
-				F6B31DE71AA3D8CF005E04EB /* LocationTuple.swift in Sources */,
 				F69715FA1A5C8F08009B9366 /* Gear.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

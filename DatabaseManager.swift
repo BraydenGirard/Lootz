@@ -18,5 +18,4 @@ protocol DatabaseManager {
     func saveUserLocation(location: CLLocation)
     func updateUser()
     func findChests(lat: Double, lng: Double, distance: Double)
-    
 }
