@@ -55,7 +55,7 @@ let GOLDRARE = 100
 
 class Loot {
     let name = UNKNOWN
-    let image =  UIImage(contentsOfFile: "default.png")!
+    let image =  UIImage(named: "default")!
     var quantity = 0
     
     init(name: String, image: UIImage, quantity: Int) {

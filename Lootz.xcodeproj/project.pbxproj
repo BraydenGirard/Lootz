@@ -327,6 +327,9 @@
 		F6D9DFB01A75765400F72300 /* west.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF891A75765400F72300 /* west.png */; };
 		F6D9DFB11A75765400F72300 /* west@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF8A1A75765400F72300 /* west@2x.png */; };
 		F6D9DFB21A75765400F72300 /* west@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D9DF8B1A75765400F72300 /* west@3x.png */; };
+		F6E493B21AA582DA00953B5A /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E493AF1AA582DA00953B5A /* default.png */; };
+		F6E493B31AA582DA00953B5A /* default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E493B01AA582DA00953B5A /* default@2x.png */; };
+		F6E493B41AA582DA00953B5A /* default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E493B11AA582DA00953B5A /* default@3x.png */; };
 		F6F35C761A77525D0042D313 /* character_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F6F35C731A77525D0042D313 /* character_ui.png */; };
 		F6F35C771A77525D0042D313 /* character_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6F35C741A77525D0042D313 /* character_ui@2x.png */; };
 		F6F35C781A77525D0042D313 /* character_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6F35C751A77525D0042D313 /* character_ui@3x.png */; };
@@ -673,6 +676,9 @@
 		F6D9DF891A75765400F72300 /* west.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = west.png; sourceTree = "<group>"; };
 		F6D9DF8A1A75765400F72300 /* west@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "west@2x.png"; sourceTree = "<group>"; };
 		F6D9DF8B1A75765400F72300 /* west@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "west@3x.png"; sourceTree = "<group>"; };
+		F6E493AF1AA582DA00953B5A /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
+		F6E493B01AA582DA00953B5A /* default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@2x.png"; sourceTree = "<group>"; };
+		F6E493B11AA582DA00953B5A /* default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default@3x.png"; sourceTree = "<group>"; };
 		F6F35C731A77525D0042D313 /* character_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = character_ui.png; sourceTree = "<group>"; };
 		F6F35C741A77525D0042D313 /* character_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "character_ui@2x.png"; sourceTree = "<group>"; };
 		F6F35C751A77525D0042D313 /* character_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "character_ui@3x.png"; sourceTree = "<group>"; };
@@ -787,6 +793,9 @@
 		F62DE8F51A2E319900E77B70 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F6E493AF1AA582DA00953B5A /* default.png */,
+				F6E493B01AA582DA00953B5A /* default@2x.png */,
+				F6E493B11AA582DA00953B5A /* default@3x.png */,
 				F6673B831A8AC93D0022966C /* collect_btn@3x.png */,
 				F6673B841A8AC93D0022966C /* collect_btn.png */,
 				F6673B851A8AC93D0022966C /* collect_btn@2x.png */,
@@ -1356,6 +1365,7 @@
 				F6B31EAE1AA43106005E04EB /* Axe_selected.png in Resources */,
 				F6F35C841A775CBD0042D313 /* armour_slot@3x.png in Resources */,
 				F6D9DFAF1A75765400F72300 /* west_red@3x.png in Resources */,
+				F6E493B41AA582DA00953B5A /* default@3x.png in Resources */,
 				F6D9DF531A75763500F72300 /* Spear.png in Resources */,
 				F6B31E041AA42DA7005E04EB /* Body_Armour_Gold@2x.png in Resources */,
 				F6B31E171AA42DCD005E04EB /* Bow_Gold@3x.png in Resources */,
@@ -1436,6 +1446,7 @@
 				F6B31E211AA42DE8005E04EB /* Gold.png in Resources */,
 				F608B61E1A7462B30072E6E0 /* helmet_slot@3x.png in Resources */,
 				F6B31E5B1AA42E3E005E04EB /* Energy_Potion_selected@2x.png in Resources */,
+				F6E493B31AA582DA00953B5A /* default@2x.png in Resources */,
 				F6B31E8B1AA42E82005E04EB /* Small_Shield_selected@2x.png in Resources */,
 				F6B31DFA1AA42DA7005E04EB /* Axe_Gold_selected.png in Resources */,
 				F608B61D1A7462B30072E6E0 /* helmet_slot@2x.png in Resources */,
@@ -1506,6 +1517,7 @@
 				F637F7631A310A8D004752E0 /* login_btn@2x.png in Resources */,
 				F608B5FB1A7462B30072E6E0 /* empty_slot.png in Resources */,
 				F6CFB6FF1A3255F100405290 /* exit@3x.png in Resources */,
+				F6E493B21AA582DA00953B5A /* default.png in Resources */,
 				F6B31E2E1AA42DFE005E04EB /* Dagger_Gold@2x.png in Resources */,
 				F6B31E1F1AA42DE8005E04EB /* Gold_selected@2x.png in Resources */,
 				F6D9DF541A75763500F72300 /* Spear@2x.png in Resources */,

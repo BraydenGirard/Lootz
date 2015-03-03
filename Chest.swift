@@ -48,7 +48,7 @@ class Chest {
     }
     
     func getItem() -> String {
-        return self.weapon
+        return self.item
     }
     
     func getGold() -> Int {
@@ -67,7 +67,7 @@ class Chest {
         loot.append(weapon)
         
         if(self.item != "Empty") {
-            var item = Loot(name: self.item, image: UIImage(contentsOfFile:self.item + ".png")!, quantity: 1)
+            var item = Loot(name: self.item, image: UIImage(named:self.item)!, quantity: 1)
             loot.append(item)
         }
         

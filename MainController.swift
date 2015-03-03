@@ -34,7 +34,6 @@ class MainController: UIViewController {
     @IBOutlet var goldImg: UIImageView!
     @IBOutlet var itemImg: UIImageView!
  
-    @IBOutlet var goldCountLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -140,13 +139,16 @@ class MainController: UIViewController {
     }
     
     @IBAction func collectBtnAction(sender: UIButton) {
-        var currentEnergy = DBFactory.execute().getUser().getEnergy()
+        var user = DBFactory.execute().getUser()
+        var currentEnergy = user.getEnergy()
         
         if(currentEnergy - chestDistance > 0) {
-            let result = DBFactory.execute().getUser().addInventory(nearestChest!.getLoot())
+            let result = user.addInventory(nearestChest!.getLoot())
             if(result == 0) {
-                DBFactory.execute().getUser().addGold(nearestChest!.getGold())
-                DBFactory.execute().getUser().setEnergy(currentEnergy - chestDistance)
+                user.addGold(nearestChest!.getGold())
+                user.setEnergy(currentEnergy - chestDistance)
+                DBFactory.execute().saveUser(user)
+                DBFactory.execute().updateUser()
                 hideLootzUI()
             } else {
                 errorLabel.text = "Need \(result) empty spots in inventory"
@@ -248,7 +250,7 @@ class MainController: UIViewController {
         }
         
         goldImg.image = UIImage(named: "Gold")
-        goldCountLabel.text = String(chest.getGold())
+        goldLabel.text = String(chest.getGold()) + " Gold"
         
         darkView.hidden = false
         lootzView.hidden = false

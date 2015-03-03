@@ -62,7 +62,7 @@ class Gear: Loot {
             self.accuracy = 20
         }
         
-        super.init(name: name, image: UIImage(contentsOfFile:name + ".png")!, quantity: quantity)
+        super.init(name: name, image: UIImage(named:name)!, quantity: quantity)
     }
     
     convenience init(parseWeapon: PFObject) {

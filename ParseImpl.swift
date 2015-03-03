@@ -92,6 +92,7 @@ class ParseImpl: DatabaseManager {
             parseUser["latHistory"] = user.getLatHistory()
             parseUser["lngHistory"] = user.getLngHistory()
             parseUser["gold"] = user.getGold()
+            parseUser.saveEventually()
             return true
         } else {
             NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
