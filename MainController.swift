@@ -145,6 +145,7 @@ class MainController: UIViewController {
         if(currentEnergy - chestDistance > 0) {
             let result = DBFactory.execute().getUser().addInventory(nearestChest!.getLoot())
             if(result == 0) {
+                DBFactory.execute().getUser().addGold(nearestChest!.getGold())
                 DBFactory.execute().getUser().setEnergy(currentEnergy - chestDistance)
                 hideLootzUI()
             } else {

@@ -93,6 +93,10 @@ class User {
         self.gold = gold
     }
     
+    func addGold(gold: Int) {
+        self.gold = self.gold + gold;
+    }
+    
     func getHealth() -> Int {
         return health
     }
