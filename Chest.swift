@@ -39,15 +39,15 @@ class Chest {
         return self.longitude
     }
 
-    func getWeapon() -> String? {
+    func getWeapon() -> String {
         return self.weapon
     }
     
-    func isGold() -> Bool? {
+    func isGold() -> Bool {
         return self.weaponGold
     }
     
-    func getItem() -> String? {
+    func getItem() -> String {
         return self.weapon
     }
     

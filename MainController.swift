@@ -30,7 +30,8 @@ class MainController: UIViewController {
     @IBOutlet var weaponImg: UIImageView!
     @IBOutlet var goldImg: UIImageView!
     @IBOutlet var itemImg: UIImageView!
-    
+ 
+    @IBOutlet var goldCountLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -115,15 +116,19 @@ class MainController: UIViewController {
             var currentLocation = LocationController.sharedInstance.getCurrentLocation()
             var chestLocation = CLLocation(latitude: chest.getLatitude(), longitude: chest.getLongitude())
             
-            var distance = currentLocation?.distanceFromLocation(chestLocation)
+            if let currLocation = currentLocation {
+                var distance = currLocation.distanceFromLocation(chestLocation)
+                
+                if(distance < 25) {
+                    showLootzUI(chest)
+                }
+                else
+                {
+                    exploreText.text = "You are not close enough to loot the chest"
+                }
+
+            }
             
-            if(distance < 25) {
-                showLootzUI()
-            }
-            else
-            {
-                exploreText.text = "You are not close enough to loot the chest"
-            }
         }
         else {
             exploreText.text = "There are no chests near by to loot"
@@ -206,7 +211,26 @@ class MainController: UIViewController {
          searchBtn.enabled = true
     }
     
-    func showLootzUI() {
+    func showLootzUI(chest: Chest) {
+        
+        if(chest.isGold()) {
+            weaponImg.image = UIImage(named:chest.getWeapon() + "_Gold")
+            weaponLabel.text = "Gold " + replaceUnderscores(chest.getWeapon())
+        } else {
+            weaponImg.image = UIImage(named:chest.getWeapon())
+            weaponLabel.text = replaceUnderscores(chest.getWeapon())
+        }
+        
+        let item = chest.getItem()
+        
+        if(item != "Empty") {
+            itemImg.image = UIImage(named: item)
+            itemLabel.text = replaceUnderscores(item)
+        }
+        
+        goldImg.image = UIImage(named: "Gold")
+        goldCountLabel.text = String(chest.getGold())
+        
         darkView.hidden = false
         lootzView.hidden = false
         collectBtn.hidden = false
@@ -216,6 +240,8 @@ class MainController: UIViewController {
         weaponImg.hidden = false
         goldImg.hidden = false
         itemImg.hidden = false
+        
+        
     }
     
     func hideLootzUI() {
@@ -228,5 +254,19 @@ class MainController: UIViewController {
         weaponImg.hidden = true
         goldImg.hidden = true
         itemImg.hidden = true
+    }
+    
+    func replaceUnderscores(theString: String) -> String {
+        let letters = NSCharacterSet.letterCharacterSet()
+        var finalString = ""
+        for uni in theString.unicodeScalars {
+            if !letters.longCharacterIsMember(uni.value) {
+                finalString += " "
+            }
+            else {
+                finalString += "\(uni)"
+            }
+        }
+        return finalString
     }
 }
