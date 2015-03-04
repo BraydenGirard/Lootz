@@ -139,7 +139,6 @@ class MainController: UIViewController {
                 user.addGold(nearestChest!.getGold())
                 user.setEnergy(currentEnergy - chestDistance)
                 DBFactory.execute().saveUser(user)
-                DBFactory.execute().updateUser()
                 hideLootzUI()
             } else {
                 errorLabel.text = "Need \(result) empty spots in inventory"

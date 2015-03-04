@@ -163,9 +163,12 @@ class ParseImpl: DatabaseManager {
         var currentUser = PFUser.currentUser()
         if currentUser != nil {
             var userQuery = PFUser.query()
-    
+         
             PFUser.currentUser().fetchIfNeededInBackgroundWithBlock({ (user:PFObject!, error: NSError!) -> Void in
-                user["inventory"].fetchIfNeededInBackgroundWithBlock({ (inventory: PFObject!, error: NSError!) -> Void in
+                user["loot"].fetchIfNeededInBackgroundWithBlock({ (inventory: PFObject!, error: NSError!) -> Void in
+                    NSNotificationCenter.defaultCenter().postNotificationName("refreshProfile", object: nil)
+                })
+                user["gear"].fetchIfNeededInBackgroundWithBlock({ (inventory: PFObject!, error: NSError!) -> Void in
                     NSNotificationCenter.defaultCenter().postNotificationName("refreshProfile", object: nil)
                 })
                 user["equipment"].fetchIfNeededInBackgroundWithBlock({ (inventory: PFObject!, error: NSError!) -> Void in
