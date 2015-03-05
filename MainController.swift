@@ -8,7 +8,6 @@ class MainController: UIViewController {
     var chestDistance: Int = 0
     
     @IBOutlet var errorLabel: UILabel!
-    @IBOutlet var darkView: UIView!
     @IBOutlet var lootzView: UIImageView!
     
     @IBOutlet var exploreText: UITextView!
@@ -242,7 +241,6 @@ class MainController: UIViewController {
         goldImg.image = UIImage(named: "Gold")
         goldLabel.text = String(chest.getGold()) + " Gold"
         
-        darkView.hidden = false
         lootzView.hidden = false
         collectBtn.hidden = false
         weaponLabel.hidden = false
@@ -255,7 +253,6 @@ class MainController: UIViewController {
     }
     
     func hideLootzUI() {
-        darkView.hidden = true
         lootzView.hidden = true
         collectBtn.hidden = true
         weaponLabel.hidden = true

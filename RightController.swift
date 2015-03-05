@@ -37,7 +37,7 @@ class RightController: UIViewController {
        
         self.view.tag = -2;
         notificationCenter.addObserver(self, selector: "exit:", name: "exit", object: nil)
-        notificationCenter.addObserver(self, selector: "refreshProfile", name: "refreshProfile", object: nil)
+        notificationCenter.addObserver(self, selector: "refresh:", name: "refresh", object: nil)
         
         
         //------------right swipe gestures in view--------------//
@@ -50,8 +50,9 @@ class RightController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        DBFactory.execute().updateUser()
         deselectButton(0)
+        println("Hello")
+        DBFactory.execute().updateUser()
     }
     
     func exit(notification: NSNotification) {
@@ -230,6 +231,11 @@ class RightController: UIViewController {
         default:
             clarityImg.image = UIImage(named: "clarity_empty")
         }
+    }
+    
+    func refresh(notification: NSNotification) {
+        println("Refresh notification called")
+        refreshProfile()
     }
     
     func refreshProfile() {
