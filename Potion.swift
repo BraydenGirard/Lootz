@@ -9,13 +9,9 @@
 import Foundation
 
 class Potion: Loot {
-    init(name: String, quantity: Int) {
-        super.init(name: name, image: UIImage(contentsOfFile:name + ".png")!, quantity: quantity)
+    init(name: String) {
+        super.init(name: name, imageName: name)
     }
     
     override func use() { }
-    
-    override func remove() { }
-    
-    override func delete() { }
 }

@@ -78,7 +78,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
     //Location was updated get newest location
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         self.currentLocation = locations[locations.count - 1] as? CLLocation
-        println("Location has been updated")
+        //println("Location has been updated")
         if(backgroundState && currentLocation != nil) {
             println("Found location in background")
             if let theLocation = currentLocation {

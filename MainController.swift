@@ -134,7 +134,7 @@ class MainController: UIViewController {
         
         if(currentEnergy - chestDistance > 0) {
             let result = user.addInventory(nearestChest!.getLoot())
-            if(result == 0) {
+            if(result) {
                 user.addGold(nearestChest!.getGold())
                 user.setEnergy(currentEnergy - chestDistance)
                 DBFactory.execute().saveUser(user)

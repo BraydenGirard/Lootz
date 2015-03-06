@@ -9,6 +9,8 @@
 import Foundation
 
 let UNKNOWN = "Uknown"
+let TYPEGEAR = "Gear"
+let TYPEPOTION = "Potion"
 let GOLD = "Gold"
 let CLARITYPOT = "Clarity_Potion"
 let ENERGYPOT = "Enerygy_Potion"
@@ -25,43 +27,25 @@ let SSHIELD = "Small_Shield"
 let LSHIELD = "Shield"
 let HELMET = "Helmet"
 let BARMOUR = "Body_Armour"
-let GBOW = "Bow_Gold"
-let GTSWORD = "Toy_Sword_Gold"
-let GSWORD = "Sword_Gold"
-let GDAGGER = "Dagger_Gold"
-let GAXE = "Axe_Gold"
-let GMACE = "Mace_Gold"
-let GSPEAR = "Spear_Gold"
-let GSTAFF = "Staff_Gold"
-let GSSHIELD = "Small_Shield_Gold"
-let GLSHIELD = "Large_Shield_Gold"
-let GHELMET = "Helmet_Gold"
-let GBARMOUR = "Body_Armour_Gold"
 let ONEHAND = "One_Hand"
 let TWOHAND = "Two_Hand"
 let ONEHANDARMOUR = "One_Hand_Armour"
+let GOLDSUFFIX = "_Gold"
 
 
-let DAMAGE = 1
-let GDAMAGE = 2
-let POTRARE = 5
-let MAPRARE = 2
-let MAXMAP = 1
-let BAGRARE = 5
-let MAXBAG = 1
-let BOUNTYRARE = 10
-let MAXBOUNTY = 1
-let GOLDRARE = 100
+let DAMAGE = 25
+let GOLDDAMAGE = 50
 
 class Loot: NSObject {
     let name = UNKNOWN
     let image =  UIImage(named: "default")!
-    var quantity = 0
+    let id = 0
     
-    init(name: String, image: UIImage, quantity: Int) {
+    init(name: String, imageName: String) {
+        self.id = DBFactory.execute().getUser().getNextId();
         self.name = name
-        self.image = image
-        self.quantity = quantity
+        self.image = UIImage(named: imageName)!
+        println("Loot contructor end")
     }
     
     func getImage() -> UIImage {
@@ -70,6 +54,10 @@ class Loot: NSObject {
     
     func getName() -> String {
         return name
+    }
+    
+    func getId() -> Int {
+        return self.id
     }
     
     func getPrettyName() -> String {
@@ -86,18 +74,5 @@ class Loot: NSObject {
         return prettyName;
     }
     
-    func getQuantity() -> Int {
-        return self.quantity
-    }
-    
-    func setQuantity(quantity: Int) {
-        self.quantity = quantity
-    }
-    
     func use() { }
-    
-    func remove() { }
-    
-    func delete() { }
-    
 }

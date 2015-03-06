@@ -37,7 +37,7 @@ class RightController: UIViewController {
        
         self.view.tag = -2;
         notificationCenter.addObserver(self, selector: "exit:", name: "exit", object: nil)
-        notificationCenter.addObserver(self, selector: "refresh:", name: "refresh", object: nil)
+        notificationCenter.addObserver(self, selector: "refresh", name: "refresh", object: nil)
         
         
         //------------right swipe gestures in view--------------//
@@ -46,7 +46,7 @@ class RightController: UIViewController {
         self.view.addGestureRecognizer(swipeRight)
         
         //------------static view setup--------------//
-        usernameLabel.text = DBFactory.execute().getUser().getUsername()
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -108,7 +108,7 @@ class RightController: UIViewController {
                     let helmet = DBFactory.execute().getUser().getEquipment(HELMET)
                     if let theHelmet = helmet {
                         DBFactory.execute().getUser().removeGear(theHelmet)
-                        refreshProfile()
+                        refresh()
                     }
                 } else if(theButton.tag == 117) {
                     //Remove the shield if room in inventory
@@ -233,15 +233,11 @@ class RightController: UIViewController {
         }
     }
     
-    func refresh(notification: NSNotification) {
-        println("Refresh notification called")
-        refreshProfile()
-    }
-    
-    func refreshProfile() {
+    func refresh() {
         setupInvButtons()
         setupBars()
         goldLabel.text = String(DBFactory.execute().getUser().getGold())
+        usernameLabel.text = DBFactory.execute().getUser().getUsername()
         
         if let headImg = DBFactory.execute().getUser().getEquipment(HELMET)?.getImage() {
             headBtn.setImage(headImg, forState: UIControlState.Normal)

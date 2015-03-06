@@ -11,58 +11,61 @@ import Foundation
 class Gear: Loot {
     
     private let type = UNKNOWN
-    private let damage = 25
+    private let damage = DAMAGE
     private let accuracy = 0
     private let ranged = false
     private let gold = false
     
-    init(name: String, gold: Bool, quantity: Int) {
+    init(name: String, gold: Bool) {
         self.gold = gold
-        if(gold) {
-            damage = 50
-        }
-        if name == BOW || name == GBOW {
+        
+        if name == BOW {
             self.type = TWOHAND
             self.ranged = true
             self.accuracy = 80
-        } else if name == TSWORD || name == GTSWORD {
+        } else if name == TSWORD {
             self.type = ONEHAND
             self.accuracy = 50
-        } else if name == SWORD || name == GSWORD {
+        } else if name == SWORD {
             self.type = ONEHAND
             self.accuracy = 85
-        } else if name == DAGGER || name == GDAGGER {
+        } else if name == DAGGER {
             self.type = ONEHAND
             self.accuracy = 75
-        } else if name == AXE || name == GAXE {
+        } else if name == AXE {
             self.type = TWOHAND
             self.accuracy = 99
-        } else if name == MACE || name == GMACE {
+        } else if name == MACE {
             self.type = ONEHAND
             self.accuracy = 95
-        } else if name == SPEAR || name == GSPEAR {
+        } else if name == SPEAR {
             self.type = ONEHAND
             self.ranged = true
             self.accuracy = 60
-        } else if name == STAFF || name == GSTAFF {
+        } else if name == STAFF {
             self.type = ONEHAND
             self.ranged = true
             self.accuracy = 99
-        } else if name == SSHIELD || name == GSSHIELD {
+        } else if name == SSHIELD {
             self.type = ONEHANDARMOUR
             self.accuracy = 10
-        } else if name == LSHIELD || name == GLSHIELD {
+        } else if name == LSHIELD {
             self.type = ONEHANDARMOUR
             self.accuracy = 20
-        } else if name == HELMET || name == GHELMET {
+        } else if name == HELMET {
             self.type = HELMET
             self.accuracy = 10
-        } else if name == BARMOUR || name == GBARMOUR {
+        } else if name == BARMOUR {
             self.type = BARMOUR
             self.accuracy = 20
         }
-        
-        super.init(name: name, image: UIImage(named:name)!, quantity: quantity)
+
+        if(self.gold) {
+            damage = GOLDDAMAGE
+            super.init(name: name, imageName: name + GOLDSUFFIX)
+        } else {
+            super.init(name: name, imageName: name)
+        }
     }
     
     func getType() -> String {
@@ -86,8 +89,4 @@ class Gear: Loot {
     }
     
     override func use() { }
-    
-    override func remove() { }
-    
-    override func delete() { }
 }

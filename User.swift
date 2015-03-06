@@ -26,6 +26,7 @@ class User {
     private var equipment: [Gear]
     private var latHistory: [Double]
     private var lngHistory: [Double]
+    private var currentId: Int
     
     init() {
         self.username = UNKNOWN
@@ -39,6 +40,7 @@ class User {
         self.equipment = []
         self.latHistory = []
         self.lngHistory = []
+        self.currentId = 0
     }
     
     init(username: String, email: String, password: String) {
@@ -53,9 +55,10 @@ class User {
         self.equipment = []
         self.latHistory = []
         self.lngHistory = []
+        self.currentId = 0
     }
     
-    init(username: String, email: String, password: String, gold: Int, health: Int, energy: Int, clarity: Int, inventory: [Loot], equipment: [Gear], latHistory: [Double], lngHistory: [Double]) {
+    init(username: String, email: String, password: String, gold: Int, health: Int, energy: Int, clarity: Int, inventory: [Loot], equipment: [Gear], latHistory: [Double], lngHistory: [Double], currentId: Int) {
         self.username = username
         self.email = email
         self.password = password
@@ -67,6 +70,16 @@ class User {
         self.equipment = equipment
         self.latHistory = latHistory
         self.lngHistory = lngHistory
+        self.currentId = currentId
+    }
+    
+    func getNextId() -> Int {
+        self.currentId = self.currentId++;
+        return self.currentId;
+    }
+    
+    func getId() -> Int {
+        return self.currentId
     }
     
     func getUsername() -> String {
@@ -195,95 +208,53 @@ class User {
     
     //Returns true if item is added
     //Returns false if item cannot be added
-    //because it already exits and only allowed 1
+    //because inventory is full
     func addInventory(item: Loot) -> Bool {
-        var uniqueItem = false
-        
-        var index = self.findInventoryIndex(item)
-        
-        if(index == -1) {
-            uniqueItem = true
-        }
-        
-        if(self.inventory.count < FULLINVENTORY || !uniqueItem) {
-            var index = self.findInventoryIndex(item)
-            
-            if(index != -1) {
-                self.inventory[index].quantity = self.inventory[index].quantity + item.getQuantity()
-                return true
-            }
+        if(self.inventory.count < FULLINVENTORY) {
             self.inventory.append(item)
             return true
         }
         return false
     }
     
-    //Returns 0 if all items are added to the inventory
-    //Returns number of items that must be cleared from inventory to make room
-    //if inventory does not have enough room
-    func addInventory(items: [Loot]) -> Int {
-        var uniqueItems = 0
-        
-        for i in items {
-            var index = self.findInventoryIndex(i)
-            
-            if(index == -1) {
-                uniqueItems++
-            }
-        }
-        
-        if(getInventory().count + uniqueItems <= FULLINVENTORY) {
+    //Returns false if not enough room to add all items
+    //returns true if all items are added to inventory
+    func addInventory(items: [Loot]) -> Bool {
+
+        if(getInventory().count + items.count <= FULLINVENTORY) {
             for i in items {
-                var index = self.findInventoryIndex(i)
-                
-                if(index != -1) {
-                    self.inventory[index].quantity + i.getQuantity()
-                }
-                else {
-                    self.inventory.append(i)
-                }
+                self.inventory.append(i)
             }
-            return 0
-        }
-        else {
-            return getInventory().count + uniqueItems - FULLINVENTORY
+            return true
+        } else {
+            return false
         }
     }
     
     //Removes the item from inventory if it exists
-    //decreases quantity if multiple exist
-    func removeInventory(item: Loot) {
-        if(getInventory().count > 0) {
-            var index = findInventoryIndex(item)
-            if(index != -1) {
-                var result = self.inventory[index].quantity - item.quantity
-                if(result > 0) {
-                    self.inventory[index].setQuantity(result)
-                }
-                else {
-                    self.inventory[index].remove()
-                }
+    func removeInventory(item: Loot) -> Bool {
+        for var i=0; i<self.inventory.count; i++ {
+            if(self.inventory[i] == item) {
+                self.inventory.removeAtIndex(i)
+                return true
             }
         }
+        return false
     }
     
-    //Removes one item from inventory to equipment
-    func equipFromInventory(item: Gear) {
-        if(getInventory().count > 0) {
-            var index = findInventoryIndex(item)
-            if(index != -1) {
-                var result = self.inventory[index].quantity - 1
-                if(result > 0) {
-                    item.setQuantity(1)
+    //Removes item from inventory to equipment
+    func equipFromInventory(item: Gear) -> Bool {
+        if(equipGear(item)) {
+            for var i=0; i<self.inventory.count; i++ {
+                if(self.inventory[i] == item) {
+                    self.inventory.removeAtIndex(i)
                     self.equipment.append(item)
-                    self.inventory[index].setQuantity(result)
-                }
-                else {
-                    item.setQuantity(1)
-                    self.equipment.append(item)
-                    self.inventory[index].remove()
+                    return true
                 }
             }
+            return false
+        } else {
+              return false
         }
     }
     
@@ -325,21 +296,18 @@ class User {
     
     //Returns true if inventory has room for gear
     func removeGear(gear: Loot) -> Bool {
-        var index = 0
-     
-        for e in self.equipment {
-            if(e.getName() == gear.getName()) {
-                if(self.addInventory(self.equipment[index])) {
-                    self.equipment[index].remove()
-                    return true
-                }
-                else {
-                    return false
+        
+        if(self.addInventory(gear)) {
+            
+            for var i=0; i<self.equipment.count; i++ {
+                if(self.equipment[i] == gear) {
+                    self.equipment.removeAtIndex(i)
                 }
             }
-            index++
+            return true
+        } else {
+            return false
         }
-        return false
     }
     
     //Returns how many of that item are equipped
@@ -376,19 +344,6 @@ class User {
             }
         }
         return nil
-    }
-    
-    //Returns -1 if the item does not exist in inventory
-    //Returns an index >= 0 if item exists in inventory
-    func findInventoryIndex(item: Loot) -> Int {
-        var index = 0
-        for tempItem in self.inventory {
-            if(item.name == tempItem.name) {
-                return index
-            }
-            index++
-        }
-        return -1
     }
     
     func getLocationHistory() -> (latitudes: [Double], longitudes: [Double]) {
