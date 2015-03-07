@@ -37,12 +37,12 @@ let DAMAGE = 25
 let GOLDDAMAGE = 50
 
 class Loot: NSObject {
-    let name = UNKNOWN
-    let image =  UIImage(named: "default")!
-    let id = 0
+    let name: String
+    let image: UIImage
+    let id: Int
     
-    init(name: String, imageName: String) {
-        self.id = DBFactory.execute().getUser().getNextId();
+    init(name: String, imageName: String, id: Int) {
+        self.id = id
         self.name = name
         self.image = UIImage(named: imageName)!
         println("Loot contructor end")
@@ -72,6 +72,10 @@ class Loot: NSObject {
             }
         }
         return prettyName;
+    }
+    
+    func getClassType() -> String {
+        return UNKNOWN
     }
     
     func use() { }

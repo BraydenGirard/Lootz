@@ -45,6 +45,8 @@ class MainController: UIViewController {
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: Selector("leftSwiped"))
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
         self.view.addGestureRecognizer(swipeLeft)
+        
+        DBFactory.execute().updateUser()
     }
     
     override func viewDidAppear(animated: Bool) {

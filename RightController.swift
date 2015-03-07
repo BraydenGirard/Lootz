@@ -52,7 +52,8 @@ class RightController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         deselectButton(0)
         println("Hello")
-        DBFactory.execute().updateUser()
+        refresh()
+        println("Goodbye")
     }
     
     func exit(notification: NSNotification) {
@@ -181,7 +182,6 @@ class RightController: UIViewController {
             var user = DBFactory.execute().getUser()
             user.removeInventory(lootItem)
             DBFactory.execute().saveUser(user)
-            DBFactory.execute().updateUser()
         }
         alertController.addAction(removeAction)
         

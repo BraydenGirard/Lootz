@@ -16,7 +16,7 @@ class Gear: Loot {
     private let ranged = false
     private let gold = false
     
-    init(name: String, gold: Bool) {
+    init(name: String, gold: Bool, id: Int) {
         self.gold = gold
         
         if name == BOW {
@@ -62,9 +62,9 @@ class Gear: Loot {
 
         if(self.gold) {
             damage = GOLDDAMAGE
-            super.init(name: name, imageName: name + GOLDSUFFIX)
+            super.init(name: name, imageName: name + GOLDSUFFIX, id: id)
         } else {
-            super.init(name: name, imageName: name)
+            super.init(name: name, imageName: name, id: id)
         }
     }
     
@@ -89,4 +89,8 @@ class Gear: Loot {
     }
     
     override func use() { }
+    
+    override func getClassType() -> String {
+        return TYPEGEAR
+    }
 }

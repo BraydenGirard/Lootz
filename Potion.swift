@@ -9,9 +9,13 @@
 import Foundation
 
 class Potion: Loot {
-    init(name: String) {
-        super.init(name: name, imageName: name)
+    init(name: String, id: Int) {
+        super.init(name: name, imageName: name, id:id)
     }
     
     override func use() { }
+    
+    override func getClassType() -> String {
+        return TYPEPOTION
+    }
 }

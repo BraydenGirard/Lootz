@@ -63,9 +63,8 @@ class ParseImpl: DatabaseManager {
     }
     
     func getUser() -> User {
-        var currentUser = PFUser.currentUser()
-        if currentUser != nil {
-           return self.getUserFromParse(currentUser)
+        if PFUser.currentUser() != nil {
+           return self.getUserFromParse(PFUser.currentUser())
         } else {
             NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
             var user = User()
@@ -83,123 +82,90 @@ class ParseImpl: DatabaseManager {
     //the id of the parse loot, if not remove the parse loot
     //from server and add the new loot
     func saveUser(user: User) -> Bool {
-        var parseUser = PFUser.currentUser()
-        if parseUser != nil {
-            var lootArray = parseUser["loot"] as [PFObject]
+        if PFUser.currentUser() != nil {
+            println("Inside save user")
+            var parseLoot:PFObject?
+            var parseLootArray = PFUser.currentUser()["loot"] as [PFObject]
+            var newLoot = true
             
-            parseUser.username = user.getUsername()
-            parseUser.email = user.getEmail()
-            parseUser["health"] = user.getHealth()
-            parseUser["energy"] = user.getEnergy()
-            parseUser["clarity"] = user.getClarity()
-            parseUser["latHistory"] = user.getLatHistory()
-            parseUser["lngHistory"] = user.getLngHistory()
-            parseUser["gold"] = user.getGold()
+            PFUser.currentUser().username = user.getUsername()
+            PFUser.currentUser().email = user.getEmail()
+            PFUser.currentUser()["health"] = user.getHealth()
+            PFUser.currentUser()["energy"] = user.getEnergy()
+            PFUser.currentUser()["clarity"] = user.getClarity()
+            PFUser.currentUser()["latHistory"] = user.getLatHistory()
+            PFUser.currentUser()["lngHistory"] = user.getLngHistory()
+            PFUser.currentUser()["gold"] = user.getGold()
+            
+            
             
             for var i=0; i<user.getInventory().count; i++ {
-                
-                if(user.getInventory()[i] is Gear) {
-                    var newGear = user.getInventory()[i] as Gear
-                    var isNew = true
-                   
-                    var parseGear:PFObject?
+                newLoot = true
+                for var k=0; k<parseLootArray.count; k++ {
+                    parseLoot = parseLootArray[k]
                     
-                    //Check if the gear already exists in the inventory
-                    for var k=0; k<lootArray.count; k++ {
-                        parseGear = lootArray[k]
-                        
-                        if(parseGear!["name"] as String == newGear.getName()) {
-                            isNew = false;
-                            break;
-                        }
+                    if(user.getInventory()[i].getId() == parseLoot!["id"] as Int) {
+                        newLoot = false
                     }
                     
-                    if(isNew) {
-                        var gear = PFObject(className: "Gear")
-                        
-                        gear["name"] = newGear.getName() as String
-                        gear["gold"] = newGear.isGold() as Bool
-                        gear["quantity"] = newGear.getQuantity() as Int
-                        gear.saveEventually()
-                        gearArray.append(gear)
-                        
-                    } else {
-                        println(newGear.getQuantity())
-                        parseGear!["quantity"] = newGear.getQuantity();
-                        parseGear!.saveEventually()
-                        //gearArray.append(parseGear!)
+                }
+                if(newLoot) {
+                    var loot = PFObject(className: "Loot")
+                    loot["type"] = user.getInventory()[i].getClassType()
+                    
+                    if(user.getInventory()[i].getClassType() == TYPEGEAR) {
+                        var gear = user.getInventory()[i] as Gear
+                        loot["id"] = gear.getId()
+                        loot["name"] = gear.getName()
+                        loot["gold"] = gear.isGold()
+                        loot["equiped"] = false
+                    } else if(user.getInventory()[i].getClassType() == TYPEPOTION) {
+                        var potion = user.getInventory()[i]
+                        loot["id"] = potion.getId()
+                        loot["name"] = potion.getName()
+                        loot["gold"] = false
+                        loot["equiped"] = false
                     }
-                    
-                    
-                } else {
-                    var isNew = true
-                    
-                    var parseLoot:PFObject? = nil
-                    
-                    //Check if the gear already exists in the inventory
-                    for var k=0; k<lootArray.count; k++ {
-                        parseLoot = lootArray[k]
-                        
-                        if(parseLoot!["name"] as String == user.getInventory()[i].getName()) {
-                            isNew = false;
-                            break;
-                        }
-                    }
-                    
-                    if(isNew) {
-                        var loot = PFObject(className: "Loot")
-                        loot["name"] = user.getInventory()[i].getName()
-                        loot["quantity"] = user.getInventory()[i].getQuantity()
-                        loot.saveEventually()
-
-                        lootArray.append(loot)
-                        
-                    } else {
-                        parseLoot!["quantity"] = user.getInventory()[i].getQuantity();
-                        parseLoot!.saveEventually()
-                        //lootArray.append(parseLoot!)
-                    }
-                    
-
+                    loot.save()
+                    parseLootArray.append(loot)
                 }
             }
             
             for var i=0; i<user.getEquipment().count; i++ {
-                var isNew = true
-                
-                var parseLoot:PFObject? = nil
-                
-                //Check if the gear already exists in the inventory
-                for var k=0; k<equipmentArray.count; k++ {
-                    parseLoot = equipmentArray[k]
+                newLoot = true
+                for var k=0; k<parseLootArray.count; k++ {
+                    parseLoot = parseLootArray[k]
                     
-                    if(parseLoot!["name"] as String == user.getEquipment()[i].getName()) {
-                        isNew = false;
-                        break;
+                    if(user.getEquipment()[i].getId() == parseLoot!["id"] as Int) {
+                        newLoot = false
                     }
+                    
                 }
                 
-                if(isNew) {
-                    var loot = PFObject(className: "Gear")
-                    loot["name"] = user.getEquipment()[i].getName()
-                    loot["gold"] = user.getEquipment()[i].isGold()
-                    loot["quantity"] = user.getEquipment()[i].getQuantity()
-                    loot.saveEventually()
-                    equipmentArray.append(loot)
+                if(newLoot) {
+                    var loot = PFObject(className: "Loot")
+                    var gear = user.getEquipment()[i]
                     
-                } else {
-                    parseLoot!["quantity"] = user.getEquipment()[i].getQuantity();
-                    parseLoot!.saveEventually()
-                    //equipmentArray.append(parseLoot!)
+                    loot["type"] = gear.getClassType()
+                    loot["id"] = gear.getId()
+                    loot["name"] = gear.getName()
+                    loot["gold"] = gear.isGold()
+                    loot["equiped"] = true
+                    loot.save()
+                    parseLootArray.append(loot)
                 }
-               
             }
-            
-            parseUser["loot"] = lootArray
-            parseUser["gear"] = gearArray
-            parseUser["equipment"] = equipmentArray
-            
-            parseUser.saveEventually()
+        
+            PFUser.currentUser()["loot"] = parseLootArray
+            println("End of save user")
+            PFUser.currentUser().saveInBackgroundWithBlock({ (complete: Bool, error: NSError!) -> Void in
+                if(error != nil) {
+                    println("Failed to save user")
+                } else {
+                    println("User save complete")
+                    NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
+                }
+            })
             return true
         } else {
             NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
@@ -208,8 +174,7 @@ class ParseImpl: DatabaseManager {
     }
     
     func saveUserLocation(location: CLLocation) {
-        var currentUser = PFUser.currentUser()
-        if currentUser != nil {
+        if PFUser.currentUser() != nil {
             var lat = location.coordinate.latitude as Double
             var lng = location.coordinate.longitude as Double
             
@@ -218,28 +183,38 @@ class ParseImpl: DatabaseManager {
             locationHistory.latitudes.append(lat)
             locationHistory.longitudes.append(lng)
             
-            currentUser["latHistory"] = locationHistory.latitudes
-            currentUser["lngHistory"] = locationHistory.longitudes
+            PFUser.currentUser()["latHistory"] = locationHistory.latitudes
+            PFUser.currentUser()["lngHistory"] = locationHistory.longitudes
             
-            currentUser.saveEventually()
+            PFUser.currentUser().saveEventually()
         } else {
             NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
         }
     }
     
     func updateUser() {
-        if let currentUser = PFUser.currentUser() {
-            currentUser.fetchIfNeededInBackgroundWithBlock({ (user: PFObject!, error: NSError!) -> Void in
-                NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
+        if PFUser.currentUser() != nil {
+            
+            var queryUser = PFQuery(className: "_User")
+            queryUser.whereKey("objectId", equalTo: PFUser.currentUser().objectId)
+            queryUser.includeKey("loot")
+            
+            queryUser.getFirstObjectInBackgroundWithBlock({ (parseUser: PFObject!, error: NSError!) -> Void in
+                if parseUser != nil {
+                    println("Found user successfully")
+                    
+                    PFUser.currentUser()["loot"] = parseUser["loot"]
+            
+                    //NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
+                }
             })
-        
         } else {
             NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
         }
     }
     
     func findChests(lat: Double, lng: Double, distance: Double) {
-    
+        println("Inside find chests")
         let currentLocation = PFGeoPoint(latitude:lat, longitude:lng)
      
         var query = PFQuery(className:"Chest")
@@ -270,8 +245,11 @@ class ParseImpl: DatabaseManager {
     
     func getUserFromParse(parseUser: PFObject) -> User {
         var result = self.getLootFromParse(parseUser["loot"] as [PFObject])
+        var user = User(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, gold: parseUser["gold"] as Int, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: result.inventory, equipment: result.equipment, latHistory: parseUser["latHistory"] as [Double], lngHistory: parseUser["lngHistory"] as [Double], currentId: parseUser["id"] as Int)
+     
+        println(user.getId())
         
-        return User(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, gold: parseUser["gold"] as Int, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: result.inventory, equipment: result.equipment, latHistory: parseUser["latHistory"] as [Double], lngHistory: parseUser["lngHistory"] as [Double], currentId: parseUser["id"] as Int)
+        return user
     }
     
     func getLootFromParse(parseLoot: [PFObject]) -> (inventory: [Loot], equipment: [Gear]) {
@@ -282,11 +260,11 @@ class ParseImpl: DatabaseManager {
             var parseLoot = parseLoot[i]
             
             if(parseLoot["type"] as NSString == TYPEGEAR && parseLoot["equiped"] as Bool) {
-                equipment.append(Gear(name: parseLoot["name"] as String, gold: parseLoot["gold"] as Bool))
+                equipment.append(Gear(name: parseLoot["name"] as String, gold: parseLoot["gold"] as Bool, id: parseLoot["id"] as Int))
             } else if(parseLoot["type"] as NSString == TYPEGEAR) {
-                inventory.append(Gear(name: parseLoot["name"] as String, gold: parseLoot["gold"] as Bool))
+                inventory.append(Gear(name: parseLoot["name"] as String, gold: parseLoot["gold"] as Bool, id: parseLoot["id"] as Int))
             } else if(parseLoot["type"] as NSString == TYPEPOTION) {
-                inventory.append(Potion(name: parseLoot["name"] as String))
+                inventory.append(Potion(name: parseLoot["name"] as String, id: parseLoot["id"] as Int))
             }
         }
         
