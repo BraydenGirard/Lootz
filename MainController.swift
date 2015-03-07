@@ -135,14 +135,14 @@ class MainController: UIViewController {
         var currentEnergy = user.getEnergy()
         
         if(currentEnergy - chestDistance > 0) {
-            let result = user.addInventory(nearestChest!.getLoot())
-            if(result) {
-                user.addGold(nearestChest!.getGold())
-                user.setEnergy(currentEnergy - chestDistance)
-                DBFactory.execute().saveUser(user)
+            let resultUser = nearestChest!.getLoot()
+            if(resultUser.success) {
+                resultUser.user.addGold(nearestChest!.getGold())
+                resultUser.user.setEnergy(currentEnergy - chestDistance)
+                DBFactory.execute().saveUser(resultUser.user)
                 hideLootzUI()
             } else {
-                errorLabel.text = "Need \(result) empty spots in inventory"
+                errorLabel.text = "Need empty spots in inventory"
                 errorLabel.hidden = false;
             }
         } else {

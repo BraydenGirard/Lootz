@@ -50,19 +50,23 @@ class Chest {
         return self.gold
     }
     
-    func getLoot() -> [Loot] {
+    func getLoot() -> (success: Bool, user: User) {
         var loot = [Loot]()
         var weapon:Gear
-    
-        weapon = Gear(name: self.weapon, gold: self.weaponGold, id: DBFactory.execute().getUser().getNextId())
+        var user = DBFactory.execute().getUser()
+        weapon = Gear(name: self.weapon, gold: self.weaponGold, id: user.getNextId())
         
         loot.append(weapon)
         
         if(self.item != "Empty") {
-            var item = Loot(name: self.item, imageName:self.item, id: DBFactory.execute().getUser().getNextId())
+            var item = Loot(name: self.item, imageName:self.item, id: user.getNextId())
             loot.append(item)
         }
         
-        return loot
+        if(user.addInventory(loot)) {
+            return (true, user)
+        } else {
+            return (false, user)
+        }
     }
 }

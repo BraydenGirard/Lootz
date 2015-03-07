@@ -87,9 +87,8 @@ class ParseImpl: DatabaseManager {
             var parseLoot:PFObject?
             var parseLootArray = PFUser.currentUser()["loot"] as [PFObject]
             var newLoot = true
-            
-            PFUser.currentUser().username = user.getUsername()
-            PFUser.currentUser().email = user.getEmail()
+        
+            PFUser.currentUser()["id"] = user.getId()
             PFUser.currentUser()["health"] = user.getHealth()
             PFUser.currentUser()["energy"] = user.getEnergy()
             PFUser.currentUser()["clarity"] = user.getClarity()
@@ -97,6 +96,7 @@ class ParseImpl: DatabaseManager {
             PFUser.currentUser()["lngHistory"] = user.getLngHistory()
             PFUser.currentUser()["gold"] = user.getGold()
             
+            println("Size of inventory is \(user.getInventory().count)")
             
             
             for var i=0; i<user.getInventory().count; i++ {
@@ -126,7 +126,6 @@ class ParseImpl: DatabaseManager {
                         loot["gold"] = false
                         loot["equiped"] = false
                     }
-                    loot.save()
                     parseLootArray.append(loot)
                 }
             }
@@ -151,21 +150,24 @@ class ParseImpl: DatabaseManager {
                     loot["name"] = gear.getName()
                     loot["gold"] = gear.isGold()
                     loot["equiped"] = true
-                    loot.save()
                     parseLootArray.append(loot)
                 }
             }
-        
+            
             PFUser.currentUser()["loot"] = parseLootArray
-            println("End of save user")
-            PFUser.currentUser().saveInBackgroundWithBlock({ (complete: Bool, error: NSError!) -> Void in
-                if(error != nil) {
-                    println("Failed to save user")
-                } else {
-                    println("User save complete")
-                    NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
-                }
+            
+            PFObject.saveAllInBackground(parseLootArray, block: { (complete: Bool, error: NSError!) -> Void in
+            
+                PFUser.currentUser().saveInBackgroundWithBlock({ (complete: Bool, error: NSError!) -> Void in
+                    if(error != nil) {
+                        println("Failed to save user")
+                    } else {
+                        println("User save complete")
+                        NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
+                    }
+                })
             })
+        
             return true
         } else {
             NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
@@ -203,6 +205,13 @@ class ParseImpl: DatabaseManager {
                 if parseUser != nil {
                     println("Found user successfully")
                     
+                    PFUser.currentUser()["id"] = parseUser["id"]
+                    PFUser.currentUser()["health"] = parseUser["health"]
+                    PFUser.currentUser()["energy"] = parseUser["energy"]
+                    PFUser.currentUser()["clarity"] = parseUser["clarity"]
+                    PFUser.currentUser()["latHistory"] = parseUser["latHistory"]
+                    PFUser.currentUser()["lngHistory"] = parseUser["lngHistory"]
+                    PFUser.currentUser()["gold"] = parseUser["gold"]
                     PFUser.currentUser()["loot"] = parseUser["loot"]
             
                     //NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
