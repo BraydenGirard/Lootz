@@ -16,7 +16,7 @@ class Gear: Loot {
     private let ranged = false
     private let gold = false
     
-    init(name: String, gold: Bool, id: Int) {
+    init(name: String, gold: Bool, lootId: String) {
         self.gold = gold
         
         if name == BOW {
@@ -62,9 +62,9 @@ class Gear: Loot {
 
         if(self.gold) {
             damage = GOLDDAMAGE
-            super.init(name: name, imageName: name + GOLDSUFFIX, id: id)
+            super.init(name: name, imageName: name + GOLDSUFFIX, lootId: lootId)
         } else {
-            super.init(name: name, imageName: name, id: id)
+            super.init(name: name, imageName: name, lootId: lootId)
         }
     }
     

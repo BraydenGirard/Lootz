@@ -50,10 +50,7 @@ class RightController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        deselectButton(0)
-        println("Hello")
         refresh()
-        println("Goodbye")
     }
     
     func exit(notification: NSNotification) {
@@ -142,6 +139,20 @@ class RightController: UIViewController {
         }
     }
     
+    func resetInvButtons() {
+        for(var i=BUTTONSTART; i<BUTTONSTART + TOTALINVBUTTONS; i++) {
+            var button = self.view.viewWithTag(i) as UIButton
+            //button.setBackgroundImage(UIImage(named: "empty_slot_selected"), forState: UIControlState.Selected)
+            //button.setBackgroundImage(UIImage(named: "empty_slot"), forState: UIControlState.Normal)
+            button.setImage(UIImage(named: "empty_slot_selected"), forState: UIControlState.Selected)
+            button.setImage(UIImage(named: "empty_slot"), forState: UIControlState.Normal)
+        }
+    }
+    
+    func resetEqpButtons() {
+        //Reset equipment buttons
+    }
+    
     func getSelectedButton() -> UIButton? {
         for(var i=BUTTONSTART; i<BUTTONSTART + TOTALBUTTONS; i++) {
             
@@ -165,6 +176,10 @@ class RightController: UIViewController {
                 button.setImage(imageSelected, forState: UIControlState.Selected)
             }
         }
+    }
+    
+    func setupEqpButtons() {
+        
     }
     
     func confirmRemove(lootItem: Loot) {
@@ -234,13 +249,23 @@ class RightController: UIViewController {
     }
     
     func refresh() {
+        if let button = getSelectedButton() {
+            button.selected = false
+        }
+        resetInvButtons()
         setupInvButtons()
         setupBars()
         goldLabel.text = String(DBFactory.execute().getUser().getGold())
         usernameLabel.text = DBFactory.execute().getUser().getUsername()
         
-        if let headImg = DBFactory.execute().getUser().getEquipment(HELMET)?.getImage() {
-            headBtn.setImage(headImg, forState: UIControlState.Normal)
+        if let headImg = DBFactory.execute().getUser().getEquipment(HELMET)?.getName() {
+            headBtn.setImage(UIImage(named: headImg), forState: UIControlState.Normal)
+            headBtn.setImage(UIImage(named: headImg + "_selected"), forState: UIControlState.Selected)
+            headBtn.setBackgroundImage(UIImage(named: "helmet_slot"), forState: UIControlState.Normal)
+            headBtn.setBackgroundImage(UIImage(named: "helmet_slot_selected"), forState: UIControlState.Selected)
+        } else {
+            headBtn.setImage(UIImage(named: "helmet_slot"), forState: UIControlState.Normal)
+            headBtn.setImage(UIImage(named: "helmet_slot_selected"), forState: UIControlState.Selected)
         }
         if let chestImg = DBFactory.execute().getUser().getEquipment(BARMOUR)?.getImage() {
             chestBtn.setImage(chestImg, forState: UIControlState.Normal)
@@ -261,7 +286,6 @@ class RightController: UIViewController {
                 }
             }
         }
-
     }
     
     func getInvImage(currentIndex: Int) -> UIImage? {

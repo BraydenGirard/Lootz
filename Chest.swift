@@ -54,12 +54,12 @@ class Chest {
         var loot = [Loot]()
         var weapon:Gear
         var user = DBFactory.execute().getUser()
-        weapon = Gear(name: self.weapon, gold: self.weaponGold, id: user.getNextId())
+        weapon = Gear(name: self.weapon, gold: self.weaponGold, lootId: String(user.getNextId()) + user.getEmail())
         
         loot.append(weapon)
         
         if(self.item != "Empty") {
-            var item = Loot(name: self.item, imageName:self.item, id: user.getNextId())
+            var item = Loot(name: self.item, imageName:self.item, lootId: String(user.getNextId()) + user.getEmail())
             loot.append(item)
         }
         

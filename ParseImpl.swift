@@ -24,7 +24,7 @@ class ParseImpl: DatabaseManager {
         parseUser["lngHistory"] = user.getLngHistory()
         parseUser["gold"] = user.getGold()
         parseUser["loot"] = []
-        parseUser["id"] = user.getId()
+        parseUser["lootId"] = user.getId()
         
         parseUser.signUpInBackgroundWithBlock {
             (succeeded: Bool!, error: NSError!) -> Void in
@@ -88,7 +88,7 @@ class ParseImpl: DatabaseManager {
             var parseLootArray = PFUser.currentUser()["loot"] as [PFObject]
             var newLoot = true
         
-            PFUser.currentUser()["id"] = user.getId()
+            PFUser.currentUser()["lootId"] = user.getId()
             PFUser.currentUser()["health"] = user.getHealth()
             PFUser.currentUser()["energy"] = user.getEnergy()
             PFUser.currentUser()["clarity"] = user.getClarity()
@@ -103,8 +103,11 @@ class ParseImpl: DatabaseManager {
                 newLoot = true
                 for var k=0; k<parseLootArray.count; k++ {
                     parseLoot = parseLootArray[k]
+                    var parseLootId = parseLoot!["lootId"] as String
+                    let localLootId = String(user.getInventory()[i].getId())
                     
-                    if(user.getInventory()[i].getId() == parseLoot!["id"] as Int) {
+                    if(localLootId == parseLoot!["lootId"] as String) {
+                        //println("Found unique loot")
                         newLoot = false
                     }
                     
@@ -115,13 +118,13 @@ class ParseImpl: DatabaseManager {
                     
                     if(user.getInventory()[i].getClassType() == TYPEGEAR) {
                         var gear = user.getInventory()[i] as Gear
-                        loot["id"] = gear.getId()
+                        loot["lootId"] = String(gear.getId())
                         loot["name"] = gear.getName()
                         loot["gold"] = gear.isGold()
                         loot["equiped"] = false
                     } else if(user.getInventory()[i].getClassType() == TYPEPOTION) {
                         var potion = user.getInventory()[i]
-                        loot["id"] = potion.getId()
+                        loot["lootId"] = String(potion.getId())
                         loot["name"] = potion.getName()
                         loot["gold"] = false
                         loot["equiped"] = false
@@ -134,8 +137,9 @@ class ParseImpl: DatabaseManager {
                 newLoot = true
                 for var k=0; k<parseLootArray.count; k++ {
                     parseLoot = parseLootArray[k]
-                    
-                    if(user.getEquipment()[i].getId() == parseLoot!["id"] as Int) {
+                    let localLootId = String(user.getEquipment()[i].getId())
+                    if(localLootId == parseLoot!["lootId"] as String) {
+                        println("Found unique equipment")
                         newLoot = false
                     }
                     
@@ -146,7 +150,7 @@ class ParseImpl: DatabaseManager {
                     var gear = user.getEquipment()[i]
                     
                     loot["type"] = gear.getClassType()
-                    loot["id"] = gear.getId()
+                    loot["lootId"] = String(gear.getId())
                     loot["name"] = gear.getName()
                     loot["gold"] = gear.isGold()
                     loot["equiped"] = true
@@ -163,7 +167,8 @@ class ParseImpl: DatabaseManager {
                         println("Failed to save user")
                     } else {
                         println("User save complete")
-                        NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
+                        self.updateUser()
+                        //NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
                     }
                 })
             })
@@ -205,7 +210,8 @@ class ParseImpl: DatabaseManager {
                 if parseUser != nil {
                     println("Found user successfully")
                     
-                    PFUser.currentUser()["id"] = parseUser["id"]
+                    PFUser.currentUser()["email"] = parseUser["email"]
+                    PFUser.currentUser()["lootId"] = parseUser["lootId"]
                     PFUser.currentUser()["health"] = parseUser["health"]
                     PFUser.currentUser()["energy"] = parseUser["energy"]
                     PFUser.currentUser()["clarity"] = parseUser["clarity"]
@@ -214,7 +220,7 @@ class ParseImpl: DatabaseManager {
                     PFUser.currentUser()["gold"] = parseUser["gold"]
                     PFUser.currentUser()["loot"] = parseUser["loot"]
             
-                    //NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
+                    NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
                 }
             })
         } else {
@@ -245,6 +251,38 @@ class ParseImpl: DatabaseManager {
         }
     }
     
+    func removeLootFromServer(loot: Loot) {
+        
+        if PFUser.currentUser() != nil {
+            var currentLoot = PFUser.currentUser()["loot"] as [PFObject]
+            
+            for var i=0; i<currentLoot.count; i++ {
+                var parseLoot = currentLoot[i] as PFObject
+                if(parseLoot["lootId"] as String == loot.getId()) {
+                    currentLoot.removeAtIndex(i)
+                }
+            }
+            
+            PFUser.currentUser()["loot"] = currentLoot
+        
+            var removeQuery = PFQuery(className: "Loot")
+            removeQuery.whereKey("lootId", equalTo: loot.getId())
+        
+            removeQuery.getFirstObjectInBackgroundWithBlock { (loot: PFObject!, error: NSError!) -> Void in
+                if loot != nil {
+                    loot.deleteEventually()
+                } else {
+                    "Remove failed"
+                }
+            }
+            
+            //NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
+        }
+        else {
+            NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
+        }
+    }
+    
     //=====================================================//
     //                                                     //
     //                  HELPER FUNCTIONS                   //
@@ -254,9 +292,7 @@ class ParseImpl: DatabaseManager {
     
     func getUserFromParse(parseUser: PFObject) -> User {
         var result = self.getLootFromParse(parseUser["loot"] as [PFObject])
-        var user = User(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, gold: parseUser["gold"] as Int, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: result.inventory, equipment: result.equipment, latHistory: parseUser["latHistory"] as [Double], lngHistory: parseUser["lngHistory"] as [Double], currentId: parseUser["id"] as Int)
-     
-        println(user.getId())
+        var user = User(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, gold: parseUser["gold"] as Int, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: result.inventory, equipment: result.equipment, latHistory: parseUser["latHistory"] as [Double], lngHistory: parseUser["lngHistory"] as [Double], currentId: parseUser["lootId"] as Int)
         
         return user
     }
@@ -269,12 +305,13 @@ class ParseImpl: DatabaseManager {
             var parseLoot = parseLoot[i]
             
             if(parseLoot["type"] as NSString == TYPEGEAR && parseLoot["equiped"] as Bool) {
-                equipment.append(Gear(name: parseLoot["name"] as String, gold: parseLoot["gold"] as Bool, id: parseLoot["id"] as Int))
+                equipment.append(Gear(name: parseLoot["name"] as String, gold: parseLoot["gold"] as Bool, lootId: parseLoot["lootId"] as String))
             } else if(parseLoot["type"] as NSString == TYPEGEAR) {
-                inventory.append(Gear(name: parseLoot["name"] as String, gold: parseLoot["gold"] as Bool, id: parseLoot["id"] as Int))
+                inventory.append(Gear(name: parseLoot["name"] as String, gold: parseLoot["gold"] as Bool, lootId: parseLoot["lootId"] as String))
             } else if(parseLoot["type"] as NSString == TYPEPOTION) {
-                inventory.append(Potion(name: parseLoot["name"] as String, id: parseLoot["id"] as Int))
+                inventory.append(Potion(name: parseLoot["name"] as String, lootId: parseLoot["lootId"] as String))
             }
+            
         }
         
         return (inventory: inventory, equipment: equipment)

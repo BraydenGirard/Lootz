@@ -74,7 +74,7 @@ class User {
     }
     
     func getNextId() -> Int {
-        self.currentId = self.currentId++;
+        self.currentId = self.currentId + 1;
         return self.currentId;
     }
     
@@ -234,8 +234,9 @@ class User {
     //Removes the item from inventory if it exists
     func removeInventory(item: Loot) -> Bool {
         for var i=0; i<self.inventory.count; i++ {
-            if(self.inventory[i] == item) {
+            if(self.inventory[i].getId() == item.getId()) {
                 self.inventory.removeAtIndex(i)
+                DBFactory.execute().removeLootFromServer(item)
                 return true
             }
         }

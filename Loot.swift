@@ -39,13 +39,12 @@ let GOLDDAMAGE = 50
 class Loot: NSObject {
     let name: String
     let image: UIImage
-    let id: Int
+    let lootId: String
     
-    init(name: String, imageName: String, id: Int) {
-        self.id = id
+    init(name: String, imageName: String, lootId: String) {
+        self.lootId = lootId
         self.name = name
         self.image = UIImage(named: imageName)!
-        println("Loot contructor end")
     }
     
     func getImage() -> UIImage {
@@ -56,8 +55,8 @@ class Loot: NSObject {
         return name
     }
     
-    func getId() -> Int {
-        return self.id
+    func getId() -> String {
+        return self.lootId
     }
     
     func getPrettyName() -> String {
