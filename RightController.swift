@@ -80,10 +80,27 @@ class RightController: UIViewController {
             //do something with inventory
             if(theButton.tag < 116) {
                 var inventory = DBFactory.execute().getUser().getInventory()
-                    
                 if((theButton.tag - BUTTONSTART) < inventory.count) {
-                    var lootItem = inventory[theButton.tag - BUTTONSTART]
-                    lootItem.use()
+                    var selectedGear = inventory[theButton.tag - BUTTONSTART] as? Gear
+                    var selectedPotion = inventory[theButton.tag - BUTTONSTART] as? Potion
+                    
+                    if let loot = selectedGear {
+                        var user = DBFactory.execute().getUser()
+                        user.equipFromInventory(loot)
+                        println("Hello world")
+                        DBFactory.execute().saveUser(user)
+                    
+                    } else if let loot = selectedPotion {
+                        var user = DBFactory.execute().getUser()
+                        if(loot.getName() == CLARITYPOT) {
+                            user.setClarity(FULLCLARITY)
+                        } else if (loot.getName() == ENERGYPOT) {
+                            user.setEnergy(FULLENERGY)
+                        } else if (loot.getName() == HEALTHPOT) {
+                            user.setHealth(FULLHEALTH)
+                        }
+                        DBFactory.execute().saveUser(user)
+                    }
                 }
             }
         }
@@ -179,13 +196,69 @@ class RightController: UIViewController {
     }
     
     func setupEqpButtons() {
-        
+        if let headImg = DBFactory.execute().getUser().getEquipment(HELMET)?.getName() {
+            headBtn.setImage(UIImage(named: headImg), forState: UIControlState.Normal)
+            headBtn.setImage(UIImage(named: headImg + "_selected"), forState: UIControlState.Selected)
+            headBtn.setBackgroundImage(UIImage(named: "helmet_slot"), forState: UIControlState.Normal)
+            headBtn.setBackgroundImage(UIImage(named: "helmet_slot_selected"), forState: UIControlState.Selected)
+        } else {
+            headBtn.setImage(UIImage(named: "helmet_slot"), forState: UIControlState.Normal)
+            headBtn.setImage(UIImage(named: "helmet_slot_selected"), forState: UIControlState.Selected)
+        }
+        if let chestImg = DBFactory.execute().getUser().getEquipment(BARMOUR)?.getName() {
+            chestBtn.setImage(UIImage(named:chestImg), forState: UIControlState.Normal)
+            chestBtn.setImage(UIImage(named:chestImg + "_selected"), forState: UIControlState.Selected)
+            chestBtn.setBackgroundImage(UIImage(named: "armour_slot"), forState: UIControlState.Normal)
+            chestBtn.setBackgroundImage(UIImage(named: "armour_slot_selected"), forState: UIControlState.Selected)
+        } else {
+            chestBtn.setImage(UIImage(named:"armour_slot"), forState: UIControlState.Normal)
+            chestBtn.setImage(UIImage(named:"armour_slot_selected"), forState: UIControlState.Selected)
+        }
+        if let offHandImg = DBFactory.execute().getUser().getEquipment(ONEHANDARMOUR)?.getName() {
+            offHandBtn.setImage(UIImage(named:offHandImg), forState: UIControlState.Normal)
+            offHandBtn.setImage(UIImage(named:offHandImg + "_selected"), forState: UIControlState.Selected)
+            offHandBtn.setBackgroundImage(UIImage(named: "sheild_slot"), forState: UIControlState.Normal)
+            offHandBtn.setBackgroundImage(UIImage(named: "sheild_slot_selected"), forState: UIControlState.Selected)
+            if let primaryHandImg = DBFactory.execute().getUser().getEquipment(ONEHAND)?.getName() {
+                primaryHandBtn.setImage(UIImage(named:primaryHandImg), forState: UIControlState.Normal)
+                primaryHandBtn.setImage(UIImage(named:primaryHandImg + "_selected"), forState: UIControlState.Selected)
+                primaryHandBtn.setBackgroundImage(UIImage(named: "weapon_slot"), forState: UIControlState.Normal)
+                primaryHandBtn.setBackgroundImage(UIImage(named: "weapon_slot_selected"), forState: UIControlState.Selected)
+                
+            }
+        } else {
+            primaryHandBtn.setImage(UIImage(named:"weapon_slot"), forState: UIControlState.Normal)
+            primaryHandBtn.setImage(UIImage(named: "weapon_slot_selected"), forState: UIControlState.Selected)
+            offHandBtn.setImage(UIImage(named:"sheild_slot"), forState: UIControlState.Normal)
+            offHandBtn.setImage(UIImage(named:"sheild_slot_selected"), forState: UIControlState.Selected)
+            
+            if let weapons = DBFactory.execute().getUser().getDualEquipment(ONEHAND) {
+                if let primaryHandImg = weapons[0].getName() as String? {
+                    primaryHandBtn.setImage(UIImage(named:primaryHandImg), forState: UIControlState.Normal)
+                    primaryHandBtn.setImage(UIImage(named:primaryHandImg + "_selected"), forState: UIControlState.Selected)
+                    primaryHandBtn.setBackgroundImage(UIImage(named: "weapon_slot"), forState: UIControlState.Normal)
+                    primaryHandBtn.setBackgroundImage(UIImage(named: "weapon_slot_selected"), forState: UIControlState.Selected)
+                }
+                if let offHandImg = weapons[1].getName() as String? {
+                    offHandBtn.setImage(UIImage(named:offHandImg), forState: UIControlState.Normal)
+                    offHandBtn.setImage(UIImage(named:offHandImg + "_selected"), forState: UIControlState.Selected)
+                    offHandBtn.setBackgroundImage(UIImage(named: "sheild_slot"), forState: UIControlState.Normal)
+                    offHandBtn.setBackgroundImage(UIImage(named: "sheild_slot_selected"), forState: UIControlState.Selected)
+                }
+            } else if let primaryHandImg = DBFactory.execute().getUser().getEquipment(ONEHAND)?.getName() {
+                primaryHandBtn.setImage(UIImage(named:primaryHandImg), forState: UIControlState.Normal)
+                primaryHandBtn.setImage(UIImage(named:primaryHandImg + "_selected"), forState: UIControlState.Normal)
+                primaryHandBtn.setBackgroundImage(UIImage(named: "weapon_slot"), forState: UIControlState.Normal)
+                primaryHandBtn.setBackgroundImage(UIImage(named: "weapon_slot_selected"), forState: UIControlState.Selected)
+                
+            }
+        }
     }
     
     func confirmRemove(lootItem: Loot) {
         let alertController = UIAlertController(
             title: "Remove Item",
-            message: "Are you sure you want to remove 1 of this item from your inventory?",
+            message: "Are you sure you want to remove this item from your inventory?",
             preferredStyle: .Alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
@@ -254,38 +327,11 @@ class RightController: UIViewController {
         }
         resetInvButtons()
         setupInvButtons()
+        setupEqpButtons()
         setupBars()
         goldLabel.text = String(DBFactory.execute().getUser().getGold())
         usernameLabel.text = DBFactory.execute().getUser().getUsername()
         
-        if let headImg = DBFactory.execute().getUser().getEquipment(HELMET)?.getName() {
-            headBtn.setImage(UIImage(named: headImg), forState: UIControlState.Normal)
-            headBtn.setImage(UIImage(named: headImg + "_selected"), forState: UIControlState.Selected)
-            headBtn.setBackgroundImage(UIImage(named: "helmet_slot"), forState: UIControlState.Normal)
-            headBtn.setBackgroundImage(UIImage(named: "helmet_slot_selected"), forState: UIControlState.Selected)
-        } else {
-            headBtn.setImage(UIImage(named: "helmet_slot"), forState: UIControlState.Normal)
-            headBtn.setImage(UIImage(named: "helmet_slot_selected"), forState: UIControlState.Selected)
-        }
-        if let chestImg = DBFactory.execute().getUser().getEquipment(BARMOUR)?.getImage() {
-            chestBtn.setImage(chestImg, forState: UIControlState.Normal)
-        }
-        if let offHandImg = DBFactory.execute().getUser().getEquipment(ONEHANDARMOUR)?.getImage() {
-            headBtn.setImage(offHandImg, forState: UIControlState.Normal)
-            if let primaryHandImg = DBFactory.execute().getUser().getEquipment(ONEHAND)?.getImage() {
-                primaryHandBtn.setImage(primaryHandImg, forState: UIControlState.Normal)
-            }
-        }
-        else {
-            if let weapons = DBFactory.execute().getUser().getDualEquipment(ONEHAND) {
-                if let primaryHandImg = weapons[0].getImage() as UIImage? {
-                    primaryHandBtn.setImage(primaryHandImg, forState: UIControlState.Normal)
-                }
-                if let offHandImg = weapons[1].getImage() as UIImage? {
-                    offHandBtn.setImage(offHandImg, forState: UIControlState.Normal)
-                }
-            }
-        }
     }
     
     func getInvImage(currentIndex: Int) -> UIImage? {

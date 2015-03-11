@@ -70,7 +70,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
     //Location manager was authorized start monitoring locations
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status:CLAuthorizationStatus)
     {
-        if status == .Authorized {
+        if status == CLAuthorizationStatus.AuthorizedAlways {
             manager.startUpdatingLocation()
         }
     }

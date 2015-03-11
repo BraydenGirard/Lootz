@@ -245,7 +245,7 @@ class User {
     
     //Removes item from inventory to equipment
     func equipFromInventory(item: Gear) -> Bool {
-        if(equipGear(item)) {
+        if(self.equipGear(item)) {
             for var i=0; i<self.inventory.count; i++ {
                 if(self.inventory[i] == item) {
                     self.inventory.removeAtIndex(i)
@@ -297,7 +297,6 @@ class User {
     
     //Returns true if inventory has room for gear
     func removeGear(gear: Loot) -> Bool {
-        
         if(self.addInventory(gear)) {
             
             for var i=0; i<self.equipment.count; i++ {
@@ -314,8 +313,8 @@ class User {
     //Returns how many of that item are equipped
     func equipmentCount(type: String) -> Int {
         var count = 0
-        for e in self.equipment {
-            if(e.getType() == type) {
+        for var i=0; i<self.equipment.count; i++ {
+            if(self.equipment[i].getType() == type) {
                 count++
             }
         }
@@ -326,13 +325,22 @@ class User {
         return equipment
     }
     
-    func getEquipment(type: String) -> Loot? {
+    func getEquipment(type: String) -> Gear? {
         for tempItem in self.equipment {
             if(type == tempItem.getType()) {
                 return tempItem;
             }
         }
         return nil
+    }
+    
+    func isEquiped(gear: Gear) -> Bool {
+        for tempGear in self.equipment {
+            if(tempGear.getType() == gear.getType()) {
+                return true
+            }
+        }
+        return false
     }
     
     func getDualEquipment(type: String) -> [Loot]? {

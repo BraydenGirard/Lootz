@@ -88,7 +88,9 @@ class Gear: Loot {
         return self.gold
     }
     
-    override func use() { }
+    override func use() {
+        
+    }
     
     override func getClassType() -> String {
         return TYPEGEAR
