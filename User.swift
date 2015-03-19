@@ -245,18 +245,17 @@ class User {
     
     //Removes item from inventory to equipment
     func equipFromInventory(item: Gear) -> Bool {
-        if(self.equipGear(item)) {
-            for var i=0; i<self.inventory.count; i++ {
-                if(self.inventory[i] == item) {
-                    self.inventory.removeAtIndex(i)
-                    self.equipment.append(item)
-                    return true
-                }
+        //println("Time to equip")
+     
+        for var i=0; i<self.inventory.count; i++ {
+            if(self.inventory[i].getId() == item.getId()) {
+                println("Found item")
+                self.inventory.removeAtIndex(i)
+                self.equipment.append(item)
+                return true
             }
-            return false
-        } else {
-              return false
         }
+        return false
     }
     
     
@@ -269,7 +268,7 @@ class User {
     //Else returns false and must remove equipment first
     func equipGear(item: Gear) -> Bool {
         if(self.equipmentCount(item.getType()) == 0) {
-            println("Equiping item")
+            //println("Equiping item")
             if(item.getType() == ONEHAND && self.equipmentCount(TWOHAND) == 0) {
                 equipFromInventory(item)
                 return true
@@ -293,6 +292,7 @@ class User {
                 return true
             }
         }
+        println("false is hit")
         return false
     }
     
@@ -311,14 +311,16 @@ class User {
         }
     }
     
-    //Returns how many of that item are equipped
+    //Returns how many of that item is equipped
     func equipmentCount(type: String) -> Int {
         var count = 0
         for var i=0; i<self.equipment.count; i++ {
             if(self.equipment[i].getType() == type) {
                 count++
             }
+           // println("Equipment count iteration \(i)")
         }
+        //println("Final count is \(count)")
         return count
     }
 

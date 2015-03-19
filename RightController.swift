@@ -86,8 +86,9 @@ class RightController: UIViewController {
                     
                     if let loot = selectedGear {
                         var user = DBFactory.execute().getUser()
+                        println("Hello world, asccessing user \(user.getUsername())")
                         user.equipFromInventory(loot)
-                        println("Hello world")
+                        
                         DBFactory.execute().saveUser(user)
                     
                     } else if let loot = selectedPotion {

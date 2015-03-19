@@ -66,6 +66,7 @@
 		F608B6211A7462B30072E6E0 /* sheild_slot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5E21A7462B30072E6E0 /* sheild_slot@3x.png */; };
 		F608B6231A7462B30072E6E0 /* weapon_slot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5E41A7462B30072E6E0 /* weapon_slot@2x.png */; };
 		F608B6241A7462B30072E6E0 /* weapon_slot@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F608B5E51A7462B30072E6E0 /* weapon_slot@3x.png */; };
+		F623D7E11ABB61280051EA9D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F623D7E01ABB61280051EA9D /* FacebookSDK.framework */; };
 		F62673BD1AA264A2000613D9 /* weapon_slot.png in Resources */ = {isa = PBXBuildFile; fileRef = F62673BC1AA264A2000613D9 /* weapon_slot.png */; };
 		F62674521AA2692E000613D9 /* armour_slot_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F62673C61AA2692D000613D9 /* armour_slot_selected.png */; };
 		F62674541AA2692E000613D9 /* armour_slot_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F62673C81AA2692D000613D9 /* armour_slot_selected@2x.png */; };
@@ -425,6 +426,7 @@
 		F608B5E21A7462B30072E6E0 /* sheild_slot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sheild_slot@3x.png"; sourceTree = "<group>"; };
 		F608B5E41A7462B30072E6E0 /* weapon_slot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weapon_slot@2x.png"; sourceTree = "<group>"; };
 		F608B5E51A7462B30072E6E0 /* weapon_slot@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weapon_slot@3x.png"; sourceTree = "<group>"; };
+		F623D7E01ABB61280051EA9D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		F62673BC1AA264A2000613D9 /* weapon_slot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weapon_slot.png; sourceTree = "<group>"; };
 		F62673C61AA2692D000613D9 /* armour_slot_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = armour_slot_selected.png; sourceTree = "<group>"; };
 		F62673C81AA2692D000613D9 /* armour_slot_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "armour_slot_selected@2x.png"; sourceTree = "<group>"; };
@@ -728,6 +730,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F636FAFF1A27D622002B832C /* CoreLocation.framework in Frameworks */,
+				F623D7E11ABB61280051EA9D /* FacebookSDK.framework in Frameworks */,
 				F64D475B1A4271E500D0914C /* ParseUI.framework in Frameworks */,
 				F64D47581A4271E500D0914C /* Bolts.framework in Frameworks */,
 				F64D47511A42711400D0914C /* libsqlite3.dylib in Frameworks */,
@@ -1160,6 +1163,7 @@
 		F636FACE1A27D506002B832C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F623D7E01ABB61280051EA9D /* FacebookSDK.framework */,
 				F64D47541A4271E500D0914C /* Bolts.framework */,
 				F64D47551A4271E500D0914C /* ParseCrashReporting.framework */,
 				F64D47561A4271E500D0914C /* ParseFacebookUtils.framework */,
@@ -1296,6 +1300,19 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				es,
+				fr,
+				he,
+				it,
+				nl,
+				pl,
+				pt,
+				ro,
+				ru,
+				tr,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = F649BE361A27D22400A00E3D;
 			productRefGroup = F649BE401A27D22400A00E3D /* Products */;
@@ -1787,6 +1804,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Lootz",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Lootz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1808,6 +1826,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Lootz",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = Lootz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
