@@ -79,7 +79,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="SV6-oP-2z4" firstAttribute="leading" secondItem="dqM-LB-ezU" secondAttribute="trailing" constant="-271" id="7xy-zX-yhc"/>
                             <constraint firstItem="c24-Qk-oJz" firstAttribute="leading" secondItem="SV6-oP-2z4" secondAttribute="trailing" constant="-175" id="B5e-Cr-seW"/>
@@ -242,7 +242,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="34U-gN-nYm" secondAttribute="centerX" constant="-0.5" id="0PE-Ru-Wxa"/>
                             <constraint firstItem="34U-gN-nYm" firstAttribute="top" secondItem="C1r-Tl-6Dq" secondAttribute="bottom" constant="-95" id="5qR-l0-Odn"/>
@@ -502,7 +502,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="bottom" secondItem="4qk-o4-sff" secondAttribute="bottom" constant="49" id="23D-x3-hpF"/>
                             <constraint firstItem="FzS-EH-h7B" firstAttribute="top" secondItem="4qk-o4-sff" secondAttribute="top" constant="-251" id="4uD-kf-1Ss"/>
@@ -784,7 +784,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="drm-VB-zBD">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
                                 </variation>
@@ -1384,7 +1384,7 @@
                                 </variation>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="05E-fo-21a" firstAttribute="trailing" secondItem="Q3X-bn-7c4" secondAttribute="trailing" constant="-135" id="005-tW-XEc"/>
                             <constraint firstItem="XnO-dD-goI" firstAttribute="bottom" secondItem="Q3X-bn-7c4" secondAttribute="bottom" constant="-66" id="1cQ-St-kTa"/>
@@ -1833,7 +1833,7 @@
         <image name="weapon_slot.png" width="40" height="41"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="MNG-AA-BbD"/>
         <segue reference="rUt-IK-zk6"/>
-        <segue reference="HXC-s2-8iK"/>
     </inferredMetricsTieBreakers>
 </document>

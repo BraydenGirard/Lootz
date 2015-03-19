@@ -269,6 +269,7 @@ class User {
     //Else returns false and must remove equipment first
     func equipGear(item: Gear) -> Bool {
         if(self.equipmentCount(item.getType()) == 0) {
+            println("Equiping item")
             if(item.getType() == ONEHAND && self.equipmentCount(TWOHAND) == 0) {
                 equipFromInventory(item)
                 return true

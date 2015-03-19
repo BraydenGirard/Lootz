@@ -143,6 +143,18 @@
 		F6673B8C1A8AC93D0022966C /* lootz_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B861A8AC93D0022966C /* lootz_ui@3x.png */; };
 		F6673B8D1A8AC93D0022966C /* lootz_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B871A8AC93D0022966C /* lootz_ui.png */; };
 		F6673B8E1A8AC93D0022966C /* lootz_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B881A8AC93D0022966C /* lootz_ui@2x.png */; };
+		F670E6EF1ABB42B000C4ED4A /* Icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6E31ABB42B000C4ED4A /* Icon29.png */; };
+		F670E6F01ABB42B000C4ED4A /* Icon29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6E41ABB42B000C4ED4A /* Icon29@2x.png */; };
+		F670E6F11ABB42B000C4ED4A /* Icon29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6E51ABB42B000C4ED4A /* Icon29@3x.png */; };
+		F670E6F21ABB42B000C4ED4A /* Icon40.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6E61ABB42B000C4ED4A /* Icon40.png */; };
+		F670E6F31ABB42B000C4ED4A /* Icon40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6E71ABB42B000C4ED4A /* Icon40@2x.png */; };
+		F670E6F41ABB42B000C4ED4A /* Icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6E81ABB42B000C4ED4A /* Icon57.png */; };
+		F670E6F51ABB42B000C4ED4A /* Icon57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6E91ABB42B000C4ED4A /* Icon57@2x.png */; };
+		F670E6F61ABB42B000C4ED4A /* Icon60.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6EA1ABB42B000C4ED4A /* Icon60.png */; };
+		F670E6F71ABB42B000C4ED4A /* Icon60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6EB1ABB42B000C4ED4A /* Icon60@2x.png */; };
+		F670E6F81ABB42B000C4ED4A /* Icon60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6EC1ABB42B000C4ED4A /* Icon60@3x.png */; };
+		F670E6F91ABB42B000C4ED4A /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6ED1ABB42B000C4ED4A /* iTunesArtwork.png */; };
+		F670E6FA1ABB42B000C4ED4A /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6EE1ABB42B000C4ED4A /* iTunesArtwork@2x.png */; };
 		F68B63231AA63F8B00122469 /* Toy_Sword_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B631D1AA63F8A00122469 /* Toy_Sword_selected.png */; };
 		F68B63241AA63F8B00122469 /* Toy_Sword_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B631E1AA63F8A00122469 /* Toy_Sword_selected@2x.png */; };
 		F68B63251AA63F8B00122469 /* Toy_Sword_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F68B631F1AA63F8A00122469 /* Toy_Sword_selected@3x.png */; };
@@ -494,6 +506,18 @@
 		F6673B861A8AC93D0022966C /* lootz_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lootz_ui@3x.png"; sourceTree = "<group>"; };
 		F6673B871A8AC93D0022966C /* lootz_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lootz_ui.png; sourceTree = "<group>"; };
 		F6673B881A8AC93D0022966C /* lootz_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lootz_ui@2x.png"; sourceTree = "<group>"; };
+		F670E6E31ABB42B000C4ED4A /* Icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon29.png; sourceTree = "<group>"; };
+		F670E6E41ABB42B000C4ED4A /* Icon29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon29@2x.png"; sourceTree = "<group>"; };
+		F670E6E51ABB42B000C4ED4A /* Icon29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon29@3x.png"; sourceTree = "<group>"; };
+		F670E6E61ABB42B000C4ED4A /* Icon40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon40.png; sourceTree = "<group>"; };
+		F670E6E71ABB42B000C4ED4A /* Icon40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon40@2x.png"; sourceTree = "<group>"; };
+		F670E6E81ABB42B000C4ED4A /* Icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon57.png; sourceTree = "<group>"; };
+		F670E6E91ABB42B000C4ED4A /* Icon57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon57@2x.png"; sourceTree = "<group>"; };
+		F670E6EA1ABB42B000C4ED4A /* Icon60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon60.png; sourceTree = "<group>"; };
+		F670E6EB1ABB42B000C4ED4A /* Icon60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon60@2x.png"; sourceTree = "<group>"; };
+		F670E6EC1ABB42B000C4ED4A /* Icon60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon60@3x.png"; sourceTree = "<group>"; };
+		F670E6ED1ABB42B000C4ED4A /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		F670E6EE1ABB42B000C4ED4A /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		F68B631C1AA63ECE00122469 /* Current Chest.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Current Chest.gpx"; sourceTree = "<group>"; };
 		F68B631D1AA63F8A00122469 /* Toy_Sword_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Toy_Sword_selected.png; sourceTree = "<group>"; };
 		F68B631E1AA63F8A00122469 /* Toy_Sword_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Toy_Sword_selected@2x.png"; sourceTree = "<group>"; };
@@ -803,6 +827,18 @@
 		F62DE8F51A2E319900E77B70 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F670E6E31ABB42B000C4ED4A /* Icon29.png */,
+				F670E6E41ABB42B000C4ED4A /* Icon29@2x.png */,
+				F670E6E51ABB42B000C4ED4A /* Icon29@3x.png */,
+				F670E6E61ABB42B000C4ED4A /* Icon40.png */,
+				F670E6E71ABB42B000C4ED4A /* Icon40@2x.png */,
+				F670E6E81ABB42B000C4ED4A /* Icon57.png */,
+				F670E6E91ABB42B000C4ED4A /* Icon57@2x.png */,
+				F670E6EA1ABB42B000C4ED4A /* Icon60.png */,
+				F670E6EB1ABB42B000C4ED4A /* Icon60@2x.png */,
+				F670E6EC1ABB42B000C4ED4A /* Icon60@3x.png */,
+				F670E6ED1ABB42B000C4ED4A /* iTunesArtwork.png */,
+				F670E6EE1ABB42B000C4ED4A /* iTunesArtwork@2x.png */,
 				F6E493AF1AA582DA00953B5A /* default.png */,
 				F6E493B01AA582DA00953B5A /* default@2x.png */,
 				F6E493B11AA582DA00953B5A /* default@3x.png */,
@@ -1283,6 +1319,7 @@
 				F62674B91AA2692E000613D9 /* Spear_selected@3x.png in Resources */,
 				F6B31E691AA42E4C005E04EB /* Health_Potion.png in Resources */,
 				F6B31EBC1AA43141005E04EB /* Helmet_Gold_selected@3x.png in Resources */,
+				F670E6F01ABB42B000C4ED4A /* Icon29@2x.png in Resources */,
 				F62674A91AA2692E000613D9 /* Shield_selected@3x.png in Resources */,
 				F6D9DF9B1A75765400F72300 /* north_red.png in Resources */,
 				F6D9DF8D1A75765400F72300 /* east_red@2x.png in Resources */,
@@ -1319,6 +1356,7 @@
 				F6B31E6B1AA42E4C005E04EB /* Health_Potion@3x.png in Resources */,
 				F6B31E671AA42E4C005E04EB /* Health_Potion_selected@2x.png in Resources */,
 				F65D23211A781EFE009A8939 /* remove_btn.png in Resources */,
+				F670E6F71ABB42B000C4ED4A /* Icon60@2x.png in Resources */,
 				F6B31E991AA42E93005E04EB /* Spear_Gold.png in Resources */,
 				F6D9DF9F1A75765400F72300 /* north@2x.png in Resources */,
 				F6D9DFAB1A75765400F72300 /* star@2x.png in Resources */,
@@ -1333,6 +1371,7 @@
 				F6D9DFB11A75765400F72300 /* west@2x.png in Resources */,
 				F637F76C1A310A8D004752E0 /* signup_btn@2x.png in Resources */,
 				F6D9DF321A75763500F72300 /* Helmet.png in Resources */,
+				F670E6F81ABB42B000C4ED4A /* Icon60@3x.png in Resources */,
 				F65D23241A781EFE009A8939 /* action_btn.png in Resources */,
 				F6F35C821A775CBD0042D313 /* armour_slot.png in Resources */,
 				F62674521AA2692E000613D9 /* armour_slot_selected.png in Resources */,
@@ -1340,6 +1379,7 @@
 				F608B6241A7462B30072E6E0 /* weapon_slot@3x.png in Resources */,
 				F608B5F81A7462B30072E6E0 /* clarity_full.png in Resources */,
 				F6B31E2B1AA42DFE005E04EB /* Dagger_Gold_selected@2x.png in Resources */,
+				F670E6F91ABB42B000C4ED4A /* iTunesArtwork.png in Resources */,
 				F62674911AA2692E000613D9 /* helmet_slot_selected@3x.png in Resources */,
 				F6CFB70A1A325E1C00405290 /* login_ui@3x.png in Resources */,
 				F6B31EBE1AA43141005E04EB /* Helmet_Gold@2x.png in Resources */,
@@ -1350,6 +1390,7 @@
 				F608B6011A7462B30072E6E0 /* energy_50.png in Resources */,
 				F6B31E1E1AA42DE8005E04EB /* Gold_selected.png in Resources */,
 				F6B31EBA1AA43141005E04EB /* Helmet_Gold_selected.png in Resources */,
+				F670E6F51ABB42B000C4ED4A /* Icon57@2x.png in Resources */,
 				F608B6041A7462B30072E6E0 /* energy_75.png in Resources */,
 				F608B5FE1A7462B30072E6E0 /* energy_25.png in Resources */,
 				F6B31E051AA42DA7005E04EB /* Body_Armour_Gold@3x.png in Resources */,
@@ -1372,6 +1413,7 @@
 				F6B31EA61AA42EA9005E04EB /* Sword_Gold@2x.png in Resources */,
 				F6B31E121AA42DCD005E04EB /* Bow_Gold_selected.png in Resources */,
 				F6D9DF551A75763500F72300 /* Spear@3x.png in Resources */,
+				F670E6EF1ABB42B000C4ED4A /* Icon29.png in Resources */,
 				F6F35C781A77525D0042D313 /* character_ui@3x.png in Resources */,
 				F6B31E471AA42E1A005E04EB /* Mace@3x.png in Resources */,
 				F6B31DFC1AA42DA7005E04EB /* Axe_Gold_selected@3x.png in Resources */,
@@ -1386,9 +1428,12 @@
 				F6D9DFAF1A75765400F72300 /* west_red@3x.png in Resources */,
 				F6E493B41AA582DA00953B5A /* default@3x.png in Resources */,
 				F6D9DF531A75763500F72300 /* Spear.png in Resources */,
+				F670E6F61ABB42B000C4ED4A /* Icon60.png in Resources */,
 				F6B31E041AA42DA7005E04EB /* Body_Armour_Gold@2x.png in Resources */,
+				F670E6F11ABB42B000C4ED4A /* Icon29@3x.png in Resources */,
 				F6B31E171AA42DCD005E04EB /* Bow_Gold@3x.png in Resources */,
 				F6B31E9B1AA42E93005E04EB /* Spear_Gold@3x.png in Resources */,
+				F670E6F31ABB42B000C4ED4A /* Icon40@2x.png in Resources */,
 				F637F76D1A310A8D004752E0 /* signup_btn@3x.png in Resources */,
 				F62674C01AA2692E000613D9 /* Sword_selected@2x.png in Resources */,
 				F6D9DFB21A75765400F72300 /* west@3x.png in Resources */,
@@ -1396,6 +1441,7 @@
 				F608B6171A7462B30072E6E0 /* health_empty@2x.png in Resources */,
 				F6B31E761AA42E62005E04EB /* Shield_Gold@2x.png in Resources */,
 				F6D9DFA71A75765400F72300 /* south.png in Resources */,
+				F670E6F21ABB42B000C4ED4A /* Icon40.png in Resources */,
 				F6CFB6FE1A3255F100405290 /* exit@2x.png in Resources */,
 				F608B5F31A7462B30072E6E0 /* clarity_75@2x.png in Resources */,
 				F6B31E881AA42E82005E04EB /* Small_Shield_Gold@2x.png in Resources */,
@@ -1424,6 +1470,7 @@
 				F626748E1AA2692E000613D9 /* helmet_slot_selected.png in Resources */,
 				F608B60F1A7462B30072E6E0 /* health_25@3x.png in Resources */,
 				F6D9DF8C1A75765400F72300 /* east_red.png in Resources */,
+				F670E6F41ABB42B000C4ED4A /* Icon57.png in Resources */,
 				F6D9DF5B1A75763500F72300 /* Sword@3x.png in Resources */,
 				F6D9DF161A75763500F72300 /* Bow@3x.png in Resources */,
 				F62674B61AA2692E000613D9 /* Spear_selected.png in Resources */,
@@ -1549,6 +1596,7 @@
 				F65D23251A781EFE009A8939 /* action_btn@2x.png in Resources */,
 				F6B31E871AA42E82005E04EB /* Small_Shield_Gold.png in Resources */,
 				F608B5F71A7462B30072E6E0 /* clarity_empty@3x.png in Resources */,
+				F670E6FA1ABB42B000C4ED4A /* iTunesArtwork@2x.png in Resources */,
 				F626746C1AA2692E000613D9 /* Bow_selected@2x.png in Resources */,
 				F62674B81AA2692E000613D9 /* Spear_selected@2x.png in Resources */,
 				F608B6031A7462B30072E6E0 /* energy_50@3x.png in Resources */,
@@ -1735,6 +1783,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Lootz",
@@ -1743,6 +1792,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Lootz-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1754,6 +1804,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Lootz",
@@ -1762,6 +1813,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Lootz-Bridging-Header.h";
 			};
 			name = Release;
