@@ -307,15 +307,19 @@ class RightController: UIViewController {
         alertController.addAction(cancelAction)
         
         let removeAction = UIAlertAction(title: "Yes Remove", style: .Default) { (action) in
-            var user = DBFactory.execute().getUser()
-            user.removeInventory(lootItem)
-            DBFactory.execute().saveUser(user)
+           self.doRemove(lootItem)
         }
         alertController.addAction(removeAction)
         
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    func doRemove(lootItem: Loot) {
+        var loot = lootItem
+        var user = DBFactory.execute().getUser()
+        user.removeInventory(loot)
+        DBFactory.execute().saveUser(user)
+    }
     func setupBars() {
         var health = DBFactory.execute().getUser().getHealth()
         var clarity = DBFactory.execute().getUser().getClarity()

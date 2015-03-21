@@ -135,7 +135,7 @@ class MainController: UIViewController {
             if let currLocation = currentLocation {
                 chestDistance = Int(currLocation.distanceFromLocation(chestLocation))
                 
-                if(chestDistance < 25) {
+                if(chestDistance < 50) {
                     showLootzUI(chest)
                 }
                 else
@@ -156,14 +156,14 @@ class MainController: UIViewController {
         var user = DBFactory.execute().getUser()
         var currentEnergy = user.getEnergy()
         
-        if(currentEnergy - chestDistance > 0) {
+        if(currentEnergy - 25 >= 0) {
             let resultUser = nearestChest!.getLoot()
             if(resultUser.success) {
                 resultUser.user.addGold(nearestChest!.getGold())
-                if(chestDistance < 25) {
-                    resultUser.user.setEnergy(currentEnergy - 25)
-                }
-                 println("The result user id is: \(resultUser.user.getId())")
+               
+                resultUser.user.setEnergy(currentEnergy - 25)
+                
+                println("The result user id is: \(resultUser.user.getId())")
                 resultUser.user.gainXP(CHESTXP)
                 DBFactory.execute().removeChestFromServer(nearestChest!)
                 DBFactory.execute().saveUser(resultUser.user)

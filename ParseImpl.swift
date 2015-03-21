@@ -279,7 +279,7 @@ class ParseImpl: DatabaseManager {
         var removeQuery = PFQuery(className: "Chest")
         let point = PFGeoPoint(latitude:chest.getLatitude(), longitude:chest.getLongitude())
         
-        removeQuery.whereKey("location", nearGeoPoint: point, withinKilometers: 0.2)
+        removeQuery.whereKey("location", nearGeoPoint: point, withinKilometers: 0.1)
         
         removeQuery.limit = 1
         
@@ -295,6 +295,64 @@ class ParseImpl: DatabaseManager {
             }
         }
 
+    }
+    
+    func getDiscoveredChests() {
+        if PFUser.currentUser() != nil {
+            var user = self.getUser()
+            var discoveredChestLngs = user.getLngHistory()
+            var discoveredChestLats = user.getLatHistory()
+            
+            println("Discovered this many chests: \(discoveredChestLngs.count)")
+            
+            if(discoveredChestLngs.count > 0) {
+                let currentLocation = PFGeoPoint(latitude:discoveredChestLats[0], longitude:discoveredChestLngs[0])
+                
+                var query = PFQuery(className:"Chest")
+                
+                query.whereKey("location", nearGeoPoint: currentLocation, withinKilometers: SEARCHDISTANCE)
+                
+                query.limit = 10
+                
+                query.findObjectsInBackgroundWithBlock { (objects: Array!, error: NSError!) -> Void in
+                    var finalChests = [Chest]()
+                    
+                    if let chests = objects {
+                        for c in chests {
+                            var chest = self.getChestFromParse(c as PFObject)
+                            finalChests.append(chest)
+                        }
+                    }
+                    println("Founds this many chests in the area: \(finalChests.count)")
+                    
+                    var discoveredChestLngs = user.getLngHistory()
+                    var discoveredChestLats = user.getLatHistory()
+                    
+                    if(finalChests.count < 1 && discoveredChestLngs.count > 0) {
+                        println("in recurse function")
+                        var user = self.getUser()
+                        
+                        discoveredChestLngs.removeAtIndex(0)
+                        discoveredChestLats.removeAtIndex(0)
+                        
+                        user.setLatHistory(discoveredChestLats)
+                        user.setLngHistory(discoveredChestLngs)
+                        self.saveUser(user)
+                        
+                        self.getDiscoveredChests()
+                    } else {
+                        NSNotificationCenter.defaultCenter().postNotificationName("chestDiscoveryComplete", object: self, userInfo:["chests": finalChests])
+                    }
+                }
+            } else {
+                println("No chests have been discovered")
+                NSNotificationCenter.defaultCenter().postNotificationName("chestDiscoveryComplete", object: self, userInfo:["chests": []])
+            }
+            
+        }
+        else {
+            NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
+        }
     }
     
     //=====================================================//

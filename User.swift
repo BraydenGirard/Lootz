@@ -14,6 +14,8 @@ let FULLCLARITY = 100
 let FULLINVENTORY = 16
 let CHESTXP = 10
 let KILLXP = 100
+let SEARCHDISTANCE = 0.1
+let BOOSTEDSEARCHDISTANCE = 0.3
 
 class User {
     
@@ -143,10 +145,10 @@ class User {
     func getClarityDistance() -> Double {
         if(clarity != 0) {
             clarity = clarity - 25
-            return 0.3
+            return BOOSTEDSEARCHDISTANCE
         }
         else {
-            return 0.1
+            return SEARCHDISTANCE
         }
     }
     
@@ -396,5 +398,12 @@ class User {
         return lngHistory
     }
     
+    func setLatHistory(latHistory: [Double]) {
+        self.latHistory = latHistory
+    }
+    
+    func setLngHistory(lngHistory: [Double]) {
+        self.lngHistory = lngHistory
+    }
   
 }

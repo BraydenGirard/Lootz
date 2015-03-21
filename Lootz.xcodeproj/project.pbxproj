@@ -285,6 +285,9 @@
 		F6CFB7081A325E1C00405290 /* login_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB7051A325E1C00405290 /* login_ui.png */; };
 		F6CFB7091A325E1C00405290 /* login_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB7061A325E1C00405290 /* login_ui@2x.png */; };
 		F6CFB70A1A325E1C00405290 /* login_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB7071A325E1C00405290 /* login_ui@3x.png */; };
+		F6D67AB01ABDE78D00E7B8A8 /* chests_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D67AAD1ABDE78D00E7B8A8 /* chests_ui.png */; };
+		F6D67AB11ABDE78D00E7B8A8 /* chests_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D67AAE1ABDE78D00E7B8A8 /* chests_ui@2x.png */; };
+		F6D67AB21ABDE78D00E7B8A8 /* chests_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6D67AAF1ABDE78D00E7B8A8 /* chests_ui@3x.png */; };
 		F6D789511A36B7B500078FA2 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D789501A36B7B500078FA2 /* DatabaseManager.swift */; };
 		F6D789531A36B88A00078FA2 /* ParseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D789521A36B88A00078FA2 /* ParseImpl.swift */; };
 		F6D789551A36B90D00078FA2 /* DBFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D789541A36B90D00078FA2 /* DBFactory.swift */; };
@@ -654,6 +657,9 @@
 		F6CFB7051A325E1C00405290 /* login_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_ui.png; sourceTree = "<group>"; };
 		F6CFB7061A325E1C00405290 /* login_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_ui@2x.png"; sourceTree = "<group>"; };
 		F6CFB7071A325E1C00405290 /* login_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_ui@3x.png"; sourceTree = "<group>"; };
+		F6D67AAD1ABDE78D00E7B8A8 /* chests_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chests_ui.png; sourceTree = "<group>"; };
+		F6D67AAE1ABDE78D00E7B8A8 /* chests_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chests_ui@2x.png"; sourceTree = "<group>"; };
+		F6D67AAF1ABDE78D00E7B8A8 /* chests_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chests_ui@3x.png"; sourceTree = "<group>"; };
 		F6D789501A36B7B500078FA2 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		F6D789521A36B88A00078FA2 /* ParseImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseImpl.swift; sourceTree = "<group>"; };
 		F6D789541A36B90D00078FA2 /* DBFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBFactory.swift; sourceTree = "<group>"; };
@@ -831,6 +837,9 @@
 		F62DE8F51A2E319900E77B70 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F6D67AAD1ABDE78D00E7B8A8 /* chests_ui.png */,
+				F6D67AAE1ABDE78D00E7B8A8 /* chests_ui@2x.png */,
+				F6D67AAF1ABDE78D00E7B8A8 /* chests_ui@3x.png */,
 				F670E6E31ABB42B000C4ED4A /* Icon29.png */,
 				F670E6E41ABB42B000C4ED4A /* Icon29@2x.png */,
 				F670E6E51ABB42B000C4ED4A /* Icon29@3x.png */,
@@ -1368,6 +1377,7 @@
 				F6D9DFA81A75765400F72300 /* south@2x.png in Resources */,
 				F6B31E0A1AA42DA7005E04EB /* Body_Armour@2x.png in Resources */,
 				F608B60A1A7462B30072E6E0 /* energy_full.png in Resources */,
+				F6D67AB11ABDE78D00E7B8A8 /* chests_ui@2x.png in Resources */,
 				F6673B8E1A8AC93D0022966C /* lootz_ui@2x.png in Resources */,
 				F6B31E521AA42E34005E04EB /* Clarity_Potion@2x.png in Resources */,
 				F608B5F61A7462B30072E6E0 /* clarity_empty@2x.png in Resources */,
@@ -1475,6 +1485,7 @@
 				F6B31E4E1AA42E34005E04EB /* Clarity_Potion_selected.png in Resources */,
 				F6B31EB01AA43106005E04EB /* Axe_selected@3x.png in Resources */,
 				F608B5F21A7462B30072E6E0 /* clarity_75.png in Resources */,
+				F6D67AB21ABDE78D00E7B8A8 /* chests_ui@3x.png in Resources */,
 				F608B6141A7462B30072E6E0 /* health_75@2x.png in Resources */,
 				F6D9DF9C1A75765400F72300 /* north_red@2x.png in Resources */,
 				F6D9DFA51A75765400F72300 /* south_red@2x.png in Resources */,
@@ -1610,6 +1621,7 @@
 				F6B31E2E1AA42DFE005E04EB /* Dagger_Gold@2x.png in Resources */,
 				F6B31E1F1AA42DE8005E04EB /* Gold_selected@2x.png in Resources */,
 				F6D9DF541A75763500F72300 /* Spear@2x.png in Resources */,
+				F6D67AB01ABDE78D00E7B8A8 /* chests_ui.png in Resources */,
 				F608B5EC1A7462B30072E6E0 /* clarity_25.png in Resources */,
 				F62674BE1AA2692E000613D9 /* Sword_selected.png in Resources */,
 				F65D23251A781EFE009A8939 /* action_btn@2x.png in Resources */,
