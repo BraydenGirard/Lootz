@@ -19,6 +19,9 @@ class RightController: UIViewController {
     
     @IBOutlet var usernameLabel: UILabel!
     @IBOutlet var goldLabel: UILabel!
+    @IBOutlet var lvlLabel: UILabel!
+    @IBOutlet var xpLabel: UILabel!
+    
     
     @IBOutlet var actionBtn: UIButton!
     @IBOutlet var removeBtn: UIButton!
@@ -86,7 +89,6 @@ class RightController: UIViewController {
                     
                     if let loot = selectedGear {
                         var user = DBFactory.execute().getUser()
-                        println("Hello world, asccessing user \(user.getUsername())")
                         user.equipGear(loot)
                         
                         DBFactory.execute().saveUser(user)
@@ -158,7 +160,6 @@ class RightController: UIViewController {
                         user.removeGear(theWeapon)
                         DBFactory.execute().saveUser(user)
                     } else {
-                        println("In remove item")
                         let twoHandWeapon = DBFactory.execute().getUser().getEquipment(TWOHAND)
                         if let theTwoHandWeapon = twoHandWeapon {
                             var user = DBFactory.execute().getUser()
@@ -368,9 +369,12 @@ class RightController: UIViewController {
         setupInvButtons()
         setupEqpButtons()
         setupBars()
-        goldLabel.text = String(DBFactory.execute().getUser().getGold())
-        usernameLabel.text = DBFactory.execute().getUser().getUsername()
         
+        var user = DBFactory.execute().getUser()
+        goldLabel.text = String(user.getGold())
+        usernameLabel.text = user.getUsername()
+        lvlLabel.text = user.getLvl()
+        xpLabel.text = String(user.getXP())
     }
     
     func getInvImage(currentIndex: Int) -> UIImage? {

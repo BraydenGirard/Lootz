@@ -20,6 +20,7 @@ class ParseImpl: DatabaseManager {
         parseUser["health"] = user.getHealth()
         parseUser["energy"] = user.getEnergy()
         parseUser["clarity"] = user.getClarity()
+        parseUser["xp"] = user.getXP()
         parseUser["latHistory"] = user.getLatHistory()
         parseUser["lngHistory"] = user.getLngHistory()
         parseUser["gold"] = user.getGold()
@@ -83,7 +84,6 @@ class ParseImpl: DatabaseManager {
     //from server and add the new loot
     func saveUser(user: User) -> Bool {
         if PFUser.currentUser() != nil {
-            println("Inside save user")
             var parseLoot:PFObject?
             var parseLootArray = PFUser.currentUser()["loot"] as [PFObject]
             var newLoot = true
@@ -92,12 +92,10 @@ class ParseImpl: DatabaseManager {
             PFUser.currentUser()["health"] = user.getHealth()
             PFUser.currentUser()["energy"] = user.getEnergy()
             PFUser.currentUser()["clarity"] = user.getClarity()
+            PFUser.currentUser()["xp"] = user.getXP()
             PFUser.currentUser()["latHistory"] = user.getLatHistory()
             PFUser.currentUser()["lngHistory"] = user.getLngHistory()
             PFUser.currentUser()["gold"] = user.getGold()
-            
-            println("Size of inventory is \(user.getInventory().count)")
-            println("Size of equipment is \(user.getEquipment().count)")
             
             for var i=0; i<user.getInventory().count; i++ {
                 newLoot = true
@@ -157,14 +155,14 @@ class ParseImpl: DatabaseManager {
             PFUser.currentUser()["loot"] = parseLootArray
             
             PFObject.saveAllInBackground(parseLootArray, block: { (complete: Bool, error: NSError!) -> Void in
-            
+                if(error != nil) {
+                    println("Failed to save users loot to server")
+                }
                 PFUser.currentUser().saveInBackgroundWithBlock({ (complete: Bool, error: NSError!) -> Void in
                     if(error != nil) {
                         println("Failed to save user")
                     } else {
-                        println("User save complete")
                         self.updateUser()
-                        //NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
                     }
                 })
             })
@@ -190,8 +188,6 @@ class ParseImpl: DatabaseManager {
             PFUser.currentUser()["lngHistory"] = locationHistory.longitudes
             
             PFUser.currentUser().saveEventually()
-        } else {
-            NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
         }
     }
     
@@ -204,19 +200,20 @@ class ParseImpl: DatabaseManager {
             
             queryUser.getFirstObjectInBackgroundWithBlock({ (parseUser: PFObject!, error: NSError!) -> Void in
                 if parseUser != nil {
-                    println("Found user successfully")
-                    
                     PFUser.currentUser()["email"] = parseUser["email"]
                     PFUser.currentUser()["lootId"] = parseUser["lootId"]
                     PFUser.currentUser()["health"] = parseUser["health"]
                     PFUser.currentUser()["energy"] = parseUser["energy"]
                     PFUser.currentUser()["clarity"] = parseUser["clarity"]
+                    PFUser.currentUser()["xp"] = parseUser["xp"]
                     PFUser.currentUser()["latHistory"] = parseUser["latHistory"]
                     PFUser.currentUser()["lngHistory"] = parseUser["lngHistory"]
                     PFUser.currentUser()["gold"] = parseUser["gold"]
                     PFUser.currentUser()["loot"] = parseUser["loot"]
             
                     NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
+                } else {
+                    println("Failed to find user on server when trying to update")
                 }
             })
         } else {
@@ -225,7 +222,6 @@ class ParseImpl: DatabaseManager {
     }
     
     func findChests(lat: Double, lng: Double, distance: Double) {
-        println("Inside find chests")
         let currentLocation = PFGeoPoint(latitude:lat, longitude:lng)
      
         var query = PFQuery(className:"Chest")
@@ -268,7 +264,7 @@ class ParseImpl: DatabaseManager {
                 if loot != nil {
                     loot.deleteEventually()
                 } else {
-                    "Remove failed"
+                    "Removing loot from server failed"
                 }
             }
             
@@ -277,6 +273,28 @@ class ParseImpl: DatabaseManager {
         else {
             NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
         }
+    }
+    
+    func removeChestFromServer(chest: Chest) {
+        var removeQuery = PFQuery(className: "Chest")
+        let point = PFGeoPoint(latitude:chest.getLatitude(), longitude:chest.getLongitude())
+        
+        removeQuery.whereKey("location", nearGeoPoint: point, withinKilometers: 0.2)
+        
+        removeQuery.limit = 1
+        
+        removeQuery.findObjectsInBackgroundWithBlock { (objects: Array!, error: NSError!) -> Void in
+            var finalChests = [Chest]()
+            
+            if let chests = objects {
+                for c in chests {
+                    c.deleteEventually()
+                }
+            } else {
+                println("Could not find a chest to remove from server")
+            }
+        }
+
     }
     
     //=====================================================//
@@ -288,7 +306,7 @@ class ParseImpl: DatabaseManager {
     
     func getUserFromParse(parseUser: PFObject) -> User {
         var result = self.getLootFromParse(parseUser["loot"] as [PFObject])
-        var user = User(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, gold: parseUser["gold"] as Int, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, inventory: result.inventory, equipment: result.equipment, latHistory: parseUser["latHistory"] as [Double], lngHistory: parseUser["lngHistory"] as [Double], currentId: parseUser["lootId"] as Int)
+        var user = User(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, gold: parseUser["gold"] as Int, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, xp: parseUser["xp"] as Int, inventory: result.inventory, equipment: result.equipment, latHistory: parseUser["latHistory"] as [Double], lngHistory: parseUser["lngHistory"] as [Double], currentId: parseUser["lootId"] as Int)
         
         return user
     }

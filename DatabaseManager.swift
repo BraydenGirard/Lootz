@@ -19,4 +19,5 @@ protocol DatabaseManager {
     func updateUser()
     func findChests(lat: Double, lng: Double, distance: Double)
     func removeLootFromServer(loot: Loot)
+    func removeChestFromServer(chest: Chest)
 }

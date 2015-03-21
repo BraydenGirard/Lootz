@@ -28,14 +28,42 @@ class MainController: UIViewController {
     @IBOutlet var goldImg: UIImageView!
     @IBOutlet var itemImg: UIImageView!
  
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var viewBlocker: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        activityIndicator.startAnimating()
+        disableView()
         hideLootzUI()
 
         notificationCenter.addObserver(self, selector: "exit:", name: "exit", object: nil)
         notificationCenter.addObserver(self, selector: "chestSearchComplete:", name: "chestSearchComplete", object: nil)
         
+      
+        
+        notificationCenter.addObserver(self, selector: "refresh", name: "refresh", object: nil)
+        DBFactory.execute().updateUser()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if(!LocationController.sharedInstance.startLocationServices()) {
+            self.showLocationPermissionError()
+        }
+    }
+    
+    func refresh() {
+        activityIndicator.stopAnimating()
+        enableView()
+    }
+    
+    func disableView() {
+        viewBlocker.hidden = false
+    }
+    
+    func enableView() {
+        viewBlocker.hidden = true
         //------------right  swipe gestures in view--------------//
         let swipeRight = UISwipeGestureRecognizer(target: self, action: Selector("rightSwiped"))
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
@@ -45,14 +73,6 @@ class MainController: UIViewController {
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: Selector("leftSwiped"))
         swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
         self.view.addGestureRecognizer(swipeLeft)
-        
-        DBFactory.execute().updateUser()
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        if(!LocationController.sharedInstance.startLocationServices()) {
-            self.showLocationPermissionError()
-        }
     }
     
     func exit(notification: NSNotification) {
@@ -97,8 +117,10 @@ class MainController: UIViewController {
             searchBtn.enabled = false
             var latitude = currentLocation.coordinate.latitude as Double
             var longitude = currentLocation.coordinate.longitude as Double
-            var distance = DBFactory.execute().getUser().getClarityDistance()
+            var user = DBFactory.execute().getUser()
+            var distance = user.getClarityDistance()
             DBFactory.execute().findChests(latitude, lng: longitude, distance: distance)
+            DBFactory.execute().saveUser(user)
         }
         else {
             showLocationError()
@@ -142,6 +164,8 @@ class MainController: UIViewController {
                     resultUser.user.setEnergy(currentEnergy - 25)
                 }
                  println("The result user id is: \(resultUser.user.getId())")
+                resultUser.user.gainXP(CHESTXP)
+                DBFactory.execute().removeChestFromServer(nearestChest!)
                 DBFactory.execute().saveUser(resultUser.user)
                
                 hideLootzUI()

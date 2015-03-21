@@ -12,6 +12,8 @@ let FULLHEALTH = 100
 let FULLENERGY = 100
 let FULLCLARITY = 100
 let FULLINVENTORY = 16
+let CHESTXP = 10
+let KILLXP = 100
 
 class User {
     
@@ -22,6 +24,7 @@ class User {
     private var health: Int
     private var energy: Int
     private var clarity: Int
+    private var xp: Int
     private var inventory: [Loot]
     private var equipment: [Gear]
     private var latHistory: [Double]
@@ -36,6 +39,7 @@ class User {
         self.health = FULLHEALTH
         self.energy = FULLENERGY
         self.clarity = FULLCLARITY
+        self.xp = 0
         self.inventory = []
         self.equipment = []
         self.latHistory = []
@@ -51,6 +55,7 @@ class User {
         self.health = FULLHEALTH
         self.energy = FULLENERGY
         self.clarity = FULLCLARITY
+        self.xp = 0
         self.inventory = []
         self.equipment = []
         self.latHistory = []
@@ -58,7 +63,7 @@ class User {
         self.currentId = 0
     }
     
-    init(username: String, email: String, password: String, gold: Int, health: Int, energy: Int, clarity: Int, inventory: [Loot], equipment: [Gear], latHistory: [Double], lngHistory: [Double], currentId: Int) {
+    init(username: String, email: String, password: String, gold: Int, health: Int, energy: Int, clarity: Int, xp: Int, inventory: [Loot], equipment: [Gear], latHistory: [Double], lngHistory: [Double], currentId: Int) {
         self.username = username
         self.email = email
         self.password = password
@@ -66,6 +71,7 @@ class User {
         self.health = health
         self.energy = energy
         self.clarity = clarity
+        self.xp = xp
         self.inventory = inventory
         self.equipment = equipment
         self.latHistory = latHistory
@@ -137,10 +143,10 @@ class User {
     func getClarityDistance() -> Double {
         if(clarity != 0) {
             clarity = clarity - 25
-            return 2
+            return 0.3
         }
         else {
-            return 1
+            return 0.1
         }
     }
     
@@ -150,6 +156,14 @@ class User {
     
     func restoreClarity() {
         self.clarity = FULLCLARITY
+    }
+    
+    func getXP() -> Int{
+        return self.xp
+    }
+    
+    func gainXP(xp: Int) {
+        self.xp = self.xp + xp
     }
     
     func getHitDamage() -> Int {
@@ -188,7 +202,7 @@ class User {
         var damage = 0
         
         for e in self.equipment {
-            if(e.getType() != ONEHAND || e.getType() != TWOHAND) {
+            if(e.getType() == ONEHANDARMOUR || e.getType() == HELMET || e.getType() == BARMOUR){
                 damage += e.getDamage()
             }
         }
@@ -199,11 +213,19 @@ class User {
         var chance = 0
         
         for e in self.equipment {
-            if(e.getType() != ONEHAND || e.getType() != TWOHAND) {
+            if(e.getType() == ONEHANDARMOUR || e.getType() == HELMET || e.getType() == BARMOUR){
                 chance += e.getAccuracy()
             }
         }
         return chance;
+    }
+    
+    func getLvl() -> String {
+        println(self.getHitChance())
+        println(self.getBlockChance())
+        var lvl = self.getHitChance() + self.getBlockChance()
+
+        return String(lvl)
     }
     
     //Returns true if item is added
@@ -245,11 +267,9 @@ class User {
     
     //Removes item from inventory to equipment
     func equipFromInventory(item: Gear) -> Bool {
-        //println("Time to equip")
      
         for var i=0; i<self.inventory.count; i++ {
             if(self.inventory[i].getId() == item.getId()) {
-                println("Found item")
                 self.inventory.removeAtIndex(i)
                 self.equipment.append(item)
                 return true
@@ -270,35 +290,28 @@ class User {
         if(self.equipmentCount(item.getType()) == 0) {
             //println("Equiping item")
             if(item.getType() == ONEHAND && self.equipmentCount(TWOHAND) == 0) {
-                 println("Inside first equip")
                 equipFromInventory(item)
                 return true
             } else if(item.getType() == TWOHAND && self.equipmentCount(ONEHAND) == 0 && self.equipmentCount(ONEHANDARMOUR) == 0) {
-                 println("Inside second equip")
                 equipFromInventory(item)
                 return true
             } else if(item.getType() == ONEHANDARMOUR && self.equipmentCount(TWOHAND) == 0 && self.equipmentCount(ONEHAND) < 2) {
-                 println("Inside third equip")
                 equipFromInventory(item)
                 return true
             } else if(item.getType() == HELMET) {
-                 println("Inside fourth equip")
                 equipFromInventory(item)
                 return true
             } else if(item.getType() == BARMOUR) {
-                 println("Inside fifth equip")
                 equipFromInventory(item)
                 return true
             }
         }
         else if(self.equipmentCount(item.getType()) == 1){
             if(item.getType() == ONEHAND && self.equipmentCount(ONEHANDARMOUR) == 0) {
-                println("Inside else if equip")
                 equipFromInventory(item)
                 return true
             }
         }
-        println("false is hit")
         return false
     }
     
@@ -353,10 +366,8 @@ class User {
     
     func getDualEquipment(type: String) -> [Loot]? {
         var weapons = [Loot]()
-        println(self.equipment.count)
         for tempItem in self.equipment {
             if(type == tempItem.getType()) {
-                println("Weapon found")
                 weapons.append(tempItem)
             }
         }
