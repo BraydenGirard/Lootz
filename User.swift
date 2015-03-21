@@ -270,24 +270,30 @@ class User {
         if(self.equipmentCount(item.getType()) == 0) {
             //println("Equiping item")
             if(item.getType() == ONEHAND && self.equipmentCount(TWOHAND) == 0) {
+                 println("Inside first equip")
                 equipFromInventory(item)
                 return true
             } else if(item.getType() == TWOHAND && self.equipmentCount(ONEHAND) == 0 && self.equipmentCount(ONEHANDARMOUR) == 0) {
+                 println("Inside second equip")
                 equipFromInventory(item)
                 return true
             } else if(item.getType() == ONEHANDARMOUR && self.equipmentCount(TWOHAND) == 0 && self.equipmentCount(ONEHAND) < 2) {
+                 println("Inside third equip")
                 equipFromInventory(item)
                 return true
             } else if(item.getType() == HELMET) {
+                 println("Inside fourth equip")
                 equipFromInventory(item)
                 return true
             } else if(item.getType() == BARMOUR) {
+                 println("Inside fifth equip")
                 equipFromInventory(item)
                 return true
             }
         }
         else if(self.equipmentCount(item.getType()) == 1){
             if(item.getType() == ONEHAND && self.equipmentCount(ONEHANDARMOUR) == 0) {
+                println("Inside else if equip")
                 equipFromInventory(item)
                 return true
             }
@@ -299,9 +305,8 @@ class User {
     //Returns true if inventory has room for gear
     func removeGear(gear: Loot) -> Bool {
         if(self.addInventory(gear)) {
-            
             for var i=0; i<self.equipment.count; i++ {
-                if(self.equipment[i] == gear) {
+                if(self.equipment[i].getId() == gear.getId()) {
                     self.equipment.removeAtIndex(i)
                 }
             }
@@ -347,15 +352,20 @@ class User {
     }
     
     func getDualEquipment(type: String) -> [Loot]? {
-        var index = 0
         var weapons = [Loot]()
+        println(self.equipment.count)
         for tempItem in self.equipment {
             if(type == tempItem.getType()) {
-                weapons[index] = tempItem;
-                index++
+                println("Weapon found")
+                weapons.append(tempItem)
             }
         }
-        return nil
+        
+        if(weapons.count > 0) {
+            return weapons
+        } else {
+            return nil
+        }
     }
     
     func getLocationHistory() -> (latitudes: [Double], longitudes: [Double]) {

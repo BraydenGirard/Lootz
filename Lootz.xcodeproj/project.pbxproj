@@ -367,6 +367,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F606D5261ABD177000A22410 /* Current Chest 2.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Current Chest 2.gpx"; sourceTree = "<group>"; };
 		F608B5A11A7422090072E6E0 /* LeftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftController.swift; sourceTree = "<group>"; };
 		F608B5A31A7422140072E6E0 /* RightController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightController.swift; sourceTree = "<group>"; };
 		F608B5A51A742D990072E6E0 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
@@ -1224,6 +1225,7 @@
 				F6B31DE31AA3C86D005E04EB /* 1279 Meadowlands.gpx */,
 				F6B31DE41AA3C87A005E04EB /* City Hall.gpx */,
 				F68B631C1AA63ECE00122469 /* Current Chest.gpx */,
+				F606D5261ABD177000A22410 /* Current Chest 2.gpx */,
 			);
 			name = Locations;
 			sourceTree = "<group>";

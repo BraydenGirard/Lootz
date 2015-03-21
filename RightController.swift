@@ -87,7 +87,7 @@ class RightController: UIViewController {
                     if let loot = selectedGear {
                         var user = DBFactory.execute().getUser()
                         println("Hello world, asccessing user \(user.getUsername())")
-                        user.equipFromInventory(loot)
+                        user.equipGear(loot)
                         
                         DBFactory.execute().saveUser(user)
                     
@@ -123,15 +123,49 @@ class RightController: UIViewController {
                 if(theButton.tag == 116) {
                     let helmet = DBFactory.execute().getUser().getEquipment(HELMET)
                     if let theHelmet = helmet {
-                        DBFactory.execute().getUser().removeGear(theHelmet)
-                        refresh()
+                        var user = DBFactory.execute().getUser()
+                        user.removeGear(theHelmet)
+                        DBFactory.execute().saveUser(user)
                     }
                 } else if(theButton.tag == 117) {
-                    //Remove the shield if room in inventory
+                    let armour = DBFactory.execute().getUser().getEquipment(ONEHANDARMOUR)
+                    if let theArmour = armour {
+                        var user = DBFactory.execute().getUser()
+                        user.removeGear(theArmour)
+                        DBFactory.execute().saveUser(user)
+                    } else {
+               
+                        let weapon = DBFactory.execute().getUser().getEquipment(ONEHAND)
+                        if let theWeapon = weapon {
+                            var user = DBFactory.execute().getUser()
+                            user.removeGear(theWeapon)
+                            DBFactory.execute().saveUser(user)
+                        }
+                    }
                 } else if(theButton.tag == 118) {
                     //Remove the chest armour if room in inventory
+                    let chest = DBFactory.execute().getUser().getEquipment(BARMOUR)
+                    if let theChest = chest {
+                        var user = DBFactory.execute().getUser()
+                        user.removeGear(theChest)
+                        DBFactory.execute().saveUser(user)
+                    }
                 } else if(theButton.tag == 119) {
-                    //Remove the sword if room in inventory
+                    
+                    let weapon = DBFactory.execute().getUser().getEquipment(ONEHAND)
+                    if let theWeapon = weapon {
+                        var user = DBFactory.execute().getUser()
+                        user.removeGear(theWeapon)
+                        DBFactory.execute().saveUser(user)
+                    } else {
+                        println("In remove item")
+                        let twoHandWeapon = DBFactory.execute().getUser().getEquipment(TWOHAND)
+                        if let theTwoHandWeapon = twoHandWeapon {
+                            var user = DBFactory.execute().getUser()
+                            user.removeGear(theTwoHandWeapon)
+                            DBFactory.execute().saveUser(user)
+                        }
+                    }
                 }
             }
         }
@@ -234,21 +268,25 @@ class RightController: UIViewController {
             offHandBtn.setImage(UIImage(named:"sheild_slot_selected"), forState: UIControlState.Selected)
             
             if let weapons = DBFactory.execute().getUser().getDualEquipment(ONEHAND) {
-                if let primaryHandImg = weapons[0].getName() as String? {
+                if let primaryHandWep = weapons[0] as Loot? {
+                    var primaryHandImg = primaryHandWep.getName()
                     primaryHandBtn.setImage(UIImage(named:primaryHandImg), forState: UIControlState.Normal)
                     primaryHandBtn.setImage(UIImage(named:primaryHandImg + "_selected"), forState: UIControlState.Selected)
                     primaryHandBtn.setBackgroundImage(UIImage(named: "weapon_slot"), forState: UIControlState.Normal)
                     primaryHandBtn.setBackgroundImage(UIImage(named: "weapon_slot_selected"), forState: UIControlState.Selected)
                 }
-                if let offHandImg = weapons[1].getName() as String? {
-                    offHandBtn.setImage(UIImage(named:offHandImg), forState: UIControlState.Normal)
-                    offHandBtn.setImage(UIImage(named:offHandImg + "_selected"), forState: UIControlState.Selected)
-                    offHandBtn.setBackgroundImage(UIImage(named: "sheild_slot"), forState: UIControlState.Normal)
-                    offHandBtn.setBackgroundImage(UIImage(named: "sheild_slot_selected"), forState: UIControlState.Selected)
+                if(weapons.count > 1) {
+                    if let offHandWep = weapons[1] as Loot? {
+                        var offHandImg = offHandWep.getName()
+                        offHandBtn.setImage(UIImage(named:offHandImg), forState: UIControlState.Normal)
+                        offHandBtn.setImage(UIImage(named:offHandImg + "_selected"), forState: UIControlState.Selected)
+                        offHandBtn.setBackgroundImage(UIImage(named: "sheild_slot"), forState: UIControlState.Normal)
+                        offHandBtn.setBackgroundImage(UIImage(named: "sheild_slot_selected"), forState: UIControlState.Selected)
+                    }
                 }
-            } else if let primaryHandImg = DBFactory.execute().getUser().getEquipment(ONEHAND)?.getName() {
+            } else if let primaryHandImg = DBFactory.execute().getUser().getEquipment(TWOHAND)?.getName() {
                 primaryHandBtn.setImage(UIImage(named:primaryHandImg), forState: UIControlState.Normal)
-                primaryHandBtn.setImage(UIImage(named:primaryHandImg + "_selected"), forState: UIControlState.Normal)
+                primaryHandBtn.setImage(UIImage(named:primaryHandImg + "_selected"), forState: UIControlState.Selected)
                 primaryHandBtn.setBackgroundImage(UIImage(named: "weapon_slot"), forState: UIControlState.Normal)
                 primaryHandBtn.setBackgroundImage(UIImage(named: "weapon_slot_selected"), forState: UIControlState.Selected)
                 

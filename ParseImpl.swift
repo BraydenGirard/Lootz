@@ -97,7 +97,7 @@ class ParseImpl: DatabaseManager {
             PFUser.currentUser()["gold"] = user.getGold()
             
             println("Size of inventory is \(user.getInventory().count)")
-            
+            println("Size of equipment is \(user.getEquipment().count)")
             
             for var i=0; i<user.getInventory().count; i++ {
                 newLoot = true
@@ -109,6 +109,12 @@ class ParseImpl: DatabaseManager {
                     if(localLootId == parseLoot!["lootId"] as String) {
                         //println("Found unique loot")
                         newLoot = false
+                        
+                        if(parseLoot!["equiped"] as Bool) {
+                            parseLootArray[k]["equiped"] = false
+                        }
+                        
+                        break
                     }
                     
                 }
@@ -139,22 +145,12 @@ class ParseImpl: DatabaseManager {
                     parseLoot = parseLootArray[k]
                     let localLootId = String(user.getEquipment()[i].getId())
                     if(localLootId == parseLoot!["lootId"] as String) {
-                        println("Found unique equipment")
-                        newLoot = false
+                        
+                        if(!(parseLoot!["equiped"] as Bool)) {
+                            parseLootArray[k]["equiped"] = true
+                        }
+                        break
                     }
-                    
-                }
-                
-                if(newLoot) {
-                    var loot = PFObject(className: "Loot")
-                    var gear = user.getEquipment()[i]
-                    
-                    loot["type"] = gear.getClassType()
-                    loot["lootId"] = String(gear.getId())
-                    loot["name"] = gear.getName()
-                    loot["gold"] = gear.isGold()
-                    loot["equiped"] = true
-                    parseLootArray.append(loot)
                 }
             }
             
