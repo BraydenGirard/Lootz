@@ -16,6 +16,7 @@ let CHESTXP = 10
 let KILLXP = 100
 let SEARCHDISTANCE = 0.1
 let BOOSTEDSEARCHDISTANCE = 0.3
+let CARLETON = (lat: 45.386583, lng: -75.696123)
 
 class User {
     
@@ -32,6 +33,9 @@ class User {
     private var latHistory: [Double]
     private var lngHistory: [Double]
     private var currentId: Int
+    private var homeLat: Double
+    private var homeLng: Double
+    private var home: Bool
     
     init() {
         self.username = UNKNOWN
@@ -47,6 +51,9 @@ class User {
         self.latHistory = []
         self.lngHistory = []
         self.currentId = 0
+        self.homeLat = CARLETON.lat
+        self.homeLng = CARLETON.lng
+        self.home = false
     }
     
     init(username: String, email: String, password: String) {
@@ -63,9 +70,12 @@ class User {
         self.latHistory = []
         self.lngHistory = []
         self.currentId = 0
+        self.homeLat = CARLETON.lat
+        self.homeLng = CARLETON.lng
+        self.home = false
     }
     
-    init(username: String, email: String, password: String, gold: Int, health: Int, energy: Int, clarity: Int, xp: Int, inventory: [Loot], equipment: [Gear], latHistory: [Double], lngHistory: [Double], currentId: Int) {
+    init(username: String, email: String, password: String, gold: Int, health: Int, energy: Int, clarity: Int, xp: Int, inventory: [Loot], equipment: [Gear], latHistory: [Double], lngHistory: [Double], currentId: Int, homeLat: Double, homeLng: Double, home: Bool) {
         self.username = username
         self.email = email
         self.password = password
@@ -79,6 +89,9 @@ class User {
         self.latHistory = latHistory
         self.lngHistory = lngHistory
         self.currentId = currentId
+        self.homeLat = homeLat
+        self.homeLng = homeLng
+        self.home = home
     }
     
     func getNextId() -> Int {
@@ -166,6 +179,30 @@ class User {
     
     func gainXP(xp: Int) {
         self.xp = self.xp + xp
+    }
+    
+    func getHomeLat() -> Double {
+        return homeLat
+    }
+    
+    func getHomeLng() -> Double {
+        return homeLng
+    }
+    
+    func setHomeLat(homeLat: Double) {
+        self.homeLat = homeLat
+    }
+    
+    func setHomeLng(homeLng: Double) {
+        self.homeLng = homeLng
+    }
+    
+    func isHome() -> Bool {
+        return home
+    }
+    
+    func setHome(home: Bool) {
+        self.home = home
     }
     
     func getHitDamage() -> Int {

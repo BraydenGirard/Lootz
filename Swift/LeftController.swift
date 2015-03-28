@@ -50,7 +50,6 @@ class LeftController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func chestDiscoveryComplete(notification: NSNotification) {
-        println("Chest discovery complete")
         let userInfo:Dictionary<String,[Chest]!> = notification.userInfo as Dictionary<String,[Chest]!>
         chests = userInfo["chests"] as [Chest]!
        
@@ -99,9 +98,6 @@ class LeftController: UIViewController, UITableViewDelegate, UITableViewDataSour
             errorLabel.text = "Not enough energy to loot"
             errorLabel.hidden = false;
         }
-        
-
-        println("Touched cell \(indexPath.row)")
     }
     
     func confirmLoot(chest: Chest) {
@@ -132,13 +128,14 @@ class LeftController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if(resultUser.success) {
             resultUser.user.addGold(chest.getGold())
             
-            resultUser.user.setEnergy(resultUser.user.getEnergy() - 50)
+            if(!resultUser.user.isHome()) {
+                resultUser.user.setEnergy(resultUser.user.getEnergy() - 50)
+            }
             
             resultUser.user.gainXP(CHESTXP)
             DBFactory.execute().removeChestFromServer(chest)
             for var i=0; i<resultUser.user.getInventory().count; i++ {
                 var loot = resultUser.user.getInventory()[i]
-                println(loot.getId())
             }
             DBFactory.execute().saveUser(resultUser.user)
         } else {

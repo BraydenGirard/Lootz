@@ -26,6 +26,9 @@ class ParseImpl: DatabaseManager {
         parseUser["gold"] = user.getGold()
         parseUser["loot"] = []
         parseUser["lootId"] = user.getId()
+        parseUser["homeLat"] = user.getHomeLat()
+        parseUser["homeLng"] = user.getHomeLng()
+        parseUser["home"] = user.isHome()
         
         parseUser.signUpInBackgroundWithBlock {
             (succeeded: Bool!, error: NSError!) -> Void in
@@ -96,6 +99,9 @@ class ParseImpl: DatabaseManager {
             PFUser.currentUser()["latHistory"] = user.getLatHistory()
             PFUser.currentUser()["lngHistory"] = user.getLngHistory()
             PFUser.currentUser()["gold"] = user.getGold()
+            PFUser.currentUser()["homeLat"] = user.getHomeLat()
+            PFUser.currentUser()["homeLng"] = user.getHomeLng()
+            PFUser.currentUser()["home"] = user.isHome()
             
             for var i=0; i<user.getInventory().count; i++ {
                 newLoot = true
@@ -105,7 +111,6 @@ class ParseImpl: DatabaseManager {
                     let localLootId = String(user.getInventory()[i].getId())
                     
                     if(localLootId == parseLoot!["lootId"] as String) {
-                        //println("Found unique loot")
                         newLoot = false
                         
                         if(parseLoot!["equiped"] as Bool) {
@@ -119,10 +124,10 @@ class ParseImpl: DatabaseManager {
                 if(newLoot) {
                     var loot = PFObject(className: "Loot")
                     loot["type"] = user.getInventory()[i].getClassType()
-                    println("Class type is: \(user.getInventory()[i].getClassType())")
+
                     if(user.getInventory()[i].getClassType() == TYPEGEAR) {
                         var gear = user.getInventory()[i] as Gear
-                          println("Saved gear with ID: \(gear.getId())")
+                        
                         loot["lootId"] = String(gear.getId())
                         loot["name"] = gear.getName()
                         loot["gold"] = gear.isGold()
@@ -130,7 +135,7 @@ class ParseImpl: DatabaseManager {
                     } else if(user.getInventory()[i].getClassType() == TYPEPOTION) {
                         
                         var potion = user.getInventory()[i]
-                        println("Saved potion with ID: \(potion.getId())")
+                    
                         loot["lootId"] = String(potion.getId())
                         loot["name"] = potion.getName()
                         loot["gold"] = false
@@ -213,6 +218,9 @@ class ParseImpl: DatabaseManager {
                     PFUser.currentUser()["lngHistory"] = parseUser["lngHistory"]
                     PFUser.currentUser()["gold"] = parseUser["gold"]
                     PFUser.currentUser()["loot"] = parseUser["loot"]
+                    PFUser.currentUser()["homeLat"] = parseUser["homeLng"]
+                    PFUser.currentUser()["homeLng"] = parseUser["homeLat"]
+                    PFUser.currentUser()["home"] = parseUser["home"]
             
                     NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
                 } else {
@@ -306,8 +314,6 @@ class ParseImpl: DatabaseManager {
             var discoveredChestLngs = user.getLngHistory()
             var discoveredChestLats = user.getLatHistory()
             
-            println("Discovered this many chests: \(discoveredChestLngs.count)")
-            
             if(discoveredChestLngs.count > 0) {
                 let currentLocation = PFGeoPoint(latitude:discoveredChestLats[0], longitude:discoveredChestLngs[0])
                 
@@ -326,13 +332,11 @@ class ParseImpl: DatabaseManager {
                             finalChests.append(chest)
                         }
                     }
-                    println("Founds this many chests in the area: \(finalChests.count)")
                     
                     var discoveredChestLngs = user.getLngHistory()
                     var discoveredChestLats = user.getLatHistory()
                     
                     if(finalChests.count < 1 && discoveredChestLngs.count > 0) {
-                        println("in recurse function")
                         var user = self.getUser()
                         
                         discoveredChestLngs.removeAtIndex(0)
@@ -367,7 +371,7 @@ class ParseImpl: DatabaseManager {
     
     func getUserFromParse(parseUser: PFObject) -> User {
         var result = self.getLootFromParse(parseUser["loot"] as [PFObject])
-        var user = User(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, gold: parseUser["gold"] as Int, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, xp: parseUser["xp"] as Int, inventory: result.inventory, equipment: result.equipment, latHistory: parseUser["latHistory"] as [Double], lngHistory: parseUser["lngHistory"] as [Double], currentId: parseUser["lootId"] as Int)
+        var user = User(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, gold: parseUser["gold"] as Int, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, xp: parseUser["xp"] as Int, inventory: result.inventory, equipment: result.equipment, latHistory: parseUser["latHistory"] as [Double], lngHistory: parseUser["lngHistory"] as [Double], currentId: parseUser["lootId"] as Int, homeLat: parseUser["homeLat"] as Double, homeLng: parseUser["homeLng"] as Double, home: parseUser["home"] as Bool)
         
         return user
     }

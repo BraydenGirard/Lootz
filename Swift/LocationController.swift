@@ -33,7 +33,9 @@ class LocationController: NSObject, CLLocationManagerDelegate{
             return false
         default:
             manager.startUpdatingLocation()
-            //manager.startMonitoringForRegion(DBFactory.execute().getUser().getHomeLocation())
+            let user = DBFactory.execute().getUser()
+            let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: user.getHomeLat(), longitude: user.getHomeLng()), radius: 30, identifier: "Home")
+            manager.stopMonitoringForRegion(homeRegion)
         }
         return true
     }
@@ -51,7 +53,9 @@ class LocationController: NSObject, CLLocationManagerDelegate{
             return false
         default:
             manager.startMonitoringSignificantLocationChanges()
-            //manager.startMonitoringForRegion(DBFactory.execute().getUser().getHomeLocation())
+            let user = DBFactory.execute().getUser()
+            let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: user.getHomeLat(), longitude: user.getHomeLng()), radius: 30, identifier: "Home")
+            manager.startMonitoringForRegion(homeRegion)
              println("Background location started")
         }
         return true
@@ -59,12 +63,16 @@ class LocationController: NSObject, CLLocationManagerDelegate{
     
     func stopLocationServices() {
         manager.stopUpdatingLocation()
-        //manager.stopMonitoringForRegion(DBFactory.execute().getUser().getHomeLocation())
+        let user = DBFactory.execute().getUser()
+        let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: user.getHomeLat(), longitude: user.getHomeLng()), radius: 30, identifier: "Home")
+        manager.stopMonitoringForRegion(homeRegion)
     }
     
     func stopBackgroundLocationServices() {
         manager.stopMonitoringSignificantLocationChanges()
-        //manager.stopMonitoringForRegion(DBFactory.execute().getUser().getHomeLocation())
+        let user = DBFactory.execute().getUser()
+        let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: user.getHomeLat(), longitude: user.getHomeLng()), radius: 30, identifier: "Home")
+        manager.stopMonitoringForRegion(homeRegion)
     }
     
     func getCurrentLocation() -> CLLocation? {
@@ -93,9 +101,16 @@ class LocationController: NSObject, CLLocationManagerDelegate{
     
     func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
         NSLog("Entering region")
+        var user = DBFactory.execute().getUser()
+        user.setHome(true)
+        user.setEnergy(FULLENERGY)
+        DBFactory.execute().saveUser(user)
     }
     
     func locationManager(manager: CLLocationManager!, didExitRegion region: CLRegion!) {
         NSLog("Exit region")
+        var user = DBFactory.execute().getUser()
+        user.setHome(false)
+        DBFactory.execute().saveUser(user)
     }
 }

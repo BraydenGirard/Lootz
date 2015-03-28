@@ -101,7 +101,17 @@ class MainController: UIViewController {
     }
 
     @IBAction func saveLocationBtnAction(sender: UIButton) {
-        
+        if let currentLocation = LocationController.sharedInstance.getCurrentLocation() {
+            var latitude = currentLocation.coordinate.latitude as Double
+            var longitude = currentLocation.coordinate.longitude as Double
+            var user = DBFactory.execute().getUser()
+            user.setHomeLat(latitude)
+            user.setHomeLng(longitude)
+            user.setHome(true)
+            DBFactory.execute().saveUser(user)
+        } else {
+            showLocationError()
+        }
     }
     
     @IBAction func viewLocationBtnAction(sender: UIButton) {
@@ -160,10 +170,11 @@ class MainController: UIViewController {
             let resultUser = nearestChest!.getLoot()
             if(resultUser.success) {
                 resultUser.user.addGold(nearestChest!.getGold())
-               
-                resultUser.user.setEnergy(currentEnergy - 25)
                 
-                println("The result user id is: \(resultUser.user.getId())")
+                if(!user.isHome()) {
+                    resultUser.user.setEnergy(currentEnergy - 25)
+                }
+
                 resultUser.user.gainXP(CHESTXP)
                 DBFactory.execute().removeChestFromServer(nearestChest!)
                 DBFactory.execute().saveUser(resultUser.user)
