@@ -349,6 +349,16 @@
 		F6E628F81AC70A3E00DA1009 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E628F21AC70A3E00DA1009 /* ParseCrashReporting.framework */; };
 		F6E628F91AC70A3E00DA1009 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E628F31AC70A3E00DA1009 /* ParseFacebookUtils.framework */; };
 		F6E628FA1AC70A3E00DA1009 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E628F41AC70A3E00DA1009 /* ParseUI.framework */; };
+		F6E628FC1AC7111E00DA1009 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = F6E628FB1AC7111E00DA1009 /* success.wav */; };
+		F6E629061AC712C700DA1009 /* splash_title.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E628FD1AC712C700DA1009 /* splash_title.png */; };
+		F6E629071AC712C700DA1009 /* splash_title@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E628FE1AC712C700DA1009 /* splash_title@2x.png */; };
+		F6E629081AC712C700DA1009 /* splash_title@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E628FF1AC712C700DA1009 /* splash_title@3x.png */; };
+		F6E629091AC712C700DA1009 /* daydream_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E629001AC712C700DA1009 /* daydream_logo@3x.png */; };
+		F6E6290A1AC712C700DA1009 /* daydream_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E629011AC712C700DA1009 /* daydream_logo.png */; };
+		F6E6290B1AC712C700DA1009 /* daydream_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E629021AC712C700DA1009 /* daydream_logo@2x.png */; };
+		F6E6290C1AC712C700DA1009 /* splash_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E629031AC712C700DA1009 /* splash_icon.png */; };
+		F6E6290D1AC712C700DA1009 /* splash_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E629041AC712C700DA1009 /* splash_icon@3x.png */; };
+		F6E6290E1AC712C700DA1009 /* splash_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E629051AC712C700DA1009 /* splash_icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -709,6 +719,16 @@
 		F6E628F21AC70A3E00DA1009 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = Frameworks/ParseCrashReporting.framework; sourceTree = SOURCE_ROOT; };
 		F6E628F31AC70A3E00DA1009 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = Frameworks/ParseFacebookUtils.framework; sourceTree = SOURCE_ROOT; };
 		F6E628F41AC70A3E00DA1009 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Frameworks/ParseUI.framework; sourceTree = SOURCE_ROOT; };
+		F6E628FB1AC7111E00DA1009 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = success.wav; path = Resources/Sounds/success.wav; sourceTree = "<group>"; };
+		F6E628FD1AC712C700DA1009 /* splash_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_title.png; path = Resources/Images/splash_title.png; sourceTree = "<group>"; };
+		F6E628FE1AC712C700DA1009 /* splash_title@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash_title@2x.png"; path = "Resources/Images/splash_title@2x.png"; sourceTree = "<group>"; };
+		F6E628FF1AC712C700DA1009 /* splash_title@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash_title@3x.png"; path = "Resources/Images/splash_title@3x.png"; sourceTree = "<group>"; };
+		F6E629001AC712C700DA1009 /* daydream_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "daydream_logo@3x.png"; path = "Resources/Images/daydream_logo@3x.png"; sourceTree = "<group>"; };
+		F6E629011AC712C700DA1009 /* daydream_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = daydream_logo.png; path = Resources/Images/daydream_logo.png; sourceTree = "<group>"; };
+		F6E629021AC712C700DA1009 /* daydream_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "daydream_logo@2x.png"; path = "Resources/Images/daydream_logo@2x.png"; sourceTree = "<group>"; };
+		F6E629031AC712C700DA1009 /* splash_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_icon.png; path = Resources/Images/splash_icon.png; sourceTree = "<group>"; };
+		F6E629041AC712C700DA1009 /* splash_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash_icon@3x.png"; path = "Resources/Images/splash_icon@3x.png"; sourceTree = "<group>"; };
+		F6E629051AC712C700DA1009 /* splash_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash_icon@2x.png"; path = "Resources/Images/splash_icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1077,6 +1097,15 @@
 				F6E627611AC707EA00DA1009 /* Spear.png */,
 				F6E627621AC707EA00DA1009 /* Spear@2x.png */,
 				F6E627631AC707EA00DA1009 /* Spear@3x.png */,
+				F6E628FD1AC712C700DA1009 /* splash_title.png */,
+				F6E628FE1AC712C700DA1009 /* splash_title@2x.png */,
+				F6E628FF1AC712C700DA1009 /* splash_title@3x.png */,
+				F6E629001AC712C700DA1009 /* daydream_logo@3x.png */,
+				F6E629011AC712C700DA1009 /* daydream_logo.png */,
+				F6E629021AC712C700DA1009 /* daydream_logo@2x.png */,
+				F6E629031AC712C700DA1009 /* splash_icon.png */,
+				F6E629041AC712C700DA1009 /* splash_icon@3x.png */,
+				F6E629051AC712C700DA1009 /* splash_icon@2x.png */,
 				F6E627641AC707EA00DA1009 /* Staff_Gold_selected.png */,
 				F6E627651AC707EA00DA1009 /* Staff_Gold_selected@2x.png */,
 				F6E627661AC707EB00DA1009 /* Staff_Gold_selected@3x.png */,
@@ -1124,6 +1153,7 @@
 		F62DE8F61A2E31A400E77B70 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				F6E628FB1AC7111E00DA1009 /* success.wav */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -1330,6 +1360,7 @@
 				F6E6278D1AC707EB00DA1009 /* action_btn@3x.png in Resources */,
 				F6E628A41AC707EB00DA1009 /* Sword_Gold@3x.png in Resources */,
 				F6E628B01AC707EB00DA1009 /* Toy_Sword@3x.png in Resources */,
+				F6E628FC1AC7111E00DA1009 /* success.wav in Resources */,
 				F6E627C51AC707EB00DA1009 /* clarity_75@2x.png in Resources */,
 				F6E628281AC707EB00DA1009 /* Helmet_selected@2x.png in Resources */,
 				F6E627A71AC707EB00DA1009 /* Body_Armour_selected@2x.png in Resources */,
@@ -1377,6 +1408,7 @@
 				F6E627FE1AC707EB00DA1009 /* Energy_Potion@2x.png in Resources */,
 				F6E628981AC707EB00DA1009 /* Staff_selected@3x.png in Resources */,
 				F6E6284A1AC707EB00DA1009 /* loot_btn@3x.png in Resources */,
+				F6E6290E1AC712C700DA1009 /* splash_icon@2x.png in Resources */,
 				F6E628AD1AC707EB00DA1009 /* Toy_Sword_selected@3x.png in Resources */,
 				F6E627961AC707EB00DA1009 /* Axe_Gold_selected@3x.png in Resources */,
 				F6E627BD1AC707EB00DA1009 /* chests_ui@3x.png in Resources */,
@@ -1392,8 +1424,10 @@
 				F6E6281C1AC707EB00DA1009 /* Health_Potion_selected@2x.png in Resources */,
 				F6E6281A1AC707EB00DA1009 /* health_full@3x.png in Resources */,
 				F6E627A81AC707EB00DA1009 /* Body_Armour_selected@3x.png in Resources */,
+				F6E6290A1AC712C700DA1009 /* daydream_logo.png in Resources */,
 				F6E628DC1AC7090000DA1009 /* 1279 Meadowlands.gpx in Resources */,
 				F6E6283E1AC707EB00DA1009 /* iTunesArtwork@2x.png in Resources */,
+				F6E6290B1AC712C700DA1009 /* daydream_logo@2x.png in Resources */,
 				F6E628AE1AC707EB00DA1009 /* Toy_Sword.png in Resources */,
 				F6E6281F1AC707EB00DA1009 /* Health_Potion@2x.png in Resources */,
 				F6E628841AC707EB00DA1009 /* Spear_Gold_selected.png in Resources */,
@@ -1478,6 +1512,7 @@
 				F6E6287C1AC707EB00DA1009 /* Small_Shield_Gold@2x.png in Resources */,
 				F6E628711AC707EB00DA1009 /* Shield@3x.png in Resources */,
 				F6E6287E1AC707EB00DA1009 /* Small_Shield_selected.png in Resources */,
+				F6E6290C1AC712C700DA1009 /* splash_icon.png in Resources */,
 				F6E627A41AC707EB00DA1009 /* Body_Armour_Gold@2x.png in Resources */,
 				F6E627BB1AC707EB00DA1009 /* chests_ui.png in Resources */,
 				F6E627B31AC707EB00DA1009 /* Bow_selected@2x.png in Resources */,
@@ -1488,6 +1523,7 @@
 				F6E627CB1AC707EB00DA1009 /* clarity_full@2x.png in Resources */,
 				F6E627AA1AC707EB00DA1009 /* Body_Armour@2x.png in Resources */,
 				F6E6278B1AC707EB00DA1009 /* action_btn.png in Resources */,
+				F6E629081AC712C700DA1009 /* splash_title@3x.png in Resources */,
 				F6E627921AC707EB00DA1009 /* armour_slot@2x.png in Resources */,
 				F6E6289A1AC707EB00DA1009 /* Staff@2x.png in Resources */,
 				F6E627ED1AC707EB00DA1009 /* energy_25@3x.png in Resources */,
@@ -1544,6 +1580,7 @@
 				F6E627F91AC707EB00DA1009 /* energy_full@3x.png in Resources */,
 				F6E6288E1AC707EB00DA1009 /* Spear@2x.png in Resources */,
 				F6E627C81AC707EB00DA1009 /* clarity_empty@2x.png in Resources */,
+				F6E629061AC712C700DA1009 /* splash_title.png in Resources */,
 				F6E628971AC707EB00DA1009 /* Staff_selected@2x.png in Resources */,
 				F6E627A91AC707EB00DA1009 /* Body_Armour.png in Resources */,
 				F6E628091AC707EB00DA1009 /* Gold.png in Resources */,
@@ -1565,6 +1602,7 @@
 				F6E628601AC707EB00DA1009 /* sheild_slot_selected.png in Resources */,
 				F6E628001AC707EB00DA1009 /* exit.png in Resources */,
 				F6E627B01AC707EB00DA1009 /* Bow_Gold@2x.png in Resources */,
+				F6E629091AC712C700DA1009 /* daydream_logo@3x.png in Resources */,
 				F6E628651AC707EB00DA1009 /* sheild_slot@3x.png in Resources */,
 				F6E628AA1AC707EB00DA1009 /* Sword@3x.png in Resources */,
 				F6E627FF1AC707EB00DA1009 /* Energy_Potion@3x.png in Resources */,
@@ -1577,6 +1615,7 @@
 				F6E627FB1AC707EB00DA1009 /* Energy_Potion_selected@2x.png in Resources */,
 				F649BE4C1A27D22400A00E3D /* Images.xcassets in Resources */,
 				F6E627F51AC707EB00DA1009 /* energy_empty@2x.png in Resources */,
+				F6E629071AC712C700DA1009 /* splash_title@2x.png in Resources */,
 				F6E6281E1AC707EB00DA1009 /* Health_Potion.png in Resources */,
 				F6E628891AC707EB00DA1009 /* Spear_Gold@3x.png in Resources */,
 				F6E6288D1AC707EB00DA1009 /* Spear.png in Resources */,
@@ -1600,6 +1639,7 @@
 				F6E628541AC707EB00DA1009 /* Mace_selected.png in Resources */,
 				F6E627981AC707EB00DA1009 /* Axe_Gold@2x.png in Resources */,
 				F6E628141AC707EB00DA1009 /* health_75@3x.png in Resources */,
+				F6E6290D1AC712C700DA1009 /* splash_icon@3x.png in Resources */,
 				F6E627B81AC707EB00DA1009 /* character_ui.png in Resources */,
 				F6E6282F1AC707EB00DA1009 /* helmet_slot@3x.png in Resources */,
 				F6E628051AC707EB00DA1009 /* explorer_ui@3x.png in Resources */,

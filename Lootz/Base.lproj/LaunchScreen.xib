@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -10,24 +10,63 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon60.png" translatesAutoresizingMaskIntoConstraints="NO" id="NKB-Dr-DdE">
-                    <rect key="frame" x="201" y="119" width="78" height="78"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="78" id="FyX-7W-Ve2"/>
-                        <constraint firstAttribute="width" constant="78" id="rke-Ix-ADx"/>
-                    </constraints>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_title.png" translatesAutoresizingMaskIntoConstraints="NO" id="7SS-nG-q34">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daydream_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="76y-sH-AgR">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="shf-7d-zJm">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                 </imageView>
             </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="NKB-Dr-DdE" secondAttribute="bottom" constant="283" id="WIe-o7-Pwh"/>
-                <constraint firstItem="NKB-Dr-DdE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="201" id="aHn-9A-24z"/>
+                <constraint firstAttribute="trailing" secondItem="7SS-nG-q34" secondAttribute="trailing" constant="139" id="41v-gY-HTV"/>
+                <constraint firstItem="7SS-nG-q34" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="200" id="A4R-VI-GRA"/>
+                <constraint firstAttribute="bottom" secondItem="76y-sH-AgR" secondAttribute="bottom" constant="153" id="DsZ-3x-Jg9"/>
+                <constraint firstAttribute="bottom" secondItem="shf-7d-zJm" secondAttribute="bottom" constant="316" id="R4c-TO-Gd1"/>
+                <constraint firstAttribute="trailing" secondItem="shf-7d-zJm" secondAttribute="trailing" constant="193" id="hnV-XG-eJn"/>
+                <constraint firstAttribute="trailing" secondItem="76y-sH-AgR" secondAttribute="trailing" constant="161" id="lyO-h2-7Hw"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="7SS-nG-q34"/>
+                    <exclude reference="76y-sH-AgR"/>
+                    <exclude reference="shf-7d-zJm"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="R4c-TO-Gd1"/>
+                    <exclude reference="hnV-XG-eJn"/>
+                    <exclude reference="41v-gY-HTV"/>
+                    <exclude reference="A4R-VI-GRA"/>
+                    <exclude reference="DsZ-3x-Jg9"/>
+                    <exclude reference="lyO-h2-7Hw"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact">
+                <mask key="subviews">
+                    <include reference="7SS-nG-q34"/>
+                    <include reference="76y-sH-AgR"/>
+                    <include reference="shf-7d-zJm"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="R4c-TO-Gd1"/>
+                    <include reference="hnV-XG-eJn"/>
+                    <include reference="41v-gY-HTV"/>
+                    <include reference="A4R-VI-GRA"/>
+                    <include reference="DsZ-3x-Jg9"/>
+                    <include reference="lyO-h2-7Hw"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
     <resources>
-        <image name="Icon60.png" width="60" height="60"/>
+        <image name="daydream_logo.png" width="157" height="27"/>
+        <image name="splash_icon.png" width="93" height="113"/>
+        <image name="splash_title.png" width="202" height="70"/>
     </resources>
 </document>

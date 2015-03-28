@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation
 
 class MainController: UIViewController {
     
@@ -6,6 +7,7 @@ class MainController: UIViewController {
     let transitionManager = TransitionManager()
     var nearestChest: Chest? = nil
     var chestDistance: Int = 0
+    var audioPlayer = AVAudioPlayer()
     
     @IBOutlet var errorLabel: UILabel!
     @IBOutlet var lootzView: UIImageView!
@@ -40,10 +42,13 @@ class MainController: UIViewController {
 
         notificationCenter.addObserver(self, selector: "exit:", name: "exit", object: nil)
         notificationCenter.addObserver(self, selector: "chestSearchComplete:", name: "chestSearchComplete", object: nil)
-        
-      
-        
         notificationCenter.addObserver(self, selector: "refresh", name: "refresh", object: nil)
+        
+        let successSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("success", ofType: "wav")!)
+        var error:NSError?
+        audioPlayer = AVAudioPlayer(contentsOfURL: successSound, error: &error)
+        audioPlayer.prepareToPlay()
+        
         DBFactory.execute().updateUser()
     }
     
@@ -174,7 +179,7 @@ class MainController: UIViewController {
                 if(!user.isHome()) {
                     resultUser.user.setEnergy(currentEnergy - 25)
                 }
-
+                audioPlayer.play()
                 resultUser.user.gainXP(CHESTXP)
                 DBFactory.execute().removeChestFromServer(nearestChest!)
                 DBFactory.execute().saveUser(resultUser.user)
