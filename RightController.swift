@@ -102,6 +102,8 @@ class RightController: UIViewController {
                         } else if (loot.getName() == HEALTHPOT) {
                             user.setHealth(FULLHEALTH)
                         }
+                      
+                        user.removeInventory(loot)
                         DBFactory.execute().saveUser(user)
                     }
                 }

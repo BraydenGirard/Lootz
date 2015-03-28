@@ -59,8 +59,9 @@ class Chest {
         loot.append(weapon)
         
         if(self.item != "Empty") {
-            var item = Loot(name: self.item, imageName:self.item, lootId: String(user.getNextId()) + user.getEmail())
+            var item = Potion(name: self.item, lootId: String(user.getNextId()) + user.getEmail())
             loot.append(item)
+            println("potion found")
         }
         
         if(user.addInventory(loot)) {

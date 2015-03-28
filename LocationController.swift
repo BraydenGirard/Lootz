@@ -33,6 +33,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
             return false
         default:
             manager.startUpdatingLocation()
+            //manager.startMonitoringForRegion(DBFactory.execute().getUser().getHomeLocation())
         }
         return true
     }
@@ -50,6 +51,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
             return false
         default:
             manager.startMonitoringSignificantLocationChanges()
+            //manager.startMonitoringForRegion(DBFactory.execute().getUser().getHomeLocation())
              println("Background location started")
         }
         return true
@@ -57,10 +59,12 @@ class LocationController: NSObject, CLLocationManagerDelegate{
     
     func stopLocationServices() {
         manager.stopUpdatingLocation()
+        //manager.stopMonitoringForRegion(DBFactory.execute().getUser().getHomeLocation())
     }
     
     func stopBackgroundLocationServices() {
         manager.stopMonitoringSignificantLocationChanges()
+        //manager.stopMonitoringForRegion(DBFactory.execute().getUser().getHomeLocation())
     }
     
     func getCurrentLocation() -> CLLocation? {
@@ -85,5 +89,13 @@ class LocationController: NSObject, CLLocationManagerDelegate{
                 DBFactory.execute().saveUserLocation(theLocation)
             }
         }
+    }
+    
+    func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
+        NSLog("Entering region")
+    }
+    
+    func locationManager(manager: CLLocationManager!, didExitRegion region: CLRegion!) {
+        NSLog("Exit region")
     }
 }

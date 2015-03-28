@@ -247,6 +247,7 @@ class User {
 
         if(getInventory().count + items.count <= FULLINVENTORY) {
             for i in items {
+                println("Adding item \(i.getName())")
                 self.inventory.append(i)
             }
             return true

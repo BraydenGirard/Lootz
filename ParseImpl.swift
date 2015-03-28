@@ -119,15 +119,18 @@ class ParseImpl: DatabaseManager {
                 if(newLoot) {
                     var loot = PFObject(className: "Loot")
                     loot["type"] = user.getInventory()[i].getClassType()
-                    
+                    println("Class type is: \(user.getInventory()[i].getClassType())")
                     if(user.getInventory()[i].getClassType() == TYPEGEAR) {
                         var gear = user.getInventory()[i] as Gear
+                          println("Saved gear with ID: \(gear.getId())")
                         loot["lootId"] = String(gear.getId())
                         loot["name"] = gear.getName()
                         loot["gold"] = gear.isGold()
                         loot["equiped"] = false
                     } else if(user.getInventory()[i].getClassType() == TYPEPOTION) {
+                        
                         var potion = user.getInventory()[i]
+                        println("Saved potion with ID: \(potion.getId())")
                         loot["lootId"] = String(potion.getId())
                         loot["name"] = potion.getName()
                         loot["gold"] = false

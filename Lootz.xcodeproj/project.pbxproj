@@ -144,6 +144,18 @@
 		F6673B8C1A8AC93D0022966C /* lootz_ui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B861A8AC93D0022966C /* lootz_ui@3x.png */; };
 		F6673B8D1A8AC93D0022966C /* lootz_ui.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B871A8AC93D0022966C /* lootz_ui.png */; };
 		F6673B8E1A8AC93D0022966C /* lootz_ui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6673B881A8AC93D0022966C /* lootz_ui@2x.png */; };
+		F66F19B81AC65ECA009D289C /* Staff_Gold_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F19AC1AC65ECA009D289C /* Staff_Gold_selected.png */; };
+		F66F19B91AC65ECA009D289C /* Staff_Gold_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F19AD1AC65ECA009D289C /* Staff_Gold_selected@2x.png */; };
+		F66F19BA1AC65ECA009D289C /* Staff_Gold_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F19AE1AC65ECA009D289C /* Staff_Gold_selected@3x.png */; };
+		F66F19BB1AC65ECA009D289C /* Staff_Gold.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F19AF1AC65ECA009D289C /* Staff_Gold.png */; };
+		F66F19BC1AC65ECA009D289C /* Staff_Gold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F19B01AC65ECA009D289C /* Staff_Gold@2x.png */; };
+		F66F19BD1AC65ECA009D289C /* Staff_Gold@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F19B11AC65ECA009D289C /* Staff_Gold@3x.png */; };
+		F66F19BE1AC65ECA009D289C /* Staff_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F19B21AC65ECA009D289C /* Staff_selected.png */; };
+		F66F19BF1AC65ECA009D289C /* Staff_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F19B31AC65ECA009D289C /* Staff_selected@2x.png */; };
+		F66F19C01AC65ECA009D289C /* Staff_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F19B41AC65ECA009D289C /* Staff_selected@3x.png */; };
+		F66F19C11AC65ECA009D289C /* Staff.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F19B51AC65ECA009D289C /* Staff.png */; };
+		F66F19C21AC65ECA009D289C /* Staff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F19B61AC65ECA009D289C /* Staff@2x.png */; };
+		F66F19C31AC65ECA009D289C /* Staff@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F66F19B71AC65ECA009D289C /* Staff@3x.png */; };
 		F670E6EF1ABB42B000C4ED4A /* Icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6E31ABB42B000C4ED4A /* Icon29.png */; };
 		F670E6F01ABB42B000C4ED4A /* Icon29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6E41ABB42B000C4ED4A /* Icon29@2x.png */; };
 		F670E6F11ABB42B000C4ED4A /* Icon29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F670E6E51ABB42B000C4ED4A /* Icon29@3x.png */; };
@@ -512,6 +524,18 @@
 		F6673B861A8AC93D0022966C /* lootz_ui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lootz_ui@3x.png"; sourceTree = "<group>"; };
 		F6673B871A8AC93D0022966C /* lootz_ui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lootz_ui.png; sourceTree = "<group>"; };
 		F6673B881A8AC93D0022966C /* lootz_ui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lootz_ui@2x.png"; sourceTree = "<group>"; };
+		F66F19AC1AC65ECA009D289C /* Staff_Gold_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Staff_Gold_selected.png; sourceTree = "<group>"; };
+		F66F19AD1AC65ECA009D289C /* Staff_Gold_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Staff_Gold_selected@2x.png"; sourceTree = "<group>"; };
+		F66F19AE1AC65ECA009D289C /* Staff_Gold_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Staff_Gold_selected@3x.png"; sourceTree = "<group>"; };
+		F66F19AF1AC65ECA009D289C /* Staff_Gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Staff_Gold.png; sourceTree = "<group>"; };
+		F66F19B01AC65ECA009D289C /* Staff_Gold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Staff_Gold@2x.png"; sourceTree = "<group>"; };
+		F66F19B11AC65ECA009D289C /* Staff_Gold@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Staff_Gold@3x.png"; sourceTree = "<group>"; };
+		F66F19B21AC65ECA009D289C /* Staff_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Staff_selected.png; sourceTree = "<group>"; };
+		F66F19B31AC65ECA009D289C /* Staff_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Staff_selected@2x.png"; sourceTree = "<group>"; };
+		F66F19B41AC65ECA009D289C /* Staff_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Staff_selected@3x.png"; sourceTree = "<group>"; };
+		F66F19B51AC65ECA009D289C /* Staff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Staff.png; sourceTree = "<group>"; };
+		F66F19B61AC65ECA009D289C /* Staff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Staff@2x.png"; sourceTree = "<group>"; };
+		F66F19B71AC65ECA009D289C /* Staff@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Staff@3x.png"; sourceTree = "<group>"; };
 		F670E6E31ABB42B000C4ED4A /* Icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon29.png; sourceTree = "<group>"; };
 		F670E6E41ABB42B000C4ED4A /* Icon29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon29@2x.png"; sourceTree = "<group>"; };
 		F670E6E51ABB42B000C4ED4A /* Icon29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon29@3x.png"; sourceTree = "<group>"; };
@@ -1026,6 +1050,18 @@
 				F626742A1AA2692D000613D9 /* Spear_selected.png */,
 				F626742C1AA2692D000613D9 /* Spear_selected@2x.png */,
 				F626742D1AA2692D000613D9 /* Spear_selected@3x.png */,
+				F66F19AC1AC65ECA009D289C /* Staff_Gold_selected.png */,
+				F66F19AD1AC65ECA009D289C /* Staff_Gold_selected@2x.png */,
+				F66F19AE1AC65ECA009D289C /* Staff_Gold_selected@3x.png */,
+				F66F19AF1AC65ECA009D289C /* Staff_Gold.png */,
+				F66F19B01AC65ECA009D289C /* Staff_Gold@2x.png */,
+				F66F19B11AC65ECA009D289C /* Staff_Gold@3x.png */,
+				F66F19B21AC65ECA009D289C /* Staff_selected.png */,
+				F66F19B31AC65ECA009D289C /* Staff_selected@2x.png */,
+				F66F19B41AC65ECA009D289C /* Staff_selected@3x.png */,
+				F66F19B51AC65ECA009D289C /* Staff.png */,
+				F66F19B61AC65ECA009D289C /* Staff@2x.png */,
+				F66F19B71AC65ECA009D289C /* Staff@3x.png */,
 				F6D9DEF01A75763500F72300 /* Sword.png */,
 				F6D9DEF11A75763500F72300 /* Sword@2x.png */,
 				F6D9DEF21A75763500F72300 /* Sword@3x.png */,
@@ -1396,6 +1432,7 @@
 				F6CFB7081A325E1C00405290 /* login_ui.png in Resources */,
 				F6B31E141AA42DCD005E04EB /* Bow_Gold_selected@3x.png in Resources */,
 				F608B6161A7462B30072E6E0 /* health_empty.png in Resources */,
+				F66F19BE1AC65ECA009D289C /* Staff_selected.png in Resources */,
 				F6B31E961AA42E93005E04EB /* Spear_Gold_selected.png in Resources */,
 				F6D9DFB11A75765400F72300 /* west@2x.png in Resources */,
 				F637F76C1A310A8D004752E0 /* signup_btn@2x.png in Resources */,
@@ -1447,11 +1484,13 @@
 				F6B31E471AA42E1A005E04EB /* Mace@3x.png in Resources */,
 				F6B31DFC1AA42DA7005E04EB /* Axe_Gold_selected@3x.png in Resources */,
 				F6D9DFAA1A75765400F72300 /* star.png in Resources */,
+				F66F19BD1AC65ECA009D289C /* Staff_Gold@3x.png in Resources */,
 				F6B31E031AA42DA7005E04EB /* Body_Armour_Gold.png in Resources */,
 				F6B31E201AA42DE8005E04EB /* Gold_selected@3x.png in Resources */,
 				F62674551AA2692E000613D9 /* armour_slot_selected@3x.png in Resources */,
 				F6B31DFD1AA42DA7005E04EB /* Axe_Gold.png in Resources */,
 				F6B31EAE1AA43106005E04EB /* Axe_selected.png in Resources */,
+				F66F19B81AC65ECA009D289C /* Staff_Gold_selected.png in Resources */,
 				F68B63261AA63F8B00122469 /* Toy_Sword.png in Resources */,
 				F6F35C841A775CBD0042D313 /* armour_slot@3x.png in Resources */,
 				F6D9DFAF1A75765400F72300 /* west_red@3x.png in Resources */,
@@ -1475,6 +1514,7 @@
 				F608B5F31A7462B30072E6E0 /* clarity_75@2x.png in Resources */,
 				F6B31E881AA42E82005E04EB /* Small_Shield_Gold@2x.png in Resources */,
 				F6B31EA71AA42EA9005E04EB /* Sword_Gold@3x.png in Resources */,
+				F66F19BC1AC65ECA009D289C /* Staff_Gold@2x.png in Resources */,
 				F65D23261A781EFE009A8939 /* action_btn@3x.png in Resources */,
 				F6D9DF921A75765400F72300 /* explorer_ui.png in Resources */,
 				F6D9DF341A75763500F72300 /* Helmet@3x.png in Resources */,
@@ -1532,6 +1572,7 @@
 				F6B31E061AA42DA7005E04EB /* Body_Armour_selected.png in Resources */,
 				F6B31E8E1AA42E82005E04EB /* Small_Shield@2x.png in Resources */,
 				F6B31E001AA42DA7005E04EB /* Body_Armour_Gold_selected.png in Resources */,
+				F66F19C31AC65ECA009D289C /* Staff@3x.png in Resources */,
 				F6D9DF971A75765400F72300 /* list@3x.png in Resources */,
 				F6673B8C1A8AC93D0022966C /* lootz_ui@3x.png in Resources */,
 				F626748C1AA2692E000613D9 /* Helmet_selected@2x.png in Resources */,
@@ -1541,7 +1582,9 @@
 				F6D9DF9A1A75765400F72300 /* loot_btn@3x.png in Resources */,
 				F62674901AA2692E000613D9 /* helmet_slot_selected@2x.png in Resources */,
 				F6B31E4F1AA42E34005E04EB /* Clarity_Potion_selected@2x.png in Resources */,
+				F66F19BA1AC65ECA009D289C /* Staff_Gold_selected@3x.png in Resources */,
 				F6B31E211AA42DE8005E04EB /* Gold.png in Resources */,
+				F66F19BF1AC65ECA009D289C /* Staff_selected@2x.png in Resources */,
 				F608B61E1A7462B30072E6E0 /* helmet_slot@3x.png in Resources */,
 				F6B31E5B1AA42E3E005E04EB /* Energy_Potion_selected@2x.png in Resources */,
 				F6E493B31AA582DA00953B5A /* default@2x.png in Resources */,
@@ -1570,6 +1613,7 @@
 				F6B31E2D1AA42DFE005E04EB /* Dagger_Gold.png in Resources */,
 				F62674A51AA2692E000613D9 /* sheild_slot_selected@3x.png in Resources */,
 				F62674811AA2692E000613D9 /* empty_slot_selected@3x.png in Resources */,
+				F66F19C01AC65ECA009D289C /* Staff_selected@3x.png in Resources */,
 				F626746A1AA2692E000613D9 /* Bow_selected.png in Resources */,
 				F65D23231A781EFE009A8939 /* remove_btn@2x.png in Resources */,
 				F62673BD1AA264A2000613D9 /* weapon_slot.png in Resources */,
@@ -1596,6 +1640,7 @@
 				F6D9DFAC1A75765400F72300 /* star@3x.png in Resources */,
 				F6673B8D1A8AC93D0022966C /* lootz_ui.png in Resources */,
 				F608B6101A7462B30072E6E0 /* health_50.png in Resources */,
+				F66F19C11AC65ECA009D289C /* Staff.png in Resources */,
 				F626747E1AA2692E000613D9 /* empty_slot_selected.png in Resources */,
 				F6D9DF591A75763500F72300 /* Sword.png in Resources */,
 				F608B60D1A7462B30072E6E0 /* health_25.png in Resources */,
@@ -1620,6 +1665,8 @@
 				F6E493B21AA582DA00953B5A /* default.png in Resources */,
 				F6B31E2E1AA42DFE005E04EB /* Dagger_Gold@2x.png in Resources */,
 				F6B31E1F1AA42DE8005E04EB /* Gold_selected@2x.png in Resources */,
+				F66F19B91AC65ECA009D289C /* Staff_Gold_selected@2x.png in Resources */,
+				F66F19BB1AC65ECA009D289C /* Staff_Gold.png in Resources */,
 				F6D9DF541A75763500F72300 /* Spear@2x.png in Resources */,
 				F6D67AB01ABDE78D00E7B8A8 /* chests_ui.png in Resources */,
 				F608B5EC1A7462B30072E6E0 /* clarity_25.png in Resources */,
@@ -1634,6 +1681,7 @@
 				F608B6121A7462B30072E6E0 /* health_50@3x.png in Resources */,
 				F6B31E721AA42E62005E04EB /* Shield_Gold_selected.png in Resources */,
 				F608B6091A7462B30072E6E0 /* energy_empty@3x.png in Resources */,
+				F66F19C21AC65ECA009D289C /* Staff@2x.png in Resources */,
 				F6D9DF991A75765400F72300 /* loot_btn@2x.png in Resources */,
 				F6B31DFE1AA42DA7005E04EB /* Axe_Gold@2x.png in Resources */,
 				F6B31E981AA42E93005E04EB /* Spear_Gold_selected@3x.png in Resources */,

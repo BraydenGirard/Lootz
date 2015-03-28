@@ -136,6 +136,10 @@ class LeftController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             resultUser.user.gainXP(CHESTXP)
             DBFactory.execute().removeChestFromServer(chest)
+            for var i=0; i<resultUser.user.getInventory().count; i++ {
+                var loot = resultUser.user.getInventory()[i]
+                println(loot.getId())
+            }
             DBFactory.execute().saveUser(resultUser.user)
         } else {
             self.errorLabel.text = "Inventory too full"
