@@ -187,6 +187,10 @@ class ParseImpl: DatabaseManager {
             var lat = location.coordinate.latitude as Double
             var lng = location.coordinate.longitude as Double
             
+            var userDefaults = NSUserDefaults()
+            userDefaults.setDouble(lat, forKey: "lat")
+            userDefaults.setDouble(lng, forKey: "lng")
+            
             var locationHistory = self.getUser().getLocationHistory()
             
             locationHistory.latitudes.append(lat)
