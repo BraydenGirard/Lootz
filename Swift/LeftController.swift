@@ -50,7 +50,7 @@ class LeftController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func chestDiscoveryComplete(notification: NSNotification) {
-        let userInfo:Dictionary<String,[Chest]!> = notification.userInfo as Dictionary<String,[Chest]!>
+        let userInfo:Dictionary<String,[Chest]!> = notification.userInfo as! Dictionary<String,[Chest]!>
         chests = userInfo["chests"] as [Chest]!
        
         self.tableView.reloadData()
@@ -59,7 +59,7 @@ class LeftController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         // this gets a reference to the screen that we're about to transition to
-        let toViewController = segue.destinationViewController as UIViewController
+        let toViewController = segue.destinationViewController as! UIViewController
         
         // instead of using the default transition animation, we'll ask
         // the segue to use our custom TransitionManager object to manage the transition animation
@@ -72,7 +72,7 @@ class LeftController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("chestCell", forIndexPath: indexPath) as UITableViewCell
+        let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("chestCell", forIndexPath: indexPath) as! UITableViewCell
         
         cell.textLabel?.text = "Chest \(indexPath.row)"
         

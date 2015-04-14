@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        //Parse.enableLocalDatastore()
+        Parse.enableLocalDatastore()
         Parse.setApplicationId("xMWHdAdDCH08EjLa8Ot10m8NHUF5Jib8TcJsvhL9", clientKey: "tGDyakqGqFly9qRJ3XrmxMEp5jaWtde5LWJrAODF")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         
@@ -26,10 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var initialViewController: UIViewController
         
         if DBFactory.execute().checkAutoSignIn() {
-            initialViewController = storyboard.instantiateViewControllerWithIdentifier("MainController") as UIViewController
+            initialViewController = storyboard.instantiateViewControllerWithIdentifier("MainController") as! UIViewController
         }
         else {
-            initialViewController = storyboard.instantiateViewControllerWithIdentifier("LoginController") as UIViewController
+            initialViewController = storyboard.instantiateViewControllerWithIdentifier("LoginController")as! UIViewController
         }
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()

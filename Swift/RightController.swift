@@ -48,8 +48,6 @@ class RightController: UIViewController {
         swipeRight.direction = UISwipeGestureRecognizerDirection.Right
         self.view.addGestureRecognizer(swipeRight)
         
-        //------------static view setup--------------//
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -68,7 +66,7 @@ class RightController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         // this gets a reference to the screen that we're about to transition to
-        let toViewController = segue.destinationViewController as UIViewController
+        let toViewController = segue.destinationViewController as! UIViewController
         
         // instead of using the default transition animation, we'll ask
         // the segue to use our custom TransitionManager object to manage the transition animation
@@ -196,7 +194,7 @@ class RightController: UIViewController {
     
     func resetInvButtons() {
         for(var i=BUTTONSTART; i<BUTTONSTART + TOTALINVBUTTONS; i++) {
-            var button = self.view.viewWithTag(i) as UIButton
+            var button = self.view.viewWithTag(i) as! UIButton
             //button.setBackgroundImage(UIImage(named: "empty_slot_selected"), forState: UIControlState.Selected)
             //button.setBackgroundImage(UIImage(named: "empty_slot"), forState: UIControlState.Normal)
             button.setImage(UIImage(named: "empty_slot_selected"), forState: UIControlState.Selected)
@@ -211,7 +209,7 @@ class RightController: UIViewController {
     func getSelectedButton() -> UIButton? {
         for(var i=BUTTONSTART; i<BUTTONSTART + TOTALBUTTONS; i++) {
             
-            var button = self.view.viewWithTag(i) as UIButton
+            var button = self.view.viewWithTag(i) as! UIButton
             if(button.selected) {
                 return button
             }
@@ -221,7 +219,7 @@ class RightController: UIViewController {
     
     func setupInvButtons() {
         for(var i=BUTTONSTART; i<BUTTONSTART + TOTALINVBUTTONS; i++) {
-            var button = self.view.viewWithTag(i) as UIButton
+            var button = self.view.viewWithTag(i) as! UIButton
             button.setBackgroundImage(UIImage(named: "empty_slot_selected"), forState: UIControlState.Selected)
             var image = getInvImage(i)
             var imageSelected = getInvImageSelected(i)

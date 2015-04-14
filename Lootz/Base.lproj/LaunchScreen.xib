@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -22,12 +22,20 @@
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="7SS-nG-q34" secondAttribute="trailing" constant="139" id="41v-gY-HTV"/>
-                <constraint firstItem="7SS-nG-q34" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="200" id="A4R-VI-GRA"/>
-                <constraint firstAttribute="bottom" secondItem="76y-sH-AgR" secondAttribute="bottom" constant="153" id="DsZ-3x-Jg9"/>
-                <constraint firstAttribute="bottom" secondItem="shf-7d-zJm" secondAttribute="bottom" constant="316" id="R4c-TO-Gd1"/>
-                <constraint firstAttribute="trailing" secondItem="shf-7d-zJm" secondAttribute="trailing" constant="193" id="hnV-XG-eJn"/>
-                <constraint firstAttribute="trailing" secondItem="76y-sH-AgR" secondAttribute="trailing" constant="161" id="lyO-h2-7Hw"/>
+                <constraint firstAttribute="centerY" secondItem="7SS-nG-q34" secondAttribute="centerY" constant="5" id="5ZQ-Vz-E8f">
+                    <variation key="heightClass=compact" constant="-27"/>
+                </constraint>
+                <constraint firstAttribute="centerX" secondItem="shf-7d-zJm" secondAttribute="centerX" constant="-0.5" id="7vL-Hv-yEi"/>
+                <constraint firstAttribute="centerX" secondItem="76y-sH-AgR" secondAttribute="centerX" constant="-0.5" id="DV5-D9-24g"/>
+                <constraint firstAttribute="centerY" secondItem="shf-7d-zJm" secondAttribute="centerY" constant="132.5" id="HYZ-Hn-42D">
+                    <variation key="heightClass=compact" constant="88"/>
+                </constraint>
+                <constraint firstAttribute="centerX" secondItem="7SS-nG-q34" secondAttribute="centerX" id="YkD-cx-UPp">
+                    <variation key="heightClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="centerY" secondItem="76y-sH-AgR" secondAttribute="centerY" constant="-73.5" id="olR-J3-h7x">
+                    <variation key="heightClass=compact" constant="-94"/>
+                </constraint>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -38,12 +46,12 @@
                     <exclude reference="shf-7d-zJm"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="R4c-TO-Gd1"/>
-                    <exclude reference="hnV-XG-eJn"/>
-                    <exclude reference="41v-gY-HTV"/>
-                    <exclude reference="A4R-VI-GRA"/>
-                    <exclude reference="DsZ-3x-Jg9"/>
-                    <exclude reference="lyO-h2-7Hw"/>
+                    <exclude reference="7vL-Hv-yEi"/>
+                    <exclude reference="HYZ-Hn-42D"/>
+                    <exclude reference="5ZQ-Vz-E8f"/>
+                    <exclude reference="YkD-cx-UPp"/>
+                    <exclude reference="DV5-D9-24g"/>
+                    <exclude reference="olR-J3-h7x"/>
                 </mask>
             </variation>
             <variation key="heightClass=compact">
@@ -53,12 +61,12 @@
                     <include reference="shf-7d-zJm"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="R4c-TO-Gd1"/>
-                    <include reference="hnV-XG-eJn"/>
-                    <include reference="41v-gY-HTV"/>
-                    <include reference="A4R-VI-GRA"/>
-                    <include reference="DsZ-3x-Jg9"/>
-                    <include reference="lyO-h2-7Hw"/>
+                    <include reference="7vL-Hv-yEi"/>
+                    <include reference="HYZ-Hn-42D"/>
+                    <include reference="5ZQ-Vz-E8f"/>
+                    <include reference="YkD-cx-UPp"/>
+                    <include reference="DV5-D9-24g"/>
+                    <include reference="olR-J3-h7x"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="548" y="455"/>

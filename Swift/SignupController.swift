@@ -43,13 +43,13 @@ class SignupController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }
     
     //MARK: - UITextField Delegate Methods
     
-    func textFieldDidBeginEditing(textField: UITextField!) {
+    func textFieldDidBeginEditing(textField: UITextField) {
         if textField.tag == 1 {
             offset = 75
         } else if textField.tag == 2 {
@@ -85,10 +85,10 @@ class SignupController: UIViewController, UITextFieldDelegate {
             if tempUsername.isEmpty {
                 return "username can not be empty"
             }
-            if countElements(tempUsername) > 20 {
+            if count(tempUsername) > 20 {
                 return "username is to long (max 20 characters)"
             }
-            if countElements(tempUsername) < 4 {
+            if count(tempUsername) < 4 {
                 return "username is to short (min 4 characters)"
             }
             

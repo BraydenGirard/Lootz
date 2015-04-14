@@ -33,9 +33,14 @@ class LocationController: NSObject, CLLocationManagerDelegate{
             return false
         default:
             manager.startUpdatingLocation()
-            let user = DBFactory.execute().getUser()
-            let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: user.getHomeLat(), longitude: user.getHomeLng()), radius: 30, identifier: "Home")
-            manager.stopMonitoringForRegion(homeRegion)
+            var userDefaults = NSUserDefaults()
+            
+            if let latitude = userDefaults.objectForKey("lat") as? Double,
+                let longitude = userDefaults.objectForKey("lng") as? Double {
+                    
+                    let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), radius: 30, identifier: "Home")
+                    manager.stopMonitoringForRegion(homeRegion)
+            }
         }
         return true
     }
@@ -53,9 +58,14 @@ class LocationController: NSObject, CLLocationManagerDelegate{
             return false
         default:
             manager.startMonitoringSignificantLocationChanges()
-            let user = DBFactory.execute().getUser()
-            let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: user.getHomeLat(), longitude: user.getHomeLng()), radius: 30, identifier: "Home")
-            manager.startMonitoringForRegion(homeRegion)
+            var userDefaults = NSUserDefaults()
+            
+            if let latitude = userDefaults.objectForKey("lat") as? Double,
+                let longitude = userDefaults.objectForKey("lng") as? Double {
+                    
+                    let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), radius: 30, identifier: "Home")
+                    manager.stopMonitoringForRegion(homeRegion)
+            }
              println("Background location started")
         }
         return true
@@ -63,16 +73,27 @@ class LocationController: NSObject, CLLocationManagerDelegate{
     
     func stopLocationServices() {
         manager.stopUpdatingLocation()
-        let user = DBFactory.execute().getUser()
-        let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: user.getHomeLat(), longitude: user.getHomeLng()), radius: 30, identifier: "Home")
-        manager.stopMonitoringForRegion(homeRegion)
+        var userDefaults = NSUserDefaults()
+        
+        if let latitude = userDefaults.objectForKey("lat") as? Double,
+            let longitude = userDefaults.objectForKey("lng") as? Double {
+                
+                let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), radius: 30, identifier: "Home")
+                manager.stopMonitoringForRegion(homeRegion)
+        }
     }
     
     func stopBackgroundLocationServices() {
         manager.stopMonitoringSignificantLocationChanges()
-        let user = DBFactory.execute().getUser()
-        let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: user.getHomeLat(), longitude: user.getHomeLng()), radius: 30, identifier: "Home")
-        manager.stopMonitoringForRegion(homeRegion)
+        
+        var userDefaults = NSUserDefaults()
+       
+        if let latitude = userDefaults.objectForKey("lat") as? Double,
+            let longitude = userDefaults.objectForKey("lng") as? Double {
+        
+                let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), radius: 30, identifier: "Home")
+                manager.stopMonitoringForRegion(homeRegion)
+        }
     }
     
     func getCurrentLocation() -> CLLocation? {

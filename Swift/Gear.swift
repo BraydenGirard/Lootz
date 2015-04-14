@@ -10,11 +10,11 @@ import Foundation
 
 class Gear: Loot {
     
-    private let type = UNKNOWN
-    private let damage = DAMAGE
-    private let accuracy = 0
-    private let ranged = false
-    private let gold = false
+    private let type: String
+    private let damage: Int
+    private let accuracy: Int
+    private let ranged: Bool
+    private let gold: Bool
     
     init(name: String, gold: Bool, lootId: String) {
         self.gold = gold
@@ -26,18 +26,23 @@ class Gear: Loot {
         } else if name == TSWORD {
             self.type = ONEHAND
             self.accuracy = 50
+            self.ranged = false
         } else if name == SWORD {
             self.type = ONEHAND
             self.accuracy = 85
+            self.ranged = false
         } else if name == DAGGER {
             self.type = ONEHAND
             self.accuracy = 75
+            self.ranged = false
         } else if name == AXE {
             self.type = TWOHAND
             self.accuracy = 99
+            self.ranged = false
         } else if name == MACE {
             self.type = ONEHAND
             self.accuracy = 95
+            self.ranged = false
         } else if name == SPEAR {
             self.type = ONEHAND
             self.ranged = true
@@ -49,21 +54,30 @@ class Gear: Loot {
         } else if name == SSHIELD {
             self.type = ONEHANDARMOUR
             self.accuracy = 10
+            self.ranged = false
         } else if name == LSHIELD {
             self.type = ONEHANDARMOUR
             self.accuracy = 20
+            self.ranged = false
         } else if name == HELMET {
             self.type = HELMET
             self.accuracy = 10
+            self.ranged = false
         } else if name == BARMOUR {
             self.type = BARMOUR
             self.accuracy = 20
+            self.ranged = false
+        } else {
+            self.type = UNKNOWN
+            self.accuracy = 0
+            self.ranged = false
         }
 
         if(self.gold) {
             damage = GOLDDAMAGE
             super.init(name: name, imageName: name + GOLDSUFFIX, lootId: lootId)
         } else {
+            damage = DAMAGE
             super.init(name: name, imageName: name, lootId: lootId)
         }
     }

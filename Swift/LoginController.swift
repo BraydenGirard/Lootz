@@ -42,7 +42,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }
     
@@ -106,10 +106,10 @@ class LoginController: UIViewController, UITextFieldDelegate {
             if tempUsername.isEmpty {
                 return "username can not be empty"
             }
-            if countElements(tempUsername) > 20 {
+            if count(tempUsername) > 20 {
                 return "username is to long (max 20 characters)"
             }
-            if countElements(tempUsername) < 4 {
+            if count(tempUsername) < 4 {
                 return "username is to short (min 4 characters)"
             }
             
