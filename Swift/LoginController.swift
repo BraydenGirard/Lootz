@@ -1,29 +1,27 @@
-//
-//  ViewController.swift
-//  Lootz
-//
-//  Created by Brayden Girard on 2014-11-27.
-//  Copyright (c) 2014 Brayden Girard. All rights reserved.
-//
+// Login view controller
 
 import UIKit
 
 class LoginController: UIViewController, UITextFieldDelegate {
     
     var offset: CGFloat = 0
+    
     let notificationCenter = NSNotificationCenter.defaultCenter()
     
     @IBOutlet var usernameText: UITextField!
     @IBOutlet var passwordText: UITextField!
     
+    //  MARK: View management
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         usernameText.delegate = self
         passwordText.delegate = self
+        
+        //  Add notifications for asynchronous networking
         notificationCenter.addObserver(self, selector: "loginFail:", name: "loginFail", object: nil)
         notificationCenter.addObserver(self, selector: "loginSuccess:", name: "loginSuccess", object: nil)
-
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -39,13 +37,15 @@ class LoginController: UIViewController, UITextFieldDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }
     
+    //  MARK: Button Listeners
+    
+    //  Checks the login for valid characters and attempts to log the user in
     @IBAction func loginButtonPushed(sender: UIButton) {
         if let error = checkLogin(usernameText.text, password: passwordText.text) {
             var alert = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.Alert)
@@ -58,6 +58,9 @@ class LoginController: UIViewController, UITextFieldDelegate {
 
     }
     
+    //  MARK: Notification listeners
+    
+    //  If the login fails display an alert with an error
     func loginFail(notification: NSNotification) {
         println("Failed login")
         var alert = UIAlertController(title: "Error", message: "Incorrect username or password", preferredStyle: UIAlertControllerStyle.Alert)
@@ -65,15 +68,16 @@ class LoginController: UIViewController, UITextFieldDelegate {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    //  If the login is succesful push the main view
     func loginSuccess(notification: NSNotification) {
         println("Successful login")
         self.performSegueWithIdentifier("loginSegue", sender: nil)
     }
     
     
-    //MARK: - Keyboard Management Methods
+    //  MARK: Keyboard management methods
     
-    // Call this method somewhere in your view controller setup code.
+    // Registers notifications for adjusting view based on keyboard
     func registerForKeyboardNotifications() {
         let notificationCenter = NSNotificationCenter.defaultCenter()
         notificationCenter.addObserver(self,
@@ -86,12 +90,15 @@ class LoginController: UIViewController, UITextFieldDelegate {
             object: nil)
     }
     
+    //  Move the view up by the height of the keyboard
     func keyboardWillBeShown(sender: NSNotification) {
         if(offset == 0) {
             offset = 100
             self.view.frame.origin.y -= offset
         }
     }
+    
+    //  Moves the view down by the height of the keyboard
     func keyboardWillBeHidden(sender: NSNotification) {
         if(offset == 100) {
             self.view.frame.origin.y += offset
@@ -99,8 +106,9 @@ class LoginController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    //User validation
+    //  MARK: User validation
     
+    //  Checks for a valid username
     func checkUsername(input: String?) -> String? {
         if let tempUsername = input {
             if tempUsername.isEmpty {
@@ -128,6 +136,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //  Checks for a valid password
     func checkPassword(input: String?) -> String? {
         if let tempPassword = input {
             if tempPassword.isEmpty {
@@ -140,6 +149,7 @@ class LoginController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //  Calls all validation methods
     func checkLogin(username: String?, password: String?) -> String? {
         if let result = checkUsername(username) {
             return result

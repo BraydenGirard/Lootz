@@ -1,3 +1,5 @@
+//  Sign up view controller
+
 import UIKit
 
 class SignupController: UIViewController, UITextFieldDelegate {
@@ -11,26 +13,36 @@ class SignupController: UIViewController, UITextFieldDelegate {
     
     var offset:CGFloat = 0
     
+    //  MARK: View management
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         usernameText.delegate = self
         emailText.delegate = self
         passwordText.delegate = self
+        
+        //  Add notifications for asynchronous networking
         notificationCenter.addObserver(self, selector: "signUpFail:", name: "signUpFail", object: nil)
         notificationCenter.addObserver(self, selector: "signUpSuccess:", name: "signUpSuccess", object: nil)
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
+    
+    //  MARK: Button Listeners
+    
+    //  Go back to the login view
     @IBAction func backPushed(sender: UIButton) {
        dismissViewControllerAnimated(true, completion: nil)
     }
     
+    //  Check for a valid sign up and send the request to the server
     @IBAction func signUpPushed(sender: UIButton) {
         if let error = checkSignUp(usernameText.text, email: emailText.text, password: passwordText.text) {
             var alert = UIAlertController(title: "Error", message: error, preferredStyle: UIAlertControllerStyle.Alert)
@@ -43,12 +55,9 @@ class SignupController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        self.view.endEditing(true)
-    }
+    //  MARK: Keyboard management methods
     
-    //MARK: - UITextField Delegate Methods
-    
+    //  Check if a text field is being edited and adjust view for keyboard height
     func textFieldDidBeginEditing(textField: UITextField!) {
         if textField.tag == 1 {
             offset = 75
@@ -60,11 +69,15 @@ class SignupController: UIViewController, UITextFieldDelegate {
         self.view.frame.origin.y -= offset
     }
     
+    //  Check when textfield is changed and readjust view
     func textFieldDidEndEditing(textField: UITextField) {
         self.view.frame.origin.y += offset
         offset = 0
     }
     
+    //  MARK: Notification listeners
+    
+    //  Show error if signup fails
     func signUpFail(notification: NSNotification) {
         println("Failed signup")
         var alert = UIAlertController(title: "User Already Exists", message: "The username or email address already exists.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -72,14 +85,16 @@ class SignupController: UIViewController, UITextFieldDelegate {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    //  Push to main view if sign up is success
     func signUpSuccess(notification: NSNotification) {
         println("Successful signup")
         
         self.performSegueWithIdentifier("signUpSegue", sender: nil)
     }
     
-    //User validation
+    //  MARK: User validation
     
+    //  Check for a valid username
     func checkUsername(input: String?) -> String? {
         if let tempUsername = input {
             if tempUsername.isEmpty {
@@ -107,6 +122,7 @@ class SignupController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //  Check for a valid email address
     func checkEmail (input: String?) -> String? {
         if let tempEmail = input {
             if tempEmail.isEmpty {
@@ -119,6 +135,7 @@ class SignupController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //  Check for a valid password
     func checkPassword(input: String?) -> String? {
         if let tempPassword = input {
             if tempPassword.isEmpty {
@@ -134,6 +151,7 @@ class SignupController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //  Check for all fields valid
     func checkSignUp(username: String?, email: String?, password: String?) -> String? {
         if let result = checkUsername(username) {
             return result
