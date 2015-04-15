@@ -29,6 +29,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
             return false
         default:
             manager.startUpdatingLocation()
+            manager.startMonitoringVisits()
             var userDefaults = NSUserDefaults()
             if let longitude = userDefaults.objectForKey("lng") as? Double {
                 if let latitude = userDefaults.objectForKey("lat") as? Double {
@@ -56,6 +57,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
             return false
         default:
             manager.startMonitoringSignificantLocationChanges()
+            manager.startMonitoringVisits()
             var userDefaults = NSUserDefaults()
             if let longitude = userDefaults.objectForKey("lng") as? Double {
                 if let latitude = userDefaults.objectForKey("lat") as? Double {
@@ -72,6 +74,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
     //  Stops monitoring standard location services
     func stopLocationServices() {
         manager.stopUpdatingLocation()
+        manager.stopMonitoringVisits()
         var userDefaults = NSUserDefaults()
         if let longitude = userDefaults.objectForKey("lng") as? Double {
             if let latitude = userDefaults.objectForKey("lat") as? Double {
@@ -86,6 +89,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
     //  Stops monitoring for significant location changes
     func stopBackgroundLocationServices() {
         manager.stopMonitoringSignificantLocationChanges()
+        manager.stopMonitoringVisits()
         var userDefaults = NSUserDefaults()
         if let longitude = userDefaults.objectForKey("lng") as? Double {
             if let latitude = userDefaults.objectForKey("lat") as? Double {
@@ -115,7 +119,6 @@ class LocationController: NSObject, CLLocationManagerDelegate{
         self.currentLocation = locations[locations.count - 1] as? CLLocation
         //println("Location has been updated")
         if(backgroundState && currentLocation != nil) {
-            println("Found location in background")
             if let theLocation = currentLocation {
                 DBFactory.execute().saveUserLocation(theLocation)
             }
@@ -124,18 +127,22 @@ class LocationController: NSObject, CLLocationManagerDelegate{
     
     //  Monitors for entering the home region
     func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
-        NSLog("Entering region")
-        var user = DBFactory.execute().getUser()
-        user.setHome(true)
-        user.setEnergy(FULLENERGY)
-        DBFactory.execute().saveUser(user)
+        DBFactory.execute().updateHome(true)
     }
     
     //  Monitors for exiting the home region
     func locationManager(manager: CLLocationManager!, didExitRegion region: CLRegion!) {
-        NSLog("Exit region")
-        var user = DBFactory.execute().getUser()
-        user.setHome(false)
-        DBFactory.execute().saveUser(user)
+        DBFactory.execute().updateHome(false)
+    }
+    
+    //  Monitors for a visit event
+    func locationManager(manager: CLLocationManager!, didVisit visit: CLVisit!) {
+        
+        if visit.departureDate.isEqualToDate(NSDate.distantFuture() as NSDate) {
+            DBFactory.execute().regenerateEnergy()
+        } else {
+            println("Left location")
+        }
+        
     }
 }

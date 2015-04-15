@@ -190,20 +190,43 @@ class ParseImpl: DatabaseManager {
     //  list of discovered chests
     func saveUserLocation(location: CLLocation) {
         if PFUser.currentUser() != nil {
-            var lat = location.coordinate.latitude as Double
-            var lng = location.coordinate.longitude as Double
             
-            var userDefaults = NSUserDefaults()
-            userDefaults.setDouble(lat, forKey: "lat")
-            userDefaults.setDouble(lng, forKey: "lng")
+            var latHistory = PFUser.currentUser()["latHistory"] as [Double]
+            var lngHistory = PFUser.currentUser()["lngHistory"] as [Double]
             
-            var locationHistory = self.getUser().getLocationHistory()
+            latHistory.append(location.coordinate.latitude as Double)
+            lngHistory.append(location.coordinate.longitude as Double)
             
-            locationHistory.latitudes.append(lat)
-            locationHistory.longitudes.append(lng)
+            PFUser.currentUser()["latHistory"] = latHistory
+            PFUser.currentUser()["lngHistory"] = lngHistory
             
-            PFUser.currentUser()["latHistory"] = locationHistory.latitudes
-            PFUser.currentUser()["lngHistory"] = locationHistory.longitudes
+            PFUser.currentUser().saveEventually()
+            
+            println("Added background location")
+        }
+    }
+    
+    //  Regenerates energy to full
+    func regenerateEnergy() {
+        if PFUser.currentUser() != nil {
+            
+            PFUser.currentUser()["energy"] = FULLENERGY
+            
+            PFUser.currentUser().saveEventually()
+            
+            println("Energy regenerated")
+        }
+    }
+    
+    //  Update the users home state
+    func updateHome(home: Bool) {
+        if PFUser.currentUser() != nil {
+            
+            PFUser.currentUser()["home"] = home
+            
+            if home {
+                PFUser.currentUser()["energy"] = FULLENERGY
+            }
             
             PFUser.currentUser().saveEventually()
         }

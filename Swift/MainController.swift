@@ -201,9 +201,13 @@ class MainController: UIViewController {
             var latitude = currentLocation.coordinate.latitude as Double
             var longitude = currentLocation.coordinate.longitude as Double
             var user = DBFactory.execute().getUser()
+            user.setEnergy(FULLENERGY)
             user.setHomeLat(latitude)
             user.setHomeLng(longitude)
             user.setHome(true)
+            var userDefaults = NSUserDefaults()
+            userDefaults.setDouble(latitude, forKey: "lat")
+            userDefaults.setDouble(longitude, forKey: "lng")
             DBFactory.execute().saveUser(user)
         } else {
             showLocationError()
