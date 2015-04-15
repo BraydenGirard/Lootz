@@ -1,12 +1,8 @@
-//
-//  Loot.swift
-//  Lootz
-//
-//  Created by Brayden Girard on 2015-01-06.
-//  Copyright (c) 2015 Brayden Girard. All rights reserved.
-//
+//  Loot model
 
 import Foundation
+
+//  MARK: Loot constants
 
 let UNKNOWN = "Uknown"
 let TYPEGEAR = "Gear"
@@ -37,15 +33,18 @@ let DAMAGE = 25
 let GOLDDAMAGE = 50
 
 class Loot: NSObject {
-    let name: String
-    let image: UIImage
-    let lootId: String
+    let name: String        //  Name of loot
+    let image: UIImage      //  Display image of loot
+    let lootId: String      //  The unique id for this specific piece of loot
     
+    //  Initialize loot
     init(name: String, imageName: String, lootId: String) {
         self.lootId = lootId
         self.name = name
         self.image = UIImage(named: imageName)!
     }
+    
+    //  MARK: Loot Getters
     
     func getImage() -> UIImage {
       return image
@@ -59,6 +58,7 @@ class Loot: NSObject {
         return self.lootId
     }
     
+    //  Displays the loot name in readable format
     func getPrettyName() -> String {
         var splitName = name.componentsSeparatedByString("_")
         var prettyName: String = ""
@@ -76,6 +76,4 @@ class Loot: NSObject {
     func getClassType() -> String {
         return UNKNOWN
     }
-    
-    func use() { }
 }

@@ -1,21 +1,16 @@
-//Rarity is diveded by 2 if weapon is gold
-//If weapon is ranged, allowed to attack the last looter
-//If the weapon is not ranged, allowed to attack the last looter if within 5 minutes of loot time
-//Weapon damage is doubled if gold for offensive weapon
-//Weapon block amount (damage) is doubled if gold for defensive weapon
-//Accuracy is chance of hit calculated by 100 / accuracy for offensive weapons
-//Accuracy is chance of block calculated by 100 / accuracy for defensive weapons
+//  Subclass of Loot - Gear is equipable loot
 
 import Foundation
 
 class Gear: Loot {
     
-    private let type = UNKNOWN
-    private let damage = DAMAGE
-    private let accuracy = 0
-    private let ranged = false
-    private let gold = false
+    private let type = UNKNOWN      //  Determines location gear can be equiped
+    private let damage = DAMAGE     //  The amount of damage the gear does in combat
+    private let accuracy = 0        //  The accuracy bonus given by the gear in combat
+    private let ranged = false      //  Is the gear is ranged
+    private let gold = false        //  Is the gear gold
     
+    //  Initialize gear based on its name
     init(name: String, gold: Bool, lootId: String) {
         self.gold = gold
         
@@ -67,6 +62,8 @@ class Gear: Loot {
             super.init(name: name, imageName: name, lootId: lootId)
         }
     }
+    
+    //  MARK: Gear getters
     
     func getType() -> String {
         return self.type

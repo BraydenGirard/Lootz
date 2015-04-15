@@ -1,19 +1,13 @@
-//
-//  Potion.swift
-//  Lootz
-//
-//  Created by Brayden Girard on 2015-01-06.
-//  Copyright (c) 2015 Brayden Girard. All rights reserved.
-//
+//  Subclass of Loot - Potions are consumable loot
 
 import Foundation
 
 class Potion: Loot {
+    
+    //  Initialize a potion
     init(name: String, lootId: String) {
         super.init(name: name, imageName: name, lootId:lootId)
     }
-    
-    override func use() { }
     
     override func getClassType() -> String {
         return TYPEPOTION

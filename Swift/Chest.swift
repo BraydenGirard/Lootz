@@ -1,22 +1,17 @@
-//
-//  Chest.swift
-//  Lootz
-//
-//  Created by Brayden Girard on 2015-01-18.
-//  Copyright (c) 2015 Brayden Girard. All rights reserved.
-//
+//  Chest model
 
 import Foundation
 
 class Chest {
     
-    private let latitude: Double
-    private let longitude: Double
-    private let weapon: String
-    private let weaponGold: Bool
-    private let item: String
-    private let gold: Int
+    private let latitude: Double    //  Location of chest latitude
+    private let longitude: Double   //  Location of chest longitude
+    private let weapon: String      //  The name of the weapon in the chest
+    private let weaponGold: Bool    //  Is the weapon in the chest gold
+    private let item: String        //  The name of the item in the chest ('Empty' if none)
+    private let gold: Int           //  The amount of gold (money) in the chest
     
+    //  Initialize a chest
     init(latitude: Double, longitude: Double, weapon: String, weaponGold: Bool, item:String, gold: Int) {
         self.latitude = latitude
         self.longitude = longitude
@@ -25,6 +20,8 @@ class Chest {
         self.item = item
         self.gold = gold
     }
+    
+    //  MARK: Chest Getters
     
     func getLatitude() -> Double {
         return self.latitude
@@ -50,6 +47,8 @@ class Chest {
         return self.gold
     }
     
+    //  Creates loot objects from the contents of a chest
+    //  Adds the loot objects to the given users inventory
     func getLoot() -> (success: Bool, user: User) {
         var loot = [Loot]()
         var weapon:Gear

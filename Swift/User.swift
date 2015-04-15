@@ -1,12 +1,8 @@
-//
-//  User.swift
-//  Lootz
-//
-//  Created by Brayden Girard on 2014-12-08.
-//  Copyright (c) 2014 Brayden Girard. All rights reserved.
-//
+//  User model
 
 import Foundation
+
+//  MARK: User constants
 
 let FULLHEALTH = 100
 let FULLENERGY = 100
@@ -20,23 +16,26 @@ let CARLETON = (lat: 45.386583, lng: -75.696123)
 
 class User {
     
-    private let username: String
-    private let email: String
-    private let password: String
-    private var gold: Int
-    private var health: Int
-    private var energy: Int
-    private var clarity: Int
-    private var xp: Int
-    private var inventory: [Loot]
-    private var equipment: [Gear]
-    private var latHistory: [Double]
-    private var lngHistory: [Double]
-    private var currentId: Int
-    private var homeLat: Double
-    private var homeLng: Double
-    private var home: Bool
+    private let username: String        //  Users username
+    private let email: String           //  Users email address
+    private let password: String        //  Users password (only used on initial signup and for login)
+    private var gold: Int               //  The amount of gold a user has
+    private var health: Int             //  A users health (must be greater than 0 to be alive)
+    private var energy: Int             //  A users energy (used for looting chests)
+    private var clarity: Int            //  A users clarity (used for added search distance)
+    private var xp: Int                 //  A users experience (gained looting chests)
+    private var inventory: [Loot]       //  A users inventory
+    private var equipment: [Gear]       //  The items a user currently has equiped
+    private var latHistory: [Double]    //  The users latitude locations discovered in the background
+    private var lngHistory: [Double]    //  The users longitude locations discovered in the background
+    private var currentId: Int          //  The current loot id seed for the user (increased with every new piece of loot)
+    private var homeLat: Double         //  The users latitude of their home base
+    private var homeLng: Double         //  The users longitude of their home base
+    private var home: Bool              //  Is the user currently at home base
     
+    //  MARK: User Initializers
+    
+    //  Initialize an empty user
     init() {
         self.username = UNKNOWN
         self.email = UNKNOWN
@@ -56,6 +55,7 @@ class User {
         self.home = false
     }
     
+    //  Initialize a new user
     init(username: String, email: String, password: String) {
         self.username = username
         self.email = email
@@ -75,6 +75,7 @@ class User {
         self.home = false
     }
     
+    //  Initialize a user
     init(username: String, email: String, password: String, gold: Int, health: Int, energy: Int, clarity: Int, xp: Int, inventory: [Loot], equipment: [Gear], latHistory: [Double], lngHistory: [Double], currentId: Int, homeLat: Double, homeLng: Double, home: Bool) {
         self.username = username
         self.email = email
@@ -93,6 +94,8 @@ class User {
         self.homeLng = homeLng
         self.home = home
     }
+    
+    //  MARK: User setters and getters
     
     func getNextId() -> Int {
         self.currentId = self.currentId + 1;
@@ -267,9 +270,9 @@ class User {
         return String(lvl)
     }
     
-    //Returns true if item is added
-    //Returns false if item cannot be added
-    //because inventory is full
+    //  Returns true if item is added
+    //  Returns false if item cannot be added
+    //  because inventory is full
     func addInventory(item: Loot) -> Bool {
         if(self.inventory.count < FULLINVENTORY) {
             self.inventory.append(item)
@@ -278,8 +281,8 @@ class User {
         return false
     }
     
-    //Returns false if not enough room to add all items
-    //returns true if all items are added to inventory
+    //  Returns false if not enough room to add all items
+    //  returns true if all items are added to inventory
     func addInventory(items: [Loot]) -> Bool {
 
         if(getInventory().count + items.count <= FULLINVENTORY) {
@@ -293,7 +296,7 @@ class User {
         }
     }
     
-    //Removes the item from inventory if it exists
+    //  Removes the item from inventory if it exists
     func removeInventory(item: Loot) -> Bool {
         for var i=0; i<self.inventory.count; i++ {
             if(self.inventory[i].getId() == item.getId()) {
@@ -305,7 +308,7 @@ class User {
         return false
     }
     
-    //Removes item from inventory to equipment
+    //  Removes item from inventory to equipment
     func equipFromInventory(item: Gear) -> Bool {
      
         for var i=0; i<self.inventory.count; i++ {
@@ -324,8 +327,8 @@ class User {
         return inventory
     }
     
-    //If room to equip returns true
-    //Else returns false and must remove equipment first
+    //  If room to equip returns true
+    //  Else returns false and must remove equipment first
     func equipGear(item: Gear) -> Bool {
         if(self.equipmentCount(item.getType()) == 0) {
             //println("Equiping item")
@@ -355,7 +358,7 @@ class User {
         return false
     }
     
-    //Returns true if inventory has room for gear
+    //  Returns true if inventory has room for gear
     func removeGear(gear: Loot) -> Bool {
         if(self.addInventory(gear)) {
             for var i=0; i<self.equipment.count; i++ {
@@ -369,16 +372,14 @@ class User {
         }
     }
     
-    //Returns how many of that item is equipped
+    //  Returns how many of that item is equipped
     func equipmentCount(type: String) -> Int {
         var count = 0
         for var i=0; i<self.equipment.count; i++ {
             if(self.equipment[i].getType() == type) {
                 count++
             }
-           // println("Equipment count iteration \(i)")
         }
-        //println("Final count is \(count)")
         return count
     }
 
