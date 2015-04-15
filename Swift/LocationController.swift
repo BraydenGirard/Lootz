@@ -1,10 +1,4 @@
-//
-//  LocationController.swift
-//  Lootz
-//
-//  Created by Brayden Girard on 2015-02-10.
-//  Copyright (c) 2015 Brayden Girard. All rights reserved.
-//
+//  Location management singleton
 
 import Foundation
 
@@ -21,6 +15,8 @@ class LocationController: NSObject, CLLocationManagerDelegate{
     var currentLocation: CLLocation?
     var backgroundState = false
     
+    //  Starts location services
+    //  Starts monitoring for location updates
     func startLocationServices() -> Bool {
         manager.delegate = self;
         manager.desiredAccuracy = kCLLocationAccuracyBest
@@ -45,6 +41,8 @@ class LocationController: NSObject, CLLocationManagerDelegate{
         return true
     }
     
+    //  Starts background location services
+    //  Starts monitoring for significant location changes
     func startBackgroundLocationServices() -> Bool {
        
         manager.delegate = self;
@@ -70,6 +68,8 @@ class LocationController: NSObject, CLLocationManagerDelegate{
         return true
     }
     
+    //  Stops location services
+    //  Stops monitoring standard location services
     func stopLocationServices() {
         manager.stopUpdatingLocation()
         var userDefaults = NSUserDefaults()
@@ -82,6 +82,8 @@ class LocationController: NSObject, CLLocationManagerDelegate{
         }
     }
     
+    //  Stops background location services
+    //  Stops monitoring for significant location changes
     func stopBackgroundLocationServices() {
         manager.stopMonitoringSignificantLocationChanges()
         var userDefaults = NSUserDefaults()
@@ -94,6 +96,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
         }
     }
     
+    //  Gets the users current location
     func getCurrentLocation() -> CLLocation? {
         return currentLocation
     }
@@ -106,7 +109,8 @@ class LocationController: NSObject, CLLocationManagerDelegate{
         }
     }
     
-    //Location was updated get newest location
+    //  There was a location updated, get newest location
+    //  If in background, save the location
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         self.currentLocation = locations[locations.count - 1] as? CLLocation
         //println("Location has been updated")
@@ -118,6 +122,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
         }
     }
     
+    //  Monitors for entering the home region
     func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
         NSLog("Entering region")
         var user = DBFactory.execute().getUser()
@@ -126,6 +131,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
         DBFactory.execute().saveUser(user)
     }
     
+    //  Monitors for exiting the home region
     func locationManager(manager: CLLocationManager!, didExitRegion region: CLRegion!) {
         NSLog("Exit region")
         var user = DBFactory.execute().getUser()

@@ -1,15 +1,12 @@
-//
-//  Parse.swift
-//  Lootz
-//
-//  Created by Brayden Girard on 2014-12-08.
-//  Copyright (c) 2014 Brayden Girard. All rights reserved.
-//
+//  Parse implementation of database manager protocol
 
 import Foundation
 
 class ParseImpl: DatabaseManager {
     
+    //  MARK: User management
+    
+    //  Given a users signup information, send a parse sign up request
     func signUp(user: User) {
        
         var parseUser = PFUser()
@@ -43,6 +40,7 @@ class ParseImpl: DatabaseManager {
         }
     }
     
+    //  Given a users login information, send a Parse login request
     func login(username: String, password: String) {
         PFUser.logInWithUsernameInBackground(username, password:password) {
             (user: PFUser!, error: NSError!) -> Void in
@@ -57,6 +55,7 @@ class ParseImpl: DatabaseManager {
         }
     }
     
+    //  Check if a user is currently logged in
     func checkAutoSignIn() -> Bool {
         var currentUser = PFUser.currentUser()
         if currentUser != nil {
@@ -66,6 +65,7 @@ class ParseImpl: DatabaseManager {
         }
     }
     
+    //  Get the local copy of the user
     func getUser() -> User {
         if PFUser.currentUser() != nil {
            return self.getUserFromParse(PFUser.currentUser())
@@ -76,15 +76,14 @@ class ParseImpl: DatabaseManager {
         }
     }
     
+    //  Get a user by their username
     func getUserByUsername(username: String) -> User {
         var query = PFUser.query()
         query.whereKey("username", equalTo:username)
         return self.getUserFromParse(query.getFirstObject())
     }
     
-    //Check to see if the id in inventory loot matches
-    //the id of the parse loot, if not remove the parse loot
-    //from server and add the new loot
+    //  Update the user in the database
     func saveUser(user: User) -> Bool {
         if PFUser.currentUser() != nil {
             var parseLoot:PFObject?
@@ -102,6 +101,11 @@ class ParseImpl: DatabaseManager {
             PFUser.currentUser()["homeLat"] = user.getHomeLat()
             PFUser.currentUser()["homeLng"] = user.getHomeLng()
             PFUser.currentUser()["home"] = user.isHome()
+            
+            //  Id used to keep track of who loot belongs to
+            //  Check to see if the id in the local loot matches
+            //  the id of the server loot, if not remove the server loot
+            //  and add the new loot
             
             for var i=0; i<user.getInventory().count; i++ {
                 newLoot = true
@@ -182,6 +186,8 @@ class ParseImpl: DatabaseManager {
         }
     }
     
+    //  Add a new location for a chest found in the background to a users 
+    //  list of discovered chests
     func saveUserLocation(location: CLLocation) {
         if PFUser.currentUser() != nil {
             var lat = location.coordinate.latitude as Double
@@ -202,7 +208,8 @@ class ParseImpl: DatabaseManager {
             PFUser.currentUser().saveEventually()
         }
     }
-    
+
+    //  Update the local copy of a user with the server copy
     func updateUser() {
         if PFUser.currentUser() != nil {
             
@@ -236,6 +243,9 @@ class ParseImpl: DatabaseManager {
         }
     }
     
+    //  MARK: Chest management
+    
+    //  Find chests in the area based on a given distance and location
     func findChests(lat: Double, lng: Double, distance: Double) {
         let currentLocation = PFGeoPoint(latitude:lat, longitude:lng)
      
@@ -258,38 +268,7 @@ class ParseImpl: DatabaseManager {
         }
     }
     
-    func removeLootFromServer(loot: Loot) {
-        
-        if PFUser.currentUser() != nil {
-            var currentLoot = PFUser.currentUser()["loot"] as [PFObject]
-            
-            for var i=0; i<currentLoot.count; i++ {
-                var parseLoot = currentLoot[i] as PFObject
-                if(parseLoot["lootId"] as String == loot.getId()) {
-                    currentLoot.removeAtIndex(i)
-                }
-            }
-            
-            PFUser.currentUser()["loot"] = currentLoot
-        
-            var removeQuery = PFQuery(className: "Loot")
-            removeQuery.whereKey("lootId", equalTo: loot.getId())
-        
-            removeQuery.getFirstObjectInBackgroundWithBlock { (loot: PFObject!, error: NSError!) -> Void in
-                if loot != nil {
-                    loot.deleteEventually()
-                } else {
-                    "Removing loot from server failed"
-                }
-            }
-            
-            //NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
-        }
-        else {
-            NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
-        }
-    }
-    
+    //  Remove a chest from the server (when a user loots a chest)
     func removeChestFromServer(chest: Chest) {
         var removeQuery = PFQuery(className: "Chest")
         let point = PFGeoPoint(latitude:chest.getLatitude(), longitude:chest.getLongitude())
@@ -312,6 +291,7 @@ class ParseImpl: DatabaseManager {
 
     }
     
+    //  Get this list of chests a user has discovered in the background
     func getDiscoveredChests() {
         if PFUser.currentUser() != nil {
             var user = self.getUser()
@@ -366,13 +346,42 @@ class ParseImpl: DatabaseManager {
         }
     }
     
-    //=====================================================//
-    //                                                     //
-    //                  HELPER FUNCTIONS                   //
-    //                                                     //
-    //=====================================================//
+    //  MARK: Loot management
     
+    //  Remove loot from the server (when user removes inventory loot)
+    func removeLootFromServer(loot: Loot) {
+        
+        if PFUser.currentUser() != nil {
+            var currentLoot = PFUser.currentUser()["loot"] as [PFObject]
+            
+            for var i=0; i<currentLoot.count; i++ {
+                var parseLoot = currentLoot[i] as PFObject
+                if(parseLoot["lootId"] as String == loot.getId()) {
+                    currentLoot.removeAtIndex(i)
+                }
+            }
+            
+            PFUser.currentUser()["loot"] = currentLoot
+            
+            var removeQuery = PFQuery(className: "Loot")
+            removeQuery.whereKey("lootId", equalTo: loot.getId())
+            
+            removeQuery.getFirstObjectInBackgroundWithBlock { (loot: PFObject!, error: NSError!) -> Void in
+                if loot != nil {
+                    loot.deleteEventually()
+                } else {
+                    "Removing loot from server failed"
+                }
+            }
+        }
+        else {
+            NSNotificationCenter.defaultCenter().postNotificationName("exit", object: nil)
+        }
+    }
     
+    //  MARK: Helper functions
+    
+    //  Copy the parse instance of user into a user model
     func getUserFromParse(parseUser: PFObject) -> User {
         var result = self.getLootFromParse(parseUser["loot"] as [PFObject])
         var user = User(username: parseUser["username"] as String, email: parseUser["email"] as String, password: UNKNOWN, gold: parseUser["gold"] as Int, health: parseUser["health"] as Int, energy: parseUser["energy"] as Int, clarity: parseUser["clarity"] as Int, xp: parseUser["xp"] as Int, inventory: result.inventory, equipment: result.equipment, latHistory: parseUser["latHistory"] as [Double], lngHistory: parseUser["lngHistory"] as [Double], currentId: parseUser["lootId"] as Int, homeLat: parseUser["homeLat"] as Double, homeLng: parseUser["homeLng"] as Double, home: parseUser["home"] as Bool)
@@ -380,6 +389,7 @@ class ParseImpl: DatabaseManager {
         return user
     }
     
+    //  Copy the parse instance of a users loot into the lootz user model
     func getLootFromParse(parseLoot: [PFObject]) -> (inventory: [Loot], equipment: [Gear]) {
         var inventory:[Loot] = []
         var equipment:[Gear] = []
@@ -400,6 +410,7 @@ class ParseImpl: DatabaseManager {
         return (inventory: inventory, equipment: equipment)
     }
     
+    //  Copy a parse chest object into a lootz chest object
     func getChestFromParse(parseChest: PFObject) -> Chest {
         let geoLocation = parseChest["location"] as PFGeoPoint
         return Chest(latitude: geoLocation.latitude, longitude: geoLocation.longitude, weapon: parseChest["weapon"] as String, weaponGold: parseChest["weaponGold"] as Bool, item: parseChest["item"] as String, gold: parseChest["gold"] as Int)
