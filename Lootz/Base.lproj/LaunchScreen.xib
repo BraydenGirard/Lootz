@@ -44,12 +44,12 @@
                     <exclude reference="shf-7d-zJm"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="M9J-3m-sQW"/>
-                    <exclude reference="yFN-R6-5CG"/>
-                    <exclude reference="Ovl-nC-yTZ"/>
-                    <exclude reference="SEb-bS-hR1"/>
                     <exclude reference="BHH-Sw-NJA"/>
                     <exclude reference="Gz4-Bh-d5Y"/>
+                    <exclude reference="Ovl-nC-yTZ"/>
+                    <exclude reference="SEb-bS-hR1"/>
+                    <exclude reference="M9J-3m-sQW"/>
+                    <exclude reference="yFN-R6-5CG"/>
                 </mask>
             </variation>
             <variation key="heightClass=compact">
@@ -59,12 +59,12 @@
                     <include reference="shf-7d-zJm"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="M9J-3m-sQW"/>
-                    <include reference="yFN-R6-5CG"/>
-                    <include reference="Ovl-nC-yTZ"/>
-                    <include reference="SEb-bS-hR1"/>
                     <include reference="BHH-Sw-NJA"/>
                     <include reference="Gz4-Bh-d5Y"/>
+                    <include reference="Ovl-nC-yTZ"/>
+                    <include reference="SEb-bS-hR1"/>
+                    <include reference="M9J-3m-sQW"/>
+                    <include reference="yFN-R6-5CG"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="548" y="455"/>

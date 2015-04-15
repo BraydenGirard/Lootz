@@ -1,10 +1,5 @@
-//
-//  DatabaseFactory.swift
-//  Lootz
-//
-//  Created by Brayden Girard on 2014-12-08.
-//  Copyright (c) 2014 Brayden Girard. All rights reserved.
-//
+//  Factory class for database / networking layer
+//  Currently set to run a Parse implementation
 
 import Foundation
 

@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  Lootz
-//
-//  Created by Brayden Girard on 2014-11-27.
-//  Copyright (c) 2014 Brayden Girard. All rights reserved.
-//
+//  Lootz App Delegate
 
 import UIKit
 
@@ -13,62 +7,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        //Parse.enableLocalDatastore()
+        //  Connects Parse framework to application
         Parse.setApplicationId("xMWHdAdDCH08EjLa8Ot10m8NHUF5Jib8TcJsvhL9", clientKey: "tGDyakqGqFly9qRJ3XrmxMEp5jaWtde5LWJrAODF")
+        
+        //  Connects Parse analytics to the applicaction
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
         var initialViewController: UIViewController
         
+        //  Check if user is logged in, if so skip login controller
         if DBFactory.execute().checkAutoSignIn() {
             initialViewController = storyboard.instantiateViewControllerWithIdentifier("MainController") as UIViewController
         }
         else {
             initialViewController = storyboard.instantiateViewControllerWithIdentifier("LoginController") as UIViewController
         }
+        
         self.window?.rootViewController = initialViewController
         self.window?.makeKeyAndVisible()
         
-        println("Application launching")
         if let launch = launchOptions {
             if let key = launch.indexForKey(UIApplicationLaunchOptionsLocationKey) {
-                println("Allowed to start background location")
                 LocationController.sharedInstance.startBackgroundLocationServices()
             }
         }
         return true
     }
 
-    func applicationWillResignActive(application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-    }
-
     func applicationDidEnterBackground(application: UIApplication) {
-         println("Application entered backgound mode")
+        //  On application background stop location updates
+        //  and start significant location updates
         LocationController.sharedInstance.stopLocationServices()
         LocationController.sharedInstance.startBackgroundLocationServices()
     }
 
-    func applicationWillEnterForeground(application: UIApplication) {
-        // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    }
-
     func applicationDidBecomeActive(application: UIApplication) {
-        println("Application became active")
+        //  On application background stop significant location updates
+        //  and start location updates
         LocationController.sharedInstance.stopBackgroundLocationServices()
         LocationController.sharedInstance.startLocationServices()
     }
 
-    func applicationWillTerminate(application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-
+    func applicationWillTerminate(application: UIApplication) { }
+    
+    func applicationWillResignActive(application: UIApplication) { }
+    
+    func applicationWillEnterForeground(application: UIApplication) { }
 }
-
