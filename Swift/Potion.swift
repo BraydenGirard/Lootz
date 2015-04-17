@@ -8,8 +8,4 @@ class Potion: Loot {
     init(name: String, lootId: String) {
         super.init(name: name, imageName: name, lootId:lootId)
     }
-    
-    override func getClassType() -> String {
-        return TYPEPOTION
-    }
 }

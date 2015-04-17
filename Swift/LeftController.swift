@@ -18,22 +18,24 @@ class LeftController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         //  Tag view for custom transition manager
         self.view.tag = -1;
         
-        //  Add swipe left gesture listener
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: Selector("leftSwiped"))
-        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
-        self.view.addGestureRecognizer(swipeLeft)
-        
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.backgroundView = nil
+        self.tableView.backgroundColor = UIColor.clearColor()
         
         //  Add notifications for asynchronous networking
         notificationCenter.addObserver(self, selector: "exit:", name: "exit", object: nil)
         notificationCenter.addObserver(self, selector: "chestDiscoveryComplete:", name: "chestDiscoveryComplete", object: nil)
         notificationCenter.addObserver(self, selector: "refresh", name: "refresh", object: nil)
+        
+        //  Add swipe left gesture listener
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: Selector("leftSwiped"))
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeLeft)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -81,7 +83,7 @@ class LeftController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("chestCell", forIndexPath: indexPath) as UITableViewCell
-        
+        cell.backgroundColor = UIColor.clearColor();
         cell.textLabel?.text = "Chest \(indexPath.row)"
         
         var currentLocation = LocationController.sharedInstance.getCurrentLocation()
@@ -90,6 +92,7 @@ class LeftController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if let currLocation = currentLocation {
             var distance = Int(currLocation.distanceFromLocation(chestLocation))
             cell.detailTextLabel?.text = String(distance) + " m"
+            cell.detailTextLabel?.textColor = UIColor.redColor()
         }
 
         return cell

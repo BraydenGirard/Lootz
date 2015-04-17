@@ -72,8 +72,4 @@ class Loot: NSObject {
         }
         return prettyName;
     }
-    
-    func getClassType() -> String {
-        return UNKNOWN
-    }
 }

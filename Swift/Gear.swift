@@ -84,8 +84,4 @@ class Gear: Loot {
     func isGold() -> Bool {
         return self.gold
     }
-    
-    override func getClassType() -> String {
-        return TYPEGEAR
-    }
 }

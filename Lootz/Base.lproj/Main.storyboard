@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -805,6 +805,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="27" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wZz-ZE-v9V">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chestCell" textLabel="pNE-Df-YLi" detailTextLabel="PLz-NI-X9c" rowHeight="27" style="IBUITableViewCellStyleValue1" id="pYn-p4-he5">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -832,6 +833,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -845,14 +847,22 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="cKH-lD-Gob" firstAttribute="bottom" secondItem="wZz-ZE-v9V" secondAttribute="bottom" constant="50" id="0Na-2L-yPF"/>
+                            <constraint firstItem="cKH-lD-Gob" firstAttribute="bottom" secondItem="wZz-ZE-v9V" secondAttribute="bottom" constant="50" id="0Na-2L-yPF">
+                                <variation key="heightClass=compact" constant="15"/>
+                            </constraint>
                             <constraint firstItem="tC4-dS-k4t" firstAttribute="top" secondItem="cKH-lD-Gob" secondAttribute="top" constant="225" id="8It-W7-FXv"/>
-                            <constraint firstItem="cKH-lD-Gob" firstAttribute="trailing" secondItem="wZz-ZE-v9V" secondAttribute="trailing" constant="47" id="GTW-Pd-MAO"/>
+                            <constraint firstItem="cKH-lD-Gob" firstAttribute="trailing" secondItem="wZz-ZE-v9V" secondAttribute="trailing" constant="47" id="GTW-Pd-MAO">
+                                <variation key="heightClass=compact" constant="34"/>
+                            </constraint>
                             <constraint firstItem="tC4-dS-k4t" firstAttribute="trailing" secondItem="cKH-lD-Gob" secondAttribute="trailing" constant="-47" id="R8y-TE-Him"/>
                             <constraint firstItem="tC4-dS-k4t" firstAttribute="bottom" secondItem="cKH-lD-Gob" secondAttribute="bottom" constant="-24" id="VM0-aA-X9M"/>
-                            <constraint firstItem="cKH-lD-Gob" firstAttribute="top" secondItem="wZz-ZE-v9V" secondAttribute="top" constant="-60" id="Xgj-3W-cqB"/>
+                            <constraint firstItem="cKH-lD-Gob" firstAttribute="top" secondItem="wZz-ZE-v9V" secondAttribute="top" constant="-60" id="Xgj-3W-cqB">
+                                <variation key="heightClass=compact" constant="-56"/>
+                            </constraint>
                             <constraint firstAttribute="centerY" secondItem="cKH-lD-Gob" secondAttribute="centerY" id="Yg9-yn-rhp"/>
-                            <constraint firstItem="cKH-lD-Gob" firstAttribute="leading" secondItem="wZz-ZE-v9V" secondAttribute="leading" constant="-47" id="cWj-kp-oEq"/>
+                            <constraint firstItem="cKH-lD-Gob" firstAttribute="leading" secondItem="wZz-ZE-v9V" secondAttribute="leading" constant="-47" id="cWj-kp-oEq">
+                                <variation key="heightClass=compact" constant="-34"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="cKH-lD-Gob" secondAttribute="centerX" constant="-0.5" id="haa-8H-DaN"/>
                             <constraint firstItem="tC4-dS-k4t" firstAttribute="leading" secondItem="cKH-lD-Gob" secondAttribute="leading" constant="47" id="rGd-vs-bhC"/>
                         </constraints>
@@ -1970,7 +1980,7 @@
         <image name="weapon_slot.png" width="40" height="41"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rUt-IK-zk6"/>
+        <segue reference="Htt-EU-I46"/>
         <segue reference="MNG-AA-BbD"/>
     </inferredMetricsTieBreakers>
 </document>

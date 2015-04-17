@@ -263,8 +263,6 @@ class User {
     }
     
     func getLvl() -> String {
-        println(self.getHitChance())
-        println(self.getBlockChance())
         var lvl = self.getHitChance() + self.getBlockChance()
 
         return String(lvl)
@@ -287,7 +285,6 @@ class User {
 
         if(getInventory().count + items.count <= FULLINVENTORY) {
             for i in items {
-                println("Adding item \(i.getName())")
                 self.inventory.append(i)
             }
             return true
@@ -331,7 +328,6 @@ class User {
     //  Else returns false and must remove equipment first
     func equipGear(item: Gear) -> Bool {
         if(self.equipmentCount(item.getType()) == 0) {
-            //println("Equiping item")
             if(item.getType() == ONEHAND && self.equipmentCount(TWOHAND) == 0) {
                 equipFromInventory(item)
                 return true
@@ -359,7 +355,7 @@ class User {
     }
     
     //  Returns true if inventory has room for gear
-    func removeGear(gear: Loot) -> Bool {
+    func removeGear(gear: Gear) -> Bool {
         if(self.addInventory(gear)) {
             for var i=0; i<self.equipment.count; i++ {
                 if(self.equipment[i].getId() == gear.getId()) {

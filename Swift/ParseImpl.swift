@@ -30,10 +30,11 @@ class ParseImpl: DatabaseManager {
         parseUser.signUpInBackgroundWithBlock {
             (succeeded: Bool!, error: NSError!) -> Void in
             if error == nil {
+                println("The Parse sign up was successful")
                 NSNotificationCenter.defaultCenter().postNotificationName("signUpSuccess", object: nil)
             } else {
                 let errorString = error.userInfo!["error"] as NSString
-                println(errorString)
+                println("The Parse sign up failed with error: \(errorString)")
                 
                 NSNotificationCenter.defaultCenter().postNotificationName("signUpFail", object: nil)
             }
@@ -45,10 +46,11 @@ class ParseImpl: DatabaseManager {
         PFUser.logInWithUsernameInBackground(username, password:password) {
             (user: PFUser!, error: NSError!) -> Void in
             if user != nil {
+                println("The Parse login was successful")
                 NSNotificationCenter.defaultCenter().postNotificationName("loginSuccess", object: nil)
             } else {
                 let errorString = error.userInfo!["error"] as NSString
-                println(errorString)
+                println("The Parse login failed with error: \(errorString)")
                 
                 NSNotificationCenter.defaultCenter().postNotificationName("loginFail", object: nil)
             }
@@ -127,19 +129,18 @@ class ParseImpl: DatabaseManager {
                 }
                 if(newLoot) {
                     var loot = PFObject(className: "Loot")
-                    loot["type"] = user.getInventory()[i].getClassType()
 
-                    if(user.getInventory()[i].getClassType() == TYPEGEAR) {
+                    if(user.getInventory()[i] is Gear) {
                         var gear = user.getInventory()[i] as Gear
-                        
+                        loot["type"] = TYPEGEAR
                         loot["lootId"] = String(gear.getId())
                         loot["name"] = gear.getName()
                         loot["gold"] = gear.isGold()
                         loot["equiped"] = false
-                    } else if(user.getInventory()[i].getClassType() == TYPEPOTION) {
+                    } else if(user.getInventory()[i] is Potion) {
                         
                         var potion = user.getInventory()[i]
-                    
+                        loot["type"] = TYPEPOTION
                         loot["lootId"] = String(potion.getId())
                         loot["name"] = potion.getName()
                         loot["gold"] = false
@@ -172,8 +173,10 @@ class ParseImpl: DatabaseManager {
                 }
                 PFUser.currentUser().saveInBackgroundWithBlock({ (complete: Bool, error: NSError!) -> Void in
                     if(error != nil) {
-                        println("Failed to save user")
+                        let errorString = error.userInfo!["error"] as NSString
+                        println("Parse failed to save user with error: \(errorString)")
                     } else {
+                        println("Parse successfully saved the user")
                         self.updateUser()
                     }
                 })
@@ -255,10 +258,11 @@ class ParseImpl: DatabaseManager {
                     PFUser.currentUser()["homeLat"] = parseUser["homeLng"]
                     PFUser.currentUser()["homeLng"] = parseUser["homeLat"]
                     PFUser.currentUser()["home"] = parseUser["home"]
-            
+                    println("Parse user updated successfully")
                     NSNotificationCenter.defaultCenter().postNotificationName("refresh", object: nil)
                 } else {
-                    println("Failed to find user on server when trying to update")
+                    let errorString = error.userInfo!["error"] as NSString
+                    println("Parse failed to find user on server when trying to update with error: \(errorString)")
                 }
             })
         } else {
@@ -287,6 +291,7 @@ class ParseImpl: DatabaseManager {
                     finalChests.append(chest)
                 }
             }
+            println("Parse query for chests is complete")
             NSNotificationCenter.defaultCenter().postNotificationName("chestSearchComplete", object: self, userInfo:["chests": finalChests])
         }
     }
@@ -308,7 +313,8 @@ class ParseImpl: DatabaseManager {
                     c.deleteEventually()
                 }
             } else {
-                println("Could not find a chest to remove from server")
+                let errorString = error.userInfo!["error"] as NSString
+                println("Parse could not find a chest to remove from server with error: \(errorString)")
             }
         }
 
@@ -355,11 +361,12 @@ class ParseImpl: DatabaseManager {
                         
                         self.getDiscoveredChests()
                     } else {
+                        println("Parse found chests in range of location history")
                         NSNotificationCenter.defaultCenter().postNotificationName("chestDiscoveryComplete", object: self, userInfo:["chests": finalChests])
                     }
                 }
             } else {
-                println("No chests have been discovered")
+                println("Parse could not find chests in range of location history")
                 NSNotificationCenter.defaultCenter().postNotificationName("chestDiscoveryComplete", object: self, userInfo:["chests": []])
             }
             
@@ -393,7 +400,8 @@ class ParseImpl: DatabaseManager {
                 if loot != nil {
                     loot.deleteEventually()
                 } else {
-                    "Removing loot from server failed"
+                    let errorString = error.userInfo!["error"] as NSString
+                    println("Parse removing loot from the server failed with error: \(errorString)")
                 }
             }
         }

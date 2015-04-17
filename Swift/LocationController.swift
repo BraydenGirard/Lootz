@@ -34,7 +34,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
             if let longitude = userDefaults.objectForKey("lng") as? Double {
                 if let latitude = userDefaults.objectForKey("lat") as? Double {
                 
-                    let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), radius: 30, identifier: "Home")
+                    let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), radius: 100, identifier: "Home")
                     manager.startMonitoringForRegion(homeRegion)
                 }
             }
@@ -62,7 +62,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
             if let longitude = userDefaults.objectForKey("lng") as? Double {
                 if let latitude = userDefaults.objectForKey("lat") as? Double {
                     
-                    let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), radius: 30, identifier: "Home")
+                    let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), radius: 100, identifier: "Home")
                     manager.startMonitoringForRegion(homeRegion)
                 }
             }
@@ -79,7 +79,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
         if let longitude = userDefaults.objectForKey("lng") as? Double {
             if let latitude = userDefaults.objectForKey("lat") as? Double {
                 
-                let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), radius: 30, identifier: "Home")
+                let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), radius: 100, identifier: "Home")
                 manager.stopMonitoringForRegion(homeRegion)
             }
         }
@@ -94,7 +94,7 @@ class LocationController: NSObject, CLLocationManagerDelegate{
         if let longitude = userDefaults.objectForKey("lng") as? Double {
             if let latitude = userDefaults.objectForKey("lat") as? Double {
                 
-                let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), radius: 30, identifier: "Home")
+                let homeRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), radius: 100, identifier: "Home")
                 manager.stopMonitoringForRegion(homeRegion)
             }
         }
